@@ -190,7 +190,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="email">Your Email</label>
-                                <input type="text" class="form-control" name="email" id="email" required>
+                                <input type="email" class="form-control" name="_replyto" id="email" required>
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -201,6 +201,8 @@
                         </div>
 
                         <div class="col-sm-12 text-center">
+                          <input type="hidden" name="_language" value="en" />
+                          <input type="text" name="_gotcha" style="display:none" />
                           <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i>Send Message</button>
 
                         </div>
