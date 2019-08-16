@@ -67,6 +67,27 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title></title>
+      <link>https://lomorage.com/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/features/</guid>
+      <description>Feature Highlight Privacy Matters Lomorage is a private cloud service which runs on your private network, which give your the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
+You can also setup multiple lomorage services in your private network, for different family members, which are complete isolated with each other.
+Cross Platfrom There is no OS limitation for running the lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&amp;rsquo;s request.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/installation/</guid>
+      <description>Installation Guide  1. Overview 2. Download  Lomorage Service Lomorage client  3. Setup  Windows macOS Raspberry Pi iOS    Installation Guide 1. Overview To use Lomorage, you need run the lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need download the client APP at app store.
+2. Download Lomorage Service You can choose which version of Lomorage to download based on your perference.</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>https://lomorage.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
