@@ -35,3 +35,16 @@
     background-color: #39A3C0;
     background-image: url(/img/installation/ios-testflight.svg);
 }
+
+.screenshoot {
+    background-color:#EAF0FB;
+    padding: 25px;
+    width: 90%;
+    text-align: center;
+}
+
+.screenshoot img {
+    margin-right:20px;
+    margin-bottom:20px;
+}
+
