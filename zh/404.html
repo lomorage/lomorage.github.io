@@ -2,6 +2,14 @@
 <html lang="en-us">
 
   <head>
+  <script type="text/javascript">
+      var userLang = navigator.language || navigator.userLanguage;
+      console.log(window.location.pathname);
+      if (userLang.startsWith("zh") && window.location.pathname == "/") {
+              window.location.href = '/zh/';
+      }
+  </script>
+
   <meta charset="utf-8">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
@@ -96,31 +104,31 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/">主页</a>
+                    <a href="/zh">主页</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/features/">特性</a>
+                    <a href="/zh/features/">特性</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/installation/">安装</a>
+                    <a href="/zh/installation/">安装</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/faq/">常见问题</a>
+                    <a href="/zh/faq/">常见问题</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/contact/">联系</a>
+                    <a href="/zh/contact/">联系</a>
                     
                   </li>
                   
@@ -190,14 +198,8 @@
         <div class="col-md-4 col-sm-6">
             <h4>关于我们</h4>
 
-            We are a small team believe that distributed web is the future,
-        and we focus on building the private photo cloud based on DWeb technologies in the first place.
-        <!--
-        <li>Easy to setup, use and maintain as existing cloud service</li>
-        <li>Store your data securely on your own devices</li>
-        <li>Backup and duplicate storage by adding more devices</li>
-        <li>No one can access your assets without permission</li>-->
-        
+            我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
+                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

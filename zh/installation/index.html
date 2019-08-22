@@ -67,7 +67,7 @@
   
   <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/features//" />
+  <meta property="og:url" content="/zh/installation//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -88,11 +88,11 @@
                 <a class="navbar-brand home" href="https://lomorage.com/">
                     <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
                     <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
-                    <span class="sr-only"> - go to homepage</span>
+                    <span class="sr-only"> - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">Toggle Navigation</span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -104,31 +104,31 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/">Home</a>
+                    <a href="/zh">主页</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/features/">Features</a>
+                    <a href="/zh/features/">特性</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/installation/">Installation</a>
+                    <a href="/zh/installation/">安装</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/faq/">FAQ</a>
+                    <a href="/zh/faq/">常见问题</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/contact/">Contact</a>
+                    <a href="/zh/contact/">联系</a>
                     
                   </li>
                   
@@ -186,66 +186,116 @@
                         <div>
                           
 
-<h1 id="feature-highlight">Feature Highlight</h1>
+<h1 id="安装说明">安装说明</h1>
 
-<h2 id="privacy-matters">Privacy Matters</h2>
+<h2 id="1-简介">1. 简介</h2>
 
-<p>Lomorage is a private cloud service which runs on your private network, which give your the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect <strong>ANY</strong> user privacy data.</p>
+<p>要使用Lomorage，您需要在本地网络运行Lomorage服务，您可以选择在Windows，macOS或者树莓派上运行。然后您需要下载手机客户端应用。</p>
 
-<p>You can also setup multiple lomorage services in your private network, for different family members, which are complete isolated with each other.</p>
+<h2 id="2-下载">2. 下载</h2>
 
-<!--
-You can also use either [DES]() to encrypt your photos, or use any [encrypted file system]() supported by the operating system.-->
+<h3 id="lomorage服务">Lomorage服务</h3>
 
-<h2 id="cross-platfrom">Cross Platfrom</h2>
+<p>您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务。Windows或macOS上运行Lomorage服务可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。</p>
 
-<p>There is no OS limitation for running the lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&rsquo;s request.</p>
+<p align="center">
 
-<p>We only support iOS client now, the Android version and Web version are on our backlog, we are planning to release this year.</p>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/lomoagent-2019_08_08.08_39_09.0.364163e/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
-<h2 id="easy-setup">Easy Setup</h2>
+ &nbsp;
+ 
+<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_08_06.22_40_22.0.79b4818/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
-<p>We are not building another NAS system, so if you want to backup and manage your photos, but get scared by the complicate setup process of NAS, just forget about the jargons and take easy. Lomorage setup is guaranteed to be within minutes. Check <a href="https://www.lomorage.com/setup">here</a> for the installation guide.</p>
+ &nbsp;
+ 
+<a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.5/image_2019-08-01-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+</p>
 
-<h2 id="keep-original-size">Keep original size</h2>
+<h3 id="lomorage客户端">Lomorage客户端</h3>
 
-<p>The photo and video are stored as original size on your disk, it will be exactly the same with the one taken on your phone. Live photo is also supported, and the image and video clips are stored together as zip file.</p>
+<p>现在支持者iOS，您可以在iPhone或者iPad上安装。现在还在beta测试阶段，点击<a href="mailto:support@lomorage.com">这里</a>申请testflight访问权限。</p>
 
-<h2 id="no-lockdown">No Lockdown</h2>
+<p align="center">
+<a href="mailto:support@lomorage.com" title="Request testflight access" class="badge testflight">TestFlight</a>
+</p>
 
-<p>Unlike some cloud based file storage which split the file into smaller segaments, Lomorage will store the photo file as it&rsquo;s on the file system, we are not using any proprietary format.</p>
+<!--<p align="center">
+<a href=""><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
 
-<p>Unlike some NAS system which require user to format the disk before using it as backup storage, with Lomorage, you can just plugin a spare disk with <a href="https://www.lomorage.com/setup#filesystem">popular file system</a>, it just works, you won&rsquo;t be locked to use specific file system, you can just use the file system you normally use, like FAT32/NTFS in Windows, thus you don&rsquo;t need 3rd party software to access the backup file.</p>
+ &nbsp;
+ 
+<a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
+</p>-->
 
-<h2 id="near-zero-maintenance">Near-zero Maintenance</h2>
+<h2 id="3-安装">3. 安装</h2>
 
-<p>Cloud service hides the complexity of the system, since Lomorage is a service deployed at user&rsquo;s network, we aim to provide same user experience with the cloud service, to minimize user intervention and maintenance.</p>
+<p>第一步: 安装Lomorage服务。</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>在Windows上双击运行Lomorage应用程序后，您需要设置数据目录，用来存储您的手机照片备份。</p>
+
+<p align="center">
+  <img width="50%" src="/img/installation/windows-lomo-agent.png">
+</p>
+
+<h3 id="macos">macOS</h3>
+
+<p>在macOs上双击运行Lomorage应用程序后，您需要设置数据目录，用来存储您的手机照片备份。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备。</p>
+
+<p align="center">
+  <img width="50%" src="/img/installation/osx-lomo-agent.png">
+</p>
+
+<h3 id="树莓派">树莓派</h3>
+
+<p>要在树莓派上运行，您需要先购买一个<a href="https://www.raspberrypi.org/">树莓派</a>，Lomorage可以运行在以下型号的机器上:</p>
 
 <ul>
-<li><p>self upgrade: Lomorage service can upgrade to newest version when available.</p></li>
-
-<li><p>auto migration: Migration will be done automatically to make sure nothing breaks aftr upgrade.</p></li>
-
-<li><p>consistency check: consistency check will be scheduled regularly to make sure no abnormal in the system.</p></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
 </ul>
 
-<!--  - expandable storage: we provide several [options](https://www.lomorage.com/expand-stroage) to expand the storage which disk is out-of-space.-->
-
-<h2 id="flexible-backup-options">Flexible backup options</h2>
-
-<p>Since most people will offload the phone storage, so having those backup once is not enough, Lomorage will provide several backup options:</p>
+<p>如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能，我们很快会提供支持树莓派4的系统镜像。下面是您需要的最小配置:</p>
 
 <ul>
-<li><p>Local redandency backup: you can backup multiple copies locally, just plugin in more disks and <a href="https://www.lomorage.com/setup#redandency-backup">setup the backup</a> on your phone.</p></li>
-
-<li><p>remote backup: you can backup to other Lomorage services setup by other family members or friends, with encryption. This is on the backlog, and plan to support this year.</p></li>
+<li>树莓派主板</li>
+<li>配套电源</li>
+<li>16GB MicroSD卡</li>
 </ul>
 
-<!--  - cloud backup: cloud backup on popular vendors is a good complementary. This is on the backlog, and plan to support this year.-->
+<p>下载了<a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.5/image_2019-08-01-lomorage-lite.zip">系统镜像</a>后, 你可以使用<a href="https://www.balena.io/etcher/">balenaEtcher</a>将其安装到MicroSD卡, balenaEtcher提供Windows和macOS版本。</p>
 
-<h2 id="share-your-moments">Share your moments</h2>
+<p>将MicroSD卡插入到台式电脑或笔记本的读卡器后，选择下载的系统镜像，选择MicroSD卡，点击“Flash“按钮，几分钟后就会安装完成。</p>
 
-<p>You can share moments with your family members, and create groups to share with multiple members at one time. It won&rsquo;t occupy your disk space so you don&rsquo;t need to worry about the disk usage on your phone.</p>
+<p align="center">
+  <img width="50%" src="/img/installation/balenaEtcher.png">
+</p>
+
+<p>安装完后，将MicroSD卡插入到树莓派，接上USB移动硬盘，插入网线，接通电源，等待几分钟系统启动。</p>
+
+<h3 id="ios">iOS</h3>
+
+<p>您可以在iPad或iPhone上安装Lomorage客户端应用，最低支持的iOS系统版本是10.3。当前还处于beta测试阶段，您需要下载testflight(<a href="https://apps.apple.com/us/app/testflight/id899247664)，然后在testflight中安装。testflight访问权限[申请](mailto:support@lomorage.com)。">https://apps.apple.com/us/app/testflight/id899247664)，然后在testflight中安装。testflight访问权限[申请](mailto:support@lomorage.com)。</a></p>
+
+<p>安装完Lomorage客户端，启动就可以自动发现同一网络中运行的Lomorage服务，如果您有多台Lomorage服务运行，那些会列举出来供选择。</p>
+
+<p>然后您可以创建用户，选择存储目录，登陆后，会花上几分钟来导入您相册的照片和视频，然后您可以选择需要上传的文件进行备份，如果已经备份成功，图片或视频下会显示一个绿色的小勾。在远程的选项卡里，显示的是远程备份过但本地没有的文件，所以如果您删除掉本地成功备份的文件，它们会显示在远程备份里面。</p>
+
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/ios-mdns-discover.png">
+  <img width="30%" src="/img/installation/ios-createuser.png">
+  <img width="30%" src="/img/installation/ios-uploading.png">
+  <img width="30%" src="/img/installation/ios-backup.png">
+  <img width="30%" src="/img/installation/ios-settings.png">
+  <img width="30%" src="/img/installation/ios-share.png">
+</p>
+</div>
+
+<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
 
                         </div>
 
@@ -266,16 +316,10 @@ You can also use either [DES]() to encrypt your photos, or use any [encrypted fi
 
         
         <div class="col-md-4 col-sm-6">
-            <h4>About us</h4>
+            <h4>关于我们</h4>
 
-            We are a small team believe that distributed web is the future,
-        and we focus on building the private photo cloud based on DWeb technologies in the first place.
-        <!--
-        <li>Easy to setup, use and maintain as existing cloud service</li>
-        <li>Store your data securely on your own devices</li>
-        <li>Backup and duplicate storage by adding more devices</li>
-        <li>No one can access your assets without permission</li>-->
-        
+            我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
+                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -309,7 +353,7 @@ You can also use either [DES]() to encrypt your photos, or use any [encrypted fi
             <p class="pull-left">Copyright (c) 2018 - 2019, Lomoware; all rights reserved.</p>
             
             <p class="pull-right">
-              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
               

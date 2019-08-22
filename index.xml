@@ -102,8 +102,8 @@ Cross Platfrom There is no OS limitation for running the lomorage service, you c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/faq/</guid>
-      <description>1. How comes the name &amp;ldquo;lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;lomorage&amp;rdquo; is just combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.
-2. What &amp;ldquo;lomorage&amp;rdquo; does? It&amp;rsquo;s private photo backup service, you can backup photos and videos in your phone, in your camera SD card, in your hard drive. It provide the similiar functionalities with those popular photo cloud services, like photo management, searching, sharing, but running on your own machine and store on your own devices.</description>
+      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.
+2. Why another photo backup service? We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we&amp;rsquo;d also like to share them with our family and friends. NAS is a little bit heavy weight for this purpose, it&amp;rsquo;s expensive, hard to install and maintain for non technical users, and require formatting of hard drive and install system on it.</description>
     </item>
     
   </channel>

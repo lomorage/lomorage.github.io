@@ -2,6 +2,14 @@
 <html lang="en-us">
 
   <head>
+  <script type="text/javascript">
+      var userLang = navigator.language || navigator.userLanguage;
+      console.log(window.location.pathname);
+      if (userLang.startsWith("zh") && window.location.pathname == "/") {
+              window.location.href = '/zh/';
+      }
+  </script>
+
   <meta charset="utf-8">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
@@ -178,37 +186,11 @@
                         <div>
                           
 
-<h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;lomorage&rdquo;?</h2>
+<h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</h2>
 
-<p>If you know what Lomography is, then &ldquo;lomorage&rdquo; is just combination of &ldquo;Lomography&rdquo; and &ldquo;Storage&rdquo;.</p>
+<p>If you know what Lomography is, then &ldquo;Lomorage&rdquo; is just combination of &ldquo;Lomography&rdquo; and &ldquo;Storage&rdquo;.</p>
 
-<h2 id="2-what-lomorage-does">2. What &ldquo;lomorage&rdquo; does?</h2>
-
-<p>It&rsquo;s private photo backup service, you can backup photos and videos in your phone, in your camera SD card, in your hard drive. It provide the similiar functionalities with those popular photo cloud services, like photo management, searching, sharing, but running on your own machine and store on your own devices.</p>
-
-<h2 id="3-what-is-needed">3. What is needed?</h2>
-
-<p>You will need a computer to run the photo backup service, it can be a desktop, a laptop, or even a single board computer with low power consumption, and it&rsquo;s cross platform(OSX/Windows/Linux). We would recommendate to run the service on Raspberry Pi so you can keep the service running on 7x24 hours, don&rsquo;t worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a>.</p>
-
-<p>You also need hard drive to backup the photo, you can install hard drive support by the system, if you are using Raspberry Pi, then you will be happy that it supports almost all the popular formats.</p>
-
-<p>You can download the Apps on your smart phone, currently only iOS is supported, Android support is in progress.</p>
-
-<h2 id="4-where-can-i-download-the-application">4. Where can I download the application?</h2>
-
-<ul>
-<li><p><a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.5/image_2019-08-01-lomorage-lite.zip">Service Raspberry Pi image</a></p></li>
-
-<li><p><a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_08_06.22_40_22.0.79b4818/LomoAgent.dmg">Service OSX version</a></p></li>
-
-<li><p><a href="https://github.com/lomorage/LomoAgentWin/releases/download/lomoagent-2019_08_08.08_39_09.0.364163e/lomoagent.msi">Service Windows version</a></p></li>
-
-<li><p>lomorage on iOS is currently in beta testing, <a href="mailto:support@lomorage.com">request</a> for testflight access.</p></li>
-
-<li><p>lomorage on Android (Work in progress)</p></li>
-</ul>
-
-<h2 id="5-why-another-photo-backup-service">5. Why another photo backup service?</h2>
+<h2 id="2-why-another-photo-backup-service">2. Why another photo backup service?</h2>
 
 <p>We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we&rsquo;d also like to share them with our family and friends. NAS is a little bit heavy weight for this purpose, it&rsquo;s expensive, hard to install and maintain for non technical users, and require formatting of hard drive and install system on it.</p>
 
@@ -219,7 +201,7 @@
 <hr />
 
 <blockquote>
-<p>In case you haven&rsquo;t found the answer for your question please feel free to contact us, we will be happy to help you.</p>
+<p>In case you haven&rsquo;t found the answer for your question please feel free to <a href="/contact">contact us</a>, we will be happy to help you.</p>
 </blockquote>
 
                         </div>

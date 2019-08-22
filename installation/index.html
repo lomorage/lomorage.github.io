@@ -2,6 +2,14 @@
 <html lang="en-us">
 
   <head>
+  <script type="text/javascript">
+      var userLang = navigator.language || navigator.userLanguage;
+      console.log(window.location.pathname);
+      if (userLang.startsWith("zh") && window.location.pathname == "/") {
+              window.location.href = '/zh/';
+      }
+  </script>
+
   <meta charset="utf-8">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
@@ -210,7 +218,7 @@
 
 <h3 id="lomorage-service">Lomorage Service</h3>
 
-<p>You can choose which version of Lomorage to download based on your perference. Running lomorage service on Windows or OSX give you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi.</p>
+<p>You can choose which version of Lomorage to download based on your perference. Running lomorage service on Windows or OSX give you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don&rsquo;t need worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a></p>
 
 <p align="center">
 
@@ -289,7 +297,7 @@
   <img width="50%" src="/img/installation/balenaEtcher.png">
 </p>
 
-<p>After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few seconds for the system boot.</p>
+<p>After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.</p>
 
 <h3 id="ios">iOS</h3>
 
