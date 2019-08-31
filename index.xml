@@ -83,8 +83,7 @@ Cross Platfrom There is no OS limitation for running the lomorage service, you c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation/</guid>
-      <description>Installation Guide  1. Overview 2. Download  Lomorage Service Lomorage client  3. Setup  Windows macOS Raspberry Pi iOS    Installation Guide 1. Overview To use Lomorage, you need run the lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need download the client APP at app store.
-2. Download Lomorage Service You can choose which version of Lomorage to download based on your perference.</description>
+      <description>Installation Guide  1. Overview 2. Download  Lomorage Service Lomorage client  3. Setup  Windows macOS Raspberry Pi iOS  4. External Access  localtunnel  1. Install nodejs 2. Install localtunnel 3. Run localtunnel 4. Config tunnel service on Lomorage application.  ngrok  1. Register 2. Download 3. Installation 4. Connect your account 5. Run ngrok 6. Config tunnel service on Lomorage application.     Installation Guide 1.</description>
     </item>
     
     <item>
@@ -102,7 +101,7 @@ Cross Platfrom There is no OS limitation for running the lomorage service, you c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/faq/</guid>
-      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. Why another photo backup service? 3. How to setup redandency backup? 4. What file systems supported?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.
+      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. Why another photo backup service? 3. How to setup redandency backup? 4. What file systems supported? 5. Why the date time seems not correct?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.
 2. Why another photo backup service? We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we&amp;rsquo;d also like to share them with our family and friends.</description>
     </item>
     

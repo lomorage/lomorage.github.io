@@ -205,6 +205,28 @@
 <li><a href="#raspberry-pi">Raspberry Pi</a></li>
 <li><a href="#ios">iOS</a></li>
 </ul></li>
+<li><a href="#4-external-access">4. External Access</a>
+
+<ul>
+<li><a href="#localtunnel">localtunnel</a>
+
+<ul>
+<li><a href="#1-install-nodejs">1. Install nodejs</a></li>
+<li><a href="#2-install-localtunnel">2. Install localtunnel</a></li>
+<li><a href="#3-run-localtunnel">3. Run localtunnel</a></li>
+<li><a href="#4-config-tunnel-service-on-lomorage-application">4. Config tunnel service on Lomorage application.</a></li>
+</ul></li>
+<li><a href="#ngrok">ngrok</a>
+
+<ul>
+<li><a href="#1-register">1. Register</a></li>
+<li><a href="#2-download-1">2. Download</a></li>
+<li><a href="#3-installation">3. Installation</a></li>
+<li><a href="#4-connect-your-account">4. Connect your account</a></li>
+<li><a href="#5-run-ngrok">5. Run ngrok</a></li>
+<li><a href="#6-config-tunnel-service-on-lomorage-application">6. Config tunnel service on Lomorage application.</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -317,6 +339,100 @@
   <img width="30%" src="/img/installation/ios-share.png">
 </p>
 </div>
+
+<h2 id="4-external-access">4. External Access</h2>
+
+<p>Currently external access need some manual setup and some technical background, we will make the process more user friendly later.</p>
+
+<p>There are a few tunnel services available for free use, most tunnel service require a client application running on your device, and setup a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the url with that subdomain, the tunnel service will forward the traffic/request to the client application.</p>
+
+<p>You can use <a href="https://localtunnel.me">localtunnel</a> or <a href="https://ngrok.com">ngrok</a>, both are free tunnel services. localtunnel doesn&rsquo;t require registration, and it can customize the subdomain, so it&rsquo;s pre-installed in Lomorage Raspberry Pi image, while ngrok may be more stable and has less dependencies.</p>
+
+<p><em>If you are using Lomorage Raspberry Pi image, the login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
+
+<h3 id="localtunnel">localtunnel</h3>
+
+<p>localtunnel requires <a href="https://nodejs.org/">nodejs</a>, if you are using Windows or macOS, you need install nodejs first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then localtunnel is already installed and you can skip step 1 an step2.</p>
+
+<h4 id="1-install-nodejs">1. Install nodejs</h4>
+
+<p>Download and install the <a href="(https://nodejs.org/en/download/)">binaries</a> in your platform.</p>
+
+<h4 id="2-install-localtunnel">2. Install localtunnel</h4>
+
+<p>Open the terminal and type</p>
+
+<pre><code>npm install -g localtunnel
+</code></pre>
+
+<h4 id="3-run-localtunnel">3. Run localtunnel</h4>
+
+<p>Assuming the preferred subdomain name is &ldquo;allice&rdquo; (you can choose your own subdomain), then open the terminal and type:</p>
+
+<pre><code>lt -s allice -p 8000 --print-requests
+</code></pre>
+
+<p>&rdquo;-s&rdquo; specify the subdomain to use, &ldquo;-p&rdquo; specify the port forward to, Lomorage service is using &ldquo;8000&rdquo; by default, and &ldquo;&ndash;print-requests&rdquo; will output coming requests.</p>
+
+<p>And if you see the output without any error message, and print out something like:</p>
+
+<pre><code>your url is: https://allice.localtunnel.me
+</code></pre>
+
+<p>Then you can start open that url in your browser, and if you see requests log printing in localtunnel output, then the tunnel is setup successfully.</p>
+
+<pre><code>Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
+</code></pre>
+
+<script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
+
+<h4 id="4-config-tunnel-service-on-lomorage-application">4. Config tunnel service on Lomorage application.</h4>
+
+<p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like &ldquo;allice.localtunnel.me&rdquo;, and the port is &ldquo;443&rdquo;.</p>
+
+<h3 id="ngrok">ngrok</h3>
+
+<h4 id="1-register">1. Register</h4>
+
+<p>Sign up a ngrok account <a href="https://dashboard.ngrok.com/signup">here</a>, after that, it will show up a &ldquo;Setup &amp; Installation&rdquo; page.</p>
+
+<h4 id="2-download-1">2. Download</h4>
+
+<p>ngrok is just one binary, you can download the version on your platform.</p>
+
+<p>If you are on Raspberry Pi, you can copy the link of Linux(ARM) on the &ldquo;Setup &amp; Installation&rdquo; page, which is &ldquo;<a href="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;">https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;</a> for now, and download it via &ldquo;wget&rdquo;.</p>
+
+<pre><code>wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+</code></pre>
+
+<h4 id="3-installation">3. Installation</h4>
+
+<p>unzip and get the binary. You can double click on Windows or macOS to unzip it.</p>
+
+<p>If you are using Raspberry Pi, use &ldquo;unzip&rdquo; command:</p>
+
+<pre><code>unzip ngrok-stable-linux-arm.zip
+</code></pre>
+
+<h4 id="4-connect-your-account">4. Connect your account</h4>
+
+<p>On the &ldquo;Setup &amp; Installation&rdquo; page step 3, it shows the authtoken, you need open <strong>terminal</strong> to run ngrok to add the authtoken to the config file.</p>
+
+<pre><code>./ngrok authtoken [your-authtoken-show-in-step-3]
+</code></pre>
+
+<h4 id="5-run-ngrok">5. Run ngrok</h4>
+
+<p>Lomorage service is using &ldquo;8000&rdquo; by default, and ngrok can&rsquo;t customize subdomain with free account. After runnig successfully, it will show the tunnel url, the subdomain is a random string which might change in next run.</p>
+
+<pre><code>./ngrok http 8000
+</code></pre>
+
+<h4 id="6-config-tunnel-service-on-lomorage-application">6. Config tunnel service on Lomorage application.</h4>
+
+<p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like &ldquo;2e30eea5.ngrok.io&rdquo;, and the port is &ldquo;443&rdquo;.</p>
+
+<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
 
 <p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>

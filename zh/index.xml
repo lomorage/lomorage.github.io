@@ -54,13 +54,14 @@ macOS 在macOs上双击运行Lomorage应用程序后，您需要设置数据目�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/faq/</guid>
-      <description>  1. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? 2. 这是在重新发明轮子吗? 3. 如何设置冗余备份? 4. 支持那些文件系统?  1. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? &amp;ldquo;lomorage&amp;rdquo;结合了&amp;rdquo;Lomography&amp;rdquo;和&amp;rdquo;Storage&amp;rdquo;两个单词.
+      <description>  1. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? 2. 这是在重新发明轮子吗? 3. 如何设置冗余备份? 4. 支持那些文件系统? 5. 为什么时间看起来不对?  1. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? &amp;ldquo;lomorage&amp;rdquo;结合了&amp;rdquo;Lomography&amp;rdquo;和&amp;rdquo;Storage&amp;rdquo;两个单词.
 2. 这是在重新发明轮子吗? 我们希望把照片视频备份在私有的存储设备，并且方便和家人分享，而不是将其备份到云端。NAS对于我们的需求有点杀鸡用牛刀的感觉，而且NAS非常昂贵，安装操作复杂，对于普通非技术背景用户并不容易，不能利用闲置硬盘，而且需要格式化已有的数据。Lomorage想做的就是一个安装简单，使用方便，功能不多不少刚刚好的一个照片备份和管理的私有云服务。
 更多信息
 3. 如何设置冗余备份? 如果您是在macOS上运行Lomorage服务（Windows暂时还没有支持），您可以打开LomoAgent应用程序的设置窗口，设置冗余备份。
 如果您是在树莓派上运行Lomorage服务，插入新的硬盘后，打开iOS手机客户端，在设置选项卡里可以设置冗余备份。
 4. 支持那些文件系统? 如果您在macOS或者Windows上运行Lomorage服务，您可以使用任何Windows或者macOS操作系统原生支持的文件系统。
 如果您是在树莓派上运行Lomorage服务，你可以使用更多的文件系统，包括:&amp;ldquo;vfat exfat ext2 ext3 ext4 hfsplus ntfs fuseblk&amp;rdquo;。
+5. 为什么时间看起来不对? 在系统中使用UTC时间来存储而不是本地时间，原因是照片可能拍摄于不同的时区，用户也会离开原先的住处搬迁到另外的时区，使用UTC时间戳能简化处理，而且可以很容易的在客户端应用程序转化为本地时间。
  如果您有更多的问题没有在这里找到答案，请联系我们
  </description>
     </item>

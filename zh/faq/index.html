@@ -191,6 +191,7 @@
 <li><a href="#2-这是在重新发明轮子吗">2. 这是在重新发明轮子吗?</a></li>
 <li><a href="#3-如何设置冗余备份">3. 如何设置冗余备份?</a></li>
 <li><a href="#4-支持那些文件系统">4. 支持那些文件系统?</a></li>
+<li><a href="#5-为什么时间看起来不对">5. 为什么时间看起来不对?</a></li>
 </ul>
 
 <h2 id="1-怎么想到-lomorage-这个名字">1. 怎么想到&rdquo;Lomorage&rdquo;这个名字?</h2>
@@ -214,6 +215,10 @@
 <p>如果您在macOS或者Windows上运行Lomorage服务，您可以使用任何Windows或者macOS操作系统原生支持的文件系统。</p>
 
 <p>如果您是在树莓派上运行Lomorage服务，你可以使用更多的文件系统，包括:&ldquo;vfat exfat ext2 ext3 ext4 hfsplus ntfs fuseblk&rdquo;。</p>
+
+<h2 id="5-为什么时间看起来不对">5. 为什么时间看起来不对?</h2>
+
+<p>在系统中使用<a href="https://baike.baidu.com/item/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6">UTC时间</a>来存储而不是本地时间，原因是照片可能拍摄于不同的时区，用户也会离开原先的住处搬迁到另外的时区，使用UTC时间戳能简化处理，而且可以很容易的在客户端应用程序转化为本地时间。</p>
 
 <hr />
 
