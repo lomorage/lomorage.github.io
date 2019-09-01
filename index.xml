@@ -83,7 +83,7 @@ Cross Platfrom There is no OS limitation for running the lomorage service, you c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation/</guid>
-      <description>Installation Guide  1. Overview 2. Download  Lomorage Service Lomorage client  3. Setup  Windows macOS Raspberry Pi iOS  4. External Access  localtunnel  1. Install nodejs 2. Install localtunnel 3. Run localtunnel 4. Config tunnel service on Lomorage application.  ngrok  1. Register 2. Download 3. Installation 4. Connect your account 5. Run ngrok 6. Config tunnel service on Lomorage application.     Installation Guide 1.</description>
+      <description>Installation Guide  1. Overview 2. Download  Lomorage Service Lomorage client  3. Setup  Windows macOS Raspberry Pi iOS  4. External Access  localtunnel  1. Install nodejs 2. Install localtunnel 3. Run localtunnel 4. Config tunnel service on Lomorage APP  ngrok  1. Register 2. Download 3. Installation 4. Connect your account 5. Run ngrok 6. Config tunnel service on Lomorage APP     Installation Guide 1.</description>
     </item>
     
     <item>

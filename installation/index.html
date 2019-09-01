@@ -214,7 +214,7 @@
 <li><a href="#1-install-nodejs">1. Install nodejs</a></li>
 <li><a href="#2-install-localtunnel">2. Install localtunnel</a></li>
 <li><a href="#3-run-localtunnel">3. Run localtunnel</a></li>
-<li><a href="#4-config-tunnel-service-on-lomorage-application">4. Config tunnel service on Lomorage application.</a></li>
+<li><a href="#4-config-tunnel-service-on-lomorage-app">4. Config tunnel service on Lomorage APP</a></li>
 </ul></li>
 <li><a href="#ngrok">ngrok</a>
 
@@ -224,7 +224,7 @@
 <li><a href="#3-installation">3. Installation</a></li>
 <li><a href="#4-connect-your-account">4. Connect your account</a></li>
 <li><a href="#5-run-ngrok">5. Run ngrok</a></li>
-<li><a href="#6-config-tunnel-service-on-lomorage-application">6. Config tunnel service on Lomorage application.</a></li>
+<li><a href="#6-config-tunnel-service-on-lomorage-app">6. Config tunnel service on Lomorage APP</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -346,13 +346,13 @@
 
 <p>There are a few tunnel services available for free use, most tunnel service require a client application running on your device, and setup a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the url with that subdomain, the tunnel service will forward the traffic/request to the client application.</p>
 
-<p>You can use <a href="https://localtunnel.me">localtunnel</a> or <a href="https://ngrok.com">ngrok</a>, both are free tunnel services. localtunnel doesn&rsquo;t require registration, and it can customize the subdomain, so it&rsquo;s pre-installed in Lomorage Raspberry Pi image, while ngrok may be more stable and has less dependencies.</p>
+<p>You can use <a href="https://localtunnel.me">localtunnel</a> or <a href="https://ngrok.com">ngrok</a>, both are free tunnel services. localtunnel doesn&rsquo;t require registration, and it can customize the subdomain, so it&rsquo;s pre-installed in Lomorage Raspberry Pi image, while ngrok need register before use, and need pay to customize subdomain, but it&rsquo;s more stable and zero dependencies.</p>
 
 <p><em>If you are using Lomorage Raspberry Pi image, the login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
 
 <h3 id="localtunnel">localtunnel</h3>
 
-<p>localtunnel requires <a href="https://nodejs.org/">nodejs</a>, if you are using Windows or macOS, you need install nodejs first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then localtunnel is already installed and you can skip step 1 an step2.</p>
+<p>If you are using Windows or macOS, you need install <a href="https://nodejs.org/">nodejs</a> first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then localtunnel is already installed and you can skip step 1 an step2.</p>
 
 <h4 id="1-install-nodejs">1. Install nodejs</h4>
 
@@ -386,7 +386,7 @@
 
 <script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
 
-<h4 id="4-config-tunnel-service-on-lomorage-application">4. Config tunnel service on Lomorage application.</h4>
+<h4 id="4-config-tunnel-service-on-lomorage-app">4. Config tunnel service on Lomorage APP</h4>
 
 <p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like &ldquo;allice.localtunnel.me&rdquo;, and the port is &ldquo;443&rdquo;.</p>
 
@@ -416,7 +416,7 @@
 
 <h4 id="4-connect-your-account">4. Connect your account</h4>
 
-<p>On the &ldquo;Setup &amp; Installation&rdquo; page step 3, it shows the authtoken, you need open <strong>terminal</strong> to run ngrok to add the authtoken to the config file.</p>
+<p>On the &ldquo;Setup &amp; Installation&rdquo; page step 3, it shows the “authtoken”, you need open <strong>terminal</strong> to run ngrok to add the authtoken to the config file.</p>
 
 <pre><code>./ngrok authtoken [your-authtoken-show-in-step-3]
 </code></pre>
@@ -428,7 +428,7 @@
 <pre><code>./ngrok http 8000
 </code></pre>
 
-<h4 id="6-config-tunnel-service-on-lomorage-application">6. Config tunnel service on Lomorage application.</h4>
+<h4 id="6-config-tunnel-service-on-lomorage-app">6. Config tunnel service on Lomorage APP</h4>
 
 <p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like &ldquo;2e30eea5.ngrok.io&rdquo;, and the port is &ldquo;443&rdquo;.</p>
 

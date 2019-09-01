@@ -66,13 +66,13 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/categories/"
+                hreflang="zh"
+                href="https://lomorage.com/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/categories/"
+                hreflang="es"
+                href="https://lomorage.com/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -139,13 +139,13 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/"
+                hreflang="zh"
+                href="https://lomorage.com/zh/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/"
+                hreflang="es"
+                href="https://lomorage.com/es/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -161,13 +161,13 @@
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/programming/</loc>
+    <loc>https://lomorage.com/categories/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lomorage.com/categories/programming/</loc>
+    <loc>https://lomorage.com/tags/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -190,13 +190,13 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/tags/"
+                hreflang="zh"
+                href="https://lomorage.com/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/tags/"
+                hreflang="es"
+                href="https://lomorage.com/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"

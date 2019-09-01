@@ -38,14 +38,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation/</guid>
-      <description>安装说明  1. 简介 2. 下载  Lomorage服务 Lomorage客户端  3. 安装  Windows macOS 树莓派 iOS    安装说明 1. 简介 要使用Lomorage，您需要在本地网络运行Lomorage服务，您可以选择在Windows，macOS或者树莓派上运行。然后您需要下载手机客户端应用。
+      <description>安装说明  1. 简介 2. 下载  Lomorage服务 Lomorage客户端  3. 安装  Windows macOS 树莓派 iOS  4. 外网访问  localtunnel  1. 安装nodejs 2. 安装localtunnel 3. 运行localtunnel 4. 在Lomorage手机应用中配置隧道服务  ngrok  1. 注册 2. 下载 3. 安装 4. 连接您的账号 5. 运行ngrok 6. 在Lomorage手机应用中配置隧道服务     安装说明 1. 简介 要使用Lomorage，您需要在本地网络运行Lomorage服务，您可以选择在Windows，macOS或者树莓派上运行。然后您需要下载手机客户端应用。
 2. 下载 Lomorage服务 您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务。Windows或macOS上运行Lomorage服务可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。
 Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi Lomorage客户端 现在支持者iOS，您可以在iPhone或者iPad上安装。现在还在beta测试阶段，点击这里申请testflight访问权限。
-TestFlight  &amp;nbsp;  -- 3. 安装 第一步: 安装Lomorage服务。
-Windows 在Windows上双击运行Lomorage应用程序后，您需要设置数据目录，用来存储您的手机照片备份。
-macOS 在macOs上双击运行Lomorage应用程序后，您需要设置数据目录，用来存储您的手机照片备份。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备。
-树莓派 要在树莓派上运行，您需要先购买一个树莓派，Lomorage可以运行在以下型号的机器上:
- Raspberry Pi 3 Model B+ Raspberry Pi Zero W Raspberry Pi 2 Model B  如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能，我们很快会提供支持树莓派4的系统镜像。下面是您需要的最小配置:</description>
+TestFlight  &amp;nbsp;  -- 3.</description>
     </item>
     
     <item>
