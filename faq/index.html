@@ -2,6 +2,14 @@
 <html lang="en-us">
 
   <head>
+  <script type="text/javascript">
+      var userLang = navigator.language || navigator.userLanguage;
+      console.log(window.location.pathname);
+      if (userLang.startsWith("zh") && window.location.pathname == "/") {
+              window.location.href = '/zh/';
+      }
+  </script>
+
   <meta charset="utf-8">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
@@ -102,6 +110,18 @@
                   
                   <li class="dropdown">
                     
+                    <a href="/features/">Features</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/installation/">Installation</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
                     <a href="/faq/">FAQ</a>
                     
                   </li>
@@ -166,46 +186,46 @@
                         <div>
                           
 
-<h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;lomorage&rdquo;?</h2>
-
-<p>If you know what Lomography is, then &ldquo;lomorage&rdquo; is just combination of &ldquo;Lomography&rdquo; and &ldquo;Storage&rdquo;.</p>
-
-<h2 id="2-what-lomorage-does">2. What &ldquo;lomorage&rdquo; does?</h2>
-
-<p>It&rsquo;s private photo backup service, you can backup photos and videos in your phone, in your camera SD card, in your hard drive. It provide the similiar functionalities with those popular photo cloud services, like photo management, searching, sharing, but running on your own machine and store on your own devices.</p>
-
-<h2 id="3-what-is-needed">3. What is needed?</h2>
-
-<p>You will need a computer to run the photo backup service, it can be a desktop, a laptop, or even a single board computer with low power consumption, and it&rsquo;s cross platform(OSX/Windows/Linux). We would recommendate to run the service on Raspberry Pi so you can keep the service running on 7x24 hours, don&rsquo;t worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a>.</p>
-
-<p>You also need hard drive to backup the photo, you can install hard drive support by the system, if you are using Raspberry Pi, then you will be happy that it supports almost all the popular formats.</p>
-
-<p>You can download the Apps on your smart phone, currently only iOS is supported, Android support is in progress.</p>
-
-<h2 id="4-where-can-i-download-the-application">4. Where can I download the application?</h2>
-
 <ul>
-<li><p><a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.4/image_2019-05-25-lomorage-lite.zip">Service Raspberry Pi image</a></p></li>
-
-<li><p><a href="https://github.com/lomorage/LomoAgentOSX/releases/download/v0.2/LomoAgent.dmg">Service OSX version</a></p></li>
-
-<li><p>Service Windows version (Work in progress)</p></li>
-
-<li><p><a href="https://github.com/lomorage/lomo-ios/releases/download/v0.42/lomo.ipa">lomorage on iOS</a></p></li>
-
-<li><p>lomorage on Android (Work in progress)</p></li>
+<li><a href="#1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</a></li>
+<li><a href="#2-why-another-photo-backup-service">2. Why another photo backup service?</a></li>
+<li><a href="#3-how-to-setup-redandency-backup">3. How to setup redandency backup?</a></li>
+<li><a href="#4-what-file-systems-supported">4. What file systems supported?</a></li>
+<li><a href="#5-why-the-date-time-seems-not-correct">5. Why the date time seems not correct?</a></li>
 </ul>
 
-<h2 id="5-why-another-photo-backup-service">5. Why another photo backup service?</h2>
+<h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</h2>
+
+<p>If you know what Lomography is, then &ldquo;Lomorage&rdquo; is just combination of &ldquo;Lomography&rdquo; and &ldquo;Storage&rdquo;.</p>
+
+<h2 id="2-why-another-photo-backup-service">2. Why another photo backup service?</h2>
 
 <p>We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we&rsquo;d also like to share them with our family and friends. NAS is a little bit heavy weight for this purpose, it&rsquo;s expensive, hard to install and maintain for non technical users, and require formatting of hard drive and install system on it.</p>
 
 <p>Buy a cheap Raspberry Pi with only 35$, install the prebuild lomorage image, connect your own hard drive, download the app, we just need a simple and efficient solution for photo and video backup, management and share.</p>
 
+<p>See more <a href="/lomorage.pdf">here</a></p>
+
+<h2 id="3-how-to-setup-redandency-backup">3. How to setup redandency backup?</h2>
+
+<p>If you are running Lomorage service on macOS (Windows haven&rsquo;t support yet), you can open the settings window of LomoAgent application, and set the redandency backup there.</p>
+
+<p>If you are running Lomorage service on Raspberry Pi, you can plugin in a new disk drive, and open iOS client APP, go to settings tab and set the redandency backup there.</p>
+
+<h2 id="4-what-file-systems-supported">4. What file systems supported?</h2>
+
+<p>If you are on Windows or macOS, then you can use whatever file system supported by Windows or macOS.</p>
+
+<p>If you are on Raspberry Pi, it supports &ldquo;vfat exfat ext2 ext3 ext4 hfsplus ntfs fuseblk&rdquo;.</p>
+
+<h2 id="5-why-the-date-time-seems-not-correct">5. Why the date time seems not correct?</h2>
+
+<p>The date time used to store on the system is in <a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a>, not the time of local timezone, the reason is that the photo can be taken in different timezones, and the user may travel or relocate to different timezones, to simplify the processing, we use UTC timestamp, and it can easily convert to different timezones on the APP.</p>
+
 <hr />
 
 <blockquote>
-<p>In case you haven&rsquo;t found the answer for your question please feel free to contact us, we will be happy to help you.</p>
+<p>In case you haven&rsquo;t found the answer for your question please feel free to <a href="/contact">contact us</a>, we will be happy to help you.</p>
 </blockquote>
 
                         </div>

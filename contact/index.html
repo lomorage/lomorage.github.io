@@ -2,6 +2,14 @@
 <html lang="en-us">
 
   <head>
+  <script type="text/javascript">
+      var userLang = navigator.language || navigator.userLanguage;
+      console.log(window.location.pathname);
+      if (userLang.startsWith("zh") && window.location.pathname == "/") {
+              window.location.href = '/zh/';
+      }
+  </script>
+
   <meta charset="utf-8">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
@@ -97,6 +105,18 @@
                   <li class="dropdown">
                     
                     <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/features/">Features</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/installation/">Installation</a>
                     
                   </li>
                   
