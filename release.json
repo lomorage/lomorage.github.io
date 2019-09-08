@@ -4,12 +4,6 @@
                    "OS":  "mac",
                    "SHA256":  "9929094b78c2122ff5afc1888f7a2c3581d24da67e79a9135672230c8debb335",
                    "URL":  "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_07.23_10_03.0.c0beee3/LomoAgent.zip",
-                   "PreCmds":  [
-                                   "PreCmds"
-                               ],
-                   "PostCmds":  [
-                                    "PostCmds"
-                                ],
                    "LomoUpgVer":  "1.0.1",
                    "LomoUpdateURL":  "https://github.com/lomorage/lomoUpdate/releases/download/v0.1/lomoupg-osx.zip"
                },
@@ -18,12 +12,6 @@
                     "OS":  "windows",
                     "SHA256":  "F10945A034C41FE99F1BDF2940D29888BAB4EA06B8C093859697B6715E881FB2",
                     "URL":  "http://lomorage.github.io/lomoagent-2019_09_03.21_50_50.0.0bab270.zip",
-                    "PreCmds":  [
-                                    "PreCmds"
-                                ],
-                    "PostCmds":  [
-                                     "PostCmds"
-                                 ],
                     "LomoUpgVer":  "20190902",
                     "LomoUpdateURL":  "http://lomorage.github.io/lomoupdate-2019_09_03.21_50_50.0.0bab270.zip"
                 }
