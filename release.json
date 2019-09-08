@@ -2,8 +2,8 @@
     "darwin":  {
                    "Version":  "2019_09_07.21_36_19.0.2a7cc13",
                    "OS":  "mac",
-                   "SHA256":  "b1a4d65e3ebff226619550505f3a59f0e03b72e03c947f735c65101fc90810c4",
-                   "URL":  "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_07.21_36_19.0.2a7cc13/LomoAgent.zip",
+                   "SHA256":  "9929094b78c2122ff5afc1888f7a2c3581d24da67e79a9135672230c8debb335",
+                   "URL":  "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_07.23_10_03.0.c0beee3/LomoAgent.zip",
                    "PreCmds":  [
                                    "PreCmds"
                                ],
