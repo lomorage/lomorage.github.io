@@ -72,9 +72,9 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/features/</guid>
-      <description>Feature Highlight Privacy Matters Lomorage is a private cloud service which runs on your private network, which give your the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
-You can also setup multiple lomorage services in your private network, for different family members, which are complete isolated with each other.
-Cross Platfrom There is no OS limitation for running the lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&amp;rsquo;s request.</description>
+      <description>Feature Highlight Privacy Matters Lomorage is a private cloud service which runs on your private network, which gives you the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
+You can also set up multiple Lomorage services in your private network, for different family members, which are completely isolated with each other.
+Cross-Platform There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&amp;rsquo;s request.</description>
     </item>
     
     <item>
@@ -101,7 +101,7 @@ Cross Platfrom There is no OS limitation for running the lomorage service, you c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/faq/</guid>
-      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. Why another photo backup service? 3. How to setup redandency backup? 4. What file systems supported? 5. Why the date time seems not correct?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.
+      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. Why another photo backup service? 3. How to setup redandency backup? 4. What file systems supported? 5. Why the date time seems not correct?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just a combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.
 2. Why another photo backup service? We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we&amp;rsquo;d also like to share them with our family and friends.</description>
     </item>
     
