@@ -244,7 +244,7 @@
 
 <p align="center">
 
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_18.21_30_47.0.10a3afd/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_19.21_24_06.0.b5e1243/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
  
@@ -252,7 +252,7 @@
 
  &nbsp;
  
-<a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.6/image_2019-09-16-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 <h3 id="lomorage-client">Lomorage client</h3>
@@ -336,6 +336,7 @@
 <p>To run on Raspberry Pi, you need to order a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, we have tested the image the following models:</p>
 
 <ul>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
@@ -351,7 +352,7 @@
 
 <p>A <a href="https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/">Raspberry Pi 3 B+ (PLUS) Starter Kit</a> is good enough for the setup.</p>
 
-<p>After you download the customized <a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.5/image_2019-08-01-lomorage-lite.zip">OS image</a>, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
+<p>After you download the customized <a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip">OS image</a>, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
 
 <p>After you insert the MicroSD to your desktop or laptop, just select the image you download, choose the MicroSD drive, and click &ldquo;Flash&rdquo;, it will be done in a few minutes.</p>
 
@@ -360,6 +361,10 @@
 </p>
 
 <p>After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.</p>
+
+<p>We strongely suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command <code>wifi_switch client [wifi-ssid] [wifi-password]</code>, replace &ldquo;[wifi-ssid]&rdquo; and &ldquo;[wifi-password]&rdquo; with those of your wifi network.</p>
+
+<p><em>The login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
 
 <h3 id="ios">iOS</h3>
 
@@ -392,7 +397,7 @@
 
 <h3 id="localtunnel">localtunnel</h3>
 
-<p>If you are using Windows or macOS, you need to install <a href="https://nodejs.org/">nodejs</a> first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then localtunnel is already installed and you can skip step 1 an step2.</p>
+<p>If you are using Windows or macOS, you need to install <a href="https://nodejs.org/">nodejs</a> first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then you can run command <code>sudo localtunnel_install.sh</code> to install localtunnel, and you can skip step 1 an step2.</p>
 
 <h4 id="1-install-nodejs">1. Install nodejs</h4>
 
