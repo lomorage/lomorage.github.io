@@ -3,34 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lomorage.com/features/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/features/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/features/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/installation/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation/"
-                />
-  </url>
-  
-  <url>
     <loc>https://lomorage.com/categories/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -75,6 +47,34 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://lomorage.com/faq/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/features/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/features/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/features/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/installation/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation/"
                 />
   </url>
   
