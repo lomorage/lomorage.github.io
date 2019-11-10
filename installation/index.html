@@ -202,7 +202,12 @@
 <ul>
 <li><a href="#windows">Windows</a></li>
 <li><a href="#macos">macOS</a></li>
-<li><a href="#raspberry-pi">Raspberry Pi</a></li>
+<li><a href="#raspberry-pi">Raspberry Pi</a>
+
+<ul>
+<li><a href="#install-with-prebuild-os-image">Install with prebuild OS image</a></li>
+<li><a href="#install-on-existing-raspbian">Install on existing Raspbian</a></li>
+</ul></li>
 <li><a href="#ios">iOS</a></li>
 </ul></li>
 <li><a href="#4-external-access">4. External Access</a>
@@ -247,11 +252,11 @@
 <a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_28.11_56_35.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
@@ -263,7 +268,7 @@
 <a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
 <!--
  &nbsp;
- 
+
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
 -->
 </p>
@@ -352,6 +357,10 @@
 
 <p>A <a href="https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/">Raspberry Pi 3 B+ (PLUS) Starter Kit</a> is good enough for the setup.</p>
 
+<p>There are two options to install Lomorage service on Raspberry Pi, one is using the prebuild OS image which has all the dependencies installed, another one is manaully installation if you already have Raspberry Pi setup and running for other purpose.</p>
+
+<h4 id="install-with-prebuild-os-image">Install with prebuild OS image</h4>
+
 <p>After you download the customized <a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip">OS image</a>, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
 
 <p>After you insert the MicroSD to your desktop or laptop, just select the image you download, choose the MicroSD drive, and click &ldquo;Flash&rdquo;, it will be done in a few minutes.</p>
@@ -365,6 +374,59 @@
 <p>We strongely suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command <code>wifi_switch client [wifi-ssid] [wifi-password]</code>, replace &ldquo;[wifi-ssid]&rdquo; and &ldquo;[wifi-password]&rdquo; with those of your wifi network.</p>
 
 <p><em>The login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
+
+<h4 id="install-on-existing-raspbian">Install on existing Raspbian</h4>
+
+<p><strong>step 1. Add lomoware source.</strong></p>
+
+<pre><code>wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+</code></pre>
+
+<p>If you are using jessie:</p>
+
+<pre><code>echo &quot;deb https://lomoware.github.io/debian jessie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+
+<p>If you are using buster:</p>
+
+<pre><code>echo &quot;deb https://lomoware.github.io/debian/buster buster main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+
+<p>then run:</p>
+
+<pre><code>sudo apt update
+</code></pre>
+
+<p><strong>step 2. Install ffmpeg and rsync.</strong></p>
+
+<pre><code>sudo apt install ffmpeg rsync -y
+</code></pre>
+
+<p><strong>step 3. Install file systems support.</strong></p>
+
+<pre><code>sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+</code></pre>
+
+<p><strong>step 4. Install usbmount.</strong></p>
+
+<p>You can skip this if you are using desktop image which has PCManFM installed that can auto mount the USB drive. If you are using the Lite image, and you can use usbmount to auto mount the USB drive.</p>
+
+<p>The usbmount we are using is a modified version which mounts a specfic USB drive to a fixed mount point in &ldquo;/media&rdquo; directory, which means the order you plugin the drives doesn&rsquo;t matter, the mount point is always the same.</p>
+
+<pre><code>sudo apt install lockfile-progs -y
+sudo mkdir /etc/usbmount
+sudo mkdir /usr/share/usbmount
+sudo wget -qO /etc/usbmount/usbmount.conf https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.conf
+sudo wget -qO /usr/share/usbmount/usbmount https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount
+sudo chmod +x /usr/share/usbmount/usbmount
+sudo wget -qO /etc/udev/rules.d/usbmount.rules https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.rules
+sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount%40.service
+</code></pre>
+
+<p><strong>step 5. Install Lomorage service</strong></p>
+
+<pre><code>sudo apt install lomo-vips lomo-backend -y
+</code></pre>
 
 <h3 id="ios">iOS</h3>
 
@@ -429,7 +491,7 @@
 <pre><code>Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
 </code></pre>
 
-<script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
+<p><script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script></p>
 
 <h4 id="4-config-tunnel-service-on-lomorage-app">4. Config tunnel service on Lomorage APP</h4>
 
@@ -477,9 +539,8 @@
 
 <p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like &ldquo;2e30eea5.ngrok.io&rdquo;, and the port is &ldquo;443&rdquo;.</p>
 
-<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
-
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p><script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
 
                         </div>
