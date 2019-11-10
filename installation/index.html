@@ -377,7 +377,7 @@
 
 <h4 id="install-on-existing-raspbian">Install on existing Raspbian</h4>
 
-<p><strong>step 1. Add lomoware source.</strong></p>
+<p><strong>step 1. Add lomoware source</strong></p>
 
 <pre><code>wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
 </code></pre>
@@ -397,17 +397,17 @@
 <pre><code>sudo apt update
 </code></pre>
 
-<p><strong>step 2. Install ffmpeg and rsync.</strong></p>
+<p><strong>step 2. Install ffmpeg and rsync</strong></p>
 
 <pre><code>sudo apt install ffmpeg rsync -y
 </code></pre>
 
-<p><strong>step 3. Install file systems support.</strong></p>
+<p><strong>step 3. Install file systems support</strong></p>
 
 <pre><code>sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
 </code></pre>
 
-<p><strong>step 4. Install usbmount.</strong></p>
+<p><strong>step 4. Install usbmount</strong></p>
 
 <p>You can skip this if you are using desktop image which has PCManFM installed that can auto mount the USB drive. If you are using the Lite image, and you can use usbmount to auto mount the USB drive.</p>
 
@@ -426,6 +426,20 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 <p><strong>step 5. Install Lomorage service</strong></p>
 
 <pre><code>sudo apt install lomo-vips lomo-backend -y
+</code></pre>
+
+<p><strong>step 6. Change mount directory if needed</strong></p>
+
+<p>If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in &ldquo;/media&rdquo; directory, for example if you are using PCManFM, then the mount directory will be &ldquo;/media/pi&rdquo;.</p>
+
+<p>To specify the mount directory to be &ldquo;/media/pi&rdquo;, modify <code>ExecStart</code> in &ldquo;lib/systemd/system/lomod.service&rdquo;, and add paramter &ldquo;&ndash;mount-dir&rdquo; as below</p>
+
+<pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
+</code></pre>
+
+<p>Then restart Lomorage service:</p>
+
+<pre><code>sudo systemctl restart lomod
 </code></pre>
 
 <h3 id="ios">iOS</h3>
