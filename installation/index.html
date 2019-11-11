@@ -347,7 +347,7 @@
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
 </ul>
 
-<p>If you don&rsquo;t have one yet, we would recommend the newer version, which gives better performance, and we will support Raspberry Pi 4 soon. The minimum set you need includes:</p>
+<p>If you don&rsquo;t have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:</p>
 
 <ul>
 <li>Raspberry Pi board</li>
@@ -405,6 +405,8 @@
 <p><strong>step 3. Install file systems support</strong></p>
 
 <pre><code>sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
 </code></pre>
 
 <p><strong>step 4. Install usbmount</strong></p>

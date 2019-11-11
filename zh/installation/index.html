@@ -202,7 +202,12 @@
 <ul>
 <li><a href="#windows">Windows</a></li>
 <li><a href="#macos">macOS</a></li>
-<li><a href="#树莓派">树莓派</a></li>
+<li><a href="#树莓派">树莓派</a>
+
+<ul>
+<li><a href="#安装系统镜像">安装系统镜像</a></li>
+<li><a href="#安装在已有的raspbian系统上">安装在已有的Raspbian系统上</a></li>
+</ul></li>
 <li><a href="#ios">iOS</a></li>
 </ul></li>
 <li><a href="#4-外网访问">4. 外网访问</a>
@@ -247,11 +252,11 @@
 <a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_28.11_56_35.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
@@ -263,7 +268,7 @@
 <a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
 <!--
  &nbsp;
- 
+
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
 -->
 </p>
@@ -342,13 +347,17 @@
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
 </ul>
 
-<p>如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能，我们很快会提供支持树莓派4的系统镜像。下面是您需要的最小配置:</p>
+<p>如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能。下面是您需要的最小配置:</p>
 
 <ul>
 <li>树莓派主板</li>
 <li>配套电源</li>
 <li>16GB MicroSD卡</li>
 </ul>
+
+<p>有两种方式来在Raspberry Pi上安装Lomorage服务程序，一种是安装预编译好的系统镜像，该镜像已经安装了所有Lomorage服务程序依赖的库和第三方工具，简单快捷，推荐使用；另一种方式相对繁琐一点，但如果您已经有Raspberry Pi在运行其他的服务程序，您可以选择这种安装方式。</p>
+
+<h4 id="安装系统镜像">安装系统镜像</h4>
 
 <p>下载了<a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip">系统镜像</a>后, 你可以使用<a href="https://www.balena.io/etcher/">balenaEtcher</a>将其安装到MicroSD卡, balenaEtcher提供Windows和macOS版本。</p>
 
@@ -365,6 +374,75 @@
 <p>为了更好的性能，我们强烈建议使用有线网络连接，但如果您想使用WiFi, 您可以登陆树莓派，并使用下面的命令来启用无线连接<code>wifi_switch client [wifi-ssid] [wifi-password]</code>，将 &ldquo;[wifi-ssid]&ldquo;和&rdquo;[wifi-password]&ldquo;替换为您的无线网络名和密码。</p>
 
 <p><em>登陆的用户名是&rdquo;pi&rdquo;，密码是&rdquo;raspberry&rdquo;</em></p>
+
+<h4 id="安装在已有的raspbian系统上">安装在已有的Raspbian系统上</h4>
+
+<p><strong>步骤1. 添加lomoware源</strong></p>
+
+<pre><code>wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+</code></pre>
+
+<p>如果您使用 jessie:</p>
+
+<pre><code>echo &quot;deb https://lomoware.github.io/debian jessie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+
+<p>如果您使用buster:</p>
+
+<pre><code>echo &quot;deb https://lomoware.github.io/debian/buster buster main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+
+<p>然后运行:</p>
+
+<pre><code>sudo apt update
+</code></pre>
+
+<p><strong>步骤2. 安装ffmpeg和rsync</strong></p>
+
+<pre><code>sudo apt install ffmpeg rsync -y
+</code></pre>
+
+<p><strong>步骤3. 安装文件系统支持</strong></p>
+
+<pre><code>sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
+</code></pre>
+
+<p><strong>步骤4. 安装usbmount</strong></p>
+
+<p>如果您在使用桌面系统，因为已经有PCManFM可以自动加载USB磁盘，您可以跳过这一步。如果您使用的是Lite系统镜像，您可以使用usbmount来自动加载USB磁盘。</p>
+
+<p>我们使用的usbmount是一个修改过的版本，保证特定的磁盘设备加载到&rdquo;/media&rdquo;路径下面特定的子目录下，不会因为设备接入顺序不同而加载到不同的目录。</p>
+
+<pre><code>sudo apt install lockfile-progs -y
+sudo mkdir /etc/usbmount
+sudo mkdir /usr/share/usbmount
+sudo wget -qO /etc/usbmount/usbmount.conf https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.conf
+sudo wget -qO /usr/share/usbmount/usbmount https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount
+sudo chmod +x /usr/share/usbmount/usbmount
+sudo wget -qO /etc/udev/rules.d/usbmount.rules https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.rules
+sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount%40.service
+</code></pre>
+
+<p><strong>步骤5. 安装Lomorage服务应用</strong></p>
+
+<pre><code>sudo apt install lomo-vips lomo-backend -y
+</code></pre>
+
+<p><strong>步骤6. 按需修改加载目录</strong></p>
+
+<p>如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到&rdquo;/media&rdquo;路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。比如如果您使用PCManFM，那么加载的路径会是&rdquo;/media/pi&rdquo;。</p>
+
+<p>要指定加载目录&rdquo;/media/pi&rdquo;, 修改&rdquo;lib/systemd/system/lomod.service&rdquo; <code>ExecStart</code>字段，加上  &ldquo;&ndash;mount-dir&rdquo;参数:</p>
+
+<pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
+</code></pre>
+
+<p>重启Lomorage服务程序:</p>
+
+<pre><code>sudo systemctl restart lomod
+</code></pre>
 
 <h3 id="ios">iOS</h3>
 
@@ -430,50 +508,54 @@
 </code></pre>
 
 <script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
+#### 4. 在Lomorage手机应用中配置隧道服务
 
-<h4 id="4-在lomorage手机应用中配置隧道服务">4. 在Lomorage手机应用中配置隧道服务</h4>
+打开Lomorage手机应用，在配置选项页里找到"外网服务"，设置地址为localtunnel输出的url，比如类似"allice.localtunnel.me"，端口为"443"。
 
-<p>打开Lomorage手机应用，在配置选项页里找到&rdquo;外网服务&rdquo;，设置地址为localtunnel输出的url，比如类似&rdquo;allice.localtunnel.me&rdquo;，端口为&rdquo;443&rdquo;。</p>
+### ngrok
 
-<h3 id="ngrok">ngrok</h3>
+#### 1. 注册
 
-<h4 id="1-注册">1. 注册</h4>
+[注册](https://dashboard.ngrok.com/signup)ngrok，完成后，会显示"设置和安装"页面.
 
-<p><a href="https://dashboard.ngrok.com/signup">注册</a>ngrok，完成后，会显示&rdquo;设置和安装&rdquo;页面.</p>
+#### 2. 下载
 
-<h4 id="2-下载-1">2. 下载</h4>
+ngrok只有一个二进制文件，您可以下载特定平台的版本。
 
-<p>ngrok只有一个二进制文件，您可以下载特定平台的版本。</p>
+如果您使用树莓派，您需要在"设置和安装"页面中拷贝Linux(ARM)版本的链接，当前是"https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip", 您可以通过"wget"来下载。
 
-<p>如果您使用树莓派，您需要在&rdquo;设置和安装&rdquo;页面中拷贝Linux(ARM)版本的链接，当前是&rdquo;<a href="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;">https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;</a>, 您可以通过&rdquo;wget&rdquo;来下载。</p>
+```
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+```
 
-<pre><code>wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-</code></pre>
+#### 3. 安装
 
-<h4 id="3-安装-1">3. 安装</h4>
+解压缩得到二进制可执行文件。在Windows或macOS下，您可以双击解压，如果您使用树莓派，可以使用unzip命令
 
-<p>解压缩得到二进制可执行文件。在Windows或macOS下，您可以双击解压，如果您使用树莓派，可以使用unzip命令</p>
+```
+unzip ngrok-stable-linux-arm.zip
+```
 
-<pre><code>unzip ngrok-stable-linux-arm.zip
-</code></pre>
+#### 4. 连接您的账号
 
-<h4 id="4-连接您的账号">4. 连接您的账号</h4>
+在"设置和安装"页面的第三步会显示"authtoken"，您需要在**命令行窗口**中运行如下命令将"authtoken"添加到配置文件。
 
-<p>在&rdquo;设置和安装&rdquo;页面的第三步会显示&rdquo;authtoken&rdquo;，您需要在<strong>命令行窗口</strong>中运行如下命令将&rdquo;authtoken&rdquo;添加到配置文件。</p>
+```
+./ngrok authtoken [your-authtoken-show-in-step-3]
+```
 
-<pre><code>./ngrok authtoken [your-authtoken-show-in-step-3]
-</code></pre>
+#### 5. 运行ngrok
 
-<h4 id="5-运行ngrok">5. 运行ngrok</h4>
+Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子域名，ngrok运行成功后，会自动绑定一个随机子域名，这个子域名在下次ngrok重新启动时会变化。
 
-<p>Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子域名，ngrok运行成功后，会自动绑定一个随机子域名，这个子域名在下次ngrok重新启动时会变化。</p>
+```
+./ngrok http 8000
+```
 
-<pre><code>./ngrok http 8000
-</code></pre>
+#### 6. 在Lomorage手机应用中配置隧道服务
 
-<h4 id="6-在lomorage手机应用中配置隧道服务">6. 在Lomorage手机应用中配置隧道服务</h4>
+打开Lomorage手机应用，在配置选项页里找到"外网服务"，设置服务器地址为ngrok输出的url，比如类似"2e30eea5.ngrok.io"，端口为"443"。
 
-<p>打开Lomorage手机应用，在配置选项页里找到&rdquo;外网服务&rdquo;，设置服务器地址为ngrok输出的url，比如类似&rdquo;2e30eea5.ngrok.io&rdquo;，端口为&rdquo;443&rdquo;。</p>
 
 <script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
 
