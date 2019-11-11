@@ -397,14 +397,14 @@
 <pre><code>sudo apt update
 </code></pre>
 
-<p><strong>步骤2. 安装ffmpeg和rsync</strong></p>
+<p><strong>步骤2. 安装第三方工具</strong></p>
 
-<pre><code>sudo apt install ffmpeg rsync -y
+<pre><code>sudo apt install ffmpeg rsync jq libimage-exiftool-perl -y
 </code></pre>
 
 <p><strong>步骤3. 安装文件系统支持</strong></p>
 
-<pre><code>sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+<pre><code>sudo apt install nfs-common exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
 sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
 sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
 </code></pre>
@@ -507,59 +507,54 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 <pre><code>Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
 </code></pre>
 
-<script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
-#### 4. 在Lomorage手机应用中配置隧道服务
+<p><script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script></p>
 
-打开Lomorage手机应用，在配置选项页里找到"外网服务"，设置地址为localtunnel输出的url，比如类似"allice.localtunnel.me"，端口为"443"。
+<h4 id="4-在lomorage手机应用中配置隧道服务">4. 在Lomorage手机应用中配置隧道服务</h4>
 
-### ngrok
+<p>打开Lomorage手机应用，在配置选项页里找到&rdquo;外网服务&rdquo;，设置地址为localtunnel输出的url，比如类似&rdquo;allice.localtunnel.me&rdquo;，端口为&rdquo;443&rdquo;。</p>
 
-#### 1. 注册
+<h3 id="ngrok">ngrok</h3>
 
-[注册](https://dashboard.ngrok.com/signup)ngrok，完成后，会显示"设置和安装"页面.
+<h4 id="1-注册">1. 注册</h4>
 
-#### 2. 下载
+<p><a href="https://dashboard.ngrok.com/signup">注册</a>ngrok，完成后，会显示&rdquo;设置和安装&rdquo;页面.</p>
 
-ngrok只有一个二进制文件，您可以下载特定平台的版本。
+<h4 id="2-下载-1">2. 下载</h4>
 
-如果您使用树莓派，您需要在"设置和安装"页面中拷贝Linux(ARM)版本的链接，当前是"https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip", 您可以通过"wget"来下载。
+<p>ngrok只有一个二进制文件，您可以下载特定平台的版本。</p>
 
-```
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-```
+<p>如果您使用树莓派，您需要在&rdquo;设置和安装&rdquo;页面中拷贝Linux(ARM)版本的链接，当前是&rdquo;<a href="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;">https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;</a>, 您可以通过&rdquo;wget&rdquo;来下载。</p>
 
-#### 3. 安装
+<pre><code>wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+</code></pre>
 
-解压缩得到二进制可执行文件。在Windows或macOS下，您可以双击解压，如果您使用树莓派，可以使用unzip命令
+<h4 id="3-安装-1">3. 安装</h4>
 
-```
-unzip ngrok-stable-linux-arm.zip
-```
+<p>解压缩得到二进制可执行文件。在Windows或macOS下，您可以双击解压，如果您使用树莓派，可以使用unzip命令</p>
 
-#### 4. 连接您的账号
+<pre><code>unzip ngrok-stable-linux-arm.zip
+</code></pre>
 
-在"设置和安装"页面的第三步会显示"authtoken"，您需要在**命令行窗口**中运行如下命令将"authtoken"添加到配置文件。
+<h4 id="4-连接您的账号">4. 连接您的账号</h4>
 
-```
-./ngrok authtoken [your-authtoken-show-in-step-3]
-```
+<p>在&rdquo;设置和安装&rdquo;页面的第三步会显示&rdquo;authtoken&rdquo;，您需要在<strong>命令行窗口</strong>中运行如下命令将&rdquo;authtoken&rdquo;添加到配置文件。</p>
 
-#### 5. 运行ngrok
+<pre><code>./ngrok authtoken [your-authtoken-show-in-step-3]
+</code></pre>
 
-Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子域名，ngrok运行成功后，会自动绑定一个随机子域名，这个子域名在下次ngrok重新启动时会变化。
+<h4 id="5-运行ngrok">5. 运行ngrok</h4>
 
-```
-./ngrok http 8000
-```
+<p>Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子域名，ngrok运行成功后，会自动绑定一个随机子域名，这个子域名在下次ngrok重新启动时会变化。</p>
 
-#### 6. 在Lomorage手机应用中配置隧道服务
+<pre><code>./ngrok http 8000
+</code></pre>
 
-打开Lomorage手机应用，在配置选项页里找到"外网服务"，设置服务器地址为ngrok输出的url，比如类似"2e30eea5.ngrok.io"，端口为"443"。
+<h4 id="6-在lomorage手机应用中配置隧道服务">6. 在Lomorage手机应用中配置隧道服务</h4>
 
+<p>打开Lomorage手机应用，在配置选项页里找到&rdquo;外网服务&rdquo;，设置服务器地址为ngrok输出的url，比如类似&rdquo;2e30eea5.ngrok.io&rdquo;，端口为&rdquo;443&rdquo;。</p>
 
-<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
-
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<p><script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
 
                         </div>
