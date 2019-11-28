@@ -3,6 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lomorage.com/zh/external-access/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/external-access/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/external-access/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/zh/installation-ios/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-ios/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-ios/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/zh/installation-osx/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-osx/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-osx/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/zh/installation-pi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-pi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-pi/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/zh/installation-win/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-win/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-win/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/zh/categories/</loc>
     <priority>0</priority>
     <xhtml:link

@@ -26,9 +26,8 @@ There are a few tunnel services available for free use, most tunnel services req
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-ios/</guid>
-      <description>Install iOS Lomorage client Curently support iPhone and iPad.
-  -- You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3. Since it&amp;rsquo;s currently in beta testing using testflight, user needs to download testflight first, and then install Lomorage in testflight. Drop us an email to request testflight access.
-After launching Lomorage, it should be able to discover the Lomorage service running in the same network.</description>
+      <description>Install iOS Lomorage client You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3.
+  -- After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use. If Lomorage service can&amp;rsquo;t be discovered automatically, you can discover the service via QRCode Scanning when using Windows or MacOS LomoAgent (open settings in LomoAgent to show the QRCode), or you can input the IP address and port manually.</description>
     </item>
     
     <item>

@@ -4,22 +4,72 @@
   
   <url>
     <loc>https://lomorage.com/external-access/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/external-access/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/external-access/"
+                />
   </url>
   
   <url>
     <loc>https://lomorage.com/installation-ios/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-ios/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-ios/"
+                />
   </url>
   
   <url>
     <loc>https://lomorage.com/installation-osx/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-osx/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-osx/"
+                />
   </url>
   
   <url>
     <loc>https://lomorage.com/installation-pi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-pi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-pi/"
+                />
   </url>
   
   <url>
     <loc>https://lomorage.com/installation-win/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-win/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-win/"
+                />
   </url>
   
   <url>

@@ -67,7 +67,7 @@
   
   <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/installation-pi//" />
+  <meta property="og:url" content="/zh/installation-ios//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -88,11 +88,11 @@
                 <a class="navbar-brand home" href="https://lomorage.com/">
                     <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
                     <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
-                    <span class="sr-only"> - go to homepage</span>
+                    <span class="sr-only"> - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">Toggle Navigation</span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -104,31 +104,31 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/">Home</a>
+                    <a href="/zh">主页</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/features/">Features</a>
+                    <a href="/zh/features/">特性</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/installation/">Installation</a>
+                    <a href="/zh/installation/">安装</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/faq/">FAQ</a>
+                    <a href="/zh/faq/">常见问题</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/contact/">Contact</a>
+                    <a href="/zh/contact/">联系</a>
                     
                   </li>
                   
@@ -186,119 +186,32 @@
                         <div>
                           
 
-<h1 id="install-lomorage-service-on-raspberry-pi">Install Lomorage Service on Raspberry Pi</h1>
+<h1 id="安装lomorage-ios客户端">安装Lomorage iOS客户端</h1>
 
-<p>To run on Raspberry Pi, you need to order a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, we have tested the image the following models:</p>
-
-<ul>
-<li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a></li>
-<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
-<li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
-<li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
-</ul>
-
-<p>If you don&rsquo;t have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:</p>
-
-<ul>
-<li>Raspberry Pi board</li>
-<li>Power supply</li>
-<li>16GB MicroSD card</li>
-</ul>
-
-<p>A <a href="https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/">Raspberry Pi 3 B+ (PLUS) Starter Kit</a> is good enough for the setup.</p>
-
-<p><strong>There are two options to install Lomorage service on Raspberry Pi</strong>, one is using the prebuild OS image which has all the dependencies installed, another one is manaully installation if you already have Raspberry Pi setup and running for other purpose.</p>
-
-<h2 id="install-with-prebuild-os-image">Install with prebuild OS image</h2>
-
-<p>Click the link below to download the prebuild OS image.</p>
+<p>您可以在iPad或iPhone上安装Lomorage客户端应用，最低支持的iOS系统版本是10.3。</p>
 
 <p align="center">
-<a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
+<!--
+ &nbsp;
+<a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
+-->
 </p>
 
-<p>After you download the customized OS image, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
+<p>安装完Lomorage客户端，启动就可以自动发现同一网络中运行的Lomorage服务，如果您有多台Lomorage服务运行，那些会列举出来供选择。如果未能自动发现服务，您可以选择扫码的方式登陆（Lomorage服务运行在Windows或者MacOS下，打开LomoAgent设置），或者手动输入IP地址和端口。</p>
 
-<p>After you insert the MicroSD to your desktop or laptop, just select the image you download, choose the MicroSD drive, and click &ldquo;Flash&rdquo;, it will be done in a few minutes.</p>
+<p>然后您可以创建用户，选择存储目录，登陆后，会花上几分钟来导入您相册的照片和视频，然后您可以选择需要上传的文件进行备份，如果已经备份成功，图片或视频下会显示一个绿色的小勾。在远程的选项卡里，显示的是远程备份过但本地没有的文件，所以如果您删除掉本地成功备份的文件，它们会显示在远程备份里面。</p>
 
-<p align="center">
-  <img width="50%" src="/img/installation/balenaEtcher.png">
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/ios-mdns-discover.png">
+  <img width="30%" src="/img/installation/ios-createuser.png">
+  <img width="30%" src="/img/installation/ios-uploading.png">
+  <img width="30%" src="/img/installation/ios-backup.png">
+  <img width="30%" src="/img/installation/ios-settings.png">
+  <img width="30%" src="/img/installation/ios-share.png">
 </p>
-
-<p>After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.</p>
-
-<p>We strongely suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command <code>wifi_switch client [wifi-ssid] [wifi-password]</code>, replace &ldquo;[wifi-ssid]&rdquo; and &ldquo;[wifi-password]&rdquo; with those of your wifi network.</p>
-
-<p><em>The login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
-
-<h2 id="install-on-existing-raspbian">Install on existing Raspbian</h2>
-
-<p><strong>step 1. Add lomoware source</strong></p>
-
-<pre><code>wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
-</code></pre>
-
-<p>If you are using jessie:</p>
-
-<pre><code>echo &quot;deb https://lomoware.github.io/debian jessie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
-</code></pre>
-
-<p>If you are using buster:</p>
-
-<pre><code>echo &quot;deb https://lomoware.github.io/debian/buster buster main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
-</code></pre>
-
-<p>then run:</p>
-
-<pre><code>sudo apt update
-</code></pre>
-
-<p><strong>step 2. Install 3rd party tools</strong></p>
-
-<pre><code>sudo apt install ffmpeg rsync jq libimage-exiftool-perl -y
-</code></pre>
-
-<p><strong>step 3. Install file systems support</strong></p>
-
-<pre><code>sudo apt install nfs-common exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
-sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
-sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
-</code></pre>
-
-<p><strong>step 4. Install usbmount</strong></p>
-
-<p>You can skip this if you are using desktop image which has PCManFM installed that can auto mount the USB drive. If you are using the Lite image, and you can use usbmount to auto mount the USB drive.</p>
-
-<p>The usbmount we are using is a modified version which mounts a specfic USB drive to a fixed mount point in &ldquo;/media&rdquo; directory, which means the order you plugin the drives doesn&rsquo;t matter, the mount point is always the same.</p>
-
-<pre><code>sudo apt install lockfile-progs -y
-sudo mkdir /etc/usbmount
-sudo mkdir /usr/share/usbmount
-sudo wget -qO /etc/usbmount/usbmount.conf https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.conf
-sudo wget -qO /usr/share/usbmount/usbmount https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount
-sudo chmod +x /usr/share/usbmount/usbmount
-sudo wget -qO /etc/udev/rules.d/usbmount.rules https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.rules
-sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount%40.service
-</code></pre>
-
-<p><strong>step 5. Install Lomorage service</strong></p>
-
-<pre><code>sudo apt install lomo-vips lomo-backend -y
-</code></pre>
-
-<p><strong>step 6. Change mount directory if needed</strong></p>
-
-<p>If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in &ldquo;/media&rdquo; directory, for example if you are using PCManFM, then the mount directory will be &ldquo;/media/pi&rdquo;.</p>
-
-<p>To specify the mount directory to be &ldquo;/media/pi&rdquo;, modify <code>ExecStart</code> in &ldquo;lib/systemd/system/lomod.service&rdquo;, and add paramter &ldquo;&ndash;mount-dir&rdquo; as below</p>
-
-<pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
-</code></pre>
-
-<p>Then restart Lomorage service:</p>
-
-<pre><code>sudo systemctl restart lomod
-</code></pre>
+</div>
 
                         </div>
 
@@ -319,16 +232,10 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 
         
         <div class="col-md-4 col-sm-6">
-            <h4>About us</h4>
+            <h4>关于我们</h4>
 
-            We are a small team believe that distributed web is the future,
-        and we focus on building the private photo cloud based on DWeb technologies in the first place.
-        <!--
-        <li>Easy to setup, use and maintain as existing cloud service</li>
-        <li>Store your data securely on your own devices</li>
-        <li>Backup and duplicate storage by adding more devices</li>
-        <li>No one can access your assets without permission</li>-->
-        
+            我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
+                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -362,7 +269,7 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
             <p class="pull-left">Copyright (c) 2018 - 2019, Lomoware; all rights reserved.</p>
             
             <p class="pull-right">
-              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
               
