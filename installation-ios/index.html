@@ -14,7 +14,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installation Guide</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -65,9 +65,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Installation Guide" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/installation//" />
+  <meta property="og:url" content="/installation-ios//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -86,9 +86,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Installation Guide - go to homepage</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
+                    <span class="sr-only"> - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -167,7 +167,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Installation Guide</h1>
+                <h1></h1>
             </div>
         </div>
     </div>
@@ -186,36 +186,35 @@
                         <div>
                           
 
-<h1 id="installation-guide">Installation Guide</h1>
+<h1 id="install-ios-lomorage-client">Install iOS Lomorage client</h1>
 
-<h2 id="1-overview">1. Overview</h2>
+<p>Curently support iPhone and iPad.</p>
 
-<p>To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store. Once you run the Lomorage service, the client APP is supposed to find the service running automatically with zero configuration, then you can upload photos on the Phone.</p>
+<p align="center">
+<a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
+<!--
+ &nbsp;
 
-<h2 id="2-install-lomorage-service">2. Install Lomorage Service</h2>
+<a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
+-->
+</p>
 
-<p>The first step is to set up the Lomorage service.</p>
+<p>You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3. Since it&rsquo;s currently in beta testing using testflight, user needs to download <a href="https://apps.apple.com/us/app/testflight/id899247664">testflight</a> first, and then install Lomorage in testflight. Drop us an email to <a href="mailto:support@lomorage.com">request</a> testflight access.</p>
 
-<p><strong>You can choose which version of Lomorage Service to download based on your preference</strong>. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don&rsquo;t need to worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a></p>
+<p>After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use. If Lomorage service can&rsquo;t be discovered automatically, you can discover the service via QRCode Scanning when using Windows or MacOS LomoAgent (open settings in LomoAgent to show the QRCode), or you can input the IP address and port manually.</p>
 
-<h3 id="lomorage-service-on-windows-installation-win"><a href="/installation-win">Lomorage Service on Windows</a></h3>
+<p>Then you can create user, choose the place you want to store your photos on the Lomorage service, after login, it will take a few minutes to import all your photos on phone, and then you can drop down to start uploading the photos to the place you choose to store your backup, if the photo uploads successfully, there will be a green check on the bottom right. The remote tab will show you those photos stored remotely but not exists locally, so if you delete your local photo that already backup successfully, it will show up in the remote tab view.</p>
 
-<h3 id="lomorage-service-on-macos-installation-osx"><a href="/installation-osx">Lomorage Service on MacOS</a></h3>
-
-<h3 id="lomorage-service-on-raspberry-pi-installation-pi"><a href="/installation-pi">Lomorage Service on Raspberry Pi</a></h3>
-
-<h2 id="3-install-lomorage-client">3. Install Lomorage Client</h2>
-
-<p>After running Lomorage Service, you can then install Lomorage client on smart phone.</p>
-
-<h3 id="lomorage-ios-client-installation-ios"><a href="/installation-ios">Lomorage iOS client</a></h3>
-
-<h2 id="4-external-access-optional">4. External Access (optional)</h2>
-
-<p>Lomorage can run within your private network with no Internet access, but if you want to access Lomorage from outside, then you can enable the external access, currently it support free 3rd party tunnel services. Check the <a href="/external-access">configuration</a> for external access.</p>
-
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/ios-mdns-discover.png">
+  <img width="30%" src="/img/installation/ios-createuser.png">
+  <img width="30%" src="/img/installation/ios-uploading.png">
+  <img width="30%" src="/img/installation/ios-backup.png">
+  <img width="30%" src="/img/installation/ios-settings.png">
+  <img width="30%" src="/img/installation/ios-share.png">
+</p>
+</div>
 
                         </div>
 

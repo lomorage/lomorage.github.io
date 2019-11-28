@@ -14,7 +14,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installation Guide</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -65,9 +65,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Installation Guide" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/installation//" />
+  <meta property="og:url" content="/external-access//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -86,9 +86,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Installation Guide - go to homepage</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
+                    <span class="sr-only"> - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -167,7 +167,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Installation Guide</h1>
+                <h1></h1>
             </div>
         </div>
     </div>
@@ -186,36 +186,102 @@
                         <div>
                           
 
-<h1 id="installation-guide">Installation Guide</h1>
+<h1 id="external-access-configuration">External Access Configuration</h1>
 
-<h2 id="1-overview">1. Overview</h2>
+<p>Currently, external access need some manual setup and some technical background, we will make the process more user-friendly later.</p>
 
-<p>To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store. Once you run the Lomorage service, the client APP is supposed to find the service running automatically with zero configuration, then you can upload photos on the Phone.</p>
+<p>There are a few tunnel services available for free use, most tunnel services require a client application running on your device, and set up a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the URL with that subdomain, the tunnel service will forward the traffic/request to the client application.</p>
 
-<h2 id="2-install-lomorage-service">2. Install Lomorage Service</h2>
+<p>You can use <a href="https://localtunnel.me">localtunnel</a> or <a href="https://ngrok.com">ngrok</a>, both are free tunnel services. localtunnel doesn&rsquo;t require registration, and it can customize the subdomain, so it&rsquo;s pre-installed in Lomorage Raspberry Pi image, while ngrok need register before use, and need pay to customize subdomain, but it&rsquo;s more stable and zero dependencies.</p>
 
-<p>The first step is to set up the Lomorage service.</p>
+<p><em>If you are using Lomorage Raspberry Pi image, the login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
 
-<p><strong>You can choose which version of Lomorage Service to download based on your preference</strong>. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don&rsquo;t need to worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a></p>
+<h2 id="localtunnel">localtunnel</h2>
 
-<h3 id="lomorage-service-on-windows-installation-win"><a href="/installation-win">Lomorage Service on Windows</a></h3>
+<p>If you are using Windows or macOS, you need to install <a href="https://nodejs.org/">nodejs</a> first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then you can run command <code>sudo localtunnel_install.sh</code> to install localtunnel, and you can skip step 1 an step2.</p>
 
-<h3 id="lomorage-service-on-macos-installation-osx"><a href="/installation-osx">Lomorage Service on MacOS</a></h3>
+<h3 id="1-install-nodejs">1. Install nodejs</h3>
 
-<h3 id="lomorage-service-on-raspberry-pi-installation-pi"><a href="/installation-pi">Lomorage Service on Raspberry Pi</a></h3>
+<p>Download and install the <a href="(https://nodejs.org/en/download/)">binaries</a> in your platform.</p>
 
-<h2 id="3-install-lomorage-client">3. Install Lomorage Client</h2>
+<h3 id="2-install-localtunnel">2. Install localtunnel</h3>
 
-<p>After running Lomorage Service, you can then install Lomorage client on smart phone.</p>
+<p>Open the terminal and type</p>
 
-<h3 id="lomorage-ios-client-installation-ios"><a href="/installation-ios">Lomorage iOS client</a></h3>
+<pre><code>npm install -g localtunnel
+</code></pre>
 
-<h2 id="4-external-access-optional">4. External Access (optional)</h2>
+<h3 id="3-run-localtunnel">3. Run localtunnel</h3>
 
-<p>Lomorage can run within your private network with no Internet access, but if you want to access Lomorage from outside, then you can enable the external access, currently it support free 3rd party tunnel services. Check the <a href="/external-access">configuration</a> for external access.</p>
+<p>Assuming the preferred subdomain name is &ldquo;allice&rdquo; (you can choose your own subdomain), then open the terminal and type:</p>
 
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
+<pre><code>lt -s allice -p 8000 --print-requests
+</code></pre>
+
+<p>&rdquo;-s&rdquo; specify the subdomain to use, &ldquo;-p&rdquo; specify the port forward to, Lomorage service is using &ldquo;8000&rdquo; by default, and &ldquo;&ndash;print-requests&rdquo; will output coming requests.</p>
+
+<p>And if you see the output without any error message, and print out something like:</p>
+
+<pre><code>your url is: https://allice.localtunnel.me
+</code></pre>
+
+<p>Then you can start open that URL in your browser, and if you see requests log printing in localtunnel output, then the tunnel is set up successfully.</p>
+
+<pre><code>Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
+</code></pre>
+
+<script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
+#### 4. Config tunnel service on Lomorage APP
+
+Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like "allice.localtunnel.me", and the port is "443".
+
+## ngrok
+
+### 1. Register
+
+Sign up a ngrok account [here](https://dashboard.ngrok.com/signup), after that, it will show up a "Setup & Installation" page.
+
+### 2. Download
+
+ngrok is just one binary, you can download the version on your platform.
+
+If you are on Raspberry Pi, you can copy the link of Linux(ARM) on the "Setup & Installation" page, which is "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip" for now, and download it via "wget".
+
+```
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+```
+
+### 3. Installation
+
+unzip and get the binary. You can double click on Windows or macOS to unzip it.
+
+If you are using Raspberry Pi, use "unzip" command:
+
+```
+unzip ngrok-stable-linux-arm.zip
+```
+
+### 4. Connect your account
+
+On the "Setup & Installation" page step 3, it shows the “authtoken”, you need open **terminal** to run ngrok to add the authtoken to the config file.
+
+```
+./ngrok authtoken [your-authtoken-show-in-step-3]
+```
+
+### 5. Run ngrok
+
+Lomorage service is using "8000" by default, and ngrok can't customize subdomain with free account. After runnig successfully, it will show the tunnel url, the subdomain is a random string which might change in next run.
+
+```
+./ngrok http 8000
+```
+
+### 6. Config tunnel service on Lomorage APP
+
+Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like "2e30eea5.ngrok.io", and the port is "443".
+
+<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
 
                         </div>
 

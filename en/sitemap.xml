@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lomorage.com/external-access/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/installation-ios/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/installation-osx/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/installation-pi/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/installation-win/</loc>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/categories/</loc>
     <priority>0</priority>
     <xhtml:link

@@ -14,7 +14,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installation Guide</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -65,9 +65,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Installation Guide" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/installation//" />
+  <meta property="og:url" content="/installation-pi//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -86,9 +86,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Installation Guide - go to homepage</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
+                    <span class="sr-only"> - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -167,7 +167,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Installation Guide</h1>
+                <h1></h1>
             </div>
         </div>
     </div>
@@ -186,36 +186,119 @@
                         <div>
                           
 
-<h1 id="installation-guide">Installation Guide</h1>
+<h1 id="install-lomorage-service-on-raspberry-pi">Install Lomorage Service on Raspberry Pi</h1>
 
-<h2 id="1-overview">1. Overview</h2>
+<p>To run on Raspberry Pi, you need to order a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, we have tested the image the following models:</p>
 
-<p>To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store. Once you run the Lomorage service, the client APP is supposed to find the service running automatically with zero configuration, then you can upload photos on the Phone.</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
+</ul>
 
-<h2 id="2-install-lomorage-service">2. Install Lomorage Service</h2>
+<p>If you don&rsquo;t have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:</p>
 
-<p>The first step is to set up the Lomorage service.</p>
+<ul>
+<li>Raspberry Pi board</li>
+<li>Power supply</li>
+<li>16GB MicroSD card</li>
+</ul>
 
-<p><strong>You can choose which version of Lomorage Service to download based on your preference</strong>. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don&rsquo;t need to worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a></p>
+<p>A <a href="https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/">Raspberry Pi 3 B+ (PLUS) Starter Kit</a> is good enough for the setup.</p>
 
-<h3 id="lomorage-service-on-windows-installation-win"><a href="/installation-win">Lomorage Service on Windows</a></h3>
+<p><strong>There are two options to install Lomorage service on Raspberry Pi</strong>, one is using the prebuild OS image which has all the dependencies installed, another one is manaully installation if you already have Raspberry Pi setup and running for other purpose.</p>
 
-<h3 id="lomorage-service-on-macos-installation-osx"><a href="/installation-osx">Lomorage Service on MacOS</a></h3>
+<h2 id="install-with-prebuild-os-image">Install with prebuild OS image</h2>
 
-<h3 id="lomorage-service-on-raspberry-pi-installation-pi"><a href="/installation-pi">Lomorage Service on Raspberry Pi</a></h3>
+<p>Click the link below to download the prebuild OS image.</p>
 
-<h2 id="3-install-lomorage-client">3. Install Lomorage Client</h2>
+<p align="center">
+<a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+</p>
 
-<p>After running Lomorage Service, you can then install Lomorage client on smart phone.</p>
+<p>After you download the customized <a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip">OS image</a>, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
 
-<h3 id="lomorage-ios-client-installation-ios"><a href="/installation-ios">Lomorage iOS client</a></h3>
+<p>After you insert the MicroSD to your desktop or laptop, just select the image you download, choose the MicroSD drive, and click &ldquo;Flash&rdquo;, it will be done in a few minutes.</p>
 
-<h2 id="4-external-access-optional">4. External Access (optional)</h2>
+<p align="center">
+  <img width="50%" src="/img/installation/balenaEtcher.png">
+</p>
 
-<p>Lomorage can run within your private network with no Internet access, but if you want to access Lomorage from outside, then you can enable the external access, currently it support free 3rd party tunnel services. Check the <a href="/external-access">configuration</a> for external access.</p>
+<p>After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.</p>
 
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
+<p>We strongely suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command <code>wifi_switch client [wifi-ssid] [wifi-password]</code>, replace &ldquo;[wifi-ssid]&rdquo; and &ldquo;[wifi-password]&rdquo; with those of your wifi network.</p>
+
+<p><em>The login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
+
+<h2 id="install-on-existing-raspbian">Install on existing Raspbian</h2>
+
+<p><strong>step 1. Add lomoware source</strong></p>
+
+<pre><code>wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+</code></pre>
+
+<p>If you are using jessie:</p>
+
+<pre><code>echo &quot;deb https://lomoware.github.io/debian jessie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+
+<p>If you are using buster:</p>
+
+<pre><code>echo &quot;deb https://lomoware.github.io/debian/buster buster main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+
+<p>then run:</p>
+
+<pre><code>sudo apt update
+</code></pre>
+
+<p><strong>step 2. Install 3rd party tools</strong></p>
+
+<pre><code>sudo apt install ffmpeg rsync jq libimage-exiftool-perl -y
+</code></pre>
+
+<p><strong>step 3. Install file systems support</strong></p>
+
+<pre><code>sudo apt install nfs-common exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
+</code></pre>
+
+<p><strong>step 4. Install usbmount</strong></p>
+
+<p>You can skip this if you are using desktop image which has PCManFM installed that can auto mount the USB drive. If you are using the Lite image, and you can use usbmount to auto mount the USB drive.</p>
+
+<p>The usbmount we are using is a modified version which mounts a specfic USB drive to a fixed mount point in &ldquo;/media&rdquo; directory, which means the order you plugin the drives doesn&rsquo;t matter, the mount point is always the same.</p>
+
+<pre><code>sudo apt install lockfile-progs -y
+sudo mkdir /etc/usbmount
+sudo mkdir /usr/share/usbmount
+sudo wget -qO /etc/usbmount/usbmount.conf https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.conf
+sudo wget -qO /usr/share/usbmount/usbmount https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount
+sudo chmod +x /usr/share/usbmount/usbmount
+sudo wget -qO /etc/udev/rules.d/usbmount.rules https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.rules
+sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount%40.service
+</code></pre>
+
+<p><strong>step 5. Install Lomorage service</strong></p>
+
+<pre><code>sudo apt install lomo-vips lomo-backend -y
+</code></pre>
+
+<p><strong>step 6. Change mount directory if needed</strong></p>
+
+<p>If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in &ldquo;/media&rdquo; directory, for example if you are using PCManFM, then the mount directory will be &ldquo;/media/pi&rdquo;.</p>
+
+<p>To specify the mount directory to be &ldquo;/media/pi&rdquo;, modify <code>ExecStart</code> in &ldquo;lib/systemd/system/lomod.service&rdquo;, and add paramter &ldquo;&ndash;mount-dir&rdquo; as below</p>
+
+<pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
+</code></pre>
+
+<p>Then restart Lomorage service:</p>
+
+<pre><code>sudo systemctl restart lomod
+</code></pre>
 
                         </div>
 

@@ -14,7 +14,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Installation Guide</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -65,9 +65,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Installation Guide" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/installation//" />
+  <meta property="og:url" content="/installation-win//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -86,9 +86,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Installation Guide - go to homepage</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
+                    <span class="sr-only"> - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -167,7 +167,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Installation Guide</h1>
+                <h1></h1>
             </div>
         </div>
     </div>
@@ -186,36 +186,48 @@
                         <div>
                           
 
-<h1 id="installation-guide">Installation Guide</h1>
+<h1 id="install-lomorage-service-on-windows">Install Lomorage Service on Windows</h1>
 
-<h2 id="1-overview">1. Overview</h2>
+<p><span>1.</span> Click the link below to downlink Lomorage Service Application.</p>
 
-<p>To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store. Once you run the Lomorage service, the client APP is supposed to find the service running automatically with zero configuration, then you can upload photos on the Phone.</p>
+<p align="center">
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_28.11_56_35.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+</p>
 
-<h2 id="2-install-lomorage-service">2. Install Lomorage Service</h2>
+<p><span>2.</span> double click &ldquo;lomoagent.msi&rdquo; to start installation. If Windows Defender shows &ldquo;lomoagent.msi&rdquo; as unknown application, please follow the steps below to allow it to run.</p>
 
-<p>The first step is to set up the Lomorage service.</p>
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-defender-1.png">
+  <img width="50%" src="/img/installation/windows-defender-2.png">
+</p>
+</div>
 
-<p><strong>You can choose which version of Lomorage Service to download based on your preference</strong>. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don&rsquo;t need to worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a></p>
+<p><span>3.</span> Follow the wizzard to finish the installation, in the End-User License Agreement, please checked the box as below.</p>
 
-<h3 id="lomorage-service-on-windows-installation-win"><a href="/installation-win">Lomorage Service on Windows</a></h3>
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-install-1.png">
+  <img width="50%" src="/img/installation/windows-install-2.png">
+  <img width="50%" src="/img/installation/windows-install-3.png">
+</p>
+</div>
 
-<h3 id="lomorage-service-on-macos-installation-osx"><a href="/installation-osx">Lomorage Service on MacOS</a></h3>
+<p><span>4.</span> Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent. If you meet below dialog popuped up by the Windows os, please select &ldquo;Private networks &hellip;&rdquo; one and click the Allow access.</p>
 
-<h3 id="lomorage-service-on-raspberry-pi-installation-pi"><a href="/installation-pi">Lomorage Service on Raspberry Pi</a></h3>
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-firewall.png">
+</p>
+</div>
 
-<h2 id="3-install-lomorage-client">3. Install Lomorage Client</h2>
+<p><span>5.</span> You will see below picture while you start the lomoagent, <strong>You need to config the &ldquo;Data directory&rdquo; before using it</strong>，&rdquo;Data directory&rdquo; is used to save the photos and videos uploading from your phone.</p>
 
-<p>After running Lomorage Service, you can then install Lomorage client on smart phone.</p>
-
-<h3 id="lomorage-ios-client-installation-ios"><a href="/installation-ios">Lomorage iOS client</a></h3>
-
-<h2 id="4-external-access-optional">4. External Access (optional)</h2>
-
-<p>Lomorage can run within your private network with no Internet access, but if you want to access Lomorage from outside, then you can enable the external access, currently it support free 3rd party tunnel services. Check the <a href="/external-access">configuration</a> for external access.</p>
-
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-lomo-agent.png">
+</p>
+</div>
 
                         </div>
 
