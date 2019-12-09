@@ -231,55 +231,52 @@
 </code></pre>
 
 <script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
-#### 4. Config tunnel service on Lomorage APP
 
-Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like "allice.localtunnel.me", and the port is "443".
+<h3 id="4-config-tunnel-service-on-lomorage-app">4. Config tunnel service on Lomorage APP</h3>
 
-## ngrok
+<p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host, the host is like &ldquo;allice.localtunnel.me&rdquo;.</p>
 
-### 1. Register
+<h2 id="ngrok">ngrok</h2>
 
-Sign up a ngrok account [here](https://dashboard.ngrok.com/signup), after that, it will show up a "Setup & Installation" page.
+<h3 id="1-register">1. Register</h3>
 
-### 2. Download
+<p>Sign up a ngrok account <a href="https://dashboard.ngrok.com/signup">here</a>, after that, it will show up a &ldquo;Setup &amp; Installation&rdquo; page.</p>
 
-ngrok is just one binary, you can download the version on your platform.
+<h3 id="2-download">2. Download</h3>
 
-If you are on Raspberry Pi, you can copy the link of Linux(ARM) on the "Setup & Installation" page, which is "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip" for now, and download it via "wget".
+<p>ngrok is just one binary, you can download the version on your platform.</p>
 
-```
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-```
+<p>If you are on Raspberry Pi, you can copy the link of Linux(ARM) on the &ldquo;Setup &amp; Installation&rdquo; page, which is &ldquo;<a href="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;">https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;</a> for now, and download it via &ldquo;wget&rdquo;.</p>
 
-### 3. Installation
+<pre><code>wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+</code></pre>
 
-unzip and get the binary. You can double click on Windows or macOS to unzip it.
+<h3 id="3-installation">3. Installation</h3>
 
-If you are using Raspberry Pi, use "unzip" command:
+<p>unzip and get the binary. You can double click on Windows or macOS to unzip it.</p>
 
-```
-unzip ngrok-stable-linux-arm.zip
-```
+<p>If you are using Raspberry Pi, use &ldquo;unzip&rdquo; command:</p>
 
-### 4. Connect your account
+<pre><code>unzip ngrok-stable-linux-arm.zip
+</code></pre>
 
-On the "Setup & Installation" page step 3, it shows the “authtoken”, you need open **terminal** to run ngrok to add the authtoken to the config file.
+<h3 id="4-connect-your-account">4. Connect your account</h3>
 
-```
-./ngrok authtoken [your-authtoken-show-in-step-3]
-```
+<p>On the &ldquo;Setup &amp; Installation&rdquo; page step 3, it shows the “authtoken”, you need open <strong>terminal</strong> to run ngrok to add the authtoken to the config file.</p>
 
-### 5. Run ngrok
+<pre><code>./ngrok authtoken [your-authtoken-show-in-step-3]
+</code></pre>
 
-Lomorage service is using "8000" by default, and ngrok can't customize subdomain with free account. After runnig successfully, it will show the tunnel url, the subdomain is a random string which might change in next run.
+<h3 id="5-run-ngrok">5. Run ngrok</h3>
 
-```
-./ngrok http 8000
-```
+<p>Lomorage service is using &ldquo;8000&rdquo; by default, and ngrok can&rsquo;t customize subdomain with free account. After runnig successfully, it will show the tunnel url, the subdomain is a random string which might change in next run.</p>
 
-### 6. Config tunnel service on Lomorage APP
+<pre><code>./ngrok http 8000
+</code></pre>
 
-Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like "2e30eea5.ngrok.io", and the port is "443".
+<h3 id="6-config-tunnel-service-on-lomorage-app">6. Config tunnel service on Lomorage APP</h3>
+
+<p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host, the host is like &ldquo;2e30eea5.ngrok.io&rdquo;.</p>
 
 <script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
 
