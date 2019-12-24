@@ -58,7 +58,7 @@ macOS 2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-win/</guid>
-      <description>Install Lomorage Service on Windows 1. Click the link below to downlink Lomorage Service Application.
+      <description>Install Lomorage Service on Windows 1. Click the link below to download Lomorage Service Application.
 Windows 2. double click &amp;ldquo;lomoagent.msi&amp;rdquo; to start installation. If Windows Defender shows &amp;ldquo;lomoagent.msi&amp;rdquo; as unknown application, please follow the steps below to allow it to run.
  3. Follow the wizzard to finish the installation, in the End-User License Agreement, please checked the box as below.
  4. Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent.</description>
