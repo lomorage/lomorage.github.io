@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/blog/2019/12/24/raspberrypi-hd/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/external-access/</loc>
     <xhtml:link
                 rel="alternate"
@@ -73,6 +88,22 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/blog/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/blog/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/categories/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -121,6 +152,22 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/categories/faq/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/categories/faq/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/categories/faq/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/features/</loc>
     <xhtml:link
                 rel="alternate"
@@ -132,6 +179,18 @@
                 hreflang="en"
                 href="https://lomorage.com/features/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/flash-drive/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/hard-disk/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -150,6 +209,7 @@
   
   <url>
     <loc>https://lomorage.com/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -169,7 +229,26 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/tags/raspberry-pi/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/restore/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/secondary-backup/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/tags/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -186,6 +265,12 @@
                 hreflang="en"
                 href="https://lomorage.com/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/usb-hub/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

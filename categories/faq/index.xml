@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faq on Lomorage</title>
+    <link>https://lomorage.com/categories/faq/</link>
+    <description>Recent content in Faq on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Dec 2019 13:43:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://lomorage.com/categories/faq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup Lomorage secondary backup with Raspberry Pi</title>
+      <link>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</link>
+      <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</guid>
+      <description>&lt;p&gt;Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currenlty provide the option to setup a secondary backup. There are several options to do this.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

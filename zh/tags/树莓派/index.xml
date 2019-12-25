@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>树莓派 on Lomorage</title>
+    <link>https://lomorage.com/zh/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
+    <description>Recent content in 树莓派 on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Dec 2019 13:43:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://lomorage.com/zh/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>树莓派设置冗余备份</title>
+      <link>https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</link>
+      <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</guid>
+      <description>&lt;p&gt;珍贵的照片和视频仅仅保存一份是不够的，我们至少需要保存两份，最好还能有一个远程的备份。Lomorage当前提供了冗余备份的功能。可以有下面的几种方式来设置冗余备份。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

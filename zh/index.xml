@@ -6,9 +6,19 @@
     <description>Recent content on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 24 Dec 2019 13:43:40 +0000</lastBuildDate>
     
 	<atom:link href="https://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>树莓派设置冗余备份</title>
+      <link>https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</link>
+      <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</guid>
+      <description>&lt;p&gt;珍贵的照片和视频仅仅保存一份是不够的，我们至少需要保存两份，最好还能有一个远程的备份。Lomorage当前提供了冗余备份的功能。可以有下面的几种方式来设置冗余备份。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title></title>
@@ -121,6 +131,7 @@ Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi 3. 安装Lomorage客户端 在�
 4. 支持那些文件系统? 如果您在macOS或者Windows上运行Lomorage服务，您可以使用任何Windows或者macOS操作系统原生支持的文件系统。
 如果您是在树莓派上运行Lomorage服务，你可以使用更多的文件系统，包括:&amp;ldquo;vfat exfat ext2 ext3 ext4 hfsplus ntfs fuseblk&amp;rdquo;。
 5. 为什么时间看起来不对? 在系统中使用UTC时间来存储而不是本地时间，原因是照片可能拍摄于不同的时区，用户也会离开原先的住处搬迁到另外的时区，使用UTC时间戳能简化处理，而且可以很容易的在客户端应用程序转化为本地时间。
+6. 如何设置冗余备份? 冗余备份的方案有几种, 查看这篇博客获取更多详细信息。
  如果您有更多的问题没有在这里找到答案，请联系我们
  </description>
     </item>
