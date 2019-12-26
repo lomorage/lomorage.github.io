@@ -86,7 +86,7 @@ Raspberry Pi 下载了系统镜像后, 你可以使用balenaEtcher将其安装�
 登陆的用户名是&amp;rdquo;pi&amp;rdquo;，密码是&amp;rdquo;raspberry&amp;rdquo;
 安装在已有的Raspbian系统上 步骤1. 添加lomoware源
 wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -  如果您使用 jessie:
-echo &amp;quot;deb https://lomoware.github.io/debian jessie main&amp;quot; | sudo tee /etc/apt/sources.</description>
+echo &amp;quot;deb https://lomoware.github.io/debian/jessie jessie main&amp;quot; | sudo tee /etc/apt/sources.</description>
     </item>
     
     <item>
