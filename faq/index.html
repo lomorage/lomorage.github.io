@@ -195,9 +195,11 @@
 <ul>
 <li><a href="#1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</a></li>
 <li><a href="#2-why-another-photo-backup-service">2. Why another photo backup service?</a></li>
-<li><a href="#3-how-to-setup-redundency-backup">3. How to setup redandency backup?</a></li>
+<li><a href="#3-how-to-setup-redundancy-backup">3. How to setup redundancy backup?</a></li>
 <li><a href="#4-what-file-systems-supported">4. What file systems supported?</a></li>
 <li><a href="#5-why-the-date-time-seems-not-correct">5. Why the date time seems not correct?</a></li>
+<li><a href="#6-how-to-set-a-secondary-backup">6. How to set a secondary backup?</a></li>
+<li><a href="#7-does-lomorage-support-backup-edited-photovideo">7. Does Lomorage support backup edited photo/video?</a></li>
 </ul>
 
 <h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</h2>
@@ -231,6 +233,14 @@
 <h2 id="6-how-to-set-a-secondary-backup">6. How to set a secondary backup?</h2>
 
 <p>There are several options to setup a secondary backup, check this <a href="/blog/2019/12/24/raspberrypi-hd/">blog</a> for more details.</p>
+
+<h2 id="7-does-lomorage-support-backup-edited-photo-video">7. Does Lomorage support backup edited photo/video?</h2>
+
+<p>On iOS, if photo is edited, system will store the original photo, the edited one, as well as the editing operations, <strong>Lomorage will store ONLY the edited photo</strong>. For edited video, system will store the video before last editing, the editing operations as well as the edited one, and <strong>Lomorage will ONLY store the editied video</strong>.</p>
+
+<p>If you would like to store the file before editing, make sure you have backup the edited one first, and then you can revert the editing in Apple&rsquo;s &ldquo;Photos APP&rdquo;, and then upload those files before editing.</p>
+
+<p>Notice: The old iOS client (&lt;0.6.10) doesn&rsquo;t support edited files, so if you have error when uploading the edited files, please delete old client and reinstall the new one, instead of upgrading to new version, to make sure the old problematic database is removed.</p>
 
 <hr />
 
