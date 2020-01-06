@@ -200,6 +200,7 @@
 <li><a href="#5-why-the-date-time-seems-not-correct">5. Why the date time seems not correct?</a></li>
 <li><a href="#6-how-to-set-a-secondary-backup">6. How to set a secondary backup?</a></li>
 <li><a href="#7-does-lomorage-support-backup-edited-file">7. Does Lomorage support backup edited file?</a></li>
+<li><a href="#8-what-is-background-backup">8. What is background backup?</a></li>
 </ul>
 
 <h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</h2>
@@ -241,6 +242,14 @@
 <p>If you would like to store the file before editing, make sure you have backup the edited one first, and then you can revert the editing in Apple&rsquo;s &ldquo;Photos APP&rdquo;, and then upload those files before editing.</p>
 
 <p>Notice: The old iOS client (&lt;0.6.10) doesn&rsquo;t support edited files, so if you have error when uploading the edited files, please delete old client and reinstall the new one, instead of upgrading to new version, to make sure the old problematic database is removed.</p>
+
+<h2 id="8-what-is-background-backup">8. What is background backup?</h2>
+
+<p>Background backup means you don&rsquo;t need to open Lomorage app to backup the assets.</p>
+
+<p>Background backup on iOS is not expected to work the same way as iCloud, Apple restricts 3rd party tools to run in the background. Currently there is only two hacks to trigger Lomorage running in the background, one is background fetch, which might be triggered when system is idle, another one is triggered when significant location changes, that is why background backup requires location permission. Both won&rsquo;t last long and can only run in background for a limited time.</p>
+
+<p>Moving Lomorage app into background, the existing upload is still running in the background but the next upload has to wait either it&rsquo;s back to foreground or the above two hack condition triggers the upload.</p>
 
 <hr />
 
