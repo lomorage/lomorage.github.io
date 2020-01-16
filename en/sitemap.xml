@@ -74,6 +74,20 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/installation-web/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-web/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-web/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/installation-win/</loc>
     <xhtml:link
                 rel="alternate"

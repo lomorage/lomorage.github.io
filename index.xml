@@ -36,7 +36,7 @@ There are a few tunnel services available for free use, most tunnel services req
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-ios/</guid>
-      <description>Install iOS Lomorage client You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3.
+      <description>Install Lomorage iOS client You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3.
   -- After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use. If Lomorage service can&amp;rsquo;t be discovered automatically, you can discover the service via QRCode Scanning when using Windows or MacOS LomoAgent (open settings in LomoAgent to show the QRCode), or you can input the IP address and port manually.</description>
     </item>
     
@@ -60,6 +60,17 @@ macOS 2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation,
       <guid>https://lomorage.com/installation-pi/</guid>
       <description>Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:
  Raspberry Pi 4 Model B Raspberry Pi 3 Model B+ Raspberry Pi Zero W Raspberry Pi 2 Model B  If you don&amp;rsquo;t have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/installation-web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/installation-web/</guid>
+      <description>Install Lomorage Web client You can use Lomorage Web client to upload photos/videos from desktop/laptop using browser, and you can use the gallery to view the photos/videos stored in Lomorage.
+If you are using Lomorage Service in MacOS, then you can just click &amp;ldquo;import&amp;rdquo; menu item in LomoAgent Application, and it will open the web application.
+If you are using Lomorage Service in Raspberry Pi, then you can use the following command to install Lomorage Web client on your raspberry Pi:</description>
     </item>
     
     <item>

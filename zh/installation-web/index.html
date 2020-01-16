@@ -14,7 +14,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>安装说明</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -65,9 +65,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="安装说明" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/zh/installation//" />
+  <meta property="og:url" content="/zh/installation-web//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -86,9 +86,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="安装说明 logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="安装说明 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">安装说明 - 跳到主页</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
+                    <span class="sr-only"> - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -173,7 +173,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>安装说明</h1>
+                <h1></h1>
             </div>
         </div>
     </div>
@@ -192,42 +192,27 @@
                         <div>
                           
 
-<h1 id="安装说明">安装说明</h1>
+<h1 id="安装lomorage网页客户端">安装Lomorage网页客户端</h1>
 
-<h2 id="1-简介">1. 简介</h2>
+<p>您可以使用Lomorage网页客户端来上传电脑里面的照片和视频，并且可以使用图库来浏览已经备份的照片和视频。</p>
 
-<p>要使用Lomorage，您需要在本地网络运行Lomorage服务程序，您可以选择在Windows，macOS或者树莓派上运行。然后您需要去应用程序商店下载手机客户端应用。在运行了Lomorage服务程序之后，手机客户端会自动发现服务，无需配置，然后您就可以开始备份照片和视频了。</p>
+<p>如果您使用MacOS版本的Lomorage服务程序，您可以点击LomoAgent应用的“导入”菜单打开网页客户端。</p>
 
-<h2 id="2-安装lomorage服务程序">2. 安装Lomorage服务程序</h2>
+<p>如果您使用树莓派版本的Lomorage服务程序，您可以使用下面的命令来安装Lomorage网页客户端到树莓派上:</p>
 
-<p>您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务程序。Windows或macOS上运行Lomorage服务程序可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。</p>
+<pre><code>sudo apt update
+sudo apt install lomo-web
+</code></pre>
 
-<p align="center">
-<a href="/zh/installation-win" title="Windows下安装Lomorage服务程序" class="badge windows">Windows</a>
-&nbsp;
-<a href="/zh/installation-osx" title="MacOS下安装Lomorage服务程序" class="badge">macOS</a>
-&nbsp;
-<a href="/zh/installation-pi" title="树莓派下安装Lomorage服务程序" class="badge raspberrypi">Raspberry Pi</a>
+<p>然后您可以在电脑的浏览器上访问&rdquo;<a href="http://raspberrypi-lomorage.local:8001">http://raspberrypi-lomorage.local:8001</a>&ldquo;，打开Lomorage网页客户端。</p>
+
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/lomo-web-login.png">
+  <img width="30%" src="/img/installation/lomo-web-upload.png">
+  <img width="30%" src="/img/installation/lomo-web-gallery.png">
 </p>
-
-<h2 id="3-安装lomorage客户端">3. 安装Lomorage客户端</h2>
-
-<p>在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。</p>
-
-<p>您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。</p>
-
-<p align="center">
-<a href="/zh/installation-ios"><img alt="Lomorage iOS客户端" src="/img/installation/app-store-ios.svg" width="220"></a>
-&nbsp;
-<a href="/zh/installation-web"><img alt="Lomorage web客户端" src="/img/installation/browser.png" width="220"></a>
-</p>
-
-<h2 id="4-外网访问-可选">4. 外网访问 (可选)</h2>
-
-<p>Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击<a href="/zh/external-access">这里</a>查看具体配置。</p>
-
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></p>
+</div>
 
                         </div>
 
