@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lomorage.com/zh/blog/2019/12/24/transfer2pc/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <xhtml:link
@@ -207,6 +212,12 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/zh/tags/windows/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/zh/tags/%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <priority>0</priority>
@@ -242,6 +253,12 @@
   
   <url>
     <loc>https://lomorage.com/zh/tags/%E6%81%A2%E5%A4%8D/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/zh/tags/%E6%89%8B%E6%9C%BA%E4%BC%A0%E7%94%B5%E8%84%91/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <priority>0</priority>
   </url>
