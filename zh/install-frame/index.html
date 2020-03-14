@@ -69,7 +69,7 @@
   
   <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/install-frame//" />
+  <meta property="og:url" content="/zh/install-frame//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -90,11 +90,11 @@
                 <a class="navbar-brand home" href="https://lomorage.com/">
                     <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
                     <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
-                    <span class="sr-only"> - go to homepage</span>
+                    <span class="sr-only"> - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">Toggle Navigation</span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -106,37 +106,37 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/">Home</a>
+                    <a href="/zh">主页</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/features/">Features</a>
+                    <a href="/zh/features/">特性</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/installation/">Installation</a>
+                    <a href="/zh/installation/">安装</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/faq/">FAQ</a>
+                    <a href="/zh/faq/">常见问题</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/contact/">Contact</a>
+                    <a href="/zh/contact/">联系</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/blog/">Blog</a>
+                    <a href="/zh/blog/">博客</a>
                     
                   </li>
                   
@@ -194,184 +194,184 @@
                         <div>
                           
 
-<h1 id="table-of-contents">Table of Contents</h1>
+<h1 id="目录">目录</h1>
 
 <ul>
-<li><a href="#install-lomo-frame">Install lomo-frame</a></li>
-<li><a href="#setup">Setup</a>
+<li><a href="#安装lomo-frame">安装lomo-frame</a></li>
+<li><a href="#安装">安装</a>
 
 <ul>
-<li><a href="#quickstart">Quickstart</a></li>
-<li><a href="#turn-frame-onoff">Turn Frame ON/OFF</a></li>
-<li><a href="#stop-or-start-lomo-frame-service">Stop/Start lomo-frame Service</a></li>
-<li><a href="#schedule-frame-onoff-time">Schedule Frame ON/OFF time</a></li>
-<li><a href="#playback-order">Playback Order</a></li>
-<li><a href="#customize-playlist">Customize playlist</a></li>
-<li><a href="#playback-media-type">Playback Media Type</a></li>
-<li><a href="#keyboard-control">Keyboard control</a></li>
-<li><a href="#setup-multiple-digital-frame">Setup multiple digital frame</a>
+<li><a href="#快速开始">快速开始</a></li>
+<li><a href="#关闭开启相框">关闭开启相框</a></li>
+<li><a href="#关闭开启lomo-frame应用">关闭开启lomo-frame应用</a></li>
+<li><a href="#定时开关">定时开关</a></li>
+<li><a href="#播放顺序">播放顺序</a></li>
+<li><a href="#自定义播放列表">自定义播放列表</a></li>
+<li><a href="#播放媒体类型">播放媒体类型</a></li>
+<li><a href="#快捷键">快捷键</a></li>
+<li><a href="#设置多个数码相框">设置多个数码相框</a>
 
 <ul>
-<li><a href="#1-install-lomo-frame">1. Install lomo-frame</a></li>
-<li><a href="#2-setup-wifi-connection">2. Setup WiFi connection</a></li>
-<li><a href="#3-check-ip-address-of-primary-raspberry-pi">3. Check IP address of primary Raspberry Pi</a></li>
-<li><a href="#4-find-the-mount-directory-on-primary-raspberry-pi">4. Find the mount directory on primary Raspberry Pi</a></li>
-<li><a href="#5-mount-on-raspberry-pi-zero-w">5. Mount on Raspberry Pi zero w</a></li>
-<li><a href="#6-reboot">6. Reboot</a></li>
+<li><a href="#1-安装lomo-frame">1. 安装lomo-frame</a></li>
+<li><a href="#2-设置wifi连接">2. 设置WiFi连接</a></li>
+<li><a href="#3-检查主树莓派的ip地址">3. 检查主树莓派的IP地址</a></li>
+<li><a href="#4-找到主树莓派的加载目录">4. 找到主树莓派的加载目录</a></li>
+<li><a href="#5-远程挂载媒体目录到树莓派zero-w">5. 远程挂载媒体目录到树莓派zero w</a></li>
+<li><a href="#6-重启">6. 重启</a></li>
 </ul></li>
 </ul></li>
 </ul>
 
-<h1 id="install-lomo-frame">Install lomo-frame</h1>
+<h1 id="安装lomo-frame">安装lomo-frame</h1>
 
-<p><strong>If you install the latest Lomorage Raspberry Pi OS image, you should already have the lomo-frame application installed in that image.</strong></p>
+<p><strong>如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装lomo-frame应用，已经预装到系统中了</strong></p>
 
-<p>Otherwise, if your OS image is before 2020-03-13 (&ldquo;image_2020-03-13-lomorage-lite.zip
-&ldquo;), or you don&rsquo;t use Lomorage Raspberry Pi OS image, you can run the following command to install it (assuming you have installed Lomorage Service Application so that you have already added &ldquo;gpg.key&rdquo;, if not you can check <a href="/installation-pi">here</a>).</p>
+<p>否则，如果您的系统镜像是2020-03-13之前的 (&ldquo;image_2020-03-13-lomorage-lite.zip
+&ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&rdquo;gpg.key&rdquo;文件，如果没有，请参考<a href="/zh/installation-pi">这里</a>）。</p>
 
 <pre><code>sudo apt update
 sudo apt install lomo-frame
 </code></pre>
 
-<h1 id="setup">Setup</h1>
+<h1 id="安装">安装</h1>
 
-<p><strong>Lomorage Digital Frame is still in beta, and setup MAY need you connect keyboard to Raspberry Pi, or you can use ssh to access Raspberry Pi, sorry, we promise that you will be able to control and setup via phone APP later.</strong></p>
+<p><strong>Lomorage电子相框程序还是beta版本，您可能需要连接键盘到树莓派，或者通过ssh方式访问树莓派。未来我们会支持通过手机方式来控制相框程序。</strong></p>
 
-<h2 id="quickstart">Quickstart</h2>
+<h2 id="快速开始">快速开始</h2>
 
-<p>If you have lomo-frame installed, it will launch on boot.</p>
+<p>如果您已经安装了lomo-frame程序，它会在开机后自动启动。</p>
 
-<p>At first launch, it will scan all the digital assets in &ldquo;/media&rdquo; directories, which means all users photo and video will be scanned, and will generate playlist in &ldquo;/opt/lomorage/var/lomo-playlist.txt&rdquo;.</p>
+<p>第一次启动时，它会扫描&rdquo;/media&rdquo;目录下面的照片和视频文件，并生成播放列表放在&rdquo;/opt/lomorage/var/lomo-playlist.txt&rdquo;文件中。</p>
 
-<p><strong>The rescan is schedule to run automatically on weekly basis (00:00 on Sunday)</strong>, so that the playlist can be updated with newly added or deleted assets. You can manually trigger the rescan in two ways:</p>
+<p><strong>系统会在每周重现扫描一次(周日00:00)</strong>, 来更新播放列表。您也可以手动来触发重新扫描，有两种方式:</p>
 
 <ol>
-<li><p>If you have keyboard connected with Raspberry Pi, press key &ldquo;r&rdquo; to rescan.</p></li>
+<li><p>如果您的树莓派连接了键盘，可以按&rdquo;r&rdquo;键重新扫描。</p></li>
 
-<li><p>If you are using ssh to access Raspberry Pi, you can use <code>framectrl.sh rescan</code> to rescan.</p></li>
+<li><p>如果您使用ssh访问，可以使用<code>framectrl.sh rescan</code>命令来重新扫描.</p></li>
 </ol>
 
-<h2 id="turn-frame-on-off">Turn Frame ON/OFF</h2>
+<h2 id="关闭开启相框">关闭开启相框</h2>
 
-<p>lomo-frame will start after system boot automatically, but if you want manual control, you can use the following commands to turn it on: <code>framectrl.sh on</code>, or turn it off: <code>framectrl.sh off</code>. <strong>It will turn on/off the monitor as well as the lomo-frame service.</strong></p>
+<p>lomo-frame应用程序会在系统启动的时候自动加载，但如果您需要手动控制，你可以使用<code>framectrl.sh on</code>命令打开, 或者使用<code>framectrl.sh off</code>命令关闭。<strong>这个命令打开或关闭lomo-frame应用，并同时打开或者关闭显示器。</strong></p>
 
-<h2 id="stop-or-start-lomo-frame-service">Stop or Start lomo-frame Service</h2>
+<h2 id="关闭开启lomo-frame应用">关闭开启lomo-frame应用</h2>
 
-<p>If you just want to quit lomo-frame service, while keep the monitor on, you can either:</p>
+<p>如果您只是想退出lomo-frame应用，但是想让显示器继续开着，您可以使用下面的方法之一:</p>
 
 <ul>
-<li><p>press &ldquo;esc&rdquo; on the keyboard if Raspberry Pi connected with keyboard.</p></li>
+<li><p>如果树莓派接了键盘，按&rdquo;esc&rdquo;键。</p></li>
 
-<li><p><code>sudo service supervisor stop</code> if you use ssh to access Raspberry Pi.</p></li>
+<li><p>如果您使用ssh访问，使用<code>sudo service supervisor stop</code>命令。</p></li>
 </ul>
 
-<p>You can use <code>sudo service supervisor start</code> to start the lomo-frame serivce.</p>
+<p>您可以用<code>sudo service supervisor start</code>命令打开lomo-frame应用.</p>
 
-<h2 id="schedule-frame-on-off-time">Schedule Frame ON/OFF time</h2>
+<h2 id="定时开关">定时开关</h2>
 
-<p><strong>The default turn on time is &ldquo;08:00 am&rdquo;, and turn off time is &ldquo;21:00 pm&rdquo;.</strong></p>
+<p><strong>默认打开时间是&rdquo;08:00 am&rdquo;, 关闭时间是&rdquo;21:00 pm&rdquo;.</strong></p>
 
-<p>You can change that use the following command, which changes the on time to &ldquo;10:00 am&rdquo; and off time to &ldquo;18:00&rdquo;:</p>
+<p>您可以使用下面的命令来修改, 下面的命令修改打开时间为&rdquo;10:00 am&rdquo;，关闭时间为&rdquo;18:00&rdquo;:</p>
 
 <pre><code>framectr.sh add --on-hour 10 --off-hour 18
 </code></pre>
 
-<p>You can also change that to &ldquo;10:30 am&rdquo; and off time to &ldquo;18:30&rdquo;</p>
+<p>您也可以修改打开时间为&rdquo;10:30 am&rdquo;，关闭时间为&rdquo;18:30&rdquo;</p>
 
 <pre><code>framectr.sh add --on-hour 10 --on-min 30 --off-hour 18 --off-min 30
 </code></pre>
 
-<p>Or if you want to keep it on 7x24, just remove the schedule:</p>
+<p>或者您想7x24小时开机, 删除定时开关机:</p>
 
 <pre><code>framectr.sh remove
 </code></pre>
 
-<h2 id="playback-order">Playback Order</h2>
+<h2 id="播放顺序">播放顺序</h2>
 
-<p><strong>By default, it&rsquo;s random</strong>, but if you prefer to playback sequentially:</p>
+<p><strong>默认是随机播放</strong>，但如果您希望顺序播放:</p>
 
 <pre><code>sudo sed -i &quot;s/is_random =.*/is_random = false/&quot; /opt/lomorage/var/video_looper.ini
 </code></pre>
 
-<p>Or you can change it back to random:</p>
+<p>或者您想改为随机播放:</p>
 
 <pre><code>sudo sed -i &quot;s/is_random =.*/is_random = true/&quot; /opt/lomorage/var/video_looper.ini
 </code></pre>
 
-<h2 id="customize-playlist">Customize playlist</h2>
+<h2 id="自定义播放列表">自定义播放列表</h2>
 
-<p>You can edit/create &ldquo;/opt/lomorage/var/lomo-playlist.txt&rdquo;, the format is one media file path per line.</p>
+<p>您可以创建后修改播放列表文件&rdquo;/opt/lomorage/var/lomo-playlist.txt&rdquo;，格式是每个文件路径一行。</p>
 
-<h2 id="playback-media-type">Playback Media Type</h2>
+<h2 id="播放媒体类型">播放媒体类型</h2>
 
-<p><strong>By default, it will play videos and images</strong>, but if you need to play only images, you can change the &ldquo;media_type&rdquo; in &ldquo;/opt/lomorage/var/video_looper.ini&rdquo;:</p>
+<p><strong>默认会播放视频和照片</strong>，但如果您只想播放照片，您可以修改&rdquo;/opt/lomorage/var/video_looper.ini&rdquo;文件中的&rdquo;media_type&rdquo;:</p>
 
 <pre><code>sudo sed -i &quot;s/media_type =.*/media_type = image/&quot; /opt/lomorage/var/video_looper.ini
 </code></pre>
 
-<p>or play only video:</p>
+<p>或者您只想播放视频:</p>
 
 <pre><code>sudo sed -i &quot;s/media_type =.*/media_type = video/&quot; /opt/lomorage/var/video_looper.ini
 </code></pre>
 
-<p>or restore to play all media assets:</p>
+<p>或者想重置为播放视频和照片:</p>
 
 <pre><code>sudo sed -i &quot;s/media_type =.*/media_type = all/&quot; /opt/lomorage/var/video_looper.ini
 </code></pre>
 
-<h2 id="keyboard-control">Keyboard control</h2>
+<h2 id="快捷键">快捷键</h2>
 
-<p>If you have keyboard connect with Raspberry Pi, you can press the following key to control:</p>
+<p>您可以通过下面的快捷键来控制:</p>
 
 <ul>
-<li><p>&ldquo;r&rdquo;: rescan playlist.</p></li>
+<li><p>&ldquo;r&rdquo;: 重新扫描并生成播放列表。</p></li>
 
-<li><p>&ldquo;k&rdquo;: skip to next.</p></li>
+<li><p>&ldquo;k&rdquo;: 跳到下一个视频或图片。</p></li>
 
-<li><p>&ldquo;s&rdquo;: pause/resume play</p></li>
+<li><p>&ldquo;s&rdquo;: 暂停播放/继续播放</p></li>
 
-<li><p>&ldquo;esc&rdquo;: quit lomo-frame</p></li>
+<li><p>&ldquo;esc&rdquo;: 退出应用</p></li>
 </ul>
 
-<h2 id="setup-multiple-digital-frame">Setup multiple digital frame</h2>
+<h2 id="设置多个数码相框">设置多个数码相框</h2>
 
-<p>This setup need some expertise, sorry, will make it easier in the future using phone APP.</p>
+<p>下面的设置需要比较多的专业知识，以后我们会在手机应用中添加相应的控制和配置功能。</p>
 
-<p>If you already have one Raspberry Pi (Primary Raspberry Pi) setup for running lomorage service, and having all the hard drivers connected with that device, you probably keep it in the storage room connected to the router with wired network, and want to setup the digital frame in bedroom or living room.</p>
+<p>如果您已经有了树莓派再跑Lomorage服务程序（主树莓派），并在上面连接了移动硬盘，您很可能会把它放在储藏室并使用有线连接，而您可能是希望数码相框放在卧室或者客厅。</p>
 
-<p>You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital asssets via WiFi, it works pretty well, the video playback is very smooth.</p>
+<p>您可以使用低成本的树莓派Zero w来安装数码相框程序，并通过WiFi远程访问您的照片和视频。树莓派Zero w跑数码相框应用甚至能流畅的播放视频。</p>
 
-<h3 id="1-install-lomo-frame">1. Install lomo-frame</h3>
+<h3 id="1-安装lomo-frame">1. 安装lomo-frame</h3>
 
-<p>You can follow the instructions on the top of the page.</p>
+<p>您可以按照本页面最前面的方式来安装。</p>
 
-<h3 id="2-setup-wifi-connection">2. Setup WiFi connection</h3>
+<h3 id="2-设置wifi连接">2. 设置WiFi连接</h3>
 
-<p>Connect keyboard with Raspberry Pi zero W and login, if you installed Lomorage Raspberry Pi OS image, you can use the command <code>wifi_switch client [wifi-ssid] [wifi-password]</code>, replace &ldquo;[wifi-ssid]&rdquo; and &ldquo;[wifi-password]&rdquo; with those of your wifi network; otherwise, you can refer to other docs online to set the WiFi connection.</p>
+<p>键盘连接到Raspberry Pi zero W并登陆, 如果您是Lomorage的树莓派镜像，可以使用命令<code>wifi_switch client [wifi-ssid] [wifi-password]</code>, 用您自己的配置替换&rdquo;[wifi-ssid]&ldquo;和&rdquo;[wifi-password]&ldquo;。如果使用其他系统，您可以参考网上其他资料来设置WiFi连接。</p>
 
-<h3 id="3-check-ip-address-of-primary-raspberry-pi">3. Check IP address of primary Raspberry Pi</h3>
+<h3 id="3-检查主树莓派的ip地址">3. 检查主树莓派的IP地址</h3>
 
-<p>You can find the IP address using iPhone APP, in &ldquo;settings&rdquo; tab, section &ldquo;LOCAL SERVICE&rdquo;, the host field is the IP address.</p>
+<p>您可以在手机APP里面查看，点击“设置”，找到“本地服务”，其中的&rdquo;服务器地址“字段里面的就是IP地址。</p>
 
-<h3 id="4-find-the-mount-directory-on-primary-raspberry-pi">4. Find the mount directory on primary Raspberry Pi</h3>
+<h3 id="4-找到主树莓派的加载目录">4. 找到主树莓派的加载目录</h3>
 
-<p>You can mount the &ldquo;media&rdquo; directory on primary Raspberry Pi onto your desktop/laptop via SAMBA, with user name &ldquo;pi&rdquo; and password &ldquo;raspberry&rdquo;, and you will find the directory name store media assets mounted under &ldquo;media&rdquo; directory.</p>
+<p>您可以把主树莓派的&rdquo;media&rdquo;目录通过SAMBA协议加载到电脑上，用户名是&rdquo;pi&rdquo;，密码是&rdquo;raspberry&rdquo;，你可以在&rdquo;media&rdquo;目录下找到加载的存储媒体文件的目录名。</p>
 
-<h3 id="5-mount-on-raspberry-pi-zero-w">5. Mount on Raspberry Pi zero w</h3>
+<h3 id="5-远程挂载媒体目录到树莓派zero-w">5. 远程挂载媒体目录到树莓派zero w</h3>
 
-<p>Say if directory with name &ldquo;/media/WD_90C27F73C27F5C82&rdquo; store media assets mounted on primary Raspberry Pi (with IP 192.168.1.155), you can mount it on your Raspberry Pi zero w, login to Raspberry Pi zero and then:</p>
+<p>比如加载到主树莓派的目录路径为&rdquo;/media/WD_90C27F73C27F5C82&rdquo;，主树莓派的IP地址为192.168.1.155, 您可以登陆树莓派zero w，并远程挂载那个目录到本地:</p>
 
 <pre><code>sudo mkdir /media/WD_90C27F73C27F5C82
 echo &quot;sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
 sudo mount -a
 </code></pre>
 
-<h3 id="6-reboot">6. Reboot</h3>
+<h3 id="6-重启">6. 重启</h3>
 
 <pre><code>sudo reboot
 </code></pre>
 
-<p>After reboot, you should be able to see it starts scanning the media files to generate playlist.</p>
+<p>重启之后，您应该可以看到开始扫描媒体文件，并生成播放列表了。</p>
 
                         </div>
 
@@ -392,16 +392,10 @@ sudo mount -a
 
         
         <div class="col-md-4 col-sm-6">
-            <h4>About us</h4>
+            <h4>关于我们</h4>
 
-            We are a small team believe that distributed web is the future,
-        and we focus on building the private photo cloud based on DWeb technologies in the first place.
-        <!--
-        <li>Easy to setup, use and maintain as existing cloud service</li>
-        <li>Store your data securely on your own devices</li>
-        <li>Backup and duplicate storage by adding more devices</li>
-        <li>No one can access your assets without permission</li>-->
-        
+            我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
+                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -435,7 +429,7 @@ sudo mount -a
             <p class="pull-left">Copyright (c) 2018 - 2019, Lomoware; all rights reserved.</p>
             
             <p class="pull-right">
-              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
               

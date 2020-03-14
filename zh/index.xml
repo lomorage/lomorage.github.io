@@ -55,6 +55,26 @@ wget https://bin.</description>
     
     <item>
       <title></title>
+      <link>https://lomorage.com/zh/install-frame/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/install-frame/</guid>
+      <description>目录  安装lomo-frame 安装  快速开始 关闭开启相框 关闭开启lomo-frame应用 定时开关 播放顺序 自定义播放列表 播放媒体类型 快捷键 设置多个数码相框  1. 安装lomo-frame 2. 设置WiFi连接 3. 检查主树莓派的IP地址 4. 找到主树莓派的加载目录 5. 远程挂载媒体目录到树莓派zero w 6. 重启    安装lomo-frame 如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装lomo-frame应用，已经预装到系统中了
+否则，如果您的系统镜像是2020-03-13之前的 (&amp;ldquo;image_2020-03-13-lomorage-lite.zip &amp;ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&amp;rdquo;gpg.key&amp;rdquo;文件，如果没有，请参考这里）。
+sudo apt update sudo apt install lomo-frame  安装 Lomorage电子相框程序还是beta版本，您可能需要连接键盘到树莓派，或者通过ssh方式访问树莓派。未来我们会支持通过手机方式来控制相框程序。
+快速开始 如果您已经安装了lomo-frame程序，它会在开机后自动启动。
+第一次启动时，它会扫描&amp;rdquo;/media&amp;rdquo;目录下面的照片和视频文件，并生成播放列表放在&amp;rdquo;/opt/lomorage/var/lomo-playlist.txt&amp;rdquo;文件中。
+系统会在每周重现扫描一次(周日00:00), 来更新播放列表。您也可以手动来触发重新扫描，有两种方式:
+ 如果您的树莓派连接了键盘，可以按&amp;rdquo;r&amp;rdquo;键重新扫描。
+ 如果您使用ssh访问，可以使用framectrl.sh rescan命令来重新扫描.
+  关闭开启相框 lomo-frame应用程序会在系统启动的时候自动加载，但如果您需要手动控制，你可以使用framectrl.sh on命令打开, 或者使用framectrl.sh off命令关闭。这个命令打开或关闭lomo-frame应用，并同时打开或者关闭显示器。
+关闭开启lomo-frame应用 如果您只是想退出lomo-frame应用，但是想让显示器继续开着，您可以使用下面的方法之一:
+ 如果树莓派接了键盘，按&amp;rdquo;esc&amp;rdquo;键。
+ 如果您使用ssh访问，使用sudo service supervisor stop命令。</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://lomorage.com/zh/installation-ios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -136,6 +156,7 @@ Windows 2. 双击&amp;rdquo;lomoagent.msi&amp;rdquo;开始安装。如果有Wind
 Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi 3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
 您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
  &amp;nbsp;  4. 外网访问 (可选) Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击这里查看具体配置。
+5. 设置数码相框(Beta) 您可以将树莓派连接显示器，并作为数码相框，您也可以使用树莓派zero w来搭建多个数码相框，并远程通过WiFi来访问。点击这里查看数码相框设置。
  Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY</description>
     </item>
     

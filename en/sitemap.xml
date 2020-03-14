@@ -33,6 +33,16 @@
   
   <url>
     <loc>https://lomorage.com/install-frame/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/install-frame/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/install-frame/"
+                />
   </url>
   
   <url>
