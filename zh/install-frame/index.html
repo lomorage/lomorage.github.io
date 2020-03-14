@@ -362,7 +362,7 @@ sudo apt install lomo-frame
 <p>比如加载到主树莓派的目录路径为&rdquo;/media/WD_90C27F73C27F5C82&rdquo;，主树莓派的IP地址为192.168.1.155, 您可以登陆树莓派zero w，并远程挂载那个目录到本地:</p>
 
 <pre><code>sudo mkdir /media/WD_90C27F73C27F5C82
-echo &quot;sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
+echo &quot;//192.168.1.124/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
 sudo mount -a
 </code></pre>
 

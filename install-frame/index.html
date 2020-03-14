@@ -362,7 +362,7 @@ sudo apt install lomo-frame
 <p>Say if directory with name &ldquo;/media/WD_90C27F73C27F5C82&rdquo; store media assets mounted on primary Raspberry Pi (with IP 192.168.1.155), you can mount it on your Raspberry Pi zero w, login to Raspberry Pi zero and then:</p>
 
 <pre><code>sudo mkdir /media/WD_90C27F73C27F5C82
-echo &quot;sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
+echo &quot;//192.168.1.124/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
 sudo mount -a
 </code></pre>
 
