@@ -59,9 +59,9 @@ wget https://bin.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/install-frame/</guid>
-      <description>目录  安装lomo-frame 安装  快速开始 关闭开启相框 关闭开启lomo-frame应用 定时开关 播放顺序 自定义播放列表 播放媒体类型 快捷键 设置多个数码相框  1. 安装lomo-frame 2. 设置WiFi连接 3. 检查主树莓派的IP地址 4. 找到主树莓派的加载目录 5. 远程挂载媒体目录到树莓派zero w 6. 重启    安装lomo-frame 如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装lomo-frame应用，已经预装到系统中了
+      <description>目录  安装lomo-frame 配置lomo-frame  快速开始 关闭开启相框 关闭开启lomo-frame应用 定时开关 播放顺序 自定义播放列表 播放媒体类型 快捷键 设置多个数码相框  1. 安装lomo-frame 2. 设置WiFi连接 3. 检查主树莓派的IP地址 4. 找到主树莓派的加载目录 5. 远程挂载媒体目录到树莓派zero w 6. 重启    安装lomo-frame 如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装lomo-frame应用，已经预装到系统中了
 否则，如果您的系统镜像是2020-03-13之前的 (&amp;ldquo;image_2020-03-13-lomorage-lite.zip &amp;ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&amp;rdquo;gpg.key&amp;rdquo;文件，如果没有，请参考这里）。
-sudo apt update sudo apt install lomo-frame  安装 Lomorage电子相框程序还是beta版本，您可能需要连接键盘到树莓派，或者通过ssh方式访问树莓派。未来我们会支持通过手机方式来控制相框程序。
+sudo apt update sudo apt install lomo-frame  配置lomo-frame Lomorage电子相框程序还是beta版本，您可能需要连接键盘到树莓派，或者通过ssh方式访问树莓派。未来我们会支持通过手机方式来控制相框程序。
 快速开始 如果您已经安装了lomo-frame程序，它会在开机后自动启动。
 第一次启动时，它会扫描&amp;rdquo;/media&amp;rdquo;目录下面的照片和视频文件，并生成播放列表放在&amp;rdquo;/opt/lomorage/var/lomo-playlist.txt&amp;rdquo;文件中。
 系统会在每周重现扫描一次(周日00:00), 来更新播放列表。您也可以手动来触发重新扫描，有两种方式:

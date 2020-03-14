@@ -36,7 +36,7 @@ There are a few tunnel services available for free use, most tunnel services req
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/install-frame/</guid>
-      <description>Table of Contents  Install lomo-frame Setup  Quickstart Turn Frame ON/OFF Stop/Start lomo-frame Service Schedule Frame ON/OFF time Playback Order Customize playlist Playback Media Type Keyboard control Setup multiple digital frame  1. Install lomo-frame 2. Setup WiFi connection 3. Check IP address of primary Raspberry Pi 4. Find the mount directory on primary Raspberry Pi 5. Mount on Raspberry Pi zero w 6. Reboot    Install lomo-frame If you install the latest Lomorage Raspberry Pi OS image, you should already have the lomo-frame application installed in that image.</description>
+      <description>Table of Contents  Install lomo-frame Setup lomo-frame  Quickstart Turn Frame ON/OFF Stop/Start lomo-frame Service Schedule Frame ON/OFF time Playback Order Customize playlist Playback Media Type Keyboard control Setup multiple digital frame  1. Install lomo-frame 2. Setup WiFi connection 3. Check IP address of primary Raspberry Pi 4. Find the mount directory on primary Raspberry Pi 5. Mount on Raspberry Pi zero w 6. Reboot    Install lomo-frame If you install the latest Lomorage Raspberry Pi OS image, you should already have the lomo-frame application installed in that image.</description>
     </item>
     
     <item>
