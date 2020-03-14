@@ -220,7 +220,7 @@
 <p>点击下面的链接下载系统镜像。</p>
 
 <p align="center">
-<a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/2020_03_13.10_54_31.0.60425d1/image_2020-03-13-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 <p>下载了系统镜像后, 你可以使用<a href="https://www.balena.io/etcher/">balenaEtcher</a>将其安装到MicroSD卡, balenaEtcher提供Windows和macOS版本。</p>
@@ -294,14 +294,16 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 <pre><code>sudo apt install lomo-vips lomo-backend -y
 </code></pre>
 
-<p><strong>步骤6. 按需修改加载目录</strong></p>
+<p><strong>步骤6. 按需修改加载目录和运行用户</strong></p>
 
-<p>如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到&rdquo;/media&rdquo;路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。比如如果您使用PCManFM，那么加载的路径会是&rdquo;/media/pi&rdquo;。</p>
+<p>如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到&rdquo;/media&rdquo;路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。</p>
 
-<p>要指定加载目录&rdquo;/media/pi&rdquo;, 修改&rdquo;lib/systemd/system/lomod.service&rdquo; <code>ExecStart</code>字段，加上  &ldquo;&ndash;mount-dir&rdquo;参数:</p>
+<p>比如如果您使用PCManFM，那么加载的路径会是&rdquo;/media/pi&rdquo;。 要指定加载目录&rdquo;/media/pi&rdquo;, 修改&rdquo;lib/systemd/system/lomod.service&rdquo; <code>ExecStart</code>字段，加上  &ldquo;&ndash;mount-dir&rdquo;参数:</p>
 
 <pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 </code></pre>
+
+<p>如果您的用户名不是&rdquo;pi&rdquo;，那么需要修改&rdquo;lib/systemd/system/lomod.service&rdquo;文件中的用户名pi(&ldquo;User=pi&rdquo;)改成您的用户名。</p>
 
 <p>重启Lomorage服务程序:</p>
 

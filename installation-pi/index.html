@@ -222,7 +222,7 @@
 <p>Click the link below to download the prebuild OS image.</p>
 
 <p align="center">
-<a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/2020_03_13.10_54_31.0.60425d1/image_2020-03-13-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 <p>After you download the customized OS image, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
@@ -294,14 +294,16 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 <pre><code>sudo apt install lomo-vips lomo-backend -y
 </code></pre>
 
-<p><strong>step 6. Change mount directory if needed</strong></p>
+<p><strong>step 6. Change mount directory and username if needed</strong></p>
 
-<p>If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in &ldquo;/media&rdquo; directory, for example if you are using PCManFM, then the mount directory will be &ldquo;/media/pi&rdquo;.</p>
+<p>If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in &ldquo;/media&rdquo; directory.</p>
 
-<p>To specify the mount directory to be &ldquo;/media/pi&rdquo;, modify <code>ExecStart</code> in &ldquo;lib/systemd/system/lomod.service&rdquo;, and add paramter &ldquo;&ndash;mount-dir&rdquo; as below</p>
+<p>For example if you are using PCManFM, then the mount directory will be &ldquo;/media/pi&rdquo;. To specify the mount directory to be &ldquo;/media/pi&rdquo;, modify <code>ExecStart</code> in &ldquo;lib/systemd/system/lomod.service&rdquo;, and add paramter &ldquo;&ndash;mount-dir&rdquo; as below</p>
 
 <pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 </code></pre>
+
+<p>If your username is not &ldquo;pi&rdquo;, you need to change &ldquo;User=pi&rdquo; in &ldquo;lib/systemd/system/lomod.service&rdquo;, and use your username.</p>
 
 <p>Then restart Lomorage service:</p>
 

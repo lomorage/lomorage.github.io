@@ -102,15 +102,17 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 sudo apt install lomo-vips lomo-backend -y
 ```
 
-**step 6. Change mount directory if needed**
+**step 6. Change mount directory and username if needed**
 
-If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in "/media" directory, for example if you are using PCManFM, then the mount directory will be "/media/pi".
+If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in "/media" directory. 
 
-To specify the mount directory to be "/media/pi", modify `ExecStart` in "lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
+For example if you are using PCManFM, then the mount directory will be "/media/pi". To specify the mount directory to be "/media/pi", modify `ExecStart` in "lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
 
 ```
 ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 ```
+
+If your username is not "pi", you need to change "User=pi" in "lib/systemd/system/lomod.service", and use your username.
 
 Then restart Lomorage service:
 

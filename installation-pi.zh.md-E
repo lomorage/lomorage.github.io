@@ -102,15 +102,17 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 sudo apt install lomo-vips lomo-backend -y
 ```
 
-**步骤6. 按需修改加载目录**
+**步骤6. 按需修改加载目录和运行用户**
 
-如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到"/media"路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。比如如果您使用PCManFM，那么加载的路径会是"/media/pi"。
+如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到"/media"路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。
 
-要指定加载目录"/media/pi", 修改"lib/systemd/system/lomod.service" `ExecStart`字段，加上  "--mount-dir"参数:
+比如如果您使用PCManFM，那么加载的路径会是"/media/pi"。 要指定加载目录"/media/pi", 修改"lib/systemd/system/lomod.service" `ExecStart`字段，加上  "--mount-dir"参数:
 
 ```
 ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 ```
+
+如果您的用户名不是"pi"，那么需要修改"lib/systemd/system/lomod.service"文件中的用户名pi("User=pi")改成您的用户名。
 
 重启Lomorage服务程序:
 
