@@ -92,7 +92,9 @@ sudo apt update sudo apt install lomo-frame  配置lomo-frame Lomorage电子相�
       
       <guid>https://lomorage.com/zh/installation-osx/</guid>
       <description> 在MacOS上安装Lomorage服务程序 1. 点击下面的链接安装Lomorage服务程序。
-macOS 2. 双击&amp;rdquo;LomoAgent.dmg&amp;rdquo;开始安装，参考下面步骤完成安装。
+macOS 如果上面链接无法访问，也可以从百度网盘下载:
+链接: https://pan.baidu.com/s/1DLqQNPSJ1t_GUJNy8raeAA 提取码: b9r3
+2. 双击&amp;rdquo;LomoAgent.dmg&amp;rdquo;开始安装，参考下面步骤完成安装。
  3. 运行应用程序LomoAgent，如果有防火墙提示，请允许LomoAgent访问网络。
 4. 程序启动后，您需要设置数据目录才能正常使用，数据目录用来存储您的手机上传的照片视频。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备份。
  </description>
