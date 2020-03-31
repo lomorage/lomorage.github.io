@@ -194,9 +194,7 @@
                         <p class="text-muted text-uppercase mb-small text-right">March 29, 2020</p>
 
                         <div id="post-content">
-                          
-
-<p>It&rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.</p>
+                          <p>It&rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.</p>
 
 <div align="center">
 <p class="screenshoot">
@@ -297,7 +295,7 @@ $ cd modules
 $ git clone https://github.com/bibaldo/MMM-COVID19
 </code></pre>
 
-<p>Then config the module in &ldquo;config/config.js&rdquo;, register aacout at <a href="https://rapidapi.com/">https://rapidapi.com/</a> and replace the &ldquo;get-your-api-key&rdquo; below with your own API key. After registered, go to <a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a> and you can find the API key with name &ldquo;X-RapidAPI-Key&rdquo;.</p>
+<p>Then config the module in &ldquo;config/config.js&rdquo;, register accout at <a href="https://rapidapi.com/">https://rapidapi.com/</a> and replace the &ldquo;get-your-api-key&rdquo; below with your own API key. After registered, go to <a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a> and you can find the API key with name &ldquo;X-RapidAPI-Key&rdquo;.</p>
 
 <pre><code>  {
     module: 'MMM-COVID19',
@@ -369,7 +367,6 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 <pre><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
 00 21 * * * vcgencmd display_power 0;pm2 stop mm
 </code></pre>
-
                         </div>
                         
                         

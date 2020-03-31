@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <script type="text/javascript">
+      var userLang = navigator.language || navigator.userLanguage;
+      console.log(window.location.pathname);
+      if (userLang.startsWith("zh") && window.location.pathname == "/") {
+              window.location.href = '/zh/';
+      }
+  </script>
+
+  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"6ace4137554cb923d96ec92c7","lid":"36ce78d7a8","uniqueMethods":true}) })</script>
+
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>使用树莓派制作新冠病毒电子看板</title>
+  <meta name="author" content="" />
+
+  
+  <meta name="keywords" content="lomorage, lomoware, photo, video, iPhone, iCloud">	
+  
+
+  
+  <meta name="description" content="Lomorage Site">	
+  
+
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  
+
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
+
+  
+  <meta property="og:title" content="使用树莓派制作新冠病毒电子看板" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/zh/blog/2020/03/29/covid19//" />
+  <meta property="og:image" content="img/logo-lomo-flip.png" />
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="https://lomorage.com/">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="使用树莓派制作新冠病毒电子看板 logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="使用树莓派制作新冠病毒电子看板 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">使用树莓派制作新冠病毒电子看板 - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fa fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh">主页</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/features/">特性</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/installation/">安装</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/faq/">常见问题</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/contact/">联系</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/blog/">博客</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>使用树莓派制作新冠病毒电子看板</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">March 29, 2020</p>
+
+                        <div id="post-content">
+                          <p>新冠病毒肆掠全球，虽然现在可以很容易的在手机上查看新闻和数据，但是设置一个专门的电子看板，显示新闻和统计会更加方便。下面会讲解如何一步步的在树莓派上安装和配置“新冠病毒电子看板”。</p>
+
+<div align="center">
+<p class="screenshoot">
+  <img width="100%" src="/img/blog/covid19/dashboard-zh.png">
+</p>
+</div>
+
+<h1 id="目录">目录</h1>
+
+<ul>
+<li><a href="#准备工作">准备工作</a></li>
+<li><a href="#工作原理">工作原理</a></li>
+<li><a href="#安装">安装</a>
+
+<ul>
+<li><a href="#1-安装最新版本的nodejs">1. 安装最新版本的NodeJS</a></li>
+<li><a href="#2-安装magicmirror">2. 安装MagicMirror</a></li>
+<li><a href="#3-使用默认的配置模版">3. 使用默认的配置模版</a></li>
+<li><a href="#4-安装mmm-covid19模块">4. 安装MMM-COVID19模块</a></li>
+<li><a href="#5-为mmm-covid19添加更多的数据源">5. 为MMM-COVID19添加更多的数据源</a></li>
+<li><a href="#6-获取更多的模块">6. 获取更多的模块</a></li>
+</ul></li>
+<li><a href="#准备投入使用">准备投入使用</a>
+
+<ul>
+<li><a href="#1-配置树莓派">1. 配置树莓派</a></li>
+<li><a href="#2-开机启动magicmirror">2. 开机启动MagicMirror</a></li>
+<li><a href="#3-添加cronjob启动关闭magicmirror">3. 添加Cronjob启动关闭MagicMirror</a></li>
+</ul></li>
+</ul>
+
+<h1 id="准备工作">准备工作</h1>
+
+<p>您需要一个树莓派和HDMI的显示器，你可以放置一个大屏幕在客厅，也可以在桌面上放置一个小屏幕作为摆台。</p>
+
+<p><strong>注意: 树莓派0/1不支持，NodeJS不支持&rdquo;armv6l&rdquo;平台了。</strong></p>
+
+<h1 id="工作原理">工作原理</h1>
+
+<p>使用的开源软件有<a href="https://github.com/MichMich/MagicMirror">MagicMirror</a>和<a href="https://github.com/bibaldo/MMM-COVID19">covid-19模块</a>.</p>
+
+<p>MagicMirror是一个开源的智能镜子平台, 但实际上使用它并不需要一面镜子，它可以被用来定制电子看板。MagicMirror的客户端和服务器程序使用了Nodejs，服务器通过http提供看板服务，客户端使用Electron，运行<a href="https://www.kioware.com/resources.aspx?resid=45">Kiosk模式</a>, 也就是浏览器的全屏模式, 您也可以运行<a href="https://docs.magicmirror.builders/getting-started/installation.html#usage">&ldquo;服务器模式&rdquo;</a>，并在另外一台电脑的浏览器上访问电子看板。</p>
+
+<p>MagicMirror定义的如下的布局，您可以选择把模块放置的看板特定的位置。</p>
+
+<p><img src="/img/blog/covid19/layout.png" alt="layout" /></p>
+
+<p>模块定义了如何获取和显示数据。</p>
+
+<p>大体上来说就这么简单!</p>
+
+<h1 id="安装">安装</h1>
+
+<h2 id="1-安装最新版本的nodejs">1. 安装最新版本的NodeJS</h2>
+
+<p><a href="https://github.com/audstanley/NodeJs-Raspberry-Pi">NodeJs-Raspberry-Pi</a>能非常方便的一行命令安装NodeJS:</p>
+
+<pre><code>$ wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash; node -v
+</code></pre>
+
+<p><em>使用&rdquo;apt install&rdquo;很有可能不会安装新版本的NodeJS，MagicMirror在后续的安装过程只会报错。</em></p>
+
+<h2 id="2-安装magicmirror">2. 安装MagicMirror</h2>
+
+<pre><code>$ git clone https://github.com/MichMich/MagicMirror
+$ cd MagicMirror/
+$ npm install
+</code></pre>
+
+<h2 id="3-使用默认的配置模版">3. 使用默认的配置模版</h2>
+
+<p>MagicMirror已经安装了一些<a href="https://docs.magicmirror.builders/getting-started/configuration.html#general">默认模块</a>.</p>
+
+<pre><code># 假设在MagicMirror目录
+$ cp config/config.js.sample config/config.js
+
+# 可以使用&quot;ctrl+c&quot;停止, 下面的运行方式仅仅用于测试
+$ npm run
+</code></pre>
+
+<p>您可以尝试去修改&rdquo;config.js&rdquo;中模块的选项，比如，您可以给&rdquo;News Feed&rdquo;模块添加更多的RSS源:</p>
+
+<pre><code>{
+   title: &quot;BBC&quot;,
+   url: &quot;http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=us&quot;
+},
+</code></pre>
+
+<p>您也可以更加上面的布局图来修改模块的位置（&rdquo;position&rdquo;参数）。</p>
+
+<p>您也可以修改默认的语言（&rdquo;language&rdquo;参数)，<a href="https://github.com/MichMich/MagicMirror/tree/master/translations">https://github.com/MichMich/MagicMirror/tree/master/translations</a>可以查看所有可用的语言选项。</p>
+
+<h2 id="4-安装mmm-covid19模块">4. 安装MMM-COVID19模块</h2>
+
+<p>将模块安装在&rdquo;modules&rdquo;目录下:</p>
+
+<pre><code># 假设在MagicMirror目录
+$ cd modules
+$ git clone https://github.com/bibaldo/MMM-COVID19
+</code></pre>
+
+<p>然后在&rdquo;config/config.js&rdquo;文件中添加模块的配置, 在<a href="https://rapidapi.com/">https://rapidapi.com/</a>注册，将下面的&rdquo;get-your-api-key&rdquo;替换为您自己的API密钥。<a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a>，&rdquo;X-RapidAPI-Key&rdquo;就是API密钥。</p>
+
+<pre><code>  {
+    module: 'MMM-COVID19',
+    position: &quot;bottom_bar&quot;,
+    config: {
+      headerRowClass: &quot;big&quot;,
+      infoRowClass: &quot;big&quot;,
+      worldStats: true,
+      countries: [&quot;USA&quot;, &quot;China&quot;],
+      lastUpdateInfo: true,
+      delta: true,
+      rapidapiKey: &quot;get-your-api-key&quot;,
+   }
+  },
+</code></pre>
+
+<p>修改了&rdquo;config/config.js&rdquo;后，您需要重启MagicMirror。</p>
+
+<h2 id="5-为mmm-covid19添加更多的数据源">5. 为MMM-COVID19添加更多的数据源</h2>
+
+<p>默认的数据源缺少一些详细信息，比如没有美国每个郡县的统计，没有中国城市的统计。您也可以添加其他的数据源，但那个就不仅仅是简单的配置了，需要修改一些代码，因为不同的数据源的格式不一样。</p>
+
+<p>这里有个<a href="https://github.com/fuji246/MMM-COVID19/commit/42356ae5f922359a0b961328a43eddb0d61c4058">改动示例</a>添加了美国郡县的统计数据，并做了汉化。这个<a href="https://github.com/fuji246/MMM-COVID19/commit/e4d9850a1faf3631bebf10b11fd70133a8921296">改动示例</a>添加了中国城市的统计数据。</p>
+
+<p>美国的数据来源<a href="https://github.com/ExpDev07/coronavirus-tracker-api">https://github.com/ExpDev07/coronavirus-tracker-api</a>，中国的数据来源<a href="https://c.m.163.com/ug/api/wuhan/app/data/list-total">https://c.m.163.com/ug/api/wuhan/app/data/list-total</a>，都不需要申请API密钥。</p>
+
+<p>其他的数据源<a href="https://github.com/pomber/covid19">https://github.com/pomber/covid19</a>, 您也可以自行去网上查找合适的数据源，并对代码做相应的改动。</p>
+
+<h2 id="6-获取更多的模块">6. 获取更多的模块</h2>
+
+<p>这个<a href="https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules">wiki</a>列举了所有的第三方模块。最上面的示例图片使用了下面的模块:</p>
+
+<ul>
+<li><p><a href="https://github.com/KirAsh4/calendar_monthly/">calendar_monthly</a></p></li>
+
+<li><p><a href="https://github.com/eouia/worldclock">worldclock</a></p></li>
+</ul>
+
+<p>您也可以根据自己的需求尝试其他的模块。</p>
+
+<h1 id="准备投入使用">准备投入使用</h1>
+
+<p>测试好电子看板后，您还需要一些额外的配置，才能将其投入使用。</p>
+
+<h2 id="1-配置树莓派">1. 配置树莓派</h2>
+
+<p>您需要关掉屏保，禁止无线网卡的休眠模式，打开OpenGL驱动，参考<a href="https://github.com/MichMich/MagicMirror/wiki/Configuring-the-Raspberry-Pi">wiki</a>进行配置。</p>
+
+<p><em>注意: 关闭屏保那一步，在修改&rdquo;/etc/xdg/lxsession/LXDE-pi/autostart&rdquo;文件时, 需要注释掉这一行&rdquo;@xscreensaver -no-splash&rdquo;（使用#），这个在上面的说明里面没有</em></p>
+
+<pre><code>@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+#@xscreensaver -no-splash
+@xset s noblank
+@xset s off
+@xset -dpms
+</code></pre>
+
+<h2 id="2-开机启动magicmirror">2. 开机启动MagicMirror</h2>
+
+<p>参考<a href="https://github.com/MichMich/MagicMirror/wiki/Auto-Starting-MagicMirror">wiki</a>设置MagicMirror开机启动。</p>
+
+<p><em>注意: 如果安装了pm2后却找不到这个命令，您需要将<code>PATH=&quot;/opt/nodejs/bin:$PATH&quot;</code>添加到&rdquo;~/.profile&rdquo;文件中，然后<code>source ~/.profile</code>更新PATH环境变量</em></p>
+
+<h2 id="3-添加cronjob启动关闭magicmirror">3. 添加Cronjob启动关闭MagicMirror</h2>
+
+<p>在&rdquo;/var/spool/cron/crontabs/pi&rdquo;文件中添加如下的内容，控制MagicMirror在早上8 am启动，晚上9 pm关闭，并打开和关闭HDMI显示器。</p>
+
+<pre><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
+00 21 * * * vcgencmd display_power 0;pm2 stop mm
+</code></pre>
+                        </div>
+                        
+                        
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lomorage" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">搜索</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
+                <input type="hidden" name="sitesearch" value="https://lomorage.com/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            <li><a href="https://lomorage.com/categories/faq">faq (2)</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/categories/%e7%9c%8b%e6%9d%bf">看板 (1)</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            <li><a href="https://lomorage.com/tags/usb%e5%88%86%e7%ba%bf%e5%99%a8"><i class="fa fa-tags"></i> usb分线器</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/u%e7%9b%98"><i class="fa fa-tags"></i> u盘</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/windows"><i class="fa fa-tags"></i> windows</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e5%86%97%e4%bd%99%e5%a4%87%e4%bb%bd"><i class="fa fa-tags"></i> 冗余备份</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e6%81%a2%e5%a4%8d"><i class="fa fa-tags"></i> 恢复</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e6%89%8b%e6%9c%ba%e4%bc%a0%e7%94%b5%e8%84%91"><i class="fa fa-tags"></i> 手机传电脑</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e6%96%b0%e5%86%a0%e7%97%85%e6%af%92"><i class="fa fa-tags"></i> 新冠病毒</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e6%a0%91%e8%8e%93%e6%b4%be"><i class="fa fa-tags"></i> 树莓派</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e7%9c%8b%e6%9d%bf"><i class="fa fa-tags"></i> 看板</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e7%a1%ac%e7%9b%98"><i class="fa fa-tags"></i> 硬盘</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
+                    
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+              
+
+        </div>
+        
+
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2018 - 2019, Lomoware; all rights reserved.</p>
+            
+            <p class="pull-right">
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              
+
+              
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-138235951-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="https://lomorage.com/js/hpneo.gmaps.js"></script>
+<script src="https://lomorage.com/js/gmaps.init.js"></script>
+<script src="https://lomorage.com/js/front.js"></script>
+
+
+<script src="https://lomorage.com/js/owl.carousel.min.js"></script>
+
+
+  </body>
+</html>
