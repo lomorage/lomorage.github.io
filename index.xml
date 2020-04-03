@@ -76,8 +76,7 @@ macOS 2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-pi/</guid>
-      <description>Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:
- Raspberry Pi 4 Model B Raspberry Pi 3 Model B+ Raspberry Pi Zero W Raspberry Pi 2 Model B  If you don&amp;rsquo;t have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:</description>
+      <description>Table of Contents  Install Lomorage Service on Raspberry Pi  Install with prebuild OS image Docker installation  1. Install Docker on Raspberry Pi 2. Get Docker image 3. Run  Apt installation  1. Add lomoware source 2. Install Lomorage 3. Change mount directory and username if needed 4. Run    Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:</description>
     </item>
     
     <item>
