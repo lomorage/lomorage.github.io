@@ -367,6 +367,38 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 <pre><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
 00 21 * * * vcgencmd display_power 0;pm2 stop mm
 </code></pre>
+
+<h2 id="4-increase-swap-size">4. Increase swap size</h2>
+
+<p>If you add more plugins, you can use <a href="https://github.com/edward-shen/MMM-pages">MMM-pages</a> to put them in several pages, and most likely MagicMirror may consume a lot of memory, which will cause system unresponsive. Increase swap size helps.</p>
+
+<ol>
+<li>Stop the swap</li>
+</ol>
+
+<pre><code>sudo dphys-swapfile swapoff
+</code></pre>
+
+<ol>
+<li>Modify the size, edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE to 1024, then create and initialize the file</li>
+</ol>
+
+<pre><code>dphys-swapfile setup
+</code></pre>
+
+<ol>
+<li>Start the swap</li>
+</ol>
+
+<pre><code>sudo dphys-swapfile swapon
+</code></pre>
+
+<h2 id="5-setup-plex">5. Setup Plex</h2>
+
+<pre><code>curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
+sudo apt update
+sudo apt install plexmediaserver
+</code></pre>
                         </div>
                         
                         
@@ -447,6 +479,9 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
             <li><a href="https://lomorage.com/categories/faq">faq (1)</a>
             </li>
             
+            <li><a href="https://lomorage.com/categories/remote-access">remote-access (1)</a>
+            </li>
+            
         </ul>
     </div>
 </div>
@@ -472,10 +507,16 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
             <li><a href="https://lomorage.com/tags/dashboard"><i class="fa fa-tags"></i> dashboard</a>
             </li>
             
+            <li><a href="https://lomorage.com/tags/ddns"><i class="fa fa-tags"></i> ddns</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/flash-drive"><i class="fa fa-tags"></i> flash-drive</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/hard-disk"><i class="fa fa-tags"></i> hard-disk</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/openwrt"><i class="fa fa-tags"></i> openwrt</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/raspberry-pi"><i class="fa fa-tags"></i> raspberry-pi</a>

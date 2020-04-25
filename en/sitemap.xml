@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lomorage.com/blog/2020/04/17/ddns/</loc>
+    <lastmod>2020-04-17T22:17:40+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/blog/2020/03/29/covid19/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
     <xhtml:link
@@ -146,7 +151,7 @@
   
   <url>
     <loc>https://lomorage.com/blog/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+    <lastmod>2020-04-17T22:17:40+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -209,6 +214,12 @@
   <url>
     <loc>https://lomorage.com/categories/dashboard/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/ddns/</loc>
+    <lastmod>2020-04-17T22:17:40+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -284,7 +295,7 @@
   
   <url>
     <loc>https://lomorage.com/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+    <lastmod>2020-04-17T22:17:40+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -304,8 +315,20 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/tags/openwrt/</loc>
+    <lastmod>2020-04-17T22:17:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/tags/raspberry-pi/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+    <lastmod>2020-04-17T22:17:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/categories/remote-access/</loc>
+    <lastmod>2020-04-17T22:17:40+00:00</lastmod>
     <priority>0</priority>
   </url>
   

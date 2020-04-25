@@ -16,7 +16,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tags</title>
+  <title>Use Dynamic DNS to remote access Lomorage</title>
   <meta name="author" content="" />
 
   
@@ -67,9 +67,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Tags" />
+  <meta property="og:title" content="Use Dynamic DNS to remote access Lomorage" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/tags//" />
+  <meta property="og:url" content="/blog/2020/04/17/ddns//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -88,9 +88,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Tags logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Tags logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Tags - go to homepage</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Use Dynamic DNS to remote access Lomorage logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Use Dynamic DNS to remote access Lomorage logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Use Dynamic DNS to remote access Lomorage - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -175,7 +175,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Tags</h1>
+                <h1>Use Dynamic DNS to remote access Lomorage</h1>
             </div>
         </div>
     </div>
@@ -184,23 +184,97 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">April 17, 2020</p>
+
+                        <div id="post-content">
+                          
+
+<h1 id="how-ddns-works">How ddns works</h1>
+
+<p>You register a subdomain at ddns service provider, for example &ldquo;lomorage.duckdns.org&rdquo;, &ldquo;lomorage&rdquo; is the sub domain, then the ddns service provider will allocate a token for you, and you start at ddns client with that token to validate your are the subdomain owner, and ddns service provide will know your public IP address. Then when someone access the subdomain, ddns service provider will tell them the your public IP address and access your service directly.</p>
+
+<p>You will need to setup port mapping on your router to provide service if your server is running internally in your network, and for HTTP service, you&rsquo;d better secure it with https.</p>
+
+<h1 id="setup-ddns">Setup ddns</h1>
+
+<p>Go to <a href="https://www.duckdns.org/">https://www.duckdns.org/</a> and register an accout, then you can register your own subdomain, once you get the domain, you can go to <a href="https://www.duckdns.org/install.jsp">https://www.duckdns.org/install.jsp</a>, and choose the platform you want to install, you can either install it on Windows, MacOS, or Raspberry Pi, even on the router like openwrt.</p>
+
+<h1 id="enable-https-for-openwrt">Enable https for openwrt</h1>
+
+<p>Self-assigned certificate doesn&rsquo;t work well and will give warnining, use &ldquo;Let&rsquo;s Encrypted&rdquo; instead. SSH login into openwrt, and install acmesh client which automate the certificate management for you.</p>
+
+<p>Make sure to change &ldquo;my.router.net&rdquo; below with your own subdomain, for example: &ldquo;lomorage.duckdns.org&rdquo;</p>
+
+<pre><code>curl https://raw.githubusercontent.com/Neilpang/acme.sh/master/acme.sh &gt; acme.sh
+chmod a+x &quot;acme.sh&quot;
+./acme.sh --install
+cd /root/.acme.sh
+DOMAIN=my.router.net ## this domain must actually point to your router
+iptables -I input_rule -p tcp --dport 80 -j ACCEPT -m comment --comment ACME
+./acme.sh --issue -d $DOMAIN -w /www
+iptables -D input_rule -p tcp --dport 80 -j ACCEPT -m comment --comment ACME
+</code></pre>
+
+<p>Then activate https for your LuCi admin web GUI.</p>
+
+<pre><code>opkg update
+opkg install luci-ssl
+/etc/init.d/uhttpd restart
+</code></pre>
+
+<p>And you need to use &ldquo;Let&rsquo;s Encrypted&rdquo; key and cert.</p>
+
+<pre><code>uci set uhttpd.main.key=&quot;$(pwd)/$DOMAIN/$DOMAIN.key&quot;
+uci set uhttpd.main.cert=&quot;$(pwd)/$DOMAIN/$DOMAIN.cer&quot;
+uci commit uhttpd
+/etc/init.d/uhttpd restart
+</code></pre>
+
+<p>If you want to enable ONLY https, redirect http:</p>
+
+<pre><code>uci set uhttpd.main.redirect_https=1
+uci commit
+/etc/init.d/uhttpd restart
+</code></pre>
+
+<p>Notes: You can refer to <a href="https://github.com/stephank/openwrt/blob/master/package/uhttpd/files/uhttpd.config">https://github.com/stephank/openwrt/blob/master/package/uhttpd/files/uhttpd.config</a> about the settings in &ldquo;/etc/config/uhttpd&rdquo;</p>
+
+<p>Finally you can try use the subdomain set above to access your router: <a href="https://yoursubdomain.duckdns.org">https://yoursubdomain.duckdns.org</a></p>
+
+                        </div>
                         
                         
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lomorage" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
+                        
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -324,6 +398,7 @@
 
                 </div>
                 
+
             </div>
             
         </div>
