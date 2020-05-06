@@ -213,8 +213,7 @@ Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi 3. 安装Lomorage客户端 在�
       <guid>https://lomorage.com/zh/features/</guid>
       <description>--  &amp;nbsp;&amp;nbsp;保护隐私 Lomorage是运行在您网络的私有云服务，为您提供便捷的照片备份和管理服务，而无需担心隐私泄漏。我们没有，并永远不会收集任何用户隐私信息。
 您也可以在家中为不同的家庭成员运行多个完全隔离的Lomorage服务。
-&amp;nbsp;&amp;nbsp;&amp;nbsp;跨平台 Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。
-客户端我们现在只支持iOS，我们计划在今年内支持Android和Web。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;跨平台 Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。客户端支持iOS, Android和浏览器。
 &amp;nbsp;&amp;nbsp;&amp;nbsp;安装简单 我们并不是在构建另一个NAS系统，如果您的需求仅仅是备份和管理您的照片和视频，但是被NAS复杂的安装过程吓到，忘掉那些专业术语，放轻松。我们保证Lomorage的安装过程只需要短短几分钟。点击这里查看安装步骤。
 &amp;nbsp;&amp;nbsp;&amp;nbsp;存储原始文件 照片和视频会按照完整尺寸备份到您的硬盘，文件和您的手机上完全一样，EXIF元数据信息也不会丢失。支持所有常见的图片和视频格式，支持HEIC和动态照片。
 &amp;nbsp;&amp;nbsp;零迁移成本 我们不会像一些云存储系统对文件进行切片分块存储，您的照片视频文件会以原始的文件格式存储备份到您的硬盘，我们不用任何私有的存储格式。要使用Lomorage，您也无需格式化硬盘，可以使用任何闲置的硬盘，并且我们的Raspberry Pi版本支持所有常见的文件系统格式，无需使用特定的文件系统，比如对于Windows用户，您可以使用FAT或者NTFS文件格式的硬盘，这样就无需第三方软件，存储的文件就能在Windows上访问。
