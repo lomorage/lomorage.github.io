@@ -132,7 +132,7 @@ You can also join our slack channel.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/faq/</guid>
-      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. Why another photo backup service? 3. How to setup redundancy backup? 4. What file systems supported? 5. Why the date time seems not correct? 6. How to set a secondary backup? 7. Does Lomorage support backup edited file? 8. What is background backup?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just a combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.</description>
+      <description>1. Why not just use cloud? 2. How about NAS? 3. Any other similiar solutions? 4. Why Lomorage? 5. What is the cost? 6. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 7. What is the business model? 8. How to setup redundancy backup? 9. What file systems supported? 10. Why the date time seems not correct? 11. How to set a secondary backup? 12. Does Lomorage support backup edited file? 13.</description>
     </item>
     
     <item>
@@ -154,6 +154,16 @@ You can also set up multiple Lomorage services in your private network, for diff
       <guid>https://lomorage.com/installation/</guid>
       <description>Installation Guide 1. Overview To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store. Once you run the Lomorage service, the client APP is supposed to find the service running automatically with zero configuration, then you can upload photos on the Phone.
 2. Install Lomorage Service The first step is to set up the Lomorage service.</description>
+    </item>
+    
+    <item>
+      <title>Price Comparison</title>
+      <link>https://lomorage.com/compare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/compare/</guid>
+      <description>Price Comparison The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Raspberry Pi 4 or other single board computer to DIY yourself if you are expert.
+for example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations.</description>
     </item>
     
   </channel>

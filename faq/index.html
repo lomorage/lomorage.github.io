@@ -195,49 +195,140 @@
                           
 
 <ul>
-<li><a href="#1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</a></li>
-<li><a href="#2-why-another-photo-backup-service">2. Why another photo backup service?</a></li>
-<li><a href="#3-how-to-setup-redundancy-backup">3. How to setup redundancy backup?</a></li>
-<li><a href="#4-what-file-systems-supported">4. What file systems supported?</a></li>
-<li><a href="#5-why-the-date-time-seems-not-correct">5. Why the date time seems not correct?</a></li>
-<li><a href="#6-how-to-set-a-secondary-backup">6. How to set a secondary backup?</a></li>
-<li><a href="#7-does-lomorage-support-backup-edited-file">7. Does Lomorage support backup edited file?</a></li>
-<li><a href="#8-what-is-background-backup">8. What is background backup?</a></li>
+<li><a href="#1-why-not-just-use-cloud">1. Why not just use cloud?</a></li>
+<li><a href="#2-how-about-nas">2. How about NAS?</a></li>
+<li><a href="#3-any-other-similiar-solutions">3. Any other similiar solutions?</a></li>
+<li><a href="#4-why-lomorage">4. Why Lomorage?</a></li>
+<li><a href="#5-what-is-the-cost">5. What is the cost?</a></li>
+<li><a href="#6-how-comes-the-name-lomorage">6. How comes the name &ldquo;Lomorage&rdquo;?</a></li>
+<li><a href="#7-what-is-the-business-model">7. What is the business model?</a></li>
+<li><a href="#8-how-to-setup-redundancy-backup">8. How to setup redundancy backup?</a></li>
+<li><a href="#9-what-file-systems-supported">9. What file systems supported?</a></li>
+<li><a href="#10-why-the-date-time-seems-not-correct">10. Why the date time seems not correct?</a></li>
+<li><a href="#11-how-to-set-a-secondary-backup">11. How to set a secondary backup?</a></li>
+<li><a href="#12-does-lomorage-support-backup-edited-file">12. Does Lomorage support backup edited file?</a></li>
+<li><a href="#13-what-is-background-backup">13. What is background backup?</a></li>
 </ul>
 
-<h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</h2>
+<h2 id="1-why-not-just-use-cloud">1. Why not just use cloud?</h2>
+
+<p>We believe the digital assets should be taken care by ourselves, store locally, backup locally, that is the primary, and cloud backup is the tertiary backup, a good complementary, the price of existing cloud storage is too high, and some of the companies(Shoebox, Canon Irista) doing the business gradually shutdown the services, this is a money losing business, it’s not the efficient way to manage huge amount of assets centralized (flicker CEO’s <a href="https://www.theverge.com/2019/12/19/21030795/flickr-pro-smugmug-don-macaskill-open-letter">open letter</a> sent last year confirmed this), they have to either make it more expensive, or make you the product. Cloud service is convenient for the user, people don’t need to buy expensive hardware, don’t need to be the professionals to maintain that, don’t need to pay the energy fee to keep it run 24x7, but things are changing, single board computers are getting cheaper, more powerful and more energy efficient, storage are getting cheaper with larger capacity, people are having more and more concerns about the privacy, it’s now viable to host the Photo service, your private cloud, at your own place.</p>
+
+<h2 id="2-how-about-nas">2. How about NAS?</h2>
+
+<p>If you haven&rsquo;t heard of NAS before, then NAS will not be your option. <a href="https://en.wikipedia.org/wiki/Network-attached_storage">NAS</a> is a general storage that can store everything, it also comes with application that can backup and management your photos and videos. Even though some NAS tried to make it easy to use, and make the operating system looks like Windows, but still it&rsquo;s too complicate for non-technical users when they tried to understand what is, think about buy a NAS for your parents and let them setup it up. Take a look at the <a href="https://global.download.synology.com/download/Document/Software/UserGuide/Firmware/DSM/3.1/enu/Syno_UsersGuide_NAServer_enu.pdf">user guide</a> it&rsquo;s just way too much for a photo back and management.</p>
+
+<h2 id="3-any-other-similiar-solutions">3. Any other similiar solutions?</h2>
+
+<p>Yes, there are other products which focuses on the vertical market, let user hosts the Photo service locally but simplies the setup and use.</p>
+
+<ul>
+<li><a href="https://www.amazon.com/ibi-Organize-Privately-Smartphones-Accounts/dp/B07Y9CH817/ref=cm_cr_arp_d_product_top?ie=UTF8">ibi - The Smart Photo Manager</a> with 1TB storage (**$119.99 **)</li>
+<li><a href="https://www.amazon.com/Monument-Photo-Management-Device-Automatically/dp/B01M8I40A6/ref=sr_1_3?dchild=1&amp;keywords=ibi&amp;qid=1588828193&amp;sr=8-3">Monument Photo Management Device</a> NO hard drive (<strong>$169.94</strong>)</li>
+<li><a href="https://www.amazon.com/Kwilt3-Personal-External-Storage-Wireless/dp/B07KQHVMJX/ref=psdc_13436301_t3_B01M8I40A6?th=1">Kwilt3 Personal Cloud Storage Device</a> NO hard drive (<strong>$99</strong>)</li>
+<li><a href="http://www.halos.co/catdrive/">CatDrive Your Private Shared Memory</a>(<strong>out-of-service</strong>)</li>
+</ul>
+
+<h2 id="4-why-lomorage">4. Why Lomorage?</h2>
+
+<p>Simple, we are not satisfied with existing solutions.</p>
+
+<ol>
+<li><p>Cloud can be the tertiary complementary backup, not the primary, nor the secondary.</p>
+
+<ul>
+<li>We currently support redandency backup locally</li>
+<li>We plan to support remote backup (like backup to your parents&rsquo; Lomorage setup) and cloud backup like <a href="https://www.backblaze.com/">backblaze</a>.</li>
+</ul></li>
+
+<li><p>Easy to setup, easy to use, easy to upgrade, zero maintenance.</p>
+
+<ul>
+<li>It only takes a few minutes to install the prebuild OS image on Raspberry Pi.</li>
+<li>We support backup to Windows and MacOS as well with one single application.</li>
+<li>software upgrade automatically.</li>
+<li>System migrate automatically to gurantee compatibility.</li>
+</ul></li>
+
+<li><p>Software matters, it need to be solid to take care of those invaluable assets.</p>
+
+<ul>
+<li>We are the user, we eat our own dog food.</li>
+<li>We release by quality not by date.</li>
+</ul></li>
+
+<li><p>It should be open, avoid any kind of lock down, the user should easily migrate to other systems, and should not get a electronic waste if the product is out of service.</p>
+
+<ul>
+<li>Media files are stored as it&rsquo;s on your disk, original format, original resolution, exactly the same.</li>
+<li>You don&rsquo;t need format your hard drive to use it,  and it supports all porpular file systems.</li>
+<li>Media files are organized in folders by &ldquo;YYYY/MM/DD&rdquo; struture on disk, you can easily import them to other systems/tools.</li>
+<li>The setup use Raspberry Pi, even if you don&rsquo;t use Lomorage, it&rsquo;s still a single board computer you can use in <a href="https://projects.raspberrypi.org/en">tons of projects</a>.</li>
+</ul></li>
+
+<li><p>More than backup and management, enjoy the memories with your families.</p>
+
+<ul>
+<li>How many times you open photo APP and take a look the old photos?</li>
+<li>Have dozons of photo frames but hard to find enough space for them?</li>
+<li>Have idle digital photo frame which requires copy/paste files, limited in storage?</li>
+<li>Think about having a large screen digital signage in your living room which shows weather, news, digital arts and selected photos, and several other smaller digital photo frames in your bedroom or study room which shows your personal photos and videos.</li>
+<li>Reuse any idle screens to build digital frames with wireless connection using Raspberry Pi, customize the content on your Phone.</li>
+<li>share your kids photo to their grandparents&rsquo; digtal frame.</li>
+</ul></li>
+
+<li><p>Stay connected while independant.</p>
+
+<ul>
+<li>You can have Lomorage setup at your home, and your parents or your friends can have their own setup. They are operating indendantly, but can talk to each other when necessary, and they can as backup for each other.</li>
+</ul></li>
+</ol>
+
+<h2 id="5-what-is-the-cost">5. What is the cost?</h2>
+
+<p>Lomorage is more cost efficient and more flexible compared with existing solutions, the software cost you nothing, and even get the hardware setup using Raspberry Pi 4 is cheaper compared with existing solutions.  If you use the Windows or Mac application, it&rsquo;s $0. There are some advanced features currently missing but are planned, and the basic backup feature is solid and stable for almost 2 years, no hidden fees, no lock down, no privacy concern, why not give it a try?</p>
+
+<p>See <a href="/compare">here</a> for comparison with cloud service, NAS and other solutions.</p>
+
+<h2 id="6-how-comes-the-name-lomorage">6. How comes the name &ldquo;Lomorage&rdquo;?</h2>
 
 <p>If you know what Lomography is, then &ldquo;Lomorage&rdquo; is just a combination of &ldquo;Lomography&rdquo; and &ldquo;Storage&rdquo;.</p>
 
-<h2 id="2-why-another-photo-backup-service">2. Why another photo backup service?</h2>
+<h2 id="7-what-is-the-business-model">7. What is the business model?</h2>
 
-<p>We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we&rsquo;d also like to share them with our family and friends. NAS is a little bit heavyweight for this purpose, it&rsquo;s expensive, hard to install and maintain for non-technical users, and require formatting of hard drive and install system on it.</p>
+<p>It&rsquo;s hard.</p>
 
-<p>Buy a cheap Raspberry Pi with only 35$, install the prebuild Lomorage image, connect your own hard drive, download the app, we just need a simple and efficient solution for photo and video backup, management and share.</p>
+<p>At this moment, we are making no money.</p>
 
-<p>See more <a href="/lomorage.pdf">here</a></p>
+<p>This is a side project starts with 3 fathers seeking a better solution for the digital assets for the family and we are doing that in spare time, we have been doing this for two years. We started this with love and build it with love, and we use it in our daily life, we do spend a lot of time on that, but we know we probably will do this even nobody is paying us, because that is what we need, and the way we do this doesn’t cost us much, the only thing we paid for now it’s the apple developer account and a domain name, we don’t host the storage, we don’t offer the device, we host website and software download at github for free, so the answer why it’s free it’s because we can.</p>
 
-<h2 id="3-how-to-setup-redundancy-backup">3. How to setup redundancy backup?</h2>
+<p>Nothing is free, and need to make money to make it sustainable, we wish we can do that full time to get the features delivered faster, but we just can&rsquo;t at this stage. We will be happy if people find the product useful and willing to spend money on that, for now the product is at early stage with basic features like backup and share, and we provide that as Freemium. We don’t have to make user part of the products, and we care the privacy since day one because we are ourself the user.</p>
+
+<p>Peter Thiel said: &ldquo;To build a successful startup, you have to be <strong>10 times better</strong> than second best.” , and we  also believe: to make money out of something, we need to build something that is valuable first.</p>
+
+<p>We are planning to release more advanced features (like advanced search, remote backup, digital frame etc), and will probably think about monetize some of them. And the digtial photo frame as a dominate screen in the room, there is also possibilities to monetize.</p>
+
+<h2 id="8-how-to-setup-redundancy-backup">8. How to setup redundancy backup?</h2>
 
 <p>If you are running Lomorage service on macOS (Windows haven&rsquo;t support yet), you can open the settings window of LomoAgent application, and set the redundancy backup there.</p>
 
 <p>If you are running Lomorage service on Raspberry Pi, you can plugin in a new disk drive, and open iOS client APP, go to settings tab and set the redundancy backup there.</p>
 
-<h2 id="4-what-file-systems-supported">4. What file systems supported?</h2>
+<h2 id="9-what-file-systems-supported">9. What file systems supported?</h2>
 
 <p>If you are on Windows or macOS, then you can use whatever file system supported by Windows or macOS.</p>
 
 <p>If you are on Raspberry Pi, it supports &ldquo;vfat exfat ext2 ext3 ext4 hfsplus ntfs fuseblk&rdquo;.</p>
 
-<h2 id="5-why-the-date-time-seems-not-correct">5. Why the date time seems not correct?</h2>
+<h2 id="10-why-the-date-time-seems-not-correct">10. Why the date time seems not correct?</h2>
 
 <p>The date time used to store on the system is in <a href="https://en.wikipedia.org/wiki/Coordinated_Universal_Time">UTC</a>, not the time of local timezone, the reason is that the photo can be taken in different timezones, and the user may travel or relocate to different timezones, to simplify the processing, we use UTC timestamp, and it can easily convert to different timezones on the APP.</p>
 
-<h2 id="6-how-to-set-a-secondary-backup">6. How to set a secondary backup?</h2>
+<h2 id="11-how-to-set-a-secondary-backup">11. How to set a secondary backup?</h2>
 
 <p>There are several options to setup a secondary backup, check this <a href="/blog/2019/12/24/raspberrypi-hd/">blog</a> for more details.</p>
 
-<h2 id="7-does-lomorage-support-backup-edited-file">7. Does Lomorage support backup edited file?</h2>
+<h2 id="12-does-lomorage-support-backup-edited-file">12. Does Lomorage support backup edited file?</h2>
 
 <p>On iOS, if photo is edited, system will store the original photo, the edited one, as well as the editing operations, <strong>Lomorage will store ONLY the edited photo</strong>. For edited video, system will store the video before last editing, the editing operations as well as the edited one, and <strong>Lomorage will ONLY store the editied video</strong>.</p>
 
@@ -245,7 +336,7 @@
 
 <p>Notice: The old iOS client (&lt;0.6.10) doesn&rsquo;t support edited files, so if you have error when uploading the edited files, please delete old client and reinstall the new one, instead of upgrading to new version, to make sure the old problematic database is removed.</p>
 
-<h2 id="8-what-is-background-backup">8. What is background backup?</h2>
+<h2 id="13-what-is-background-backup">13. What is background backup?</h2>
 
 <p>Background backup means you don&rsquo;t need to open Lomorage app to backup the assets.</p>
 
