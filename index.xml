@@ -163,7 +163,7 @@ You can also set up multiple Lomorage services in your private network, for diff
       
       <guid>https://lomorage.com/compare/</guid>
       <description>Price Comparison The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Raspberry Pi 4 or other single board computer to DIY yourself if you are expert.
-for example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations.</description>
+For example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations.</description>
     </item>
     
   </channel>

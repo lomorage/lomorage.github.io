@@ -261,6 +261,20 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/zh/compare/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/compare/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/compare/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/zh/tags/%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <priority>0</priority>
