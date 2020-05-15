@@ -36,6 +36,11 @@
     background-image: url(/img/installation/ios-testflight.svg);
 }
 
+.badge.docker {
+    background-color: #4896E7;
+    background-image: url(/img/installation/docker.svg);
+}
+
 .screenshoot {
     background-color:#EAF0FB;
     padding: 25px;
