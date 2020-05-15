@@ -88,8 +88,9 @@ sudo apt update sudo apt install lomo-frame  配置lomo-frame Lomorage电子相�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-android/</guid>
-      <description> 安装Lomorage安卓手机App 您可以在安卓手机上安卓Lomorage App，目前的Lomorage App是开发预览版，最低支持的安卓系统版本是7.1，正式版会很快发布，欢迎关注Lomorage公众号。
-欢迎提供反馈，我们会不断更新我们的软件， 点击下面的图标下载开发预览版
+      <description> 安装Lomorage安卓手机App ！ 中文版发布了，请下载试用
+您可以在安卓手机上安卓Lomorage App，目前的Lomorage App是开发预览版，最低支持的安卓系统版本是7.1，正式版会很快发布，欢迎关注Lomorage公众号。
+欢迎提供反馈，我们会不断更新我们的软件， 点击下面的图标下载最新中文版
   -- Lomorage 是一款个人私有照片和视频备份工具，它方便的把您的照片和视频备份到Windows PC机或者Apple MAC机，也可以备份到Lomorage 定制的树莓派上。 您需要在Windows 或者 Mac 或者 树莓派上安装 Lomorage 服务程序。
 安装完Lomorage客户端，可能需要花一两分钟时间导入您的视频和照片。然后在Manage Account界面可以创建账号，登录，下拉备份您的照片和视频，还可以和您的家人进行分享。
 App会导入您的照片和视频，并且提示您需要登录  点击右上角的菜单，进入账号管理界面. 在那里，App会自动发现您的Lomorage服务器程序 然后创建账号，登录。您也可以通过二维码扫描您的Lomorage服务器程序. （如果您用的是Windows或者Mac的Lomorage 服务程序）  下来开始备份您的照片和视频 可以选择过滤选项来查看您要的照片和视频  在 备份 栏目，你可以长按选中然后分享给您的家人  通过 Members 选项来查看所有的用户  通过 Inbox 来查看您的家人通过Lomorage 系统分享给您的照片和视频  您可以在设置页配置您的远程访问和冗余备份，并且发送反馈  </description>
