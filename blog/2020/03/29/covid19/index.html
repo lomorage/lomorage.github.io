@@ -247,6 +247,19 @@
 
 <h1 id="installation">Installation</h1>
 
+<p>If you are using lite image, you need install desktop first to run MagicMirror.</p>
+
+<pre><code>sudo apt-get update 
+sudo apt-get -y dist-upgrade
+sudo apt-get install raspberrypi-ui-mods -y
+sudo apt-get install libgdk-pixbuf2.0-dev -y
+sudo ln -s /usr/lib/*/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders /usr/local/bin/gdk-pixbuf-query-loaders
+sudo gdk-pixbuf-query-loaders --update-cache -y
+sudo apt install ca-certificates python-certifi python3-certifi -y
+sudo apt-get install -y --reinstall ca-certificates
+sudo update-ca-certificates --fresh
+</code></pre>
+
 <h2 id="1-install-latest-nodejs">1. Install latest NodeJS</h2>
 
 <p><a href="https://github.com/audstanley/NodeJs-Raspberry-Pi">NodeJs-Raspberry-Pi</a> is very convinient to setup latest NodeJS with one command:</p>
@@ -473,6 +486,9 @@ sudo apt install plexmediaserver
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
             
+            <li><a href="https://lomorage.com/categories/blog">blog (1)</a>
+            </li>
+            
             <li><a href="https://lomorage.com/categories/dashboard">dashboard (1)</a>
             </li>
             
@@ -510,6 +526,9 @@ sudo apt install plexmediaserver
             <li><a href="https://lomorage.com/tags/hard-disk"><i class="fa fa-tags"></i> hard-disk</a>
             </li>
             
+            <li><a href="https://lomorage.com/tags/mycloud"><i class="fa fa-tags"></i> mycloud</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/raspberry-pi"><i class="fa fa-tags"></i> raspberry-pi</a>
             </li>
             
@@ -520,6 +539,9 @@ sudo apt install plexmediaserver
             </li>
             
             <li><a href="https://lomorage.com/tags/usb-hub"><i class="fa fa-tags"></i> usb-hub</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/%e8%bf%81%e7%a7%bb"><i class="fa fa-tags"></i> 迁移</a>
             </li>
             
         </ul>

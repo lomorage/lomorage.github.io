@@ -6,10 +6,31 @@
     <description>Recent content on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 22:43:40 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2020 21:04:40 +0000</lastBuildDate>
     
 	<atom:link href="https://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lomorage帮您解决iCloud的痛点</title>
+      <link>https://lomorage.com/zh/blog/2020/07/19/mypains/</link>
+      <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2020/07/19/mypains/</guid>
+      <description>&lt;p&gt;我的照片很多，一部分放在移动硬盘里，一部分放在U盘里，无论移动硬盘和U盘，我都放两份。
+  自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>迁移MyCloud的数据到Lomorage</title>
+      <link>https://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</link>
+      <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;曾经&lt;/strong&gt;买了一个WD-西部数据的MyCloud 6T的存储，用来存照片和视频。因为它的App不好用，
+所以每次都是用USB线把手机连上电脑，然后开着电脑把手机的照片拷贝到MyCloud的共享盘里。
+下面我们来看看如何把MyCloud的东西迁移到Lomorage。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>使用树莓派制作新冠病毒电子看板</title>
@@ -200,7 +221,7 @@ Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi &amp;nbsp; Docker 3. 安装Lomo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/faq/</guid>
-      <description>1. 为什么不用云服务? 2. NAS怎么样? 3. 其他选择呢? 4. 为什么要做Lomorage? 5. 价格 6. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? 7. 你们的商业模式是什么? 3. 如何设置冗余备份? 4. 支持那些文件系统? 5. 为什么时间看起来不对? 6. 如何设置冗余备份? 7. 编辑后的照片视频支持吗? 8. 什么是后台备份?  1. 为什么不用云服务? 我们认为数字资产的管理需要保存在本地，在本地做好备份，而云端的存储只是本地存储的一个补充，现有的云存储成本过高，国内的云存储厂商相继停止运营:
+      <description>1. 为什么不用云服务? 2. NAS怎么样? 3. 其他选择呢? 4. 为什么要做Lomorage? 5. 价格 6. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? 7. 你们的商业模式是什么? 8. 如何设置冗余备份? 9. 支持那些文件系统? 10. 为什么时间看起来不对? 11. 如何设置冗余备份? 12. 编辑后的照片视频支持吗? 13. 什么是后台备份?  1. 为什么不用云服务? 我们认为数字资产的管理需要保存在本地，在本地做好备份，而云端的存储只是本地存储的一个补充，现有的云存储成本过高，国内的云存储厂商相继停止运营:
  115 网盘：2016 年 3 月 4 日下线「我聊」中的「文件发送」功能，后续一直在调整。 新浪微盘：2016 年 6 月 30 日开始关闭免费个人用户的存储服务。 华为网盘：2016 年 6 月 30 日开始关闭。 迅雷 / 金山快盘：停止快盘个人用户的存储服务，数据保留到 2016 年 6 月 30 日。 360 云盘：2016 年 11 月起停止个人云盘服务，2017 年 2 月 1 日起关闭所有云盘账号并清空数据。 UC 云盘：2016 年 4 月 15 日开始终止网盘的存储服务，停止上传服务 / 离线资源存至网盘功能 / 视频转码服务。  国内外的照片存储服务也相继关停:</description>
     </item>
     

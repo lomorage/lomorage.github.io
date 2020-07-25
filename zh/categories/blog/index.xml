@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Lomorage</title>
+    <link>https://lomorage.com/zh/categories/blog/</link>
+    <description>Recent content in Blog on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Jul 2020 21:04:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://lomorage.com/zh/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lomorage帮您解决iCloud的痛点</title>
+      <link>https://lomorage.com/zh/blog/2020/07/19/mypains/</link>
+      <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2020/07/19/mypains/</guid>
+      <description>&lt;p&gt;我的照片很多，一部分放在移动硬盘里，一部分放在U盘里，无论移动硬盘和U盘，我都放两份。
+  自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>迁移MyCloud的数据到Lomorage</title>
+      <link>https://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</link>
+      <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;曾经&lt;/strong&gt;买了一个WD-西部数据的MyCloud 6T的存储，用来存照片和视频。因为它的App不好用，
+所以每次都是用USB线把手机连上电脑，然后开着电脑把手机的照片拷贝到MyCloud的共享盘里。
+下面我们来看看如何把MyCloud的东西迁移到Lomorage。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
