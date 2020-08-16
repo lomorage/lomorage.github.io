@@ -2,6 +2,13 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
+	   	<loc>https://lomorage.com/en/sitemap.xml</loc>
+		
+	   	<lastmod>2020-05-17T13:43:40+00:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
 	   	<loc>https://lomorage.com/es/sitemap.xml</loc>
 		
 	</sitemap>
@@ -10,13 +17,6 @@
 	   	<loc>https://lomorage.com/zh/sitemap.xml</loc>
 		
 	   	<lastmod>2020-07-19T21:04:40+00:00</lastmod>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://lomorage.com/en/sitemap.xml</loc>
-		
-	   	<lastmod>2020-05-17T13:43:40+00:00</lastmod>
 		
 	</sitemap>
 	
