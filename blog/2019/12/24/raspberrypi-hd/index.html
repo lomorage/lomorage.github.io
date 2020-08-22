@@ -194,7 +194,7 @@
                         <p class="text-muted text-uppercase mb-small text-right">December 24, 2019</p>
 
                         <div id="post-content">
-                          <p>Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currenlty provide the option to setup a secondary backup. There are several options to do this.</p>
+                          <p>Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.</p>
 
 <h1 id="table-of-contents">Table of Contents</h1>
 
@@ -216,7 +216,7 @@
 
 <h2 id="option-1-1-usb-hard-drive-1-usb-flash-drive-on-same-raspberry-pi">Option 1 (1 USB hard drive, 1 USB flash drive on same Raspberry Pi)</h2>
 
-<p>Raspberry Pi should have no problem to power one USB hard drive, you can even add one more USB flash drive. Since nomrally, a hard drive is expected to have <a href="https://www.datanumen.com/blogs/usb-flash-drive-vs-external-hard-drive-better-storing-data/">a much longer lifespan</a>, and USB flash drive has <a href="https://www.flashbay.com/blog/usb-life-expectancy">limited number of write/erase cycles</a>, it&rsquo;s better to use hard drive as the primary storage and USB hard drive.</p>
+<p>Raspberry Pi should have no problem to power one USB hard drive, you can even add one more USB flash drive. Since normally, a hard drive is expected to have <a href="https://www.datanumen.com/blogs/usb-flash-drive-vs-external-hard-drive-better-storing-data/">a much longer lifespan</a>, and USB flash drive has <a href="https://www.flashbay.com/blog/usb-life-expectancy">limited number of write/erase cycles</a>, it&rsquo;s better to use hard drive as the primary storage and USB hard drive.</p>
 
 <h2 id="option-2-2-usb-hard-drive-on-same-raspberry-pi">Option 2 (2 USB hard drive on same Raspberry Pi)</h2>
 
@@ -254,11 +254,11 @@ sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F
 sudo umount -a
 </code></pre>
 
-<p><strong>Notice: Don&rsquo;t use the secondary Lomorage service even though it can be found, since we are using the primary one and set redancency backup to the directory mounted via Samba. Currently we don&rsquo;t have GUI to set the backup this way, you have to do that manually in commandline, will add GUI later</strong></p>
+<p><strong>Notice: Don&rsquo;t use the secondary Lomorage service even though it can be found, since we are using the primary one and set redundancy backup to the directory mounted via Samba. Currently we don&rsquo;t have GUI to set the backup this way, you have to do that manually in commandline, will add GUI later</strong></p>
 
 <h2 id="option-4-1-usb-drive-one-raspberry-pi-nas">Option 4 (1 USB drive one Raspberry Pi, NAS)</h2>
 
-<p>You can also reuse your NAS and follow the similiar steps above in Option 3 to mount the NAS storage via Samba.</p>
+<p>You can also reuse your NAS and follow the similar steps above in Option 3 to mount the NAS storage via Samba.</p>
 
 <p>The parameters needed are:</p>
 

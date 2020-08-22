@@ -38,7 +38,7 @@ keep the computer on to copy the files to MyCloud disk.
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
       <guid>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</guid>
-      <description>&lt;p&gt;Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currenlty provide the option to setup a secondary backup. There are several options to do this.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@ There are a few tunnel services available for free use, most tunnel services req
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-android/</guid>
-      <description>Install Lomorage App in Android phone Currently you can install the app on Android phone, the minimual version is 7.1.
+      <description>Install Lomorage App in Android phone Currently you can install the app on Android phone, the minimal version is 7.1.
 Currently it is dev-beta version, will publish to Google Play Store soon
 Click below icon to download.
 
@@ -124,7 +124,7 @@ If you are using Lomorage Service in Raspberry Pi, then you can use the followin
       <guid>https://lomorage.com/installation-win/</guid>
       <description>Install Lomorage Service on Windows 1. Click the link below to download Lomorage Service Application.
 Windows 2. double click &amp;ldquo;lomoagent.msi&amp;rdquo; to start installation. If Windows Defender shows &amp;ldquo;lomoagent.msi&amp;rdquo; as unknown application, please follow the steps below to allow it to run.
- 3. Follow the wizzard to finish the installation, in the End-User License Agreement, please checked the box as below.
+ 3. Follow the wizard to finish the installation, in the End-User License Agreement, please checked the box as below.
  4. Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent.</description>
     </item>
     
