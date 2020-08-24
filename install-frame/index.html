@@ -197,8 +197,8 @@
 <h1 id="table-of-contents">Table of Contents</h1>
 
 <ul>
-<li><a href="#install-lomo-frame">Install lomo-frame</a></li>
-<li><a href="#setup-lomo-frame">Setup lomo-frame</a>
+<li><a href="#install-lomo-frame">Install Lomo-frame</a></li>
+<li><a href="#setup-lomo-frame">Setup Lomo-frame</a>
 
 <ul>
 <li><a href="#quickstart">Quickstart</a></li>
@@ -212,7 +212,7 @@
 <li><a href="#setup-multiple-digital-frame">Setup multiple digital frame</a>
 
 <ul>
-<li><a href="#1-install-lomo-frame">1. Install lomo-frame</a></li>
+<li><a href="#1-install-lomo-frame">1. Install Lomo-frame</a></li>
 <li><a href="#2-setup-wifi-connection">2. Setup WiFi connection</a></li>
 <li><a href="#3-check-ip-address-of-primary-raspberry-pi">3. Check IP address of primary Raspberry Pi</a></li>
 <li><a href="#4-find-the-mount-directory-on-primary-raspberry-pi">4. Find the mount directory on primary Raspberry Pi</a></li>
@@ -222,9 +222,11 @@
 </ul></li>
 </ul>
 
-<h1 id="install-lomo-frame">Install lomo-frame</h1>
+<h1 id="install-lomo-frame">Install Lomo-frame</h1>
 
-<p><strong>If you install the latest Lomorage Raspberry Pi OS image, you should already have the lomo-frame application installed in that image.</strong></p>
+<p><strong>Lomo-frame only supports on Raspberry Pi, Windows/Mac or the docker version is not supported</strong></p>
+
+<p><strong>If you install the latest Lomorage Raspberry Pi OS image, you should already have the Lomo-frame application installed in that image.</strong></p>
 
 <p>Otherwise, if your OS image is before 2020-03-13 (&ldquo;image_2020-03-13-lomorage-lite.zip
 &ldquo;), or you don&rsquo;t use Lomorage Raspberry Pi OS image, you can run the following command to install it (assuming you have installed Lomorage Service Application so that you have already added &ldquo;gpg.key&rdquo;, if not you can check <a href="/installation-pi">here</a>).</p>
@@ -233,31 +235,42 @@
 sudo apt install lomo-frame
 </code></pre>
 
-<h1 id="setup-lomo-frame">Setup lomo-frame</h1>
+<h1 id="setup-lomo-frame">Setup Lomo-frame</h1>
 
-<p><strong>Lomorage Digital Frame is still in beta, and setup MAY need you connect keyboard to Raspberry Pi, or you can use ssh to access Raspberry Pi, sorry, we promise that you will be able to control and setup via phone APP later.</strong></p>
+<p>You have several options:</p>
+
+<ol>
+<li><p>Run Lomorage service and Lomo-frame on the same Raspberry Pi.</p></li>
+
+<li><p>Run Lomorage service on one Raspberry Pi, and run Lomo-frame on other Raspberry Pis. For example, you can run Lomo-frame on the cheap Raspberry Pi zero, and run Lomorage service on more powerful Raspberry Pi 4.</p></li>
+</ol>
+
+<p>Once you have Lomo-frame running, it will show a QRCode on the screen, and you can use iOS APP to register the frame in settings, once success, you can share photos with the digital frame just like share with other contacts in Lomorage APP. <strong>Currently, only iOS APP support register/unregister Lomorage digital frame, once registered, you can share to the digital frame on Android APP as well</strong></p>
 
 <h2 id="quickstart">Quickstart</h2>
 
-<p>If you have lomo-frame installed, it will launch on boot.</p>
+<p>If you have Lomo-frame installed, it will launch on boot.</p>
 
-<p>At first launch, it will scan all the digital assets in &ldquo;/media&rdquo; directories, which means all users photo and video will be scanned, and will generate playlist in &ldquo;/opt/lomorage/var/lomo-playlist.txt&rdquo;.</p>
+<p>If the Raspberry Pi is not connected to the network, you need to connect it first, if you prefer to use WiFi, connect HDMI and keyboard with Raspberry Pi and reboot, follow the instruction on screen to enter in terminal and login Raspberry Pi, then you can use the command <code>wifi_switch client [wifi-ssid] [wifi-password]</code>, replace &ldquo;[wifi-ssid]&rdquo; and &ldquo;[wifi-password]&rdquo; with those of your wifi network.</p>
 
-<p><strong>The rescan is schedule to run automatically on weekly basis (00:00 on Sunday)</strong>, so that the playlist can be updated with newly added or deleted assets. You can manually trigger the rescan in two ways:</p>
+<p>Once setup network, reboot and it will show a QRCode, you can go to &ldquo;Settings&rdquo; Tab in Lomorage iOS APP to register the frame, then you can use either Lomorage iOS APP or Lomorage Android APP to share photos with the digital frame.</p>
 
-<ol>
-<li><p>If you have keyboard connected with Raspberry Pi, press key &ldquo;r&rdquo; to rescan.</p></li>
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/frame-register-ios.png">
+  <img width="30%" src="/img/installation/frame-share-ios.png">
+</p>
+</div>
 
-<li><p>If you are using ssh to access Raspberry Pi, you can use <code>framectrl.sh rescan</code> to rescan.</p></li>
-</ol>
+<p>If you don&rsquo;t need more configuration, you can skip the below sections.</p>
 
 <h2 id="turn-frame-on-off">Turn Frame ON/OFF</h2>
 
-<p>lomo-frame will start after system boot automatically, but if you want manual control, you can use the following commands to turn it on: <code>framectrl.sh on</code>, or turn it off: <code>framectrl.sh off</code>. <strong>It will turn on/off the monitor as well as the lomo-frame service.</strong></p>
+<p>Lomo-frame will start after system boot automatically, but if you want manual control, you can use the following commands to turn it on: <code>framectrl.sh on</code>, or turn it off: <code>framectrl.sh off</code>. <strong>It will turn on/off the monitor as well as the Lomo-frame service.</strong></p>
 
-<h2 id="stop-or-start-lomo-frame-service">Stop or Start lomo-frame Service</h2>
+<h2 id="stop-or-start-lomo-frame-service">Stop or Start Lomo-frame Service</h2>
 
-<p>If you just want to quit lomo-frame service, while keep the monitor on, you can either:</p>
+<p>If you just want to quit Lomo-frame service, while keep the monitor on, you can either:</p>
 
 <ul>
 <li><p>press &ldquo;esc&rdquo; on the keyboard if Raspberry Pi connected with keyboard.</p></li>
@@ -265,7 +278,7 @@ sudo apt install lomo-frame
 <li><p><code>sudo service supervisor stop</code> if you use ssh to access Raspberry Pi.</p></li>
 </ul>
 
-<p>You can use <code>sudo service supervisor start</code> to start the lomo-frame serivce.</p>
+<p>You can use <code>sudo service supervisor start</code> to start the Lomo-frame service.</p>
 
 <h2 id="schedule-frame-on-off-time">Schedule Frame ON/OFF time</h2>
 
@@ -330,7 +343,7 @@ sudo apt install lomo-frame
 
 <li><p>&ldquo;s&rdquo;: pause/resume play</p></li>
 
-<li><p>&ldquo;esc&rdquo;: quit lomo-frame</p></li>
+<li><p>&ldquo;esc&rdquo;: quit Lomo-frame</p></li>
 </ul>
 
 <h2 id="setup-multiple-digital-frame">Setup multiple digital frame</h2>
@@ -341,7 +354,7 @@ sudo apt install lomo-frame
 
 <p>You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital assets via WiFi, it works pretty well, the video playback is very smooth.</p>
 
-<h3 id="1-install-lomo-frame">1. Install lomo-frame</h3>
+<h3 id="1-install-lomo-frame">1. Install Lomo-frame</h3>
 
 <p>You can follow the instructions on the top of the page.</p>
 

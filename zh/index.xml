@@ -89,18 +89,17 @@ wget https://bin.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/install-frame/</guid>
-      <description>目录  安装lomo-frame 配置lomo-frame  快速开始 关闭开启相框 关闭开启lomo-frame应用 定时开关 播放顺序 自定义播放列表 播放媒体类型 快捷键 设置多个数码相框  1. 安装lomo-frame 2. 设置WiFi连接 3. 检查主树莓派的IP地址 4. 找到主树莓派的加载目录 5. 远程挂载媒体目录到树莓派zero w 6. 重启    安装lomo-frame 如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装lomo-frame应用，已经预装到系统中了
+      <description>目录  安装Lomo-frame 配置Lomo-frame  快速开始 关闭开启相框 关闭开启Lomo-frame应用 定时开关 播放顺序 自定义播放列表 播放媒体类型 快捷键 设置多个数码相框  1. 安装Lomo-frame 2. 设置WiFi连接 3. 检查主树莓派的IP地址 4. 找到主树莓派的加载目录 5. 远程挂载媒体目录到树莓派zero w 6. 重启    安装Lomo-frame Lomo-frame应用只支持Raspberry Pi平台, Windows/Mac或docker版本不支持。
+如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装Lomo-frame应用，已经预装到系统中了。
 否则，如果您的系统镜像是2020-03-13之前的 (&amp;ldquo;image_2020-03-13-lomorage-lite.zip &amp;ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&amp;rdquo;gpg.key&amp;rdquo;文件，如果没有，请参考这里）。
-sudo apt update sudo apt install lomo-frame  配置lomo-frame Lomorage电子相框程序还是beta版本，您可能需要连接键盘到树莓派，或者通过ssh方式访问树莓派。未来我们会支持通过手机方式来控制相框程序。
-快速开始 如果您已经安装了lomo-frame程序，它会在开机后自动启动。
-第一次启动时，它会扫描&amp;rdquo;/media&amp;rdquo;目录下面的照片和视频文件，并生成播放列表放在&amp;rdquo;/opt/lomorage/var/lomo-playlist.txt&amp;rdquo;文件中。
-系统会在每周重现扫描一次(周日00:00), 来更新播放列表。您也可以手动来触发重新扫描，有两种方式:
- 如果您的树莓派连接了键盘，可以按&amp;rdquo;r&amp;rdquo;键重新扫描。
- 如果您使用ssh访问，可以使用framectrl.sh rescan命令来重新扫描.
-  关闭开启相框 lomo-frame应用程序会在系统启动的时候自动加载，但如果您需要手动控制，你可以使用framectrl.sh on命令打开, 或者使用framectrl.sh off命令关闭。这个命令打开或关闭lomo-frame应用，并同时打开或者关闭显示器。
-关闭开启lomo-frame应用 如果您只是想退出lomo-frame应用，但是想让显示器继续开着，您可以使用下面的方法之一:
- 如果树莓派接了键盘，按&amp;rdquo;esc&amp;rdquo;键。
- 如果您使用ssh访问，使用sudo service supervisor stop命令。</description>
+sudo apt update sudo apt install lomo-frame  配置Lomo-frame 您有多个选择:
+ 在同一个树莓派上运行Lomorage服务和相框程序。
+ 在不同的树莓派上运行Lomorage服务和相框程序，比如您可以用树莓派zero来运行相框程序，用性能更好的的树莓派4来运行树莓派4。
+  如果相框程序运行起来后，会在相框屏幕上显示一个二维码，您可以使用iOS Lomorage应用程序来注册相框，成功后，您就可以在Lomorage手机应用里给相框分享照片了，就像分享到其他联系人一样。当前只有iOS应用支持注册/注销数码相框，但注册之后，您可以使用Android应用程序来分享照片给数码相框。
+快速开始 如果您已经安装了Lomo-frame程序，它会在开机后自动启动。
+如果树莓派没有连上网络，您需要先将其连上网络，如果您使用WiFi，先连上HDMI和键盘，然后重启设备，按照屏幕上的提示进入命令行并登陆，接下来可以使用命令wifi_switch client [wifi-ssid] [wifi-password], 用您自己的配置替换&amp;rdquo;[wifi-ssid]&amp;ldquo;和&amp;rdquo;[wifi-password]&amp;ldquo;。
+网络设置完成后，重启，会显示QRCode，您可以到Lomorage iOS APP的设置页面，注册相框，然后您就可以使用手机应用程序来分享照片给数码相框。
+ 如果你无需更多的高级配置，则可以跳过下面的内容。</description>
     </item>
     
     <item>
@@ -211,7 +210,7 @@ Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果
 Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi &amp;nbsp; Docker 3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
 您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
   &amp;nbsp;  4. 外网访问 (可选) Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击这里查看具体配置。
-5. 设置数码相框(Beta) 您可以将树莓派连接显示器，并作为数码相框，您也可以使用树莓派zero w来搭建多个数码相框，并远程通过WiFi来访问。点击这里查看数码相框设置。
+5. 设置数码相框 (可选) 您可以将树莓派连接显示器，并作为数码相框，您也可以使用树莓派zero w来搭建多个数码相框，并远程通过WiFi来访问。点击这里查看数码相框设置。
  Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY</description>
     </item>
     
