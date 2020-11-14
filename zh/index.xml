@@ -178,7 +178,8 @@ sudo apt update sudo apt install lomo-web  然后您可以在电脑的浏览器�
       <guid>https://lomorage.com/zh/installation-win/</guid>
       <description> 在Windows上安装Lomorage服务程序 1. 点击下面的链接安装Lomorage服务程序。
 Windows 如果上面链接无法访问，也可以从百度网盘下载:
-链接: https://pan.baidu.com/s/1EnG9ZV32-b3SIfF-TS9vgw 提取码: qxsq
+链接: https://pan.baidu.com/s/193H64Xw5lMGA90O1eDrD_A
+提取码： wsd4
 2. 双击&amp;rdquo;lomoagent.msi&amp;rdquo;开始安装。如果有Windows Defender提示未知应用，请参考如下步骤允许安装程序运行。
  3. 勾选&amp;rdquo;最终用户许可协议&amp;rdquo;后，一路完成安装步骤。
  4. 双击桌面的LomoAgent图标，启动应用程序，如果有防火墙提示，请允许LomoAgent访问私有网络。
