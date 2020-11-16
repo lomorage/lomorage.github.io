@@ -316,6 +316,8 @@ sudo systemctl start docker
 
 <p>You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host.</p>
 
+<p>There should be subdirectories in media home directory，for example if you specify <code>-m /mnt/hdd/</code>, then there should be some subdirectory in hdd, like <code>-m /mnt/hdd/lomorage</code>.</p>
+
 <pre><code>run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
 
 Command line options:

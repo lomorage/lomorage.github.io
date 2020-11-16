@@ -316,6 +316,8 @@ sudo systemctl start docker
 
 <p>您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您<strong>必须</strong>指定host参数。</p>
 
+<p>媒体存储目录下必须存在子目录，比如指定<code>-m /mnt/hdd/</code>，那hdd目录下必须存在子目录比如<code>-m /mnt/hdd/lomorage</code>。</p>
+
 <pre><code>run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
 
 Command line options:
