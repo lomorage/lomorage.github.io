@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.78.1" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -195,21 +195,17 @@
 
                         <div id="post-content">
                           <p>It&rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/covid19/dashboard-en.png">
 </p>
 </div>
-
 <h1 id="table-of-contents">Table of Contents</h1>
-
 <ul>
 <li><a href="#table-of-contents">Table of Contents</a></li>
 <li><a href="#prepare">Prepare</a></li>
 <li><a href="#how-it-works">How it works</a></li>
 <li><a href="#installation">Installation</a>
-
 <ul>
 <li><a href="#1-install-latest-nodejs">1. Install latest NodeJS</a></li>
 <li><a href="#2-install-magicmirror">2. Install MagicMirror</a></li>
@@ -217,38 +213,27 @@
 <li><a href="#4-install-mmm-covid19-module">4. Install MMM-COVID19 module</a></li>
 <li><a href="#5-add-more-data-sources-for-mmm-covid19">5. Add more data sources for MMM-COVID19</a></li>
 <li><a href="#6-get-more-modules">6. Get more modules</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="#ready-to-use">Ready to use</a>
-
 <ul>
 <li><a href="#1-configuring-the-raspberry-pi">1. Configuring the Raspberry Pi</a></li>
 <li><a href="#2-auto-starting-magicmirror">2. Auto Starting MagicMirror</a></li>
 <li><a href="#3-add-cronjob-to-startstop-magicmirror">3. Add cronjob to start/stop MagicMirror</a>)</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h1 id="prepare">Prepare</h1>
-
 <p>The setup the dashboard, you need Raspberry Pi and a HDMI monitor, you can either use big screen in the living room, or use smaller one on the desk. <strong>Notes: This won&rsquo;t work for Raspberry Pi zero/one, there is no NodeJS support for &ldquo;armv6l&rdquo; any more.</strong></p>
-
 <h1 id="how-it-works">How it works</h1>
-
 <p>It&rsquo;s using <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a> and <a href="https://github.com/bibaldo/MMM-COVID19">covid-19 module</a>.</p>
-
 <p>MagicMirror is an open source modular smart mirror platform, but it doesn&rsquo;t have to be a mirror, it can be used to setup customized dashboard. MagicMirror is using Nodejs for both client and server, the server provides http service for the dashboard and client is using Electron and run it in <a href="https://www.kioware.com/resources.aspx?resid=45">Kiosk mode</a>, which is actually running a browser in fullscreen mode, actually you can just one the <a href="https://docs.magicmirror.builders/getting-started/installation.html#usage">&ldquo;server only mode&rdquo;</a> and open the dashboard in browser on another machine which can access the network.</p>
-
 <p>MagicMirror defines layout below, and you can put dashboard provided by the modules at specific locations.</p>
-
-<p><img src="/img/blog/covid19/layout.png" alt="layout" /></p>
-
+<p><img src="/img/blog/covid19/layout.png" alt="layout"></p>
 <p>The modules can define how to fetch the data and how to present it.</p>
-
 <p>That is it!</p>
-
 <h1 id="installation">Installation</h1>
-
 <p>If you are using lite image, you need install desktop first to run MagicMirror.</p>
-
 <pre><code>sudo apt-get update 
 sudo apt-get -y dist-upgrade
 sudo apt-get install raspberrypi-ui-mods -y
@@ -258,58 +243,34 @@ sudo gdk-pixbuf-query-loaders --update-cache -y
 sudo apt install ca-certificates python-certifi python3-certifi -y
 sudo apt-get install -y --reinstall ca-certificates
 sudo update-ca-certificates --fresh
-</code></pre>
-
-<h2 id="1-install-latest-nodejs">1. Install latest NodeJS</h2>
-
+</code></pre><h2 id="1-install-latest-nodejs">1. Install latest NodeJS</h2>
 <p><a href="https://github.com/audstanley/NodeJs-Raspberry-Pi">NodeJs-Raspberry-Pi</a> is very convinient to setup latest NodeJS with one command:</p>
-
 <pre><code>$ wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash; node -v
-</code></pre>
-
-<p><em>Most likely using &ldquo;apt install&rdquo; won&rsquo;t get the latest version and MagicMirror will complaint when installation.</em></p>
-
+</code></pre><p><em>Most likely using &ldquo;apt install&rdquo; won&rsquo;t get the latest version and MagicMirror will complaint when installation.</em></p>
 <h2 id="2-install-magicmirror">2. Install MagicMirror</h2>
-
 <pre><code>$ git clone https://github.com/MichMich/MagicMirror
 $ cd MagicMirror/
 $ npm install
-</code></pre>
-
-<h2 id="3-try-run-with-the-sample-config">3. Try run with the sample config</h2>
-
+</code></pre><h2 id="3-try-run-with-the-sample-config">3. Try run with the sample config</h2>
 <p>MagicMirror comes with some <a href="https://docs.magicmirror.builders/getting-started/configuration.html#general">default modules</a>.</p>
-
 <pre><code># assuming in MagicMirror directory
 $ cp config/config.js.sample config/config.js
 
 # use &quot;ctrl+c&quot; to stop, this way of running is for testing
 $ npm run
-</code></pre>
-
-<p>You can try play with the options provided by the modules in &ldquo;config.js&rdquo;, for example, you can add more <a href="https://docs.rsshub.app/">RSS feed</a> to the &ldquo;News Feed&rdquo; module:</p>
-
+</code></pre><p>You can try play with the options provided by the modules in &ldquo;config.js&rdquo;, for example, you can add more <a href="https://docs.rsshub.app/">RSS feed</a> to the &ldquo;News Feed&rdquo; module:</p>
 <pre><code>{
    title: &quot;BBC&quot;,
    url: &quot;http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=us&quot;
 },
-</code></pre>
-
-<p>Or you can change the position referring to the layout mentioned above.</p>
-
+</code></pre><p>Or you can change the position referring to the layout mentioned above.</p>
 <p>You can also change the language by changing &ldquo;language&rdquo; in &ldquo;config.js&rdquo;, check <a href="https://github.com/MichMich/MagicMirror/tree/master/translations">https://github.com/MichMich/MagicMirror/tree/master/translations</a> for languages available.</p>
-
 <h2 id="4-install-mmm-covid19-module">4. Install MMM-COVID19 module</h2>
-
 <p>Install in modules directory:</p>
-
 <pre><code># assuming in MagicMirror directory
 $ cd modules
 $ git clone https://github.com/bibaldo/MMM-COVID19
-</code></pre>
-
-<p>Then config the module in &ldquo;config/config.js&rdquo;, register account at <a href="https://rapidapi.com/">https://rapidapi.com/</a> and replace the &ldquo;get-your-api-key&rdquo; below with your own API key. After registered, go to <a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a> and you can find the API key with name &ldquo;X-RapidAPI-Key&rdquo;.</p>
-
+</code></pre><p>Then config the module in &ldquo;config/config.js&rdquo;, register account at <a href="https://rapidapi.com/">https://rapidapi.com/</a> and replace the &ldquo;get-your-api-key&rdquo; below with your own API key. After registered, go to <a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a> and you can find the API key with name &ldquo;X-RapidAPI-Key&rdquo;.</p>
 <pre><code>  {
     module: 'MMM-COVID19',
     position: &quot;bottom_bar&quot;,
@@ -323,91 +284,56 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
       rapidapiKey: &quot;get-your-api-key&quot;,
    }
   },
-</code></pre>
-
-<p>After making changes to &ldquo;config/config.js&rdquo;, you can restart MagicMirror.</p>
-
+</code></pre><p>After making changes to &ldquo;config/config.js&rdquo;, you can restart MagicMirror.</p>
 <h2 id="5-add-more-data-sources-for-mmm-covid19">5. Add more data sources for MMM-COVID19</h2>
-
 <p>The default data sources is lacking details, for example it won&rsquo;t have the data for counties in USA, and no data for cities in China. You can add other data sources, but it won&rsquo;t be a simple configuration, and requires some code changes since the data format is not compatible.</p>
-
 <p>Here is the <a href="https://github.com/fuji246/MMM-COVID19/commit/42356ae5f922359a0b961328a43eddb0d61c4058">changes</a> made to show counties statistics in USA and to add Chinese translation.</p>
-
 <p>The data source used for USA counties is from <a href="https://github.com/ExpDev07/coronavirus-tracker-api">https://github.com/ExpDev07/coronavirus-tracker-api</a>, no API key required.</p>
-
 <p>Another options people using in other projects is <a href="https://github.com/pomber/covid19">https://github.com/pomber/covid19</a>, there are some other source available on internet for your country with more details and you can just search with google, and make changes to the code.</p>
-
 <h2 id="6-get-more-modules">6. Get more modules</h2>
-
 <p>There is a <a href="https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules">wiki</a> on 3rd party modules. The demo dashborad shows on top using the following modules:</p>
-
 <ul>
-<li><p><a href="https://github.com/KirAsh4/calendar_monthly/">calendar_monthly</a></p></li>
-
-<li><p><a href="https://github.com/eouia/worldclock">worldclock</a></p></li>
+<li>
+<p><a href="https://github.com/KirAsh4/calendar_monthly/">calendar_monthly</a></p>
+</li>
+<li>
+<p><a href="https://github.com/eouia/worldclock">worldclock</a></p>
+</li>
 </ul>
-
 <p>You can try other modules based on your needs.</p>
-
 <h1 id="ready-to-use">Ready to use</h1>
-
 <p>After you tested the dashboard, you still need some configuration to make it ready to use.</p>
-
 <h2 id="1-configuring-the-raspberry-pi">1. Configuring the Raspberry Pi</h2>
-
 <p>You need disable the screensaver, disable the WiFi power save mode and enable OpenGL driver, follow the <a href="https://github.com/MichMich/MagicMirror/wiki/Configuring-the-Raspberry-Pi">wiki</a> to config the system.</p>
-
 <p><em>Notes: I have only one problem with disabling screensaver, when changing &ldquo;/etc/xdg/lxsession/LXDE-pi/autostart&rdquo;, have to comment line &ldquo;@xscreensaver -no-splash&rdquo; to make it work besides adding those 3 lines below it</em></p>
-
 <pre><code>@lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 #@xscreensaver -no-splash
 @xset s noblank
 @xset s off
 @xset -dpms
-</code></pre>
-
-<h2 id="2-auto-starting-magicmirror">2. Auto Starting MagicMirror</h2>
-
+</code></pre><h2 id="2-auto-starting-magicmirror">2. Auto Starting MagicMirror</h2>
 <p>Follow the steps on the <a href="https://github.com/MichMich/MagicMirror/wiki/Auto-Starting-MagicMirror">wiki</a> to enable auto start of MagicMirror when system start.</p>
-
 <p><em>Notes: If after installing pm2 but it&rsquo;s not found, you probably need to add <code>PATH=&quot;/opt/nodejs/bin:$PATH&quot;</code> in &ldquo;~/.profile&rdquo; and then <code>source ~/.profile</code></em></p>
-
-<h2 id="3-add-cronjob-to-start-stop-magicmirror">3. Add cronjob to start/stop MagicMirror</h2>
-
+<h2 id="3-add-cronjob-to-startstop-magicmirror">3. Add cronjob to start/stop MagicMirror</h2>
 <p>Add the following lines in &ldquo;/var/spool/cron/crontabs/pi&rdquo; which start MagicMirror at 8 am and stop at 9 pm, it also turns on/off the monitor accordingly.</p>
-
 <pre><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
 00 21 * * * vcgencmd display_power 0;pm2 stop mm
-</code></pre>
-
-<h2 id="4-increase-swap-size">4. Increase swap size</h2>
-
+</code></pre><h2 id="4-increase-swap-size">4. Increase swap size</h2>
 <p>If you add more plugins, you can use <a href="https://github.com/edward-shen/MMM-pages">MMM-pages</a> to put them in several pages, and most likely MagicMirror may consume a lot of memory, which will cause system unresponsive. Increase swap size helps.</p>
-
 <ol>
 <li>Stop the swap</li>
 </ol>
-
 <pre><code>sudo dphys-swapfile swapoff
-</code></pre>
-
-<ol>
+</code></pre><ol start="2">
 <li>Modify the size, edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE to 1024, then create and initialize the file</li>
 </ol>
-
 <pre><code>dphys-swapfile setup
-</code></pre>
-
-<ol>
+</code></pre><ol start="3">
 <li>Start the swap</li>
 </ol>
-
 <pre><code>sudo dphys-swapfile swapon
-</code></pre>
-
-<h2 id="5-setup-plex">5. Setup Plex</h2>
-
+</code></pre><h2 id="5-setup-plex">5. Setup Plex</h2>
 <pre><code>curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
 sudo apt update
 sudo apt install plexmediaserver
@@ -492,6 +418,9 @@ sudo apt install plexmediaserver
             <li><a href="https://lomorage.com/categories/dashboard">dashboard (1)</a>
             </li>
             
+            <li><a href="https://lomorage.com/categories/docker">docker (1)</a>
+            </li>
+            
             <li><a href="https://lomorage.com/categories/faq">faq (1)</a>
             </li>
             
@@ -514,16 +443,25 @@ sudo apt install plexmediaserver
     <div class="panel-body">
         <ul class="tag-cloud">
             
+            <li><a href="https://lomorage.com/tags/container"><i class="fa fa-tags"></i> container</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/covid-19"><i class="fa fa-tags"></i> covid-19</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/dashboard"><i class="fa fa-tags"></i> dashboard</a>
             </li>
             
+            <li><a href="https://lomorage.com/tags/docker"><i class="fa fa-tags"></i> docker</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/flash-drive"><i class="fa fa-tags"></i> flash-drive</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/hard-disk"><i class="fa fa-tags"></i> hard-disk</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/lomorage"><i class="fa fa-tags"></i> lomorage</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/mycloud"><i class="fa fa-tags"></i> mycloud</a>
@@ -582,7 +520,6 @@ sudo apt install plexmediaserver
         <li>Store your data securely on your own devices</li>
         <li>Backup and duplicate storage by adding more devices</li>
         <li>No one can access your assets without permission</li>-->
-        
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

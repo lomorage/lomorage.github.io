@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lomorage</title>
@@ -6,10 +6,15 @@
     <description>Recent content on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 May 2020 13:43:40 +0000</lastBuildDate>
-    
-	<atom:link href="https://lomorage.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run Lomoage Docker in Windows 10</title>
+      <link>https://lomorage.com/blog/2020/11/16/windows-docker/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/blog/2020/11/16/windows-docker/</guid>
+      <description>&lt;p&gt;Though Lomorage already provide Windows Native MSI package, But if you like to run Docker image in Windows, please follow below steps to do so. Esp. on Windows Server, Docker can leverage the Windows HYPER-v technology，and let the Lomorage running faster. If you do not know what is Docker, you also can download the native Lomorage installer for Windows, &lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;Download Lomorage Windows Installer&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Move MyCloud to Lomorage</title>
@@ -17,10 +22,10 @@
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
       <guid>https://lomorage.com/blog/2020/05/17/import_my_cloud/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt; have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the
+      <description>&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt; have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the 
 My Cloud app is not good to use, so everything I have to connect to my phone with USB cable, and
-keep the computer on to copy the files to MyCloud disk.
-  &lt;strong&gt;Now&lt;/strong&gt; let me introduce how to import / move MyCloud data to Lomorage.&lt;/p&gt;</description>
+keep the computer on to copy the files to MyCloud disk. 
+&lt;strong&gt;Now&lt;/strong&gt; let me introduce how to import / move MyCloud data to Lomorage.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,7 +62,7 @@ There are a few tunnel services available for free use, most tunnel services req
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/install-frame/</guid>
-      <description>Table of Contents  Install Lomo-frame Setup Lomo-frame  Quickstart Turn Frame ON/OFF Stop/Start lomo-frame Service Schedule Frame ON/OFF time Playback Order Customize playlist Playback Media Type Keyboard control Setup multiple digital frame  1. Install Lomo-frame 2. Setup WiFi connection 3. Check IP address of primary Raspberry Pi 4. Find the mount directory on primary Raspberry Pi 5. Mount on Raspberry Pi zero w 6. Reboot    Install Lomo-frame Lomo-frame only supports on Raspberry Pi, Windows/Mac or the docker version is not supported</description>
+      <description>Table of Contents  Install Lomo-frame Setup Lomo-frame  Quickstart Turn Frame ON/OFF Stop/Start lomo-frame Service Schedule Frame ON/OFF time Playback Order Customize playlist Playback Media Type Keyboard control Setup multiple digital frame  1. Install Lomo-frame 2. Setup WiFi connection 3. Check IP address of primary Raspberry Pi 4. Find the mount directory on primary Raspberry Pi 5. Mount on Raspberry Pi zero w 6. Reboot      Install Lomo-frame Lomo-frame only supports on Raspberry Pi, Windows/Mac or the docker version is not supported</description>
     </item>
     
     <item>
@@ -69,8 +74,7 @@ There are a few tunnel services available for free use, most tunnel services req
       <description>Install Lomorage App in Android phone Currently you can install the app on Android phone, the minimal version is 7.1.
 Currently it is dev-beta version, will publish to Google Play Store soon
 Click below icon to download.
-
-After launching Lomorage, it will take a few minutes to import all your photos and videos on phone in the first time.
+After launching Lomorage, it will take a few minutes to import all your photos and videos on phone in the first time.
 Then you can click the right up more menu to Manage account.</description>
     </item>
     
@@ -81,7 +85,7 @@ Then you can click the right up more menu to Manage account.</description>
       
       <guid>https://lomorage.com/installation-ios/</guid>
       <description>Install Lomorage iOS client You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3.
-  -- After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use. If Lomorage service can&amp;rsquo;t be discovered automatically, you can discover the service via QRCode Scanning when using Windows or MacOS LomoAgent (open settings in LomoAgent to show the QRCode), or you can input the IP address and port manually.</description>
+--After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use. If Lomorage service can&amp;rsquo;t be discovered automatically, you can discover the service via QRCode Scanning when using Windows or MacOS LomoAgent (open settings in LomoAgent to show the QRCode), or you can input the IP address and port manually.</description>
     </item>
     
     <item>
@@ -91,9 +95,9 @@ Then you can click the right up more menu to Manage account.</description>
       
       <guid>https://lomorage.com/installation-osx/</guid>
       <description>Install Lomorage Service on MacOS 1. Click the link below to download Lomorage Service Application.
-macOS 2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation, and follow the steps below to finish the installation.
- 3. Run LomoAgent Application，please allow network access for LomoAgent if firewall is triggered.
-4. After launch the Lomorage application，You need to set the &amp;ldquo;Home directory&amp;rdquo; before using Lomorage，&amp;rdquo;Home directory&amp;rdquo; is used to save the photos and videos uploading from your phone。You can also set up a backup directory which served as redundancy backup.</description>
+macOS2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation, and follow the steps below to finish the installation.
+3. Run LomoAgent Application，please allow network access for LomoAgent if firewall is triggered.
+4. After launch the Lomorage application，You need to set the &amp;ldquo;Home directory&amp;rdquo; before using Lomorage，&amp;ldquo;Home directory&amp;rdquo; is used to save the photos and videos uploading from your phone。You can also set up a backup directory which served as redundancy backup.</description>
     </item>
     
     <item>
@@ -102,7 +106,7 @@ macOS 2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-pi/</guid>
-      <description>Table of Contents  Install Lomorage Service on Raspberry Pi  Install with prebuild OS image Docker installation  1. Install Docker on Raspberry Pi 2. Get Docker image 3. Run  Apt installation  1. Add lomoware source 2. Install Lomorage 3. Change mount directory and username if needed 4. Run    Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:</description>
+      <description>Table of Contents  Install Lomorage Service on Raspberry Pi  Install with prebuild OS image Docker installation  1. Install Docker on Raspberry Pi 2. Get Docker image 3. Run   Apt installation  1. Add lomoware source 2. Install Lomorage 3. Change mount directory and username if needed 4. Run      Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:</description>
     </item>
     
     <item>
@@ -123,9 +127,9 @@ If you are using Lomorage Service in Raspberry Pi, then you can use the followin
       
       <guid>https://lomorage.com/installation-win/</guid>
       <description>Install Lomorage Service on Windows 1. Click the link below to download Lomorage Service Application.
-Windows 2. double click &amp;ldquo;lomoagent.msi&amp;rdquo; to start installation. If Windows Defender shows &amp;ldquo;lomoagent.msi&amp;rdquo; as unknown application, please follow the steps below to allow it to run.
- 3. Follow the wizard to finish the installation, in the End-User License Agreement, please checked the box as below.
- 4. Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent.</description>
+Windows2. double click &amp;ldquo;lomoagent.msi&amp;rdquo; to start installation. If Windows Defender shows &amp;ldquo;lomoagent.msi&amp;rdquo; as unknown application, please follow the steps below to allow it to run.
+3. Follow the wizard to finish the installation, in the End-User License Agreement, please checked the box as below.
+4. Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent.</description>
     </item>
     
     <item>
@@ -144,7 +148,7 @@ You can also join our slack channel.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/faq/</guid>
-      <description>1. Why not just use cloud? 2. How about NAS? 3. Any other similiar solutions? 4. Why Lomorage? 5. What is the cost? 6. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 7. What is the business model? 8. How to setup redundancy backup? 9. What file systems supported? 10. Why the date time seems not correct? 11. How to set a secondary backup? 12. Does Lomorage support backup edited file? 13.</description>
+      <description>1. Why not just use cloud? 2. How about NAS? 3. Any other similiar solutions? 4. Why Lomorage? 5. What is the cost? 6. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 7. What is the business model? 8. How to setup redundancy backup? 9. What file systems supported? 10. Why the date time seems not correct? 11. How to set a secondary backup? 12. Does Lomorage support backup edited file? 13. What is background backup?</description>
     </item>
     
     <item>
@@ -153,9 +157,9 @@ You can also join our slack channel.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/features/</guid>
-      <description>--  &amp;nbsp;&amp;nbsp;&amp;nbsp;Privacy Matters Lomorage is a private cloud service which runs on your private network, which gives you the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
+      <description>-- Privacy Matters Lomorage is a private cloud service which runs on your private network, which gives you the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
 You can also set up multiple Lomorage services in your private network, for different family members, which are completely isolated with each other.
-&amp;nbsp;&amp;nbsp;&amp;nbsp;Cross-Platform There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&amp;rsquo;s request.</description>
+ Cross-Platform There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&amp;rsquo;s request.</description>
     </item>
     
     <item>

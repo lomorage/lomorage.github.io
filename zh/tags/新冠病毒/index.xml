@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>新冠病毒 on Lomorage</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 新冠病毒 on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 22:43:40 +0000</lastBuildDate>
-    
-	<atom:link href="https://lomorage.com/zh/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 29 Mar 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/zh/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用树莓派制作新冠病毒电子看板</title>
       <link>https://lomorage.com/zh/blog/2020/03/29/covid19/</link>

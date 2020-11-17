@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.78.1" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -194,165 +194,116 @@
                         <p class="text-muted text-uppercase mb-small text-right">May 17, 2020</p>
 
                         <div id="post-content">
-                          <p><strong>I</strong> have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the
+                          <p><strong>I</strong> have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the 
 My Cloud app is not good to use, so everything I have to connect to my phone with USB cable, and
-keep the computer on to copy the files to MyCloud disk.
-  <strong>Now</strong> let me introduce how to import / move MyCloud data to Lomorage.</p>
-
+keep the computer on to copy the files to MyCloud disk. 
+<strong>Now</strong> let me introduce how to import / move MyCloud data to Lomorage.</p>
 <h1 id="table-of-contents">Table of Contents</h1>
-
 <ul>
-<li><a href="#Config your MyCloud">Config your MyCloud</a>
-
+<li>[Config your MyCloud](#Config your MyCloud)
 <ul>
 <li><a href="#1-Turn-on-SSH-on-MyCloud-admin-page">1. Turn on SSH on MyCloud admin page</a></li>
 <li><a href="#2-Connect-to-MyCloud-with-SSH">2. Connect to MyCloud with SSH</a></li>
 <li><a href="#3-Edit-exports-file-on-MyCloud">3. Edit exports file on MyCloud</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="#Mount-MyCloud-folder-to-Lomorage-server">Mount MyCloud folder to Lomorage server</a>
-
 <ul>
 <li><a href="#1-Connect-to-Lomorage-server-with-SSH">1. Connect to Lomorage server with SSH</a></li>
 <li><a href="#2-Mount-MyCloud-folder">2. Mount MyCloud folder</a></li>
 <li><a href="#3-Check-MyCloud-mounted-folder">3. Check MyCloud mounted folder</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="#Start-import-MyCloud-data-to-Lomorage">Start import MyCloud data to Lomorage</a>
-
 <ul>
 <li><a href="#1-Scan-files">1. Scan files </a></li>
 <li><a href="#2-Install-tmux">2. Install tmux</a></li>
 <li><a href="#3-Start-import-to-Lomorage">3. Start import to Lomorage</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h1 id="config-your-mycloud">Config your MyCloud</h1>
-
 <h2 id="1-turn-on-ssh-on-mycloud-admin-page">1. Turn on SSH on MyCloud admin page</h2>
-
 <p>Open MyCloud admin web page, on settings, turn on SSH and set the password as tips. Like below picture:</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/import_my_cloud/f14b9c18-f941-429a-a848-1426f547ab37.png">
 </p>
 </div>
-
 <h2 id="2-connect-to-mycloud-with-ssh">2. Connect to MyCloud with SSH</h2>
-
 <p>Use below command to connect MyCloud on SSH client like putty or other SSH client tools.</p>
-
 <blockquote>
-<p>ssh -oHostKeyAlgorithms=+ssh-dss root@192.168.0.24</p>
+<p>ssh -oHostKeyAlgorithms=+ssh-dss <a href="mailto:root@192.168.0.24">root@192.168.0.24</a></p>
 </blockquote>
-
 <p>CD to <strong>nfs</strong> folder, check what shared folder there. Below is my case as the picture:</p>
-
 <blockquote>
 <p>cd /nfs</p>
 </blockquote>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/import_my_cloud/6822a363-9172-4e35-b77c-5318ea01c50a.png">
 </p>
 </div>
-
 <p>The <strong>Public</strong> folder is which I want to mount to Lomorage.</p>
-
 <h2 id="3-edit-exports-file-on-mycloud">3. Edit exports file on MyCloud</h2>
-
 <p>Inside SSH client, run below command:</p>
-
 <blockquote>
 <p>sudo vi /etc/exports</p>
 </blockquote>
-
 <p>And copy below line to the bottom of the file:</p>
-
 <blockquote>
-<p>/nfs/Public 192.168.0.<sup>1</sup>&frasl;<sub>24</sub>(rw,subtree_check,secure)</p>
+<p>/nfs/Public 192.168.0.1/24(rw,subtree_check,secure)</p>
 </blockquote>
-
 <p><strong>192.168.0.1</strong> is your router&rsquo;s IP, please change to yours real IP.</p>
-
 <p>Then save to exit.</p>
-
 <p>Till now, MyCloud configure is finished.</p>
-
 <h1 id="mount-mycloud-folder-to-lomorage-server">Mount MyCloud folder to Lomorage server</h1>
-
 <h2 id="1-connect-to-lomorage-server-with-ssh">1. Connect to Lomorage server with SSH</h2>
-
 <p>Inside SSH client, run below command:</p>
-
 <blockquote>
-<p>ssh pi@192.168.0.40</p>
+<p>ssh <a href="mailto:pi@192.168.0.40">pi@192.168.0.40</a></p>
 </blockquote>
-
 <p>The default password for pi is: <strong>raspberry</strong>.</p>
-
 <h2 id="2-mount-mycloud-folder">2. Mount MyCloud folder</h2>
-
 <p>Create new folder under home/pi like below:</p>
-
 <blockquote>
 <p>cd /home/pi</p>
-
 <p>sudo mkdir mycloud</p>
 </blockquote>
-
 <p>run below command to mount the MyCloud folder.</p>
-
 <blockquote>
 <p>sudo mount 192.168.0.24:/nfs/Public /home/pi/mycloud</p>
 </blockquote>
-
 <p><strong>192.168.0.24</strong> is the MyCloud&rsquo;s IP, please change yours real IP here.</p>
-
 <p>if up command has error, please run below command.</p>
-
 <blockquote>
 <p>sudo rpcbind start</p>
 </blockquote>
-
 <p>then run below command again.</p>
-
 <blockquote>
 <p>sudo mount 192.168.0.24:/nfs/Public /home/pi/mycloud</p>
 </blockquote>
-
 <h2 id="3-check-mycloud-mounted-folder">3. Check MyCloud mounted folder</h2>
-
 <p>Run below command and you will see the files from MyCloud disk. Congratulations, key step is done.</p>
-
 <blockquote>
 <p>cd /home/pi/mycloud</p>
 </blockquote>
-
 <h1 id="start-import-mycloud-data-to-lomorage">Start import MyCloud data to Lomorage</h1>
-
 <h2 id="1-scan-files">1. Scan files</h2>
-
 <p>Run below command to scan the mounted folder</p>
-
 <blockquote>
 <p>cd /opt/lomorage/bin</p>
-
+</blockquote>
+<blockquote>
 <p>./lomoc s /home/pi/mycloud</p>
 </blockquote>
-
 <p>[mycloud is the folder which you mounted from the MyCloud/Public]</p>
-
 <p>It need some time to finish the scanning if you have many assets from MyCloud.</p>
-
 <p>If the scanning finished, run below command to check the files.</p>
-
 <blockquote>
 <p>~/.lomo</p>
 </blockquote>
-
 <p>Some assets will be categorized if the EXIF info there. Like below:</p>
-
 <pre><code>pi@raspberrypi-lomorage:~/.lomo/links/unclassfied $ ls -l
 total 20
 drwxr-xr-x 2 pi pi 4096 May 17 16:42  aisnote
@@ -371,49 +322,32 @@ drwxr-xr-x 13 pi pi 4096 May 17 16:42 2019
 drwxr-xr-x  2 pi pi 4096 May 17 16:42 xiaomi
 drwxr-xr-x  2 pi pi 4096 May 17 16:42 来自：iPhone
 pi@raspberrypi-lomorage:~/.lomo/links/unclassfied/Shared Pictures $
-</code></pre>
-
-<h2 id="2-install-tmux">2. Install tmux</h2>
-
+</code></pre><h2 id="2-install-tmux">2. Install tmux</h2>
 <p>If you are familiar with tmux, please ignore.</p>
-
 <p>Please install tmux on your Lomorage server using below command:</p>
-
 <blockquote>
 <p>sudo apt install tmux</p>
 </blockquote>
-
 <p>then:</p>
-
 <blockquote>
 <p>tmux</p>
 </blockquote>
-
 <h2 id="3-start-import-to-lomorage">3. Start import to Lomorage</h2>
-
 <p>Enter into tmux session，run below:</p>
-
 <blockquote>
 <p>cd /opt/lomorage/bin</p>
-
+</blockquote>
+<blockquote>
 <p>./lomoc import -y [lomorage username] [password]</p>
 </blockquote>
-
 <p><strong>Note</strong>： the username and password here is the info which you used to login Lomorage on Phone APP.</p>
-
 <p>Then lomoc application will discovering how many Lomorage servers in your home network, please do that as screen messages.</p>
-
 <p>The log will be print out like below if import success.</p>
-
 <pre><code>success upload /home/pi/.lomo/links/classfied/2010/09/16/Does a Kangaroo Have a Mother, Too_ Book Read Aloud, written by Eric Carle.mp4
 success upload /home/pi/.lomo/links/classfied/2010/10/07/If the Dinosaurs Came Back.m4v.mp4
 success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows That Type by - Doreen Cronin.mp4
-</code></pre>
-
-<h1 id="btw">BTW</h1>
-
+</code></pre><h1 id="btw">BTW</h1>
 <p><strong>Lomorage will provide the new API soon for this importing, next time you do this step with your Lomorage phone APP</strong></p>
-
 <p>Thanks for your reading and enjoy the Lomorage. Welcome comments and feedbacks.</p>
                         </div>
                         
@@ -495,6 +429,9 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
             <li><a href="https://lomorage.com/categories/dashboard">dashboard (1)</a>
             </li>
             
+            <li><a href="https://lomorage.com/categories/docker">docker (1)</a>
+            </li>
+            
             <li><a href="https://lomorage.com/categories/faq">faq (1)</a>
             </li>
             
@@ -517,16 +454,25 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
     <div class="panel-body">
         <ul class="tag-cloud">
             
+            <li><a href="https://lomorage.com/tags/container"><i class="fa fa-tags"></i> container</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/covid-19"><i class="fa fa-tags"></i> covid-19</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/dashboard"><i class="fa fa-tags"></i> dashboard</a>
             </li>
             
+            <li><a href="https://lomorage.com/tags/docker"><i class="fa fa-tags"></i> docker</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/flash-drive"><i class="fa fa-tags"></i> flash-drive</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/hard-disk"><i class="fa fa-tags"></i> hard-disk</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/lomorage"><i class="fa fa-tags"></i> lomorage</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/mycloud"><i class="fa fa-tags"></i> mycloud</a>
@@ -585,7 +531,6 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
         <li>Store your data securely on your own devices</li>
         <li>Backup and duplicate storage by adding more devices</li>
         <li>No one can access your assets without permission</li>-->
-        
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

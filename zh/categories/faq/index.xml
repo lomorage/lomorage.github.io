@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Faq on Lomorage</title>
+    <title>FAQ on Lomorage</title>
     <link>https://lomorage.com/zh/categories/faq/</link>
-    <description>Recent content in Faq on Lomorage</description>
+    <description>Recent content in FAQ on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Dec 2019 13:43:40 +0000</lastBuildDate>
-    
-	<atom:link href="https://lomorage.com/zh/categories/faq/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 24 Dec 2019 13:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/zh/categories/faq/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用lomorage把照片和视频传到Windows</title>
       <link>https://lomorage.com/zh/blog/2019/12/24/transfer2pc/</link>

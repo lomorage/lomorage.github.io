@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.78.1" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -192,132 +192,101 @@
                     <div class="col-md-12">
 
                         <div>
-                          
-
-<h1 id="目录">目录</h1>
-
+                          <h1 id="目录">目录</h1>
 <ul>
-<li><a href="#在树莓派上安装lomorage服务程序">在树莓派上安装Lomorage服务程序</a>
-
+<li><a href="#%E5%9C%A8%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8A%E5%AE%89%E8%A3%85lomorage%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F">在树莓派上安装Lomorage服务程序</a>
 <ul>
-<li><a href="#安装系统镜像">安装系统镜像</a></li>
-<li><a href="#docker安装">Docker安装</a>
-
+<li><a href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F">安装系统镜像</a></li>
+<li><a href="#docker%E5%AE%89%E8%A3%85">Docker安装</a>
 <ul>
-<li><a href="#1-树莓派上安装docker">1. 树莓派上安装Docker</a></li>
-<li><a href="#2-获取docker镜像">2. 获取Docker镜像</a></li>
-<li><a href="#3-运行">3. 运行</a></li>
-</ul></li>
-<li><a href="#apt安装">APT安装</a>
-
-<ul>
-<li><a href="#1-添加lomoware源">1. 添加lomoware源</a></li>
-<li><a href="#2-安装lomorage">2. 安装Lomorage</a></li>
-<li><a href="#3-按需修改加载目录和运行用户">3. 按需修改加载目录和运行用户</a></li>
-<li><a href="#4-运行">4. 运行</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#1-%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8A%E5%AE%89%E8%A3%85docker">1. 树莓派上安装Docker</a></li>
+<li><a href="#2-%E8%8E%B7%E5%8F%96docker%E9%95%9C%E5%83%8F">2. 获取Docker镜像</a></li>
+<li><a href="#3-%E8%BF%90%E8%A1%8C">3. 运行</a></li>
 </ul>
-
+</li>
+<li><a href="#apt%E5%AE%89%E8%A3%85">APT安装</a>
+<ul>
+<li><a href="#1-%E6%B7%BB%E5%8A%A0lomoware%E6%BA%90">1. 添加lomoware源</a></li>
+<li><a href="#2-%E5%AE%89%E8%A3%85lomorage">2. 安装Lomorage</a></li>
+<li><a href="#3-%E6%8C%89%E9%9C%80%E4%BF%AE%E6%94%B9%E5%8A%A0%E8%BD%BD%E7%9B%AE%E5%BD%95%E5%92%8C%E8%BF%90%E8%A1%8C%E7%94%A8%E6%88%B7">3. 按需修改加载目录和运行用户</a></li>
+<li><a href="#4-%E8%BF%90%E8%A1%8C">4. 运行</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h1 id="在树莓派上安装lomorage服务程序">在树莓派上安装Lomorage服务程序</h1>
-
 <p>要在树莓派上运行，您需要先购买一个<a href="https://www.raspberrypi.org/">树莓派</a>，Lomorage可以运行在以下型号的机器上:</p>
-
 <ul>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
 </ul>
-
 <p>如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能。下面是您需要的最小配置:</p>
-
 <ul>
 <li>树莓派主板</li>
 <li>配套电源</li>
 <li>16GB MicroSD卡</li>
 </ul>
-
 <p><strong>有3种方式来在Raspberry Pi上安装Lomorage服务程序</strong>, 一种是安装预编译好的系统镜像，该镜像已经安装了所有Lomorage服务程序依赖的库和第三方工具，简单快捷，推荐使用；如果您已经有树莓派在运行其他服务，您也可以使用Docker镜像来安装，或者使用从APT源安装。</p>
-
 <h2 id="安装系统镜像">安装系统镜像</h2>
-
 <p>预装的系统镜像包括所有的包:</p>
-
 <ul>
-<li><p>lomo-backend: Lomorage服务程序</p></li>
-
-<li><p>lomo-web: Lomorage网页程序</p></li>
-
-<li><p>lomo-base: 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</p></li>
-
-<li><p>lomo-frame: 数码相框程序</p></li>
+<li>
+<p>lomo-backend: Lomorage服务程序</p>
+</li>
+<li>
+<p>lomo-web: Lomorage网页程序</p>
+</li>
+<li>
+<p>lomo-base: 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</p>
+</li>
+<li>
+<p>lomo-frame: 数码相框程序</p>
+</li>
 </ul>
-
 <p>点击下面的链接下载系统镜像。</p>
-
 <p align="center">
 <a href="https://github.com/lomorage/pi-gen/releases/download/2020_04_24.21_33_24.0.1d48693/image_2020-04-24-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
-
 <p>下载了系统镜像后, 你可以使用<a href="https://www.balena.io/etcher/">balenaEtcher</a>将其安装到MicroSD卡, balenaEtcher提供Windows和macOS版本。</p>
-
 <p>将MicroSD卡插入到台式电脑或笔记本的读卡器后，选择下载的系统镜像，选择MicroSD卡，点击“Flash“按钮，几分钟后就会安装完成。</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="50%" src="/img/installation/balenaEtcher.png">
 </p>
 </div>
-
 <p>安装完后，将MicroSD卡插入到树莓派，接上USB移动硬盘，插入网线，接通电源，等待几分钟系统启动。</p>
-
-<p>如果您连接了HDMI，系统启动完成后，会提示没有找到资源，您可以使用Lomorage手机应用程序上传照片，然后按&rdquo;r&rdquo;键重新扫描。如果您想退出到控制台做一些系统配置，可以按&rdquo;ESC&rdquo;退出，然后按&rdquo;Ctrl+Alt+F2&rdquo;切换到控制台，配置完成后，可以使用命令<code>sudo service supervisor restart</code>来启动Lomorage相框程序。</p>
-
-<p><em>默认的用户名是&rdquo;pi&rdquo;，密码是&rdquo;raspberry&rdquo;</em></p>
-
-<p>为了更好的性能，建议使用有线网络连接，但如果您想使用WiFi, 您可以登陆树莓派，并使用下面的命令来启用无线连接<code>wifi_switch.sh client wifi-ssid wifi-password</code>，将 &ldquo;wifi-ssid&rdquo;和&rdquo;wifi-password&rdquo;替换为您的无线网络名和密码。<em>如果您的无线网络名称中有中文字符或者空格，就需要用引号，比如<code>wifi_switch.sh client &quot;Lomorage的 无线&quot; mypassword</code></em></p>
-
+<p>如果您连接了HDMI，系统启动完成后，会提示没有找到资源，您可以使用Lomorage手机应用程序上传照片，然后按&quot;r&quot;键重新扫描。如果您想退出到控制台做一些系统配置，可以按&quot;ESC&quot;退出，然后按&quot;Ctrl+Alt+F2&quot;切换到控制台，配置完成后，可以使用命令<code>sudo service supervisor restart</code>来启动Lomorage相框程序。</p>
+<p><em>默认的用户名是&quot;pi&quot;，密码是&quot;raspberry&quot;</em></p>
+<p>为了更好的性能，建议使用有线网络连接，但如果您想使用WiFi, 您可以登陆树莓派，并使用下面的命令来启用无线连接<code>wifi_switch.sh client wifi-ssid wifi-password</code>，将 &ldquo;wifi-ssid&quot;和&quot;wifi-password&quot;替换为您的无线网络名和密码。<em>如果您的无线网络名称中有中文字符或者空格，就需要用引号，比如<code>wifi_switch.sh client &quot;Lomorage的 无线&quot; mypassword</code></em></p>
 <h2 id="docker安装">Docker安装</h2>
-
 <p>在已有的系统上使用Docker镜像安装非常方便。这种方式不适用于树莓派0和树莓派1。</p>
-
 <p><strong>这种情况下MDNS不工作，手机应用不能自动发现服务，您需要手动输入服务地址和端口号。</strong></p>
-
 <p>Docker镜像包括:</p>
-
 <ul>
-<li><p>lomo-backend: Lomorage服务程序</p></li>
-
-<li><p>lomo-web: Lomorage网页程序</p></li>
+<li>
+<p>lomo-backend: Lomorage服务程序</p>
+</li>
+<li>
+<p>lomo-web: Lomorage网页程序</p>
+</li>
 </ul>
-
 <h3 id="1-树莓派上安装docker">1. 树莓派上安装Docker</h3>
-
-<p><em>注意: 如果您使用OMSC，需要修改“/etc/os-release”文件，将其中的&rdquo;id=osmc&rdquo;替换为&rdquo;id=raspbain&rdquo;</em></p>
-
+<p><em>注意: 如果您使用OMSC，需要修改“/etc/os-release”文件，将其中的&quot;id=osmc&quot;替换为&quot;id=raspbain&rdquo;</em></p>
 <pre><code>sudo apt install -y ca-certificates
 sudo update-ca-certificates --fresh
 curl -fSLs https://get.docker.com | sudo sh
 sudo usermod -aG docker $USER
 sudo systemctl start docker
-</code></pre>
-
-<h3 id="2-获取docker镜像">2. 获取Docker镜像</h3>
-
+</code></pre><h3 id="2-获取docker镜像">2. 获取Docker镜像</h3>
 <p>从docker hub拉取镜像文件。</p>
-
 <pre><code>sudo docker pull lomorage/raspberrypi-lomorage:latest
-</code></pre>
-
-<h3 id="3-运行">3. 运行</h3>
-
+</code></pre><h3 id="3-运行">3. 运行</h3>
 <p>下载<a href="https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh">run.sh</a>。</p>
-
 <p>您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您<strong>必须</strong>指定host参数。</p>
-
 <p>媒体存储目录下必须存在子目录，比如指定<code>-m /mnt/hdd/</code>，那hdd目录下必须存在子目录比如<code>-m /mnt/hdd/lomorage</code>。</p>
-
 <pre><code>run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
 
 Command line options:
@@ -332,70 +301,46 @@ Command line options:
 Examples:
     # assuming your hard drive mounted in /media, like /media/usb0, /media/usb1.
     ./run.sh -m /media -b /home/pi/lomorage -h 192.168.1.232
-</code></pre>
-
-<p>您可以将运行命令添加到&rdquo;/etc/rc.local&rdquo;中，在&rdquo;exit 0&rdquo;之前，这样系统开机的时候就可以自动启动了。</p>
-
+</code></pre><p>您可以将运行命令添加到&quot;/etc/rc.local&quot;中，在&quot;exit 0&quot;之前，这样系统开机的时候就可以自动启动了。</p>
 <h2 id="apt安装">APT安装</h2>
-
 <p>如果您运行官方的系统，APT是最快捷的安装方式。</p>
-
 <h3 id="1-添加lomoware源">1. 添加lomoware源</h3>
-
 <pre><code>sudo apt install -y ca-certificates python-certifi python3-certifi
 sudo update-ca-certificates --fresh
 wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
-</code></pre>
-
-<p>如果您使用 jessie:</p>
-
+</code></pre><p>如果您使用 jessie:</p>
 <pre><code>echo &quot;deb https://lomoware.github.io/debian/jessie jessie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
-</code></pre>
-
-<p>如果您使用buster:</p>
-
+</code></pre><p>如果您使用buster:</p>
 <pre><code>echo &quot;deb https://lomoware.github.io/debian/buster buster main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
-</code></pre>
-
-<p>然后运行:</p>
-
+</code></pre><p>然后运行:</p>
 <pre><code>sudo apt update
-</code></pre>
-
-<h3 id="2-安装lomorage">2. 安装Lomorage</h3>
-
+</code></pre><h3 id="2-安装lomorage">2. 安装Lomorage</h3>
 <p>最小安装需要lomo-vips和lomo-backend，您可以根据自己需要进行选择。</p>
-
 <ul>
-<li><p>lomo-backend: 必须, Lomorage服务程序</p></li>
-
-<li><p>lomo-web: 可选, Lomorage网页程序</p></li>
-
-<li><p>lomo-base: 可选, 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</p></li>
-
-<li><p>lomo-vips: 必须, lomo-backend使用的图像处理库</p></li>
-
-<li><p>lomo-frame: 可选, 数码相框程序</p></li>
+<li>
+<p>lomo-backend: 必须, Lomorage服务程序</p>
+</li>
+<li>
+<p>lomo-web: 可选, Lomorage网页程序</p>
+</li>
+<li>
+<p>lomo-base: 可选, 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</p>
+</li>
+<li>
+<p>lomo-vips: 必须, lomo-backend使用的图像处理库</p>
+</li>
+<li>
+<p>lomo-frame: 可选, 数码相框程序</p>
+</li>
 </ul>
-
 <pre><code>sudo apt install lomo-base lomo-vips lomo-backend lomo-web lomo-frame -y
-</code></pre>
-
-<h3 id="3-按需修改加载目录和运行用户">3. 按需修改加载目录和运行用户</h3>
-
-<p>如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到&rdquo;/media&rdquo;路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。</p>
-
-<p>比如如果您使用PCManFM，那么加载的路径会是&rdquo;/media/pi&rdquo;。 要指定加载目录&rdquo;/media/pi&rdquo;, 修改&rdquo;/lib/systemd/system/lomod.service&rdquo;的<code>ExecStart</code>字段，加上  &ldquo;&ndash;mount-dir&rdquo;参数:</p>
-
+</code></pre><h3 id="3-按需修改加载目录和运行用户">3. 按需修改加载目录和运行用户</h3>
+<p>如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到&quot;/media&quot;路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。</p>
+<p>比如如果您使用PCManFM，那么加载的路径会是&quot;/media/pi&quot;。 要指定加载目录&quot;/media/pi&quot;, 修改&quot;/lib/systemd/system/lomod.service&quot;的<code>ExecStart</code>字段，加上  &ldquo;&ndash;mount-dir&quot;参数:</p>
 <pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
-</code></pre>
-
-<p>如果您的用户名不是&rdquo;pi&rdquo;，那么需要修改&rdquo;lib/systemd/system/lomod.service&rdquo;文件中的用户名pi(&ldquo;User=pi&rdquo;)改成您的用户名。</p>
-
+</code></pre><p>如果您的用户名不是&quot;pi&rdquo;，那么需要修改&quot;lib/systemd/system/lomod.service&quot;文件中的用户名pi(&ldquo;User=pi&rdquo;)改成您的用户名。</p>
 <h3 id="4-运行">4. 运行</h3>
-
 <p>重启Lomorage服务程序:</p>
-
 <pre><code># 重启lomo-backend
 sudo systemctl restart lomod
 
@@ -405,7 +350,6 @@ sudo systemctl restart lomow
 # 重启lomo-frame
 sudo service supervisor restart
 </code></pre>
-
                         </div>
 
                     </div>
@@ -428,7 +372,6 @@ sudo service supervisor restart
             <h4>关于我们</h4>
 
             我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
-                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.78.1" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -192,99 +192,48 @@
                     <div class="col-md-12">
 
                         <div>
-                          
-
-<h1 id="外网访问设置">外网访问设置</h1>
-
+                          <h1 id="外网访问设置">外网访问设置</h1>
 <p>外网访问需要一点技术背景来进行手工设置，我们后续的版本会让这个设置更加简单。</p>
-
 <p>外网访问依赖于隧道连接服务来实现内网穿透，现有一些服务提供商提供免费的服务，大多数隧道服务都需要下载客户端，运行在您的设备上，同公网的隧道服务器建立连接，并分配子域名，当通过子域名进行访问时，隧道服务就会将请求转发到您的应用程序。</p>
-
 <p>您可以使用<a href="https://localtunnel.me">localtunnel</a>或者<a href="https://ngrok.com">ngrok</a>，这两个都是免费的隧道服务. localtunnel无需注册，并且支持自定义子域名; ngrok需要注册，使用自定义子域名需要付费，但更加稳定，并没有额外的依赖。</p>
-
-<p><em>如果您使用Lomorage的树莓派镜像, 登陆的用户名是&rdquo;pi&rdquo;，密码是&rdquo;raspberry&rdquo;</em></p>
-
+<p><em>如果您使用Lomorage的树莓派镜像, 登陆的用户名是&quot;pi&quot;，密码是&quot;raspberry&quot;</em></p>
 <h2 id="localtunnel">localtunnel</h2>
-
 <p>如果您使用Windows或者macOS，您需要先先安装<a href="https://nodejs.org/">nodejs</a>，再安装localtunnel。如果您使用Lomorage的树莓派镜像，您可以直接运行<code>sudo localtunnel_install.sh</code>来安装localtunnel，您可以跳过下面的步骤1和步骤2。</p>
-
 <h3 id="1-安装nodejs">1. 安装nodejs</h3>
-
 <p>下载并安装对应平台下的<a href="(https://nodejs.org/en/download/)">二进制安装包</a>。</p>
-
 <h3 id="2-安装localtunnel">2. 安装localtunnel</h3>
-
 <p>打开命令行窗口并输入:</p>
-
 <pre><code>npm install -g localtunnel
-</code></pre>
-
-<h3 id="3-运行localtunnel">3. 运行localtunnel</h3>
-
-<p>如果您需要使用子域名&rdquo;allice&rdquo; (您可以选择自己的子域名), 打开命令行窗口并输入:</p>
-
+</code></pre><h3 id="3-运行localtunnel">3. 运行localtunnel</h3>
+<p>如果您需要使用子域名&quot;allice&quot; (您可以选择自己的子域名), 打开命令行窗口并输入:</p>
 <pre><code>lt -s allice -p 8000 --print-requests
-</code></pre>
-
-<p>&rdquo;-s&rdquo;指定要使用的子域名, &ldquo;-p&rdquo;指定要转发的目的端口, Lomorage服务默认使用&rdquo;8000&rdquo;, &ldquo;&ndash;print-requests&rdquo;输出接收到的请求信息。</p>
-
+</code></pre><p>&ldquo;-s&quot;指定要使用的子域名, &ldquo;-p&quot;指定要转发的目的端口, Lomorage服务默认使用&quot;8000&rdquo;, &ldquo;&ndash;print-requests&quot;输出接收到的请求信息。</p>
 <p>如果输出结果没有任何错误，并输出类似如下的内容:</p>
-
 <pre><code>your url is: https://allice.localtunnel.me
-</code></pre>
-
-<p>您可以在浏览器窗口中打开localtunnel输出的url，如果您能在localtunnel的输出看到刚发出的访问请求日志，隧道服务就已经配置成功了。</p>
-
+</code></pre><p>您可以在浏览器窗口中打开localtunnel输出的url，如果您能在localtunnel的输出看到刚发出的访问请求日志，隧道服务就已经配置成功了。</p>
 <pre><code>Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
-</code></pre>
-
-<script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
-
+</code></pre><script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
 <h3 id="4-在lomorage手机应用中配置隧道服务">4. 在Lomorage手机应用中配置隧道服务</h3>
-
-<p>打开Lomorage手机应用，在配置选项页里找到&rdquo;外网服务&rdquo;，设置地址为localtunnel输出的url，比如类似&rdquo;allice.localtunnel.me&rdquo;。</p>
-
+<p>打开Lomorage手机应用，在配置选项页里找到&quot;外网服务&rdquo;，设置地址为localtunnel输出的url，比如类似&quot;allice.localtunnel.me&rdquo;。</p>
 <h2 id="ngrok">ngrok</h2>
-
 <h3 id="1-注册">1. 注册</h3>
-
-<p><a href="https://dashboard.ngrok.com/signup">注册</a>ngrok，完成后，会显示&rdquo;设置和安装&rdquo;页面.</p>
-
+<p><a href="https://dashboard.ngrok.com/signup">注册</a>ngrok，完成后，会显示&quot;设置和安装&quot;页面.</p>
 <h3 id="2-下载">2. 下载</h3>
-
 <p>ngrok只有一个二进制文件，您可以下载特定平台的版本。</p>
-
-<p>如果您使用树莓派，您需要在&rdquo;设置和安装&rdquo;页面中拷贝Linux(ARM)版本的链接，当前是&rdquo;<a href="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;">https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;</a>, 您可以通过&rdquo;wget&rdquo;来下载。</p>
-
+<p>如果您使用树莓派，您需要在&quot;设置和安装&quot;页面中拷贝Linux(ARM)版本的链接，当前是&quot;https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;, 您可以通过&quot;wget&quot;来下载。</p>
 <pre><code>wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-</code></pre>
-
-<h3 id="3-安装">3. 安装</h3>
-
+</code></pre><h3 id="3-安装">3. 安装</h3>
 <p>解压缩得到二进制可执行文件。在Windows或macOS下，您可以双击解压，如果您使用树莓派，可以使用unzip命令</p>
-
 <pre><code>unzip ngrok-stable-linux-arm.zip
-</code></pre>
-
-<h3 id="4-连接您的账号">4. 连接您的账号</h3>
-
-<p>在&rdquo;设置和安装&rdquo;页面的第三步会显示&rdquo;authtoken&rdquo;，您需要在<strong>命令行窗口</strong>中运行如下命令将&rdquo;authtoken&rdquo;添加到配置文件。</p>
-
+</code></pre><h3 id="4-连接您的账号">4. 连接您的账号</h3>
+<p>在&quot;设置和安装&quot;页面的第三步会显示&quot;authtoken&quot;，您需要在<strong>命令行窗口</strong>中运行如下命令将&quot;authtoken&quot;添加到配置文件。</p>
 <pre><code>./ngrok authtoken [your-authtoken-show-in-step-3]
-</code></pre>
-
-<h3 id="5-运行ngrok">5. 运行ngrok</h3>
-
+</code></pre><h3 id="5-运行ngrok">5. 运行ngrok</h3>
 <p>Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子域名，ngrok运行成功后，会自动绑定一个随机子域名，这个子域名在下次ngrok重新启动时会变化。</p>
-
 <pre><code>./ngrok http 8000
-</code></pre>
-
-<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
-
+</code></pre><script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
 <h3 id="6-在lomorage手机应用中配置隧道服务">6. 在Lomorage手机应用中配置隧道服务</h3>
-
-<p>打开Lomorage手机应用，在配置选项页里找到&rdquo;外网服务&rdquo;，设置服务器地址为ngrok输出的url，比如类似&rdquo;2e30eea5.ngrok.io&rdquo;。</p>
+<p>打开Lomorage手机应用，在配置选项页里找到&quot;外网服务&quot;，设置服务器地址为ngrok输出的url，比如类似&quot;2e30eea5.ngrok.io&quot;。</p>
 
                         </div>
 
@@ -308,7 +257,6 @@
             <h4>关于我们</h4>
 
             我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
-                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

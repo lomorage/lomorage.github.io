@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lomorage</title>
@@ -6,10 +6,15 @@
     <description>Recent content on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2020 21:04:40 +0000</lastBuildDate>
-    
-	<atom:link href="https://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Windows 10 上安装Lomorage容器镜像</title>
+      <link>https://lomorage.com/zh/blog/2020/11/16/windows-docker/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2020/11/16/windows-docker/</guid>
+      <description>&lt;p&gt;虽然Lomorage已经提供了Windows原生安装包，但对于喜欢使用Docker的人来说，用Docker来配置Lomorage服务器，也是一个非常好的选择，尤其在Windows Server上可以极大的发挥HYPER-v技术，让Lomorage的服务器健步如飞。本篇适合有Docker使用经验的人员，如果您不知道Docker是啥，请&lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;直接下载Lomorage原生安装包&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Lomorage帮您解决iCloud的痛点</title>
@@ -18,7 +23,7 @@
       
       <guid>https://lomorage.com/zh/blog/2020/07/19/mypains/</guid>
       <description>&lt;p&gt;我的照片很多，一部分放在移动硬盘里，一部分放在U盘里，无论移动硬盘和U盘，我都放两份。
-  自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
+自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -68,19 +73,20 @@
       <description>外网访问设置 外网访问需要一点技术背景来进行手工设置，我们后续的版本会让这个设置更加简单。
 外网访问依赖于隧道连接服务来实现内网穿透，现有一些服务提供商提供免费的服务，大多数隧道服务都需要下载客户端，运行在您的设备上，同公网的隧道服务器建立连接，并分配子域名，当通过子域名进行访问时，隧道服务就会将请求转发到您的应用程序。
 您可以使用localtunnel或者ngrok，这两个都是免费的隧道服务. localtunnel无需注册，并且支持自定义子域名; ngrok需要注册，使用自定义子域名需要付费，但更加稳定，并没有额外的依赖。
-如果您使用Lomorage的树莓派镜像, 登陆的用户名是&amp;rdquo;pi&amp;rdquo;，密码是&amp;rdquo;raspberry&amp;rdquo;
+如果您使用Lomorage的树莓派镜像, 登陆的用户名是&amp;quot;pi&amp;quot;，密码是&amp;quot;raspberry&amp;quot;
 localtunnel 如果您使用Windows或者macOS，您需要先先安装nodejs，再安装localtunnel。如果您使用Lomorage的树莓派镜像，您可以直接运行sudo localtunnel_install.sh来安装localtunnel，您可以跳过下面的步骤1和步骤2。
 1. 安装nodejs 下载并安装对应平台下的二进制安装包。
 2. 安装localtunnel 打开命令行窗口并输入:
-npm install -g localtunnel  3. 运行localtunnel 如果您需要使用子域名&amp;rdquo;allice&amp;rdquo; (您可以选择自己的子域名), 打开命令行窗口并输入:
-lt -s allice -p 8000 --print-requests  &amp;rdquo;-s&amp;rdquo;指定要使用的子域名, &amp;ldquo;-p&amp;rdquo;指定要转发的目的端口, Lomorage服务默认使用&amp;rdquo;8000&amp;rdquo;, &amp;ldquo;&amp;ndash;print-requests&amp;rdquo;输出接收到的请求信息。
+npm install -g localtunnel3. 运行localtunnel 如果您需要使用子域名&amp;quot;allice&amp;quot; (您可以选择自己的子域名), 打开命令行窗口并输入:
+lt -s allice -p 8000 --print-requests&amp;ldquo;-s&amp;quot;指定要使用的子域名, &amp;ldquo;-p&amp;quot;指定要转发的目的端口, Lomorage服务默认使用&amp;quot;8000&amp;rdquo;, &amp;ldquo;&amp;ndash;print-requests&amp;quot;输出接收到的请求信息。
 如果输出结果没有任何错误，并输出类似如下的内容:
-your url is: https://allice.localtunnel.me  您可以在浏览器窗口中打开localtunnel输出的url，如果您能在localtunnel的输出看到刚发出的访问请求日志，隧道服务就已经配置成功了。
-Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /   4. 在Lomorage手机应用中配置隧道服务 打开Lomorage手机应用，在配置选项页里找到&amp;rdquo;外网服务&amp;rdquo;，设置地址为localtunnel输出的url，比如类似&amp;rdquo;allice.localtunnel.me&amp;rdquo;。
-ngrok 1. 注册 注册ngrok，完成后，会显示&amp;rdquo;设置和安装&amp;rdquo;页面.
+your url is: https://allice.localtunnel.me您可以在浏览器窗口中打开localtunnel输出的url，如果您能在localtunnel的输出看到刚发出的访问请求日志，隧道服务就已经配置成功了。
+Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /4. 在Lomorage手机应用中配置隧道服务 打开Lomorage手机应用，在配置选项页里找到&amp;quot;外网服务&amp;rdquo;，设置地址为localtunnel输出的url，比如类似&amp;quot;allice.localtunnel.me&amp;rdquo;。
+ngrok 1. 注册 注册ngrok，完成后，会显示&amp;quot;设置和安装&amp;quot;页面.
 2. 下载 ngrok只有一个二进制文件，您可以下载特定平台的版本。
-如果您使用树莓派，您需要在&amp;rdquo;设置和安装&amp;rdquo;页面中拷贝Linux(ARM)版本的链接，当前是&amp;rdquo;https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&amp;quot;, 您可以通过&amp;rdquo;wget&amp;rdquo;来下载。
-wget https://bin.</description>
+如果您使用树莓派，您需要在&amp;quot;设置和安装&amp;quot;页面中拷贝Linux(ARM)版本的链接，当前是&amp;quot;https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&amp;quot;, 您可以通过&amp;quot;wget&amp;quot;来下载。
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip3. 安装 解压缩得到二进制可执行文件。在Windows或macOS下，您可以双击解压，如果您使用树莓派，可以使用unzip命令
+unzip ngrok-stable-linux-arm.</description>
     </item>
     
     <item>
@@ -89,17 +95,16 @@ wget https://bin.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/install-frame/</guid>
-      <description>目录  安装Lomo-frame 配置Lomo-frame  快速开始 关闭开启相框 关闭开启Lomo-frame应用 定时开关 播放顺序 自定义播放列表 播放媒体类型 快捷键 设置多个数码相框  1. 安装Lomo-frame 2. 设置WiFi连接 3. 检查主树莓派的IP地址 4. 找到主树莓派的加载目录 5. 远程挂载媒体目录到树莓派zero w 6. 重启    安装Lomo-frame Lomo-frame应用只支持Raspberry Pi平台, Windows/Mac或docker版本不支持。
+      <description>目录  安装Lomo-frame 配置Lomo-frame  快速开始 关闭开启相框 关闭开启Lomo-frame应用 定时开关 播放顺序 自定义播放列表 播放媒体类型 快捷键 设置多个数码相框  1. 安装Lomo-frame 2. 设置WiFi连接 3. 检查主树莓派的IP地址 4. 找到主树莓派的加载目录 5. 远程挂载媒体目录到树莓派zero w 6. 重启      安装Lomo-frame Lomo-frame应用只支持Raspberry Pi平台, Windows/Mac或docker版本不支持。
 如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装Lomo-frame应用，已经预装到系统中了。
-否则，如果您的系统镜像是2020-03-13之前的 (&amp;ldquo;image_2020-03-13-lomorage-lite.zip &amp;ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&amp;rdquo;gpg.key&amp;rdquo;文件，如果没有，请参考这里）。
-sudo apt update sudo apt install lomo-frame  配置Lomo-frame 您有多个选择:
- 在同一个树莓派上运行Lomorage服务和相框程序。
- 在不同的树莓派上运行Lomorage服务和相框程序，比如您可以用树莓派zero来运行相框程序，用性能更好的的树莓派4来运行树莓派4。
+否则，如果您的系统镜像是2020-03-13之前的 (&amp;ldquo;image_2020-03-13-lomorage-lite.zip &amp;ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&amp;quot;gpg.key&amp;quot;文件，如果没有，请参考这里）。
+sudo apt updatesudo apt install lomo-frame配置Lomo-frame 您有多个选择:
+  在同一个树莓派上运行Lomorage服务和相框程序。
+  在不同的树莓派上运行Lomorage服务和相框程序，比如您可以用树莓派zero来运行相框程序，用性能更好的的树莓派4来运行树莓派4。
   如果相框程序运行起来后，会在相框屏幕上显示一个二维码，您可以使用iOS Lomorage应用程序来注册相框，成功后，您就可以在Lomorage手机应用里给相框分享照片了，就像分享到其他联系人一样。当前只有iOS应用支持注册/注销数码相框，但注册之后，您可以使用Android应用程序来分享照片给数码相框。
 快速开始 如果您已经安装了Lomo-frame程序，它会在开机后自动启动。
-如果树莓派没有连上网络，您需要先将其连上网络，如果您使用WiFi，先连上HDMI和键盘，然后重启设备，按照屏幕上的提示进入命令行并登陆，接下来可以使用命令wifi_switch client [wifi-ssid] [wifi-password], 用您自己的配置替换&amp;rdquo;[wifi-ssid]&amp;ldquo;和&amp;rdquo;[wifi-password]&amp;ldquo;。
-网络设置完成后，重启，会显示QRCode，您可以到Lomorage iOS APP的设置页面，注册相框，然后您就可以使用手机应用程序来分享照片给数码相框。
- 如果你无需更多的高级配置，则可以跳过下面的内容。</description>
+如果树莓派没有连上网络，您需要先将其连上网络，如果您使用WiFi，先连上HDMI和键盘，然后重启设备，按照屏幕上的提示进入命令行并登陆，接下来可以使用命令wifi_switch client [wifi-ssid] [wifi-password], 用您自己的配置替换&amp;rdquo;[wifi-ssid]&amp;ldquo;和&amp;rdquo;[wifi-password]&amp;quot;。
+网络设置完成后，重启，会显示QRCode，您可以到Lomorage iOS APP的设置页面，注册相框，然后您就可以使用手机应用程序来分享照片给数码相框。</description>
     </item>
     
     <item>
@@ -108,12 +113,12 @@ sudo apt update sudo apt install lomo-frame  配置Lomo-frame 您有多个选择
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-android/</guid>
-      <description> 安装Lomorage安卓手机App ！ 中文版发布了，请下载试用
+      <description>安装Lomorage安卓手机App ！ 中文版发布了，请下载试用
 您可以在安卓手机上安卓Lomorage App，目前的Lomorage App是开发预览版，最低支持的安卓系统版本是7.1，正式版会很快发布，欢迎关注Lomorage公众号。
 欢迎提供反馈，我们会不断更新我们的软件， 点击下面的图标下载最新中文版
-  -- Lomorage 是一款个人私有照片和视频备份工具，它方便的把您的照片和视频备份到Windows PC机或者Apple MAC机，也可以备份到Lomorage 定制的树莓派上。 您需要在Windows 或者 Mac 或者 树莓派上安装 Lomorage 服务程序。
+--Lomorage 是一款个人私有照片和视频备份工具，它方便的把您的照片和视频备份到Windows PC机或者Apple MAC机，也可以备份到Lomorage 定制的树莓派上。 您需要在Windows 或者 Mac 或者 树莓派上安装 Lomorage 服务程序。
 安装完Lomorage客户端，可能需要花一两分钟时间导入您的视频和照片。然后在Manage Account界面可以创建账号，登录，下拉备份您的照片和视频，还可以和您的家人进行分享。
-App会导入您的照片和视频，并且提示您需要登录  点击右上角的菜单，进入账号管理界面. 在那里，App会自动发现您的Lomorage服务器程序 然后创建账号，登录。您也可以通过二维码扫描您的Lomorage服务器程序. （如果您用的是Windows或者Mac的Lomorage 服务程序）  下来开始备份您的照片和视频 可以选择过滤选项来查看您要的照片和视频  在 备份 栏目，你可以长按选中然后分享给您的家人  通过 Members 选项来查看所有的用户  通过 Inbox 来查看您的家人通过Lomorage 系统分享给您的照片和视频  您可以在设置页配置您的远程访问和冗余备份，并且发送反馈  </description>
+App会导入您的照片和视频，并且提示您需要登录点击右上角的菜单，进入账号管理界面. 在那里，App会自动发现您的Lomorage服务器程序 然后创建账号，登录。您也可以通过二维码扫描您的Lomorage服务器程序. （如果您用的是Windows或者Mac的Lomorage 服务程序）  下来开始备份您的照片和视频 可以选择过滤选项来查看您要的照片和视频 在 备份 栏目，你可以长按选中然后分享给您的家人 通过 Members 选项来查看所有的用户 通过 Inbox 来查看您的家人通过Lomorage 系统分享给您的照片和视频 您可以在设置页配置您的远程访问和冗余备份，并且发送反馈 </description>
     </item>
     
     <item>
@@ -122,10 +127,9 @@ App会导入您的照片和视频，并且提示您需要登录  点击右上角
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-ios/</guid>
-      <description> 安装Lomorage iOS客户端 您可以在iPad或iPhone上安装Lomorage客户端应用，最低支持的iOS系统版本是10.3。
-  -- 安装完Lomorage客户端，启动就可以自动发现同一网络中运行的Lomorage服务，如果您有多台Lomorage服务运行，那些会列举出来供选择。如果未能自动发现服务，您可以选择扫码的方式登陆（Lomorage服务运行在Windows或者MacOS下，打开LomoAgent设置），或者手动输入IP地址和端口。
-然后您可以创建用户，选择存储目录，登陆后，会花上几分钟来导入您相册的照片和视频，然后您可以选择需要上传的文件进行备份，如果已经备份成功，图片或视频下会显示一个绿色的小勾。在远程的选项卡里，显示的是远程备份过但本地没有的文件，所以如果您删除掉本地成功备份的文件，它们会显示在远程备份里面。
- </description>
+      <description>安装Lomorage iOS客户端 您可以在iPad或iPhone上安装Lomorage客户端应用，最低支持的iOS系统版本是10.3。
+--安装完Lomorage客户端，启动就可以自动发现同一网络中运行的Lomorage服务，如果您有多台Lomorage服务运行，那些会列举出来供选择。如果未能自动发现服务，您可以选择扫码的方式登陆（Lomorage服务运行在Windows或者MacOS下，打开LomoAgent设置），或者手动输入IP地址和端口。
+然后您可以创建用户，选择存储目录，登陆后，会花上几分钟来导入您相册的照片和视频，然后您可以选择需要上传的文件进行备份，如果已经备份成功，图片或视频下会显示一个绿色的小勾。在远程的选项卡里，显示的是远程备份过但本地没有的文件，所以如果您删除掉本地成功备份的文件，它们会显示在远程备份里面。</description>
     </item>
     
     <item>
@@ -134,12 +138,12 @@ App会导入您的照片和视频，并且提示您需要登录  点击右上角
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-osx/</guid>
-      <description> 在MacOS上安装Lomorage服务程序 1. 点击下面的链接安装Lomorage服务程序。
-macOS 如果上面链接无法访问，也可以从百度网盘下载: 链接: https://pan.baidu.com/s/1SkCo-zzvgAC_GzugVaZVbw 提取码: wj35
-2. 双击&amp;rdquo;LomoAgent.dmg&amp;rdquo;开始安装，参考下面步骤完成安装。
- 3. 运行应用程序LomoAgent，如果有防火墙提示，请允许LomoAgent访问网络。
+      <description>在MacOS上安装Lomorage服务程序 1. 点击下面的链接安装Lomorage服务程序。
+macOS如果上面链接无法访问，也可以从百度网盘下载: 链接: https://pan.baidu.com/s/1SkCo-zzvgAC_GzugVaZVbw 提取码: wj35
+2. 双击&amp;quot;LomoAgent.dmg&amp;quot;开始安装，参考下面步骤完成安装。
+3. 运行应用程序LomoAgent，如果有防火墙提示，请允许LomoAgent访问网络。
 4. 程序启动后，您需要设置数据目录才能正常使用，数据目录用来存储您的手机上传的照片视频。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备份。
- </description>
+</description>
     </item>
     
     <item>
@@ -148,13 +152,12 @@ macOS 如果上面链接无法访问，也可以从百度网盘下载: 链接: h
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-pi/</guid>
-      <description>目录  在树莓派上安装Lomorage服务程序  安装系统镜像 Docker安装  1. 树莓派上安装Docker 2. 获取Docker镜像 3. 运行  APT安装  1. 添加lomoware源 2. 安装Lomorage 3. 按需修改加载目录和运行用户 4. 运行    在树莓派上安装Lomorage服务程序 要在树莓派上运行，您需要先购买一个树莓派，Lomorage可以运行在以下型号的机器上:
+      <description>目录  在树莓派上安装Lomorage服务程序  安装系统镜像 Docker安装  1. 树莓派上安装Docker 2. 获取Docker镜像 3. 运行   APT安装  1. 添加lomoware源 2. 安装Lomorage 3. 按需修改加载目录和运行用户 4. 运行      在树莓派上安装Lomorage服务程序 要在树莓派上运行，您需要先购买一个树莓派，Lomorage可以运行在以下型号的机器上:
  Raspberry Pi 4 Model B Raspberry Pi 3 Model B+ Raspberry Pi Zero W Raspberry Pi 2 Model B  如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能。下面是您需要的最小配置:
  树莓派主板 配套电源 16GB MicroSD卡  有3种方式来在Raspberry Pi上安装Lomorage服务程序, 一种是安装预编译好的系统镜像，该镜像已经安装了所有Lomorage服务程序依赖的库和第三方工具，简单快捷，推荐使用；如果您已经有树莓派在运行其他服务，您也可以使用Docker镜像来安装，或者使用从APT源安装。
 安装系统镜像 预装的系统镜像包括所有的包:
- lomo-backend: Lomorage服务程序
- lomo-web: Lomorage网页程序
- lomo-base: 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</description>
+  lomo-backend: Lomorage服务程序
+  lomo-web: Lomorage网页程序</description>
     </item>
     
     <item>
@@ -163,11 +166,10 @@ macOS 如果上面链接无法访问，也可以从百度网盘下载: 链接: h
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-web/</guid>
-      <description> 安装Lomorage网页客户端 您可以使用Lomorage网页客户端来上传电脑里面的照片和视频，并且可以使用图库来浏览已经备份的照片和视频。
+      <description>安装Lomorage网页客户端 您可以使用Lomorage网页客户端来上传电脑里面的照片和视频，并且可以使用图库来浏览已经备份的照片和视频。
 如果您使用MacOS版本的Lomorage服务程序，您可以点击LomoAgent应用的“导入”菜单打开网页客户端。
 如果您使用树莓派版本的Lomorage服务程序，您可以使用下面的命令来安装Lomorage网页客户端到树莓派上:
-sudo apt update sudo apt install lomo-web  然后您可以在电脑的浏览器上访问&amp;rdquo;http://raspberrypi-lomorage.local:8001&amp;ldquo;，打开Lomorage网页客户端。
- </description>
+sudo apt updatesudo apt install lomo-web然后您可以在电脑的浏览器上访问&amp;quot;http://raspberrypi-lomorage.local:8001&amp;quot;，打开Lomorage网页客户端。</description>
     </item>
     
     <item>
@@ -176,15 +178,14 @@ sudo apt update sudo apt install lomo-web  然后您可以在电脑的浏览器�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-win/</guid>
-      <description> 在Windows上安装Lomorage服务程序 1. 点击下面的链接安装Lomorage服务程序。
-Windows 如果上面链接无法访问，也可以从百度网盘下载:
+      <description>在Windows上安装Lomorage服务程序 1. 点击下面的链接安装Lomorage服务程序。
+Windows如果上面链接无法访问，也可以从百度网盘下载:
 链接: https://pan.baidu.com/s/193H64Xw5lMGA90O1eDrD_A
 提取码： wsd4
-2. 双击&amp;rdquo;lomoagent.msi&amp;rdquo;开始安装。如果有Windows Defender提示未知应用，请参考如下步骤允许安装程序运行。
- 3. 勾选&amp;rdquo;最终用户许可协议&amp;rdquo;后，一路完成安装步骤。
- 4. 双击桌面的LomoAgent图标，启动应用程序，如果有防火墙提示，请允许LomoAgent访问私有网络。
- 5. 程序启动后，您需要设置数据目录才能正常使用，数据目录用来存储您的手机上传的照片视频。
- </description>
+2. 双击&amp;quot;lomoagent.msi&amp;quot;开始安装。如果有Windows Defender提示未知应用，请参考如下步骤允许安装程序运行。
+3. 勾选&amp;quot;最终用户许可协议&amp;quot;后，一路完成安装步骤。
+4. 双击桌面的LomoAgent图标，启动应用程序，如果有防火墙提示，请允许LomoAgent访问私有网络。
+5. 程序启动后，您需要设置数据目录才能正常使用，数据目录用来存储您的手机上传的照片视频。</description>
     </item>
     
     <item>
@@ -197,7 +198,7 @@ Windows 如果上面链接无法访问，也可以从百度网盘下载:
 比如，云服务主要按不同的存储空间容量大小来定价，其他的一些功能则没有差别；而对于那些放置在自家的硬件产品，价格的差别主要在于硬件的配置，同一厂商的不同型号软件功能没有太大差异。在所有的功能中，备份是最基础的功能，其他的高级功能都是构建在这个基础上的。
 Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果您使用Windows或Mac电脑，也就无需另外购置额外的硬件，但如果想更好但利用改系统，将其作为一个7x24小时的私有云，您可以选择树莓派。即便是购买树莓派，也比市面上的方案更加经济实用。软件方面有些高级功能现在还在开发中，但基本的存储备份功能安全稳定，没有任何隐形费用，没有任何用户锁定，不泄漏隐私，为什么不试试呢？
 和云服务的比较 下面的按年费来比较, 下面的表格的空单元格表示没有对应的选项。比如Apple iCloud只提供了5 GB, 50 GB, 200 GB and 2 TB的选项, 对Lomorage而言，现在比较难买到新的硬盘是小于500G的。Lomorage的基础功能都是免费的，所以下面的价格主要是考虑的硬件，和硬件的损耗，还有电费。
-   Lomorage Apple iCloud Google Photo Amazon Photo OneDrive 百度云     5 GB  免费  免费 免费    15 GB   免费      50 GB  ¥ 72       100 GB   ¥ 141.</description>
+   Lomorage Apple iCloud Google Photo Amazon Photo OneDrive 百度云     5 GB  免费  免费 免费    15 GB   免费      50 GB  ¥ 72       100 GB   ¥ 141.82 ¥ 141.</description>
     </item>
     
     <item>
@@ -208,11 +209,12 @@ Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果
       <guid>https://lomorage.com/zh/installation/</guid>
       <description>安装说明 1. 简介 要使用Lomorage，您需要在本地网络运行Lomorage服务程序，您可以选择在Windows，macOS或者树莓派上运行。然后您需要去应用程序商店下载手机客户端应用。在运行了Lomorage服务程序之后，手机客户端会自动发现服务，无需配置，然后您就可以开始备份照片和视频了。
 2. 安装Lomorage服务程序 您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务程序。Windows或macOS上运行Lomorage服务程序可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。
-Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi &amp;nbsp; Docker 3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
+Windows&amp;nbsp;macOS&amp;nbsp;Raspberry Pi&amp;nbsp;Docker3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
 您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
-  &amp;nbsp;  4. 外网访问 (可选) Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击这里查看具体配置。
+&amp;nbsp;4. 外网访问 (可选) Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击这里查看具体配置。
 5. 设置数码相框 (可选) 您可以将树莓派连接显示器，并作为数码相框，您也可以使用树莓派zero w来搭建多个数码相框，并远程通过WiFi来访问。点击这里查看数码相框设置。
- Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY</description>
+
+Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY</description>
     </item>
     
     <item>
@@ -221,7 +223,7 @@ Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi &amp;nbsp; Docker 3. 安装Lomo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/faq/</guid>
-      <description>1. 为什么不用云服务? 2. NAS怎么样? 3. 其他选择呢? 4. 为什么要做Lomorage? 5. 价格 6. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? 7. 你们的商业模式是什么? 8. 如何设置冗余备份? 9. 支持那些文件系统? 10. 为什么时间看起来不对? 11. 如何设置冗余备份? 12. 编辑后的照片视频支持吗? 13. 什么是后台备份?  1. 为什么不用云服务? 我们认为数字资产的管理需要保存在本地，在本地做好备份，而云端的存储只是本地存储的一个补充，现有的云存储成本过高，国内的云存储厂商相继停止运营:
+      <description>1. 为什么不用云服务? 2. NAS怎么样? 3. 其他选择呢? 4. 为什么要做Lomorage? 5. 价格 6. 怎么想到&amp;quot;Lomorage&amp;quot;这个名字? 7. 你们的商业模式是什么? 8. 如何设置冗余备份? 9. 支持那些文件系统? 10. 为什么时间看起来不对? 11. 如何设置冗余备份? 12. 编辑后的照片视频支持吗? 13. 什么是后台备份?  1. 为什么不用云服务? 我们认为数字资产的管理需要保存在本地，在本地做好备份，而云端的存储只是本地存储的一个补充，现有的云存储成本过高，国内的云存储厂商相继停止运营:
  115 网盘：2016 年 3 月 4 日下线「我聊」中的「文件发送」功能，后续一直在调整。 新浪微盘：2016 年 6 月 30 日开始关闭免费个人用户的存储服务。 华为网盘：2016 年 6 月 30 日开始关闭。 迅雷 / 金山快盘：停止快盘个人用户的存储服务，数据保留到 2016 年 6 月 30 日。 360 云盘：2016 年 11 月起停止个人云盘服务，2017 年 2 月 1 日起关闭所有云盘账号并清空数据。 UC 云盘：2016 年 4 月 15 日开始终止网盘的存储服务，停止上传服务 / 离线资源存至网盘功能 / 视频转码服务。  国内外的照片存储服务也相继关停:</description>
     </item>
     
@@ -231,20 +233,21 @@ Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi &amp;nbsp; Docker 3. 安装Lomo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/features/</guid>
-      <description>--  &amp;nbsp;&amp;nbsp;保护隐私 Lomorage是运行在您网络的私有云服务，为您提供便捷的照片备份和管理服务，而无需担心隐私泄漏。我们没有，并永远不会收集任何用户隐私信息。
+      <description>-- 保护隐私 Lomorage是运行在您网络的私有云服务，为您提供便捷的照片备份和管理服务，而无需担心隐私泄漏。我们没有，并永远不会收集任何用户隐私信息。
 您也可以在家中为不同的家庭成员运行多个完全隔离的Lomorage服务。
-&amp;nbsp;&amp;nbsp;&amp;nbsp;跨平台 Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。客户端支持iOS, Android和浏览器。
-&amp;nbsp;&amp;nbsp;&amp;nbsp;安装简单 我们并不是在构建另一个NAS系统，如果您的需求仅仅是备份和管理您的照片和视频，但是被NAS复杂的安装过程吓到，忘掉那些专业术语，放轻松。我们保证Lomorage的安装过程只需要短短几分钟。点击这里查看安装步骤。
-&amp;nbsp;&amp;nbsp;&amp;nbsp;存储原始文件 照片和视频会按照完整尺寸备份到您的硬盘，文件和您的手机上完全一样，EXIF元数据信息也不会丢失。支持所有常见的图片和视频格式，支持HEIC和动态照片。
-&amp;nbsp;&amp;nbsp;零迁移成本 我们不会像一些云存储系统对文件进行切片分块存储，您的照片视频文件会以原始的文件格式存储备份到您的硬盘，我们不用任何私有的存储格式。要使用Lomorage，您也无需格式化硬盘，可以使用任何闲置的硬盘，并且我们的Raspberry Pi版本支持所有常见的文件系统格式，无需使用特定的文件系统，比如对于Windows用户，您可以使用FAT或者NTFS文件格式的硬盘，这样就无需第三方软件，存储的文件就能在Windows上访问。
-&amp;nbsp;&amp;nbsp;零维护成本 云服务之所以得到广泛使用的一个原因就是它在为用户提供了便利性的同时隐藏了系统的复杂性，因为Lomorage是一个在用户环境中部署的私用云，我们致力于提供云服务一样的用户体验，减少用户的干预和维护。
- 自动升级: 有新版本可用的时候Lomorage服务会自动升级到最新版本。
- 自动迁移: 升级新系统的同时，会根据需要自动的进行数据迁移，保证版本兼容。
- 一致性检查: 系统会定期进行一致性检查，来保证数据的完整性和一致性，并自动修复。
-  &amp;nbsp;&amp;nbsp;多重备份 大多数用户在手机空间不够的时候，会将已经备份的照片视频删除，仅仅只有一份备份是不够的，Lomorage提供了多种备份方案:
- 本地容易备份: 您可以在本地备份多份数据，您只需要多接上一块硬盘，并在设置备份路径。
- 远程备份: 您可以选择加密备份到朋友或亲戚加的闲置硬盘空间。我们计划在今年内支持这个功能。   &amp;nbsp;&amp;nbsp;分享瞬间 您可以和自己家人分享照片和视频，并可自定义多个群组，分享不会占用额外的存储空间，而无需担心自己的手机空间不够。
-&amp;nbsp;&amp;nbsp;框起美好回忆 您可以将树莓派和显示屏连接作为数码相框，您可以通过低成本的树莓派zero w来搭建多个数码相框，并通过无线进行访问您的Lomorage存储备份，而无需担心数码相框的存储空间不够，也不需要手动将文件拷贝到数码相框。</description>
+ 跨平台 Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。客户端支持iOS, Android和浏览器。
+ 安装简单 我们并不是在构建另一个NAS系统，如果您的需求仅仅是备份和管理您的照片和视频，但是被NAS复杂的安装过程吓到，忘掉那些专业术语，放轻松。我们保证Lomorage的安装过程只需要短短几分钟。点击这里查看安装步骤。
+ 存储原始文件 照片和视频会按照完整尺寸备份到您的硬盘，文件和您的手机上完全一样，EXIF元数据信息也不会丢失。支持所有常见的图片和视频格式，支持HEIC和动态照片。
+ 零迁移成本 我们不会像一些云存储系统对文件进行切片分块存储，您的照片视频文件会以原始的文件格式存储备份到您的硬盘，我们不用任何私有的存储格式。要使用Lomorage，您也无需格式化硬盘，可以使用任何闲置的硬盘，并且我们的Raspberry Pi版本支持所有常见的文件系统格式，无需使用特定的文件系统，比如对于Windows用户，您可以使用FAT或者NTFS文件格式的硬盘，这样就无需第三方软件，存储的文件就能在Windows上访问。
+ 零维护成本 云服务之所以得到广泛使用的一个原因就是它在为用户提供了便利性的同时隐藏了系统的复杂性，因为Lomorage是一个在用户环境中部署的私用云，我们致力于提供云服务一样的用户体验，减少用户的干预和维护。
+  自动升级: 有新版本可用的时候Lomorage服务会自动升级到最新版本。
+  自动迁移: 升级新系统的同时，会根据需要自动的进行数据迁移，保证版本兼容。
+  一致性检查: 系统会定期进行一致性检查，来保证数据的完整性和一致性，并自动修复。
+   多重备份 大多数用户在手机空间不够的时候，会将已经备份的照片视频删除，仅仅只有一份备份是不够的，Lomorage提供了多种备份方案:
+  本地容易备份: 您可以在本地备份多份数据，您只需要多接上一块硬盘，并在设置备份路径。
+  远程备份: 您可以选择加密备份到朋友或亲戚加的闲置硬盘空间。我们计划在今年内支持这个功能。
+   分享瞬间 您可以和自己家人分享照片和视频，并可自定义多个群组，分享不会占用额外的存储空间，而无需担心自己的手机空间不够。
+ 框起美好回忆 您可以将树莓派和显示屏连接作为数码相框，您可以通过低成本的树莓派zero w来搭建多个数码相框，并通过无线进行访问您的Lomorage存储备份，而无需担心数码相框的存储空间不够，也不需要手动将文件拷贝到数码相框。</description>
     </item>
     
     <item>

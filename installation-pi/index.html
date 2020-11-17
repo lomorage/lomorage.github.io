@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.78.1" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -192,132 +192,100 @@
                     <div class="col-md-12">
 
                         <div>
-                          
-
-<h1 id="table-of-contents">Table of Contents</h1>
-
+                          <h1 id="table-of-contents">Table of Contents</h1>
 <ul>
 <li><a href="#install-lomorage-service-on-raspberry-pi">Install Lomorage Service on Raspberry Pi</a>
-
 <ul>
 <li><a href="#install-with-prebuild-os-image">Install with prebuild OS image</a></li>
 <li><a href="#docker-installation">Docker installation</a>
-
 <ul>
 <li><a href="#1-install-docker-on-raspberry-pi">1. Install Docker on Raspberry Pi</a></li>
 <li><a href="#2-get-docker-image">2. Get Docker image</a></li>
 <li><a href="#3-run">3. Run</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="#apt-installation">Apt installation</a>
-
 <ul>
 <li><a href="#1-add-lomoware-source">1. Add lomoware source</a></li>
 <li><a href="#2-install-lomorage">2. Install Lomorage</a></li>
 <li><a href="#3-change-mount-directory-and-username-if-needed">3. Change mount directory and username if needed</a></li>
 <li><a href="#4-run">4. Run</a></li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h1 id="install-lomorage-service-on-raspberry-pi">Install Lomorage Service on Raspberry Pi</h1>
-
 <p>To run on Raspberry Pi, you need to order a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, we have tested the image the following models:</p>
-
 <ul>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
 <li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
 </ul>
-
 <p>If you don&rsquo;t have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:</p>
-
 <ul>
 <li>Raspberry Pi board</li>
 <li>Power supply</li>
 <li>16GB MicroSD card</li>
 </ul>
-
 <p>A <a href="https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/">Raspberry Pi 3 B+ (PLUS) Starter Kit</a> is good enough for the setup.</p>
-
 <p><strong>There are 3 options to install Lomorage service on Raspberry Pi</strong>, one is using the prebuild OS image which has all the dependencies installed, or you can run docker image on your existing running Raspberry Pi, or if you can just use APT install.</p>
-
 <h2 id="install-with-prebuild-os-image">Install with prebuild OS image</h2>
-
 <p>The prebuild image includes all Lomorage packages, including:</p>
-
 <ul>
-<li><p>lomo-backend: Lomorage service backend</p></li>
-
-<li><p>lomo-web: Lomorage web application</p></li>
-
-<li><p>lomo-base: network configure tool, button control, hard drive mount tool (usbmount modification), bluetooth console</p></li>
-
-<li><p>lomo-frame: the digital frame application</p></li>
+<li>
+<p>lomo-backend: Lomorage service backend</p>
+</li>
+<li>
+<p>lomo-web: Lomorage web application</p>
+</li>
+<li>
+<p>lomo-base: network configure tool, button control, hard drive mount tool (usbmount modification), bluetooth console</p>
+</li>
+<li>
+<p>lomo-frame: the digital frame application</p>
+</li>
 </ul>
-
 <p>Click the link below to download the prebuild OS image.</p>
-
 <p align="center">
 <a href="https://github.com/lomorage/pi-gen/releases/download/2020_04_24.21_33_24.0.1d48693/image_2020-04-24-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
-
 <p>After you download the customized OS image, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
-
 <p>After you insert the MicroSD to your desktop or laptop, just select the image you download, choose the MicroSD drive, and click &ldquo;Flash&rdquo;, it will be done in a few minutes.</p>
-
 <p align="center">
   <img width="50%" src="/img/installation/balenaEtcher.png">
 </p>
-
 <p>After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.</p>
-
 <p>If you have HDMI connected, after system boot successfully, it will show up a screen that no able to find any assets. You can upload photos using Lomorage Phone app, and then press &ldquo;r&rdquo; to rescan. If you want to quit to terminal to do some configuration, just press &ldquo;ESC&rdquo; and then &ldquo;Ctrl+Alt+F2&rdquo;, after you made any changes and want to start lomo-frame, use command <code>sudo service supervisor restart</code>.</p>
-
 <p><em>The default login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
-
 <p>We suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command <code>wifi_switch.sh client &quot;wifi-ssid&quot; wifi-password</code>, replace &ldquo;wifi-ssid&rdquo; and &ldquo;wifi-password&rdquo; with those of your wifi network. <em>Make sure you have quotation mark around &ldquo;wifi-ssid&rdquo; if you have space or unicode character in it, for example <code>wifi_switch.sh client &quot;Lomorage's 2.4G&quot; mypassword</code>.</em></p>
-
 <h2 id="docker-installation">Docker installation</h2>
-
 <p>Docker installation is convenient way if you don&rsquo;t want to mess thing on existing system. It doesn&rsquo;t support Raspberry Pi 0 and 1 now.</p>
-
 <p><strong>MDNS won&rsquo;t work in this case, so the service won&rsquo;t be discovered automatically on Lomorage Phone APP, you have to enter the service IP address and Port manually</strong></p>
-
 <p>Docker image includes:</p>
-
 <ul>
-<li><p>lomo-backend: Lomorage service backend</p></li>
-
-<li><p>lomo-web: Lomorage web application</p></li>
+<li>
+<p>lomo-backend: Lomorage service backend</p>
+</li>
+<li>
+<p>lomo-web: Lomorage web application</p>
+</li>
 </ul>
-
 <h3 id="1-install-docker-on-raspberry-pi">1. Install Docker on Raspberry Pi</h3>
-
 <p><em>note: If you are using OMSC, you need to change &ldquo;id=osmc&rdquo; in “/etc/os-release” to &ldquo;id=raspbain&rdquo;</em></p>
-
 <pre><code>sudo apt install -y ca-certificates
 sudo update-ca-certificates --fresh
 curl -fSLs https://get.docker.com | sudo sh
 sudo usermod -aG docker $USER
 sudo systemctl start docker
-</code></pre>
-
-<h3 id="2-get-docker-image">2. Get Docker image</h3>
-
+</code></pre><h3 id="2-get-docker-image">2. Get Docker image</h3>
 <p>Pull from docker hub.</p>
-
 <pre><code>sudo docker pull lomorage/raspberrypi-lomorage:latest
-</code></pre>
-
-<h3 id="3-run">3. Run</h3>
-
+</code></pre><h3 id="3-run">3. Run</h3>
 <p>Download <a href="https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh">run.sh</a>.</p>
-
 <p>You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host.</p>
-
 <p>There should be subdirectories in media home directory，for example if you specify <code>-m /mnt/hdd/</code>, then there should be some subdirectory in hdd, like <code>-m /mnt/hdd/lomorage</code>.</p>
-
 <pre><code>run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
 
 Command line options:
@@ -332,70 +300,46 @@ Command line options:
 Examples:
     # assuming your hard drive mounted in /media, like /media/usb0, /media/usb1.
     ./run.sh -m /media -b /home/pi/lomorage -h 192.168.1.232
-</code></pre>
-
-<p>You can add the command in &ldquo;/etc/rc.local&rdquo; before &ldquo;exit 0&rdquo; to make it run automatically after system boot.</p>
-
+</code></pre><p>You can add the command in &ldquo;/etc/rc.local&rdquo; before &ldquo;exit 0&rdquo; to make it run automatically after system boot.</p>
 <h2 id="apt-installation">Apt installation</h2>
-
 <p>If you have the official Raspbian image installed already, APT installation would be the quickest way to install.</p>
-
 <h3 id="1-add-lomoware-source">1. Add lomoware source</h3>
-
 <pre><code>sudo apt install -y ca-certificates python-certifi python3-certifi
 sudo update-ca-certificates --fresh
 wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
-</code></pre>
-
-<p>If you are using jessie:</p>
-
+</code></pre><p>If you are using jessie:</p>
 <pre><code>echo &quot;deb https://lomoware.github.io/debian/jessie jessie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
-</code></pre>
-
-<p>If you are using buster:</p>
-
+</code></pre><p>If you are using buster:</p>
 <pre><code>echo &quot;deb https://lomoware.github.io/debian/buster buster main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
-</code></pre>
-
-<p>then run:</p>
-
+</code></pre><p>then run:</p>
 <pre><code>sudo apt update
-</code></pre>
-
-<h3 id="2-install-lomorage">2. Install Lomorage</h3>
-
+</code></pre><h3 id="2-install-lomorage">2. Install Lomorage</h3>
 <p>You need at least lomo-vips and lomo-backend installed.</p>
-
 <ul>
-<li><p>lomo-backend: mandatory, Lomorage service backend</p></li>
-
-<li><p>lomo-web: optional, Lomorage web application</p></li>
-
-<li><p>lomo-base: optional, network configure tool, button control, hard drive mount tool, bluetooth console</p></li>
-
-<li><p>lomo-vips: mandatory, lomorage vips clone. (A fast image processing library with low memory needs), used by lomo-backend</p></li>
-
-<li><p>lomo-frame: optional, the digital frame application</p></li>
+<li>
+<p>lomo-backend: mandatory, Lomorage service backend</p>
+</li>
+<li>
+<p>lomo-web: optional, Lomorage web application</p>
+</li>
+<li>
+<p>lomo-base: optional, network configure tool, button control, hard drive mount tool, bluetooth console</p>
+</li>
+<li>
+<p>lomo-vips: mandatory, lomorage vips clone. (A fast image processing library with low memory needs), used by lomo-backend</p>
+</li>
+<li>
+<p>lomo-frame: optional, the digital frame application</p>
+</li>
 </ul>
-
 <pre><code>sudo apt install lomo-base lomo-vips lomo-backend lomo-web lomo-frame -y
-</code></pre>
-
-<h3 id="3-change-mount-directory-and-username-if-needed">3. Change mount directory and username if needed</h3>
-
+</code></pre><h3 id="3-change-mount-directory-and-username-if-needed">3. Change mount directory and username if needed</h3>
 <p>You may need to specify the mount directory if the USB drive is not mounted in &ldquo;/media&rdquo; directory.</p>
-
 <p>For example if you are using PCManFM, then the mount directory will be &ldquo;/media/pi&rdquo;. To specify the mount directory to be &ldquo;/media/pi&rdquo;, modify <code>ExecStart</code> in &ldquo;/lib/systemd/system/lomod.service&rdquo;, and add parameter &ldquo;&ndash;mount-dir&rdquo; as below</p>
-
 <pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
-</code></pre>
-
-<p>If your username is not &ldquo;pi&rdquo;, you need to change &ldquo;User=pi&rdquo; in &ldquo;/lib/systemd/system/lomod.service&rdquo;, and use your username.</p>
-
+</code></pre><p>If your username is not &ldquo;pi&rdquo;, you need to change &ldquo;User=pi&rdquo; in &ldquo;/lib/systemd/system/lomod.service&rdquo;, and use your username.</p>
 <h3 id="4-run">4. Run</h3>
-
 <p>Restart Lomorage service:</p>
-
 <pre><code># restart lomo-backend
 sudo systemctl restart lomod
 
@@ -405,7 +349,6 @@ sudo systemctl restart lomow
 # restart lomo-frame
 sudo service supervisor restart
 </code></pre>
-
                         </div>
 
                     </div>
@@ -434,7 +377,6 @@ sudo service supervisor restart
         <li>Store your data securely on your own devices</li>
         <li>Backup and duplicate storage by adding more devices</li>
         <li>No one can access your assets without permission</li>-->
-        
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

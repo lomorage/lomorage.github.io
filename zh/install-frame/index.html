@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.78.1" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -192,199 +192,132 @@
                     <div class="col-md-12">
 
                         <div>
-                          
-
-<h1 id="目录">目录</h1>
-
+                          <h1 id="目录">目录</h1>
 <ul>
-<li><a href="#安装lomo-frame">安装Lomo-frame</a></li>
-<li><a href="#配置lomo-frame">配置Lomo-frame</a>
-
+<li><a href="#%E5%AE%89%E8%A3%85lomo-frame">安装Lomo-frame</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AElomo-frame">配置Lomo-frame</a>
 <ul>
-<li><a href="#快速开始">快速开始</a></li>
-<li><a href="#关闭开启相框">关闭开启相框</a></li>
-<li><a href="#关闭开启lomo-frame应用">关闭开启Lomo-frame应用</a></li>
-<li><a href="#定时开关">定时开关</a></li>
-<li><a href="#播放顺序">播放顺序</a></li>
-<li><a href="#自定义播放列表">自定义播放列表</a></li>
-<li><a href="#播放媒体类型">播放媒体类型</a></li>
-<li><a href="#快捷键">快捷键</a></li>
-<li><a href="#设置多个数码相框">设置多个数码相框</a>
-
+<li><a href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">快速开始</a></li>
+<li><a href="#%E5%85%B3%E9%97%AD%E5%BC%80%E5%90%AF%E7%9B%B8%E6%A1%86">关闭开启相框</a></li>
+<li><a href="#%E5%85%B3%E9%97%AD%E5%BC%80%E5%90%AFlomo-frame%E5%BA%94%E7%94%A8">关闭开启Lomo-frame应用</a></li>
+<li><a href="#%E5%AE%9A%E6%97%B6%E5%BC%80%E5%85%B3">定时开关</a></li>
+<li><a href="#%E6%92%AD%E6%94%BE%E9%A1%BA%E5%BA%8F">播放顺序</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8">自定义播放列表</a></li>
+<li><a href="#%E6%92%AD%E6%94%BE%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B">播放媒体类型</a></li>
+<li><a href="#%E5%BF%AB%E6%8D%B7%E9%94%AE">快捷键</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E5%A4%9A%E4%B8%AA%E6%95%B0%E7%A0%81%E7%9B%B8%E6%A1%86">设置多个数码相框</a>
 <ul>
-<li><a href="#1-安装lomo-frame">1. 安装Lomo-frame</a></li>
-<li><a href="#2-设置wifi连接">2. 设置WiFi连接</a></li>
-<li><a href="#3-检查主树莓派的ip地址">3. 检查主树莓派的IP地址</a></li>
-<li><a href="#4-找到主树莓派的加载目录">4. 找到主树莓派的加载目录</a></li>
-<li><a href="#5-远程挂载媒体目录到树莓派zero-w">5. 远程挂载媒体目录到树莓派zero w</a></li>
-<li><a href="#6-重启">6. 重启</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#1-%E5%AE%89%E8%A3%85lomo-frame">1. 安装Lomo-frame</a></li>
+<li><a href="#2-%E8%AE%BE%E7%BD%AEwifi%E8%BF%9E%E6%8E%A5">2. 设置WiFi连接</a></li>
+<li><a href="#3-%E6%A3%80%E6%9F%A5%E4%B8%BB%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84ip%E5%9C%B0%E5%9D%80">3. 检查主树莓派的IP地址</a></li>
+<li><a href="#4-%E6%89%BE%E5%88%B0%E4%B8%BB%E6%A0%91%E8%8E%93%E6%B4%BE%E7%9A%84%E5%8A%A0%E8%BD%BD%E7%9B%AE%E5%BD%95">4. 找到主树莓派的加载目录</a></li>
+<li><a href="#5-%E8%BF%9C%E7%A8%8B%E6%8C%82%E8%BD%BD%E5%AA%92%E4%BD%93%E7%9B%AE%E5%BD%95%E5%88%B0%E6%A0%91%E8%8E%93%E6%B4%BEzero-w">5. 远程挂载媒体目录到树莓派zero w</a></li>
+<li><a href="#6-%E9%87%8D%E5%90%AF">6. 重启</a></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h1 id="安装lomo-frame">安装Lomo-frame</h1>
-
 <p><strong>Lomo-frame应用只支持Raspberry Pi平台, Windows/Mac或docker版本不支持。</strong></p>
-
 <p><strong>如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装Lomo-frame应用，已经预装到系统中了。</strong></p>
-
 <p>否则，如果您的系统镜像是2020-03-13之前的 (&ldquo;image_2020-03-13-lomorage-lite.zip
-&ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&rdquo;gpg.key&rdquo;文件，如果没有，请参考<a href="/zh/installation-pi">这里</a>）。</p>
-
+&ldquo;)，或者您没有使用Lomorage树莓派系统镜像，您可以使用下面的命令安装（您应该已经安装过lomorage服务程序，添加过&quot;gpg.key&quot;文件，如果没有，请参考<a href="/zh/installation-pi">这里</a>）。</p>
 <pre><code>sudo apt update
 sudo apt install lomo-frame
-</code></pre>
-
-<h1 id="配置lomo-frame">配置Lomo-frame</h1>
-
+</code></pre><h1 id="配置lomo-frame">配置Lomo-frame</h1>
 <p>您有多个选择:</p>
-
 <ol>
-<li><p>在同一个树莓派上运行Lomorage服务和相框程序。</p></li>
-
-<li><p>在不同的树莓派上运行Lomorage服务和相框程序，比如您可以用树莓派zero来运行相框程序，用性能更好的的树莓派4来运行树莓派4。</p></li>
+<li>
+<p>在同一个树莓派上运行Lomorage服务和相框程序。</p>
+</li>
+<li>
+<p>在不同的树莓派上运行Lomorage服务和相框程序，比如您可以用树莓派zero来运行相框程序，用性能更好的的树莓派4来运行树莓派4。</p>
+</li>
 </ol>
-
 <p>如果相框程序运行起来后，会在相框屏幕上显示一个二维码，您可以使用iOS Lomorage应用程序来注册相框，成功后，您就可以在Lomorage手机应用里给相框分享照片了，就像分享到其他联系人一样。<strong>当前只有iOS应用支持注册/注销数码相框，但注册之后，您可以使用Android应用程序来分享照片给数码相框。</strong></p>
-
 <h2 id="快速开始">快速开始</h2>
-
 <p>如果您已经安装了Lomo-frame程序，它会在开机后自动启动。</p>
-
-<p>如果树莓派没有连上网络，您需要先将其连上网络，如果您使用WiFi，先连上HDMI和键盘，然后重启设备，按照屏幕上的提示进入命令行并登陆，接下来可以使用命令<code>wifi_switch client [wifi-ssid] [wifi-password]</code>, 用您自己的配置替换&rdquo;[wifi-ssid]&ldquo;和&rdquo;[wifi-password]&ldquo;。</p>
-
+<p>如果树莓派没有连上网络，您需要先将其连上网络，如果您使用WiFi，先连上HDMI和键盘，然后重启设备，按照屏幕上的提示进入命令行并登陆，接下来可以使用命令<code>wifi_switch client [wifi-ssid] [wifi-password]</code>, 用您自己的配置替换&rdquo;[wifi-ssid]&ldquo;和&rdquo;[wifi-password]&quot;。</p>
 <p>网络设置完成后，重启，会显示QRCode，您可以到Lomorage iOS APP的设置页面，注册相框，然后您就可以使用手机应用程序来分享照片给数码相框。</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="30%" src="/img/installation/frame-register-ios.png">
   <img width="30%" src="/img/installation/frame-share-ios.png">
 </p>
 </div>
-
 <p>如果你无需更多的高级配置，则可以跳过下面的内容。</p>
-
 <h2 id="关闭开启相框">关闭开启相框</h2>
-
 <p>Lomo-frame应用程序会在系统启动的时候自动加载，但如果您需要手动控制，你可以使用<code>framectrl.sh on</code>命令打开, 或者使用<code>framectrl.sh off</code>命令关闭。<strong>这个命令打开或关闭Lomo-frame应用，并同时打开或者关闭显示器。</strong></p>
-
 <h2 id="关闭开启lomo-frame应用">关闭开启Lomo-frame应用</h2>
-
 <p>如果您只是想退出Lomo-frame应用，但是想让显示器L续开着，您可以使用下面的方法之一:</p>
-
 <ul>
-<li><p>如果树莓派接了键盘，按&rdquo;esc&rdquo;键。</p></li>
-
-<li><p>如果您使用ssh访问，使用<code>sudo service supervisor stop</code>命令。</p></li>
+<li>
+<p>如果树莓派接了键盘，按&quot;esc&quot;键。</p>
+</li>
+<li>
+<p>如果您使用ssh访问，使用<code>sudo service supervisor stop</code>命令。</p>
+</li>
 </ul>
-
 <p>您可以用<code>sudo service supervisor start</code>命令打开Lomo-frame应用.</p>
-
 <h2 id="定时开关">定时开关</h2>
-
-<p><strong>默认打开时间是&rdquo;08:00 am&rdquo;, 关闭时间是&rdquo;21:00 pm&rdquo;.</strong></p>
-
-<p>您可以使用下面的命令来修改, 下面的命令修改打开时间为&rdquo;10:00 am&rdquo;，关闭时间为&rdquo;18:00&rdquo;:</p>
-
+<p><strong>默认打开时间是&quot;08:00 am&rdquo;, 关闭时间是&quot;21:00 pm&quot;.</strong></p>
+<p>您可以使用下面的命令来修改, 下面的命令修改打开时间为&quot;10:00 am&quot;，关闭时间为&quot;18:00&quot;:</p>
 <pre><code>framectr.sh add --on-hour 10 --off-hour 18
-</code></pre>
-
-<p>您也可以修改打开时间为&rdquo;10:30 am&rdquo;，关闭时间为&rdquo;18:30&rdquo;</p>
-
+</code></pre><p>您也可以修改打开时间为&quot;10:30 am&quot;，关闭时间为&quot;18:30&quot;</p>
 <pre><code>framectr.sh add --on-hour 10 --on-min 30 --off-hour 18 --off-min 30
-</code></pre>
-
-<p>或者您想7x24小时开机, 删除定时开关机:</p>
-
+</code></pre><p>或者您想7x24小时开机, 删除定时开关机:</p>
 <pre><code>framectr.sh remove
-</code></pre>
-
-<h2 id="播放顺序">播放顺序</h2>
-
+</code></pre><h2 id="播放顺序">播放顺序</h2>
 <p><strong>默认是随机播放</strong>，但如果您希望顺序播放:</p>
-
 <pre><code>sudo sed -i &quot;s/is_random =.*/is_random = false/&quot; /opt/lomorage/var/video_looper.ini
-</code></pre>
-
-<p>或者您想改为随机播放:</p>
-
+</code></pre><p>或者您想改为随机播放:</p>
 <pre><code>sudo sed -i &quot;s/is_random =.*/is_random = true/&quot; /opt/lomorage/var/video_looper.ini
-</code></pre>
-
-<h2 id="自定义播放列表">自定义播放列表</h2>
-
-<p>您可以创建后修改播放列表文件&rdquo;/opt/lomorage/var/lomo-playlist.txt&rdquo;，格式是每个文件路径一行。</p>
-
+</code></pre><h2 id="自定义播放列表">自定义播放列表</h2>
+<p>您可以创建后修改播放列表文件&quot;/opt/lomorage/var/lomo-playlist.txt&quot;，格式是每个文件路径一行。</p>
 <h2 id="播放媒体类型">播放媒体类型</h2>
-
-<p><strong>默认会播放视频和照片</strong>，但如果您只想播放照片，您可以修改&rdquo;/opt/lomorage/var/video_looper.ini&rdquo;文件中的&rdquo;media_type&rdquo;:</p>
-
+<p><strong>默认会播放视频和照片</strong>，但如果您只想播放照片，您可以修改&quot;/opt/lomorage/var/video_looper.ini&quot;文件中的&quot;media_type&quot;:</p>
 <pre><code>sudo sed -i &quot;s/media_type =.*/media_type = image/&quot; /opt/lomorage/var/video_looper.ini
-</code></pre>
-
-<p>或者您只想播放视频:</p>
-
+</code></pre><p>或者您只想播放视频:</p>
 <pre><code>sudo sed -i &quot;s/media_type =.*/media_type = video/&quot; /opt/lomorage/var/video_looper.ini
-</code></pre>
-
-<p>或者想重置为播放视频和照片:</p>
-
+</code></pre><p>或者想重置为播放视频和照片:</p>
 <pre><code>sudo sed -i &quot;s/media_type =.*/media_type = all/&quot; /opt/lomorage/var/video_looper.ini
-</code></pre>
-
-<h2 id="快捷键">快捷键</h2>
-
+</code></pre><h2 id="快捷键">快捷键</h2>
 <p>您可以通过下面的快捷键来控制:</p>
-
 <ul>
-<li><p>&ldquo;r&rdquo;: 重新扫描并生成播放列表。</p></li>
-
-<li><p>&ldquo;k&rdquo;: 跳到下一个视频或图片。</p></li>
-
-<li><p>&ldquo;s&rdquo;: 暂停播放/继续播放</p></li>
-
-<li><p>&ldquo;esc&rdquo;: 退出应用</p></li>
+<li>
+<p>&ldquo;r&rdquo;: 重新扫描并生成播放列表。</p>
+</li>
+<li>
+<p>&ldquo;k&rdquo;: 跳到下一个视频或图片。</p>
+</li>
+<li>
+<p>&ldquo;s&rdquo;: 暂停播放/继续播放</p>
+</li>
+<li>
+<p>&ldquo;esc&rdquo;: 退出应用</p>
+</li>
 </ul>
-
 <h2 id="设置多个数码相框">设置多个数码相框</h2>
-
 <p>下面的设置需要比较多的专业知识，以后我们会在手机应用中添加相应的控制和配置功能。</p>
-
 <p>如果您已经有了树莓派再跑Lomorage服务程序（主树莓派），并在上面连接了移动硬盘，您很可能会把它放在储藏室并使用有线连接，而您可能是希望数码相框放在卧室或者客厅。</p>
-
 <p>您可以使用低成本的树莓派Zero w来安装数码相框程序，并通过WiFi远程访问您的照片和视频。树莓派Zero w跑数码相框应用甚至能流畅的播放视频。</p>
-
 <h3 id="1-安装lomo-frame">1. 安装Lomo-frame</h3>
-
 <p>您可以按照本页面最前面的方式来安装。</p>
-
 <h3 id="2-设置wifi连接">2. 设置WiFi连接</h3>
-
-<p>键盘连接到Raspberry Pi zero W并登陆, 如果您是Lomorage的树莓派镜像，可以使用命令<code>wifi_switch client [wifi-ssid] [wifi-password]</code>, 用您自己的配置替换&rdquo;[wifi-ssid]&ldquo;和&rdquo;[wifi-password]&ldquo;。如果使用其他系统，您可以参考网上其他资料来设置WiFi连接。</p>
-
+<p>键盘连接到Raspberry Pi zero W并登陆, 如果您是Lomorage的树莓派镜像，可以使用命令<code>wifi_switch client [wifi-ssid] [wifi-password]</code>, 用您自己的配置替换&quot;[wifi-ssid]&ldquo;和&rdquo;[wifi-password]&quot;。如果使用其他系统，您可以参考网上其他资料来设置WiFi连接。</p>
 <h3 id="3-检查主树莓派的ip地址">3. 检查主树莓派的IP地址</h3>
-
-<p>您可以在手机APP里面查看，点击“设置”，找到“本地服务”，其中的&rdquo;服务器地址“字段里面的就是IP地址。</p>
-
+<p>您可以在手机APP里面查看，点击“设置”，找到“本地服务”，其中的&quot;服务器地址“字段里面的就是IP地址。</p>
 <h3 id="4-找到主树莓派的加载目录">4. 找到主树莓派的加载目录</h3>
-
-<p>您可以把主树莓派的&rdquo;media&rdquo;目录通过SAMBA协议加载到电脑上，用户名是&rdquo;pi&rdquo;，密码是&rdquo;raspberry&rdquo;，你可以在&rdquo;media&rdquo;目录下找到加载的存储媒体文件的目录名。</p>
-
+<p>您可以把主树莓派的&quot;media&quot;目录通过SAMBA协议加载到电脑上，用户名是&quot;pi&quot;，密码是&quot;raspberry&quot;，你可以在&quot;media&quot;目录下找到加载的存储媒体文件的目录名。</p>
 <h3 id="5-远程挂载媒体目录到树莓派zero-w">5. 远程挂载媒体目录到树莓派zero w</h3>
-
-<p>比如加载到主树莓派的目录路径为&rdquo;/media/WD_90C27F73C27F5C82&rdquo;，主树莓派的IP地址为192.168.1.155, 您可以登陆树莓派zero w，并远程挂载那个目录到本地:</p>
-
+<p>比如加载到主树莓派的目录路径为&quot;/media/WD_90C27F73C27F5C82&quot;，主树莓派的IP地址为192.168.1.155, 您可以登陆树莓派zero w，并远程挂载那个目录到本地:</p>
 <pre><code>sudo mkdir /media/WD_90C27F73C27F5C82
 echo &quot;//192.168.1.124/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
 sudo mount -a
-</code></pre>
-
-<h3 id="6-重启">6. 重启</h3>
-
+</code></pre><h3 id="6-重启">6. 重启</h3>
 <pre><code>sudo reboot
-</code></pre>
-
-<p>重启之后，您应该可以看到开始扫描媒体文件，并生成播放列表了。</p>
+</code></pre><p>重启之后，您应该可以看到开始扫描媒体文件，并生成播放列表了。</p>
 
                         </div>
 
@@ -408,7 +341,6 @@ sudo mount -a
             <h4>关于我们</h4>
 
             我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
-                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

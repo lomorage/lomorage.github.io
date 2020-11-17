@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.78.1" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -195,86 +195,66 @@
 
                         <div id="post-content">
                           <p>Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.</p>
-
 <h1 id="table-of-contents">Table of Contents</h1>
-
 <ul>
 <li><a href="#setup-lomorage-secondary-backup-with-raspberry-pi">Setup Lomorage secondary backup with Raspberry Pi</a>
-
 <ul>
 <li><a href="#option-1-1-usb-hard-drive-1-usb-flash-drive-on-same-raspberry-pi">Option 1 (1 USB hard drive, 1 USB flash drive on same Raspberry Pi)</a></li>
 <li><a href="#option-2-2-usb-hard-drive-on-same-raspberry-pi">Option 2 (2 USB hard drive on same Raspberry Pi)</a></li>
 <li><a href="#option-3-2-usb-hard-drive-on-2-separate-raspberry-pis">Option 3 (2 USB hard drive on 2 separate Raspberry Pis)</a></li>
 <li><a href="#option-4-1-usb-drive-one-raspberry-pi-nas">Option 4 (1 USB drive one Raspberry Pi, NAS)</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="#restore-from-the-secondary-backup">Restore from the secondary backup</a></li>
 </ul>
-
 <h1 id="setup-lomorage-secondary-backup-with-raspberry-pi">Setup Lomorage secondary backup with Raspberry Pi</h1>
-
 <p>You can choose the option suits your need.</p>
-
 <h2 id="option-1-1-usb-hard-drive-1-usb-flash-drive-on-same-raspberry-pi">Option 1 (1 USB hard drive, 1 USB flash drive on same Raspberry Pi)</h2>
-
 <p>Raspberry Pi should have no problem to power one USB hard drive, you can even add one more USB flash drive. Since normally, a hard drive is expected to have <a href="https://www.datanumen.com/blogs/usb-flash-drive-vs-external-hard-drive-better-storing-data/">a much longer lifespan</a>, and USB flash drive has <a href="https://www.flashbay.com/blog/usb-life-expectancy">limited number of write/erase cycles</a>, it&rsquo;s better to use hard drive as the primary storage and USB hard drive.</p>
-
 <h2 id="option-2-2-usb-hard-drive-on-same-raspberry-pi">Option 2 (2 USB hard drive on same Raspberry Pi)</h2>
-
 <p>Most likely, Raspberry Pi won&rsquo;t be able to provide that much power two USB hard drives. You can use the USB hub with power supply, which means the USB hard drive will be powered by the USB hub instead of Raspberry Pi.</p>
-
 <ul>
-<li><p><a href="https://www.walmart.com/ip/Plugable-USB-Hub-USB-2-0-7-Port-15W/134245816">USB 2.0 7-Port Hub with 15W Power Adapter from Plugable Technologies</a></p></li>
-
-<li><p><a href="https://www.adafruit.com/product/961">USB 2.0 Powered Hub - 7 Ports with 5V 2A Power Supply</a></p></li>
+<li>
+<p><a href="https://www.walmart.com/ip/Plugable-USB-Hub-USB-2-0-7-Port-15W/134245816">USB 2.0 7-Port Hub with 15W Power Adapter from Plugable Technologies</a></p>
+</li>
+<li>
+<p><a href="https://www.adafruit.com/product/961">USB 2.0 Powered Hub - 7 Ports with 5V 2A Power Supply</a></p>
+</li>
 </ul>
-
 <h2 id="option-3-2-usb-hard-drive-on-2-separate-raspberry-pis">Option 3 (2 USB hard drive on 2 separate Raspberry Pis)</h2>
-
 <p>It would be safer if you have two setups in different places, the Lomorage OS image already enabled Samba file share service by default, so what you can do it&rsquo;s actually mount the hard drive of the secondary setup in the the first setup.</p>
-
 <p>For example, if secondary Pi has ip &ldquo;192.168.1.155&rdquo;, the driver is mount at &ldquo;/media/WD_90C27F73C27F5C82&rdquo;.</p>
-
 <p>One the primary Pi, we can use the following command to mount it, just change the ip address and mount directory according to your setup.</p>
-
 <pre><code>mkdir /media/WD_90C27F73C27F5C82
 
 # user pass is the username password on 2nd Pi, that is the default.
 # uid 1000 and gid 1000 is for mount it as user Pi on 1st Pi
 sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000
-</code></pre>
-
-<p>You can also add the entry in &ldquo;/etc/fstab&rdquo;, so that it can mount when system start:</p>
-
+</code></pre><p>You can also add the entry in &ldquo;/etc/fstab&rdquo;, so that it can mount when system start:</p>
 <pre><code>//192.168.1.155/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000
-</code></pre>
-
-<p>You can use the following command to umount and mount all entries in fstab to validate the configuration:</p>
-
+</code></pre><p>You can use the following command to umount and mount all entries in fstab to validate the configuration:</p>
 <pre><code>sudo mount -a
 sudo umount -a
-</code></pre>
-
-<p><strong>Notice: Don&rsquo;t use the secondary Lomorage service even though it can be found, since we are using the primary one and set redundancy backup to the directory mounted via Samba. Currently we don&rsquo;t have GUI to set the backup this way, you have to do that manually in commandline, will add GUI later</strong></p>
-
+</code></pre><p><strong>Notice: Don&rsquo;t use the secondary Lomorage service even though it can be found, since we are using the primary one and set redundancy backup to the directory mounted via Samba. Currently we don&rsquo;t have GUI to set the backup this way, you have to do that manually in commandline, will add GUI later</strong></p>
 <h2 id="option-4-1-usb-drive-one-raspberry-pi-nas">Option 4 (1 USB drive one Raspberry Pi, NAS)</h2>
-
 <p>You can also reuse your NAS and follow the similar steps above in Option 3 to mount the NAS storage via Samba.</p>
-
 <p>The parameters needed are:</p>
-
 <ul>
-<li><p>samba service ip (192.168.1.155)</p></li>
-
-<li><p>samba shared directory name (WD_90C27F73C27F5C82)</p></li>
-
-<li><p>local mount root directory (on Raspberry Pi is &ldquo;/media&rdquo; if using Lomorage OS image; If not, it and can be changed via &ldquo;&ndash;mount-dir&rdquo; command line args when running lomod;)</p></li>
-
-<li><p>username/password for Samba service</p></li>
+<li>
+<p>samba service ip (192.168.1.155)</p>
+</li>
+<li>
+<p>samba shared directory name (WD_90C27F73C27F5C82)</p>
+</li>
+<li>
+<p>local mount root directory (on Raspberry Pi is &ldquo;/media&rdquo; if using Lomorage OS image; If not, it and can be changed via &ldquo;&ndash;mount-dir&rdquo; command line args when running lomod;)</p>
+</li>
+<li>
+<p>username/password for Samba service</p>
+</li>
 </ul>
-
 <h1 id="restore-from-the-secondary-backup">Restore from the secondary backup</h1>
-
-<p>If unfortunately the hard drive on your primary device is dead, you can bring up the secondary setup as primary one. The photo and video assets are already backup on the secondary hard drive, as well as the database. You can copy the &ldquo;assets.db&rdquo; in the user directory on hard drive to &ldquo;/opt/lomorage/var/assets.db&rdquo;, and change the &ldquo;home_dir&rdquo; in table &ldquo;user&rdquo; for each user in &ldquo;assets.db&rdquo;. We promise will let this process less painful, but for now, you have to do that manually, if you have the problem and can&rsquo;t figure it by yourself, join our <a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM">slack channel</a> or reach us via <a href="mailto: support@lomorage.com">email</a>, and we will help you solve it.</p>
+<p>If unfortunately the hard drive on your primary device is dead, you can bring up the secondary setup as primary one. The photo and video assets are already backup on the secondary hard drive, as well as the database. You can copy the &ldquo;assets.db&rdquo; in the user directory on hard drive to &ldquo;/opt/lomorage/var/assets.db&rdquo;, and change the &ldquo;home_dir&rdquo; in table &ldquo;user&rdquo; for each user in &ldquo;assets.db&rdquo;. We promise will let this process less painful, but for now, you have to do that manually, if you have the problem and can&rsquo;t figure it by yourself, join our <a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM">slack channel</a> or reach us via [email](mailto: <a href="mailto:support@lomorage.com">support@lomorage.com</a>), and we will help you solve it.</p>
                         </div>
                         
                         
@@ -355,6 +335,9 @@ sudo umount -a
             <li><a href="https://lomorage.com/categories/dashboard">dashboard (1)</a>
             </li>
             
+            <li><a href="https://lomorage.com/categories/docker">docker (1)</a>
+            </li>
+            
             <li><a href="https://lomorage.com/categories/faq">faq (1)</a>
             </li>
             
@@ -377,16 +360,25 @@ sudo umount -a
     <div class="panel-body">
         <ul class="tag-cloud">
             
+            <li><a href="https://lomorage.com/tags/container"><i class="fa fa-tags"></i> container</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/covid-19"><i class="fa fa-tags"></i> covid-19</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/dashboard"><i class="fa fa-tags"></i> dashboard</a>
             </li>
             
+            <li><a href="https://lomorage.com/tags/docker"><i class="fa fa-tags"></i> docker</a>
+            </li>
+            
             <li><a href="https://lomorage.com/tags/flash-drive"><i class="fa fa-tags"></i> flash-drive</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/hard-disk"><i class="fa fa-tags"></i> hard-disk</a>
+            </li>
+            
+            <li><a href="https://lomorage.com/tags/lomorage"><i class="fa fa-tags"></i> lomorage</a>
             </li>
             
             <li><a href="https://lomorage.com/tags/mycloud"><i class="fa fa-tags"></i> mycloud</a>
@@ -445,7 +437,6 @@ sudo umount -a
         <li>Store your data securely on your own devices</li>
         <li>Backup and duplicate storage by adding more devices</li>
         <li>No one can access your assets without permission</li>-->
-        
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

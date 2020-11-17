@@ -1,6 +1,151 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://lomorage.com/blog/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/categories/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://lomorage.com/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/container/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/docker/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/tags/docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/tags/docker/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/categories/docker/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/lomorage/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/tags/lomorage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/tags/lomorage/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://lomorage.com/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/blog/2020/11/16/windows-docker/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/blog/2020/11/16/windows-docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/blog/2020/11/16/windows-docker/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://lomorage.com/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/categories/blog/</loc>
+    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/categories/blog/"
+                />
+  </url>
   
   <url>
     <loc>https://lomorage.com/blog/2020/05/17/import_my_cloud/</loc>
@@ -15,6 +160,56 @@
                 hreflang="en"
                 href="https://lomorage.com/blog/2020/05/17/import_my_cloud/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/mycloud/</loc>
+    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/tags/mycloud/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/tags/mycloud/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/covid-19/</loc>
+    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/categories/dashboard/</loc>
+    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/dashboard/</loc>
+    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/raspberry-pi/</loc>
+    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
   </url>
   
   <url>
@@ -33,6 +228,41 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/categories/faq/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/categories/faq/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/categories/faq/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/flash-drive/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/hard-disk/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/restore/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/tags/secondary-backup/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <xhtml:link
@@ -48,7 +278,13 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/tags/usb-hub/</loc>
+    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/external-access/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -63,6 +299,7 @@
   
   <url>
     <loc>https://lomorage.com/install-frame/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -77,6 +314,7 @@
   
   <url>
     <loc>https://lomorage.com/installation-android/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -91,6 +329,7 @@
   
   <url>
     <loc>https://lomorage.com/installation-ios/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -105,6 +344,7 @@
   
   <url>
     <loc>https://lomorage.com/installation-osx/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -119,6 +359,7 @@
   
   <url>
     <loc>https://lomorage.com/installation-pi/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -133,6 +374,7 @@
   
   <url>
     <loc>https://lomorage.com/installation-web/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -147,6 +389,7 @@
   
   <url>
     <loc>https://lomorage.com/installation-win/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -156,59 +399,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://lomorage.com/installation-win/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/categories/blog/</loc>
-    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/categories/blog/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/blog/</loc>
-    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/blog/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/categories/</loc>
-    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/categories/"
                 />
   </url>
   
@@ -227,24 +417,6 @@
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/covid-19/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/categories/dashboard/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/dashboard/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lomorage.com/faq/</loc>
     <xhtml:link
                 rel="alternate"
@@ -255,22 +427,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://lomorage.com/faq/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/categories/faq/</loc>
-    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/categories/faq/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/categories/faq/"
                 />
   </url>
   
@@ -289,18 +445,6 @@
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/flash-drive/</loc>
-    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/hard-disk/</loc>
-    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lomorage.com/installation/</loc>
     <xhtml:link
                 rel="alternate"
@@ -315,43 +459,6 @@
   </url>
   
   <url>
-    <loc>https://lomorage.com/</loc>
-    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/mycloud/</loc>
-    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/tags/mycloud/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/tags/mycloud/"
-                />
-  </url>
-  
-  <url>
     <loc>https://lomorage.com/compare/</loc>
     <xhtml:link
                 rel="alternate"
@@ -362,67 +469,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://lomorage.com/compare/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/raspberry-pi/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/restore/</loc>
-    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/secondary-backup/</loc>
-    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/usb-hub/</loc>
-    <lastmod>2019-12-24T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</loc>
-    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/"
                 />
   </url>
   

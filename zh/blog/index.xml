@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Lomorage</title>
@@ -6,10 +6,15 @@
     <description>Recent content in Blogs on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2020 21:04:40 +0000</lastBuildDate>
-    
-	<atom:link href="https://lomorage.com/zh/blog/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/zh/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Windows 10 上安装Lomorage容器镜像</title>
+      <link>https://lomorage.com/zh/blog/2020/11/16/windows-docker/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/blog/2020/11/16/windows-docker/</guid>
+      <description>&lt;p&gt;虽然Lomorage已经提供了Windows原生安装包，但对于喜欢使用Docker的人来说，用Docker来配置Lomorage服务器，也是一个非常好的选择，尤其在Windows Server上可以极大的发挥HYPER-v技术，让Lomorage的服务器健步如飞。本篇适合有Docker使用经验的人员，如果您不知道Docker是啥，请&lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;直接下载Lomorage原生安装包&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Lomorage帮您解决iCloud的痛点</title>
@@ -18,7 +23,7 @@
       
       <guid>https://lomorage.com/zh/blog/2020/07/19/mypains/</guid>
       <description>&lt;p&gt;我的照片很多，一部分放在移动硬盘里，一部分放在U盘里，无论移动硬盘和U盘，我都放两份。
-  自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
+自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
     </item>
     
     <item>
