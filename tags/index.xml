@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 22:43:40 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate>
     
 	<atom:link href="https://lomorage.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Container</title>
+      <link>https://lomorage.com/tags/container/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/tags/container/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Covid 19</title>
@@ -30,6 +39,15 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>https://lomorage.com/tags/docker/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Flash Drive</title>
       <link>https://lomorage.com/tags/flash-drive/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
@@ -44,6 +62,15 @@
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
       <guid>https://lomorage.com/tags/hard-disk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lomorage</title>
+      <link>https://lomorage.com/tags/lomorage/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/tags/lomorage/</guid>
       <description></description>
     </item>
     

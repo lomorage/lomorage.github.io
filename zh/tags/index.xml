@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2020 21:04:40 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate>
     
 	<atom:link href="https://lomorage.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker</title>
+      <link>https://lomorage.com/zh/tags/docker/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/tags/docker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Icloud</title>
@@ -17,6 +26,15 @@
       <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/tags/icloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lomorage</title>
+      <link>https://lomorage.com/zh/tags/lomorage/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/tags/lomorage/</guid>
       <description></description>
     </item>
     
@@ -62,6 +80,15 @@
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/tags/%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>容器</title>
+      <link>https://lomorage.com/zh/tags/%E5%AE%B9%E5%99%A8/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/tags/%E5%AE%B9%E5%99%A8/</guid>
       <description></description>
     </item>
     
