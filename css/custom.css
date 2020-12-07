@@ -41,6 +41,11 @@
     background-image: url(/img/installation/docker.svg);
 }
 
+.badge.armbian {
+    background-color: #ff0000;
+    background-image: url(/img/installation/armbian.svg);
+}
+
 .screenshoot {
     background-color:#EAF0FB;
     padding: 25px;
