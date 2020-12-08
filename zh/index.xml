@@ -186,6 +186,7 @@ macOS 如果上面链接无法访问，也可以从百度网盘下载: 链接: h
 如果您使用MacOS版本的Lomorage服务程序，您可以点击LomoAgent应用的“导入”菜单打开网页客户端。
 如果您使用树莓派版本的Lomorage服务程序，您可以使用下面的命令来安装Lomorage网页客户端到树莓派上:
 sudo apt update sudo apt install lomo-web  然后您可以在电脑的浏览器上访问&amp;rdquo;http://raspberrypi-lomorage.local:8001&amp;ldquo;，打开Lomorage网页客户端。
+登陆用户名和密码是您用手机Lomorage APP生成的用户名和密码
  </description>
     </item>
     
