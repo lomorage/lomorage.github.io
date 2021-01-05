@@ -69,7 +69,7 @@
   
   <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/external-access//" />
+  <meta property="og:url" content="/installation-armbian//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -192,57 +192,15 @@
                     <div class="col-md-12">
 
                         <div>
-                          <h1 id="external-access-configuration">External Access Configuration</h1>
-<p>Currently, external access need some manual setup and some technical background, we will make the process more user-friendly later.</p>
-<p>There are a few tunnel services available for free use, most tunnel services require a client application running on your device, and set up a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the URL with that subdomain, the tunnel service will forward the traffic/request to the client application.</p>
-<p>You can use <a href="https://localtunnel.me">localtunnel</a> or <a href="https://ngrok.com">ngrok</a>, both are free tunnel services. localtunnel doesn&rsquo;t require registration, and it can customize the subdomain, so it&rsquo;s pre-installed in Lomorage Raspberry Pi image, while ngrok need register before use, and need pay to customize subdomain, but it&rsquo;s more stable and zero dependencies.</p>
-<p><em>If you are using Lomorage Raspberry Pi image, the login username is &ldquo;pi&rdquo; and password is &ldquo;raspberry&rdquo;</em></p>
-<h2 id="localtunnel">localtunnel</h2>
-<p>If you are using Windows or macOS, you need to install <a href="https://nodejs.org/">nodejs</a> first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then you can run command <code>sudo localtunnel_install.sh</code> to install localtunnel, and you can skip step 1 an step2.</p>
-<h3 id="1-install-nodejs">1. Install nodejs</h3>
-<p>Download and install the <a href="(https://nodejs.org/en/download/)">binaries</a> in your platform.</p>
-<h3 id="2-install-localtunnel">2. Install localtunnel</h3>
-<p>Open the terminal and type</p>
-<pre><code>npm install -g localtunnel
-</code></pre><h3 id="3-run-localtunnel">3. Run localtunnel</h3>
-<p>Assuming the preferred subdomain name is &ldquo;allice&rdquo; (you can choose your own subdomain), then open the terminal and type:</p>
-<pre><code>lt -s allice -p 8000 --print-requests
-</code></pre><p>&ldquo;-s&rdquo; specify the subdomain to use, &ldquo;-p&rdquo; specify the port forward to, Lomorage service is using &ldquo;8000&rdquo; by default, and &ldquo;&ndash;print-requests&rdquo; will output coming requests.</p>
-<p>And if you see the output without any error message, and print out something like:</p>
-<pre><code>your url is: https://allice.localtunnel.me
-</code></pre><p>Then you can start open that URL in your browser, and if you see requests log printing in localtunnel output, then the tunnel is set up successfully.</p>
-<pre><code>Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
-</code></pre><script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
-<h3 id="4-config-tunnel-service-on-lomorage-app">4. Config tunnel service on Lomorage APP</h3>
-<p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host, the host is like &ldquo;allice.localtunnel.me&rdquo;.</p>
-<p>eg：on Android Lomorgae App, go to <strong>Setting</strong> page. Fill the server address as <a href="https://allice.localtunnel.me">https://allice.localtunnel.me</a>, then fill the port 443 if you did not changed the default port.
-If you fill the server address as <a href="http://allice.localtunnel.me">http://allice.localtunnel.me</a>, please fill the port 80, see below picture:</p>
-<div align="left">
-<p class="screenshoot">
-  <img width="30%" src="/img/installation/android/external_setting.jpg">
-</p>
-</div>
-<h2 id="ngrok">ngrok</h2>
-<h3 id="1-register">1. Register</h3>
-<p>Sign up a ngrok account <a href="https://dashboard.ngrok.com/signup">here</a>, after that, it will show up a &ldquo;Setup &amp; Installation&rdquo; page.</p>
-<h3 id="2-download">2. Download</h3>
-<p>ngrok is just one binary, you can download the version on your platform.</p>
-<p>If you are on Raspberry Pi, you can copy the link of Linux(ARM) on the &ldquo;Setup &amp; Installation&rdquo; page, which is &ldquo;<a href="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip%22">https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&quot;</a> for now, and download it via &ldquo;wget&rdquo;.</p>
-<pre><code>wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-</code></pre><h3 id="3-installation">3. Installation</h3>
-<p>unzip and get the binary. You can double click on Windows or macOS to unzip it.</p>
-<p>If you are using Raspberry Pi, use &ldquo;unzip&rdquo; command:</p>
-<pre><code>unzip ngrok-stable-linux-arm.zip
-</code></pre><h3 id="4-connect-your-account">4. Connect your account</h3>
-<p>On the &ldquo;Setup &amp; Installation&rdquo; page step 3, it shows the “authtoken”, you need open <strong>terminal</strong> to run ngrok to add the authtoken to the config file.</p>
-<pre><code>./ngrok authtoken [your-authtoken-show-in-step-3]
-</code></pre><h3 id="5-run-ngrok">5. Run ngrok</h3>
-<p>Lomorage service is using &ldquo;8000&rdquo; by default, and ngrok can&rsquo;t customize subdomain with free account. After runnig successfully, it will show the tunnel url, the subdomain is a random string which might change in next run.</p>
-<pre><code>./ngrok http 8000
-</code></pre><script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
-<h3 id="6-config-tunnel-service-on-lomorage-app">6. Config tunnel service on Lomorage APP</h3>
-<p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host, the host is like &ldquo;2e30eea5.ngrok.io&rdquo;.</p>
-
+                          <h1 id="install-lomorage-service-on-armbian">Install Lomorage Service on Armbian</h1>
+<p>Currently it supports Armbian Focal. If you have other needs please reach us for support.</p>
+<pre><code>sudo apt install -y ca-certificates python-certifi python3-certifi
+sudo update-ca-certificates --fresh
+wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+echo &quot;deb https://lomoware.github.io/debian/focal focal main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+sudo apt update
+sudo apt install lomo-base lomo-vips lomo-backend lomo-web -y
+</code></pre>
                         </div>
 
                     </div>

@@ -338,6 +338,7 @@ wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/
 <p>For example if you are using PCManFM, then the mount directory will be &ldquo;/media/pi&rdquo;. To specify the mount directory to be &ldquo;/media/pi&rdquo;, modify <code>ExecStart</code> in &ldquo;/lib/systemd/system/lomod.service&rdquo;, and add parameter &ldquo;&ndash;mount-dir&rdquo; as below</p>
 <pre><code>ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 </code></pre><p>If your username is not &ldquo;pi&rdquo;, you need to change &ldquo;User=pi&rdquo; in &ldquo;/lib/systemd/system/lomod.service&rdquo;, and use your username.</p>
+<p><strong>Make sure the user has the r/w permission for the &ldquo;mount-dir&rdquo; set above</strong></p>
 <h3 id="4-run">4. Run</h3>
 <p>Restart Lomorage service:</p>
 <pre><code># restart lomo-backend

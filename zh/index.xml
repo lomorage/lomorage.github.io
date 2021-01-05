@@ -81,12 +81,11 @@ npm install -g localtunnel3. 运行localtunnel 如果您需要使用子域名&a
 lt -s allice -p 8000 --print-requests&amp;ldquo;-s&amp;quot;指定要使用的子域名, &amp;ldquo;-p&amp;quot;指定要转发的目的端口, Lomorage服务默认使用&amp;quot;8000&amp;rdquo;, &amp;ldquo;&amp;ndash;print-requests&amp;quot;输出接收到的请求信息。
 如果输出结果没有任何错误，并输出类似如下的内容:
 your url is: https://allice.localtunnel.me您可以在浏览器窗口中打开localtunnel输出的url，如果您能在localtunnel的输出看到刚发出的访问请求日志，隧道服务就已经配置成功了。
-Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /4. 在Lomorage手机应用中配置隧道服务 打开Lomorage手机应用，在配置选项页里找到&amp;quot;外网服务&amp;rdquo;，设置地址为localtunnel输出的url，比如类似&amp;quot;allice.localtunnel.me&amp;rdquo;。
-ngrok 1. 注册 注册ngrok，完成后，会显示&amp;quot;设置和安装&amp;quot;页面.
+Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /4. 在Lomorage手机应用中配置隧道服务 打开Lomorage手机应用，在配置选项页里找到&amp;quot;外网服务&amp;rdquo;，设置地址为localtunnel输出的url，比如类似&amp;quot;allice.localtunnel.me&amp;rdquo;。 比如：安卓手机 可以在设置页面进行配置，并测试。如果您的localtunnel是https的，默认端口是443，如果是http，端口填80. 如图：
+ngrok 1. 注册 注册ngrok，完成后，会显示&amp;quot;设置和安装&amp;quot;页面.
 2. 下载 ngrok只有一个二进制文件，您可以下载特定平台的版本。
 如果您使用树莓派，您需要在&amp;quot;设置和安装&amp;quot;页面中拷贝Linux(ARM)版本的链接，当前是&amp;quot;https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip&amp;quot;, 您可以通过&amp;quot;wget&amp;quot;来下载。
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip3. 安装 解压缩得到二进制可执行文件。在Windows或macOS下，您可以双击解压，如果您使用树莓派，可以使用unzip命令
-unzip ngrok-stable-linux-arm.</description>
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip3.</description>
     </item>
     
     <item>
@@ -119,6 +118,16 @@ sudo apt updatesudo apt install lomo-frame配置Lomo-frame 您有多个选择:
 --Lomorage 是一款个人私有照片和视频备份工具，它方便的把您的照片和视频备份到Windows PC机或者Apple MAC机，也可以备份到Lomorage 定制的树莓派上。 您需要在Windows 或者 Mac 或者 树莓派上安装 Lomorage 服务程序。
 安装完Lomorage客户端，可能需要花一两分钟时间导入您的视频和照片。然后在Manage Account界面可以创建账号，登录，下拉备份您的照片和视频，还可以和您的家人进行分享。
 App会导入您的照片和视频，并且提示您需要登录点击右上角的菜单，进入账号管理界面. 在那里，App会自动发现您的Lomorage服务器程序 然后创建账号，登录。您也可以通过二维码扫描您的Lomorage服务器程序. （如果您用的是Windows或者Mac的Lomorage 服务程序）  下来开始备份您的照片和视频 可以选择过滤选项来查看您要的照片和视频 在 备份 栏目，你可以长按选中然后分享给您的家人 通过 Members 选项来查看所有的用户 通过 Inbox 来查看您的家人通过Lomorage 系统分享给您的照片和视频 您可以在设置页配置您的远程访问和冗余备份，并且发送反馈 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/zh/installation-armbian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/installation-armbian/</guid>
+      <description>在Armbian上安装Lomorage服务程序 当前支持Armbian Focal。如果你有其他的需求请联系我们。
+sudo apt install -y ca-certificates python-certifi python3-certifisudo update-ca-certificates --freshwget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -echo &amp;quot;deb https://lomoware.github.io/debian/focal focal main&amp;quot; | sudo tee /etc/apt/sources.list.d/lomoware.listsudo apt updatesudo apt install lomo-base lomo-vips lomo-backend lomo-web -y</description>
     </item>
     
     <item>
@@ -169,7 +178,8 @@ macOS如果上面链接无法访问，也可以从百度网盘下载: 链接: h
       <description>安装Lomorage网页客户端 您可以使用Lomorage网页客户端来上传电脑里面的照片和视频，并且可以使用图库来浏览已经备份的照片和视频。
 如果您使用MacOS版本的Lomorage服务程序，您可以点击LomoAgent应用的“导入”菜单打开网页客户端。
 如果您使用树莓派版本的Lomorage服务程序，您可以使用下面的命令来安装Lomorage网页客户端到树莓派上:
-sudo apt updatesudo apt install lomo-web然后您可以在电脑的浏览器上访问&amp;quot;http://raspberrypi-lomorage.local:8001&amp;quot;，打开Lomorage网页客户端。</description>
+sudo apt updatesudo apt install lomo-web然后您可以在电脑的浏览器上访问&amp;quot;http://raspberrypi-lomorage.local:8001&amp;quot;，打开Lomorage网页客户端。
+登陆用户名和密码是您用手机Lomorage APP生成的用户名和密码</description>
     </item>
     
     <item>
@@ -209,7 +219,7 @@ Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果
       <guid>https://lomorage.com/zh/installation/</guid>
       <description>安装说明 1. 简介 要使用Lomorage，您需要在本地网络运行Lomorage服务程序，您可以选择在Windows，macOS或者树莓派上运行。然后您需要去应用程序商店下载手机客户端应用。在运行了Lomorage服务程序之后，手机客户端会自动发现服务，无需配置，然后您就可以开始备份照片和视频了。
 2. 安装Lomorage服务程序 您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务程序。Windows或macOS上运行Lomorage服务程序可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。
-Windows&amp;nbsp;macOS&amp;nbsp;Raspberry Pi&amp;nbsp;Docker3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
+Windows&amp;nbsp;macOS&amp;nbsp;Raspbian&amp;nbsp;Docker&amp;nbsp;Armbian3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
 您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
 &amp;nbsp;4. 外网访问 (可选) Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击这里查看具体配置。
 5. 设置数码相框 (可选) 您可以将树莓派连接显示器，并作为数码相框，您也可以使用树莓派zero w来搭建多个数码相框，并远程通过WiFi来访问。点击这里查看数码相框设置。

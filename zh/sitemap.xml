@@ -363,6 +363,21 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/zh/installation-armbian/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-armbian/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-armbian/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/zh/installation-ios/</loc>
     <priority>0</priority>
     <xhtml:link
