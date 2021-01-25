@@ -76,11 +76,11 @@ There are a few tunnel services available for free use, most tunnel services req
       
       <guid>https://lomorage.com/installation-android/</guid>
       <description>Install Lomorage App in Android phone Currently you can install the app on Android phone, the minimal version is 7.1.
-Currently it is dev-beta version, will publish to Google Play Store soon
-Click below icon to download.
+Click below icon to go to Goole Play Store to download.
 
 After launching Lomorage, it will take a few minutes to import all your photos and videos on phone in the first time.
-Then you can click the right up more menu to Manage account.</description>
+Then you can click the right up more menu to Manage account.
+At there, the app will automatically find the Lomorage service if you installed on Mac/Windows or Raspberry pi.</description>
     </item>
     
     <item>
@@ -141,10 +141,10 @@ If you are using Lomorage Service in Raspberry Pi, then you can use the followin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-win/</guid>
-      <description>Install Lomorage Service on Windows 1. Click the link below to download Lomorage Service Application.
-Windows 2. double click &amp;ldquo;lomoagent.msi&amp;rdquo; to start installation. If Windows Defender shows &amp;ldquo;lomoagent.msi&amp;rdquo; as unknown application, please follow the steps below to allow it to run.
+      <description>Install Lomorage Service on Windows 1. Click the Windows icon link below to download Lomorage Server For Windows.
+Click to download == Windows 2. double click &amp;ldquo;lomoagent.msi&amp;rdquo; to start installation. If Windows Defender shows &amp;ldquo;lomoagent.msi&amp;rdquo; as unknown application, please follow the steps below to allow it to run.
  3. Follow the wizard to finish the installation, in the End-User License Agreement, please checked the box as below.
- 4. Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent.</description>
+ 4.</description>
     </item>
     
     <item>
