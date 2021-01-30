@@ -129,8 +129,12 @@ App会导入您的照片和视频，并且提示您需要登录  点击右上角
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-armbian/</guid>
-      <description> 在Armbian上安装Lomorage服务程序 当前支持Armbian Focal。如果你有其他的需求请联系我们。
-sudo apt install -y ca-certificates python-certifi python3-certifi sudo update-ca-certificates --fresh wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add - echo &amp;quot;deb https://lomoware.github.io/debian/focal focal main&amp;quot; | sudo tee /etc/apt/sources.list.d/lomoware.list sudo apt update sudo apt install lomo-base lomo-vips lomo-backend lomo-web -y  </description>
+      <description>可以有两种安装方式。
+Docker安装  按这里的步骤安装docker[instruction]
+ 从docker hub拉Lomorage的image
+  sudo docker pull lomorage/raspberrypi-lomorage:latest   运行  下载run.sh。
+您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您必须指定host, subnet, gateway, network-interface, vlan-address参数。
+run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address Command line options: -m DIR Absolute path of media directory used for media assets, default to &amp;quot;/media&amp;quot;, optional -b DIR Absolute path of lomo directory used for db and log files, default to &amp;quot;/home/jeromy/lomo&amp;quot;, optional -h HOST IP address or hostname of the host machine, required -s SUBNET Subnet of the host network(like 192.</description>
     </item>
     
     <item>

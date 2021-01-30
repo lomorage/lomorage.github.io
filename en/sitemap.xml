@@ -268,14 +268,20 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/categories/dashboard/</loc>
+    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/tags/dashboard/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lomorage.com/categories/dashboard/</loc>
-    <lastmod>2020-03-29T22:43:40+00:00</lastmod>
+    <loc>https://lomorage.com/categories/docker/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -293,12 +299,6 @@
                 hreflang="en"
                 href="https://lomorage.com/tags/docker/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/categories/docker/</loc>
-    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
