@@ -130,6 +130,18 @@ macOS 2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation,
     
     <item>
       <title></title>
+      <link>https://lomorage.com/installation-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/installation-ubuntu/</guid>
+      <description>You can either use the docker installation, or install using APT
+Docker installation Please refer to lomo-docker for installation with docker image. You can either use the arm image &amp;ldquo;lomorage/raspberrypi-lomorage:latest&amp;rdquo; or amd64 image &amp;ldquo;lomorage/amd64-lomorage:latest&amp;rdquo; based on the host architecture.
+APT installation Currently we only support x86/AMD64 Ubuntu 18.04.5 LTS (Bionic Beaver) and Ubuntu 20.04.1 LTS (Focal Fossa).
+1. Add lomoware source sudo apt install -y ca-certificates python-certifi python3-certifi sudo update-ca-certificates --fresh wget -qO - https://raw.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://lomorage.com/installation-web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

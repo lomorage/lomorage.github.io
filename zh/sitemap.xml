@@ -171,6 +171,20 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/zh/installation-ubuntu/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-ubuntu/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-ubuntu/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/zh/installation-web/</loc>
     <xhtml:link
                 rel="alternate"

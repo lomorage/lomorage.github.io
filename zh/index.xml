@@ -180,6 +180,22 @@ macOS 如果上面链接无法访问，也可以从百度网盘下载: 链接: h
     
     <item>
       <title></title>
+      <link>https://lomorage.com/zh/installation-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/installation-ubuntu/</guid>
+      <description>您可以使用docker或者APT的方式安装。
+Docker安装 请参考lomo-docker安装Docker镜像。您可以根据你的CPU架构选择使用arm的镜像&amp;rdquo;lomorage/raspberrypi-lomorage:latest&amp;rdquo; ，或者amd64的镜像&amp;rdquo;lomorage/amd64-lomorage:latest&amp;rdquo;。
+APT安装 当前我们只支持x86/AMD64 Ubuntu 18.04.5 LTS (Bionic Beaver)和Ubuntu 20.04.1 LTS (Focal Fossa)。
+1. 安装lomoware源 sudo apt install -y ca-certificates python-certifi python3-certifi sudo update-ca-certificates --fresh wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -  如果您使用Bionic:
+echo &amp;quot;deb https://lomoware.github.io/debian/bionic bionic main&amp;quot; | sudo tee /etc/apt/sources.list.d/lomoware.list  如果您使用focal:
+echo &amp;quot;deb https://lomoware.github.io/debian/focal focal main&amp;quot; | sudo tee /etc/apt/sources.list.d/lomoware.list  然后运行:
+sudo apt update  2. 安装Lomorage 您至少需要安装lomo-vips,lomo-base-lite和lomo-backend。
+ lomo-backend: 必须, Lomorage服务程序</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://lomorage.com/zh/installation-web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -230,7 +246,7 @@ Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果
       <guid>https://lomorage.com/zh/installation/</guid>
       <description>安装说明 1. 简介 要使用Lomorage，您需要在本地网络运行Lomorage服务程序，您可以选择在Windows，macOS或者树莓派上运行。然后您需要去应用程序商店下载手机客户端应用。在运行了Lomorage服务程序之后，手机客户端会自动发现服务，无需配置，然后您就可以开始备份照片和视频了。
 2. 安装Lomorage服务程序 您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务程序。Windows或macOS上运行Lomorage服务程序可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。
-Windows &amp;nbsp; macOS &amp;nbsp; Raspbian &amp;nbsp; Docker &amp;nbsp; Armbian 3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
+Windows &amp;nbsp; macOS &amp;nbsp; Raspbian &amp;nbsp; Docker &amp;nbsp; Armbian &amp;nbsp; Ubuntu 3. 安装Lomorage客户端 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
 您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
   &amp;nbsp;  4. 外网访问 (可选) Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击这里查看具体配置。
 5. 设置数码相框 (可选) 您可以将树莓派连接显示器，并作为数码相框，您也可以使用树莓派zero w来搭建多个数码相框，并远程通过WiFi来访问。点击这里查看数码相框设置。
