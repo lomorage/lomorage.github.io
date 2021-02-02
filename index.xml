@@ -89,12 +89,21 @@ At there, the app will automatically find the Lomorage service if you installed 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-armbian/</guid>
-      <description>You have two options to install.
-Docker installation  Follow the instruction to install docker
- Pull from docker hub.
-  sudo docker pull lomorage/raspberrypi-lomorage:latest   Run  Download run.sh.
-You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host, subnet, gateway, network-interface, vlan-address.
-run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address Command line options: -m DIR Absolute path of media directory used for media assets, default to &amp;quot;/media&amp;quot;, optional -b DIR Absolute path of lomo directory used for db and log files, default to &amp;quot;/home/jeromy/lomo&amp;quot;, optional -h HOST IP address or hostname of the host machine, required -s SUBNET Subnet of the host network(like 192.</description>
+      <description>You have two options to install:
+ Docker installation
+ Build your own image
+  Docker installation Please refer to lomo-docker for installation with docker image. You should use the arm image &amp;ldquo;lomorage/raspberrypi-lomorage:latest&amp;rdquo;.
+Build your own image It should support all the SBC supported by official Armbain, but if you find it doesn&amp;rsquo;t work, feel free to reach us.
+There is a prebuild image for Orange Pi Zerob.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/installation-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/installation-docker/</guid>
+      <description>Docker installation Please refer to lomo-docker for installation with docker image. You can either use the arm image &amp;ldquo;lomorage/raspberrypi-lomorage:latest&amp;rdquo; or amd64 image &amp;ldquo;lomorage/amd64-lomorage:latest&amp;rdquo; based on the host architecture.</description>
     </item>
     
     <item>
@@ -125,7 +134,8 @@ macOS 2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/installation-pi/</guid>
-      <description>Table of Contents  Install Lomorage Service on Raspberry Pi  Install with prebuild OS image Docker installation  1. Install Docker on Raspberry Pi 2. Get Docker image 3. Run  Apt installation  1. Add lomoware source 2. Install Lomorage 3. Change mount directory and username if needed 4. Run    Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:</description>
+      <description>Table of Contents  Install Lomorage Service on Raspberry Pi  Install with prebuild OS image Docker installation Apt installation  1. Add lomoware source 2. Install Lomorage 3. Change mount directory and username if needed 4. Run    Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:
+ Raspberry Pi 4 Model B Raspberry Pi 3 Model B+ Raspberry Pi Zero W Raspberry Pi 2 Model B  If you don&amp;rsquo;t have one yet, we would recommend the newer version, which gives better performance.</description>
     </item>
     
     <item>

@@ -194,54 +194,23 @@
                         <div>
                           
 
-<p>You have two options to install.</p>
+<p>You have two options to install:</p>
+
+<ul>
+<li><p>Docker installation</p></li>
+
+<li><p>Build your own image</p></li>
+</ul>
 
 <h1 id="docker-installation">Docker installation</h1>
 
-<ul>
-<li><p>Follow the <a href="https://docs.docker.com/engine/install/debian/">instruction</a> to install docker</p></li>
-
-<li><p>Pull from docker hub.</p></li>
-</ul>
-
-<pre><code>sudo docker pull lomorage/raspberrypi-lomorage:latest
-</code></pre>
-
-<ul>
-<li>Run</li>
-</ul>
-
-<p>Download <a href="https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh">run.sh</a>.</p>
-
-<p>You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host, subnet, gateway, network-interface, vlan-address.</p>
-
-<pre><code>run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address
-
-Command line options:
-    -m  DIR         Absolute path of media directory used for media assets, default to &quot;/media&quot;, optional
-    -b  DIR         Absolute path of lomo directory used for db and log files, default to &quot;/home/jeromy/lomo&quot;, optional
-    -h  HOST        IP address or hostname of the host machine, required
-    -s  SUBNET      Subnet of the host network(like 192.168.1.0/24), required
-    -g  GATEWAY     gateway of the host network(like 192.168.1.1), required
-    -n  NETWORK_INF network interface of the host network(like eth0), required
-    -a  VLAN_ADDR   vlan address to be used(like 192.168.1.99), required
-    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to &quot;8000&quot;, optional
-    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to &quot;8001&quot;, optional
-    -i  IMAGE_NAME  docker image name, for example &quot;lomorage/raspberrypi-lomorage:[tag]&quot;, default &quot;lomorage/raspberrypi-lomorage:latest&quot;, optional
-    -d              Debug mode to run in foreground, default to 0, optional
-
-Examples:
-    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb0
-    ./run.sh -m /media -b /home/pi/lomo -h 192.168.1.232 -s 192.168.1.0/24 -g 192.168.1.1 -n eth0 -a 192.168.1.99
-</code></pre>
-
-<p>You can add the command in &ldquo;/etc/rc.local&rdquo; before &ldquo;exit 0&rdquo; to make it run automatically after system boot.</p>
+<p>Please refer to <a href="https://github.com/lomorage/lomo-docker">lomo-docker</a> for installation with docker image. You should use the arm image &ldquo;lomorage/raspberrypi-lomorage:latest&rdquo;.</p>
 
 <h1 id="build-your-own-image">Build your own image</h1>
 
 <p>It should support all the SBC supported by official Armbain, but if you find it doesn&rsquo;t work, feel free to reach us.</p>
 
-<p>There is a <a href="https://github.com/lomorage/build/releases/download/2021_02_01.23_18_29.0.829c7a4/Armbian_21.02.0-trunk_Orangepizero_buster_current_5.10.11_minimal.img.xz">prebuild image</a> for <a href="http://www.orangepi.org/orangepizero/">Orange Pi Zero</a>.</p>
+<p>There is a <a href="https://github.com/lomorage/build/releases/download/2021_02_01.23_18_29.0.829c7a4/Armbian_21.02.0-trunk_Orangepizero_buster_current_5.10.11_minimal.img.xz">prebuild image</a> for <a href="http://www.orangepi.org/orangepizero/">Orange Pi Zero</a>b.</p>
 
 <h2 id="1-prepare-build-env">1. Prepare build env</h2>
 

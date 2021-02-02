@@ -129,12 +129,25 @@ App会导入您的照片和视频，并且提示您需要登录  点击右上角
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-armbian/</guid>
-      <description>可以有两种安装方式。
-Docker安装  按这里的步骤安装docker[instruction]
- 从docker hub拉Lomorage的image
-  sudo docker pull lomorage/raspberrypi-lomorage:latest   运行  下载run.sh。
-您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您必须指定host, subnet, gateway, network-interface, vlan-address参数。
-run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address Command line options: -m DIR Absolute path of media directory used for media assets, default to &amp;quot;/media&amp;quot;, optional -b DIR Absolute path of lomo directory used for db and log files, default to &amp;quot;/home/jeromy/lomo&amp;quot;, optional -h HOST IP address or hostname of the host machine, required -s SUBNET Subnet of the host network(like 192.</description>
+      <description>可以有两种安装方式:
+ Docker安装
+ 构建自己的镜像
+  Docker安装 请参考lomo-docker安装Docker镜像。请使用arm的镜像&amp;rdquo;lomorage/raspberrypi-lomorage:latest&amp;rdquo;。
+构建自己的镜像 下面的步骤应该对于所有Armbain官方支持的SBC都适用，但如果您发现有问题，请联系我们。
+这里有已经编译好的Orange Pi Zero的镜像。
+1. 准备编译环境 如果您使用Ubuntu Focal 20.04.x amd64，可以跳过这一步。
+ 下载安装Vagrant.
+ 安装可以调整存储空间大小的插件:
+  vagrant plugin install vagrant-disksize   安装git并克隆Armbian仓库:  # Clone the project. git clone --depth 1 https://github.com/lomorage/build # Make the Vagrant box available. This might take a while but only needs to be done once. vagrant box add ubuntu/focal64 # If the box gets updated by the folks at HashiCorp, we&#39;ll want to update our copy too.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/zh/installation-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/installation-docker/</guid>
+      <description>Docker安装 请参考lomo-docker安装Docker镜像。您可以根据你的CPU架构选择使用arm的镜像&amp;rdquo;lomorage/raspberrypi-lomorage:latest&amp;rdquo;，或者amd64的镜像&amp;rdquo;lomorage/amd64-lomorage:latest&amp;rdquo;</description>
     </item>
     
     <item>
@@ -169,13 +182,15 @@ macOS 如果上面链接无法访问，也可以从百度网盘下载: 链接: h
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/zh/installation-pi/</guid>
-      <description>目录  在树莓派上安装Lomorage服务程序  安装系统镜像 Docker安装  1. 树莓派上安装Docker 2. 获取Docker镜像 3. 运行  APT安装  1. 添加lomoware源 2. 安装Lomorage 3. 按需修改加载目录和运行用户 4. 运行    在树莓派上安装Lomorage服务程序 要在树莓派上运行，您需要先购买一个树莓派，Lomorage可以运行在以下型号的机器上:
+      <description>目录  在树莓派上安装Lomorage服务程序  安装系统镜像 Docker安装 APT安装  1. 添加lomoware源 2. 安装Lomorage 3. 按需修改加载目录和运行用户 4. 运行    在树莓派上安装Lomorage服务程序 要在树莓派上运行，您需要先购买一个树莓派，Lomorage可以运行在以下型号的机器上:
  Raspberry Pi 4 Model B Raspberry Pi 3 Model B+ Raspberry Pi Zero W Raspberry Pi 2 Model B  如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能。下面是您需要的最小配置:
  树莓派主板 配套电源 16GB MicroSD卡  有3种方式来在Raspberry Pi上安装Lomorage服务程序, 一种是安装预编译好的系统镜像，该镜像已经安装了所有Lomorage服务程序依赖的库和第三方工具，简单快捷，推荐使用；如果您已经有树莓派在运行其他服务，您也可以使用Docker镜像来安装，或者使用从APT源安装。
 安装系统镜像 预装的系统镜像包括所有的包:
  lomo-backend: Lomorage服务程序
  lomo-web: Lomorage网页程序
- lomo-base: 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</description>
+ lomo-base: 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台
+ lomo-frame: 数码相框程序
+  点击下面的链接下载系统镜像。</description>
     </item>
     
     <item>

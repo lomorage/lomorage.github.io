@@ -119,6 +119,20 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/installation-docker/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/installation-docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/installation-docker/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/installation-ios/</loc>
     <xhtml:link
                 rel="alternate"
