@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Lomorage</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Blogs on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate>
-    
-	<atom:link href="https://lomorage.com/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run Lomoage Docker in Windows 10</title>
       <link>https://lomorage.com/blog/2020/11/16/windows-docker/</link>
@@ -29,7 +25,7 @@
       <description>&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt; have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the
 My Cloud app is not good to use, so everything I have to connect to my phone with USB cable, and
 keep the computer on to copy the files to MyCloud disk.
-  &lt;strong&gt;Now&lt;/strong&gt; let me introduce how to import / move MyCloud data to Lomorage.&lt;/p&gt;</description>
+&lt;strong&gt;Now&lt;/strong&gt; let me introduce how to import / move MyCloud data to Lomorage.&lt;/p&gt;</description>
     </item>
     
     <item>

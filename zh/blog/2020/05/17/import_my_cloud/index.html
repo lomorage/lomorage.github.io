@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.80.0" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -112,13 +112,13 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/zh/features/">特性</a>
+                    <a href="/lomorage.zh.pdf">产品路线图</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/zh/installation/">安装</a>
+                    <a href="https://docs.lomorage.com/zh">文档</a>
                     
                   </li>
                   
@@ -197,172 +197,121 @@
                           <p><strong>曾经</strong>买了一个WD-西部数据的MyCloud 6T的存储，用来存照片和视频。因为它的App不好用，
 所以每次都是用USB线把手机连上电脑，然后开着电脑把手机的照片拷贝到MyCloud的共享盘里。
 下面我们来看看如何把MyCloud的东西迁移到Lomorage。</p>
-
 <h1 id="目录">目录</h1>
-
 <ul>
-<li><a href="#配置您的MyCloud">配置您的MyCloud</a>
-
+<li><a href="#%E9%85%8D%E7%BD%AE%E6%82%A8%E7%9A%84MyCloud">配置您的MyCloud</a>
 <ul>
-<li><a href="#1-打开MyCloud的SSH访问">1. 打开MyCloud的SSH访问</a></li>
-<li><a href="#2-用SSH连上MyCloud">2. 用SSH连上MyCloud</a></li>
-<li><a href="#3-编辑exports文件">3. 编辑exports文件</a></li>
-</ul></li>
-<li><a href="#加载MyCloud的目录到Lomorage上">加载MyCloud的目录到Lomorage上</a>
-
-<ul>
-<li><a href="#1-用SSH客户端连上Lomorage服务器">1. 用SSH客户端连上Lomorage服务器</a></li>
-<li><a href="#2-加载MyCloud目录">2. 加载MyCloud目录</a></li>
-<li><a href="#3-查看MyCloud文件">3. 查看MyCloud文件</a></li>
-</ul></li>
-<li><a href="#开始导入MyCloud到Lomorage">开始导入MyCloud到Lomorage</a>
-
-<ul>
-<li><a href="#1-扫描文件信息">1. 扫描文件信息 </a></li>
-<li><a href="#2-安装tmux">2. 安装tmux</a></li>
-<li><a href="#3-开始导入到Lomorage">3. 开始导入到Lomorage</a></li>
-</ul></li>
+<li><a href="#1-%E6%89%93%E5%BC%80MyCloud%E7%9A%84SSH%E8%AE%BF%E9%97%AE">1. 打开MyCloud的SSH访问</a></li>
+<li><a href="#2-%E7%94%A8SSH%E8%BF%9E%E4%B8%8AMyCloud">2. 用SSH连上MyCloud</a></li>
+<li><a href="#3-%E7%BC%96%E8%BE%91exports%E6%96%87%E4%BB%B6">3. 编辑exports文件</a></li>
 </ul>
-
+</li>
+<li><a href="#%E5%8A%A0%E8%BD%BDMyCloud%E7%9A%84%E7%9B%AE%E5%BD%95%E5%88%B0Lomorage%E4%B8%8A">加载MyCloud的目录到Lomorage上</a>
+<ul>
+<li><a href="#1-%E7%94%A8SSH%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BF%9E%E4%B8%8ALomorage%E6%9C%8D%E5%8A%A1%E5%99%A8">1. 用SSH客户端连上Lomorage服务器</a></li>
+<li><a href="#2-%E5%8A%A0%E8%BD%BDMyCloud%E7%9B%AE%E5%BD%95">2. 加载MyCloud目录</a></li>
+<li><a href="#3-%E6%9F%A5%E7%9C%8BMyCloud%E6%96%87%E4%BB%B6">3. 查看MyCloud文件</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E5%AF%BC%E5%85%A5MyCloud%E5%88%B0Lomorage">开始导入MyCloud到Lomorage</a>
+<ul>
+<li><a href="#1-%E6%89%AB%E6%8F%8F%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF">1. 扫描文件信息 </a></li>
+<li><a href="#2-%E5%AE%89%E8%A3%85tmux">2. 安装tmux</a></li>
+<li><a href="#3-%E5%BC%80%E5%A7%8B%E5%AF%BC%E5%85%A5%E5%88%B0Lomorage">3. 开始导入到Lomorage</a></li>
+</ul>
+</li>
+</ul>
 <h1 id="配置您的mycloud">配置您的MyCloud</h1>
-
 <h2 id="1-打开mycloud的ssh访问">1. 打开MyCloud的SSH访问</h2>
-
 <p>打开MyCloud的管理页面，在设置页面，打开SSH，并且按照提示设置密码。如下图：</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/import_my_cloud/f14b9c18-f941-429a-a848-1426f547ab37.png">
 </p>
 </div>
-
 <h2 id="2-用ssh连上mycloud">2. 用SSH连上MyCloud</h2>
-
 <p>通过SSH 客户端，可以选用putty，用SSH连上MyCloud。</p>
-
 <p>操作命令如下：</p>
-
 <blockquote>
-<p>ssh -oHostKeyAlgorithms=+ssh-dss root@192.168.0.24</p>
+<p>ssh -oHostKeyAlgorithms=+ssh-dss <a href="mailto:root@192.168.0.24">root@192.168.0.24</a></p>
 </blockquote>
-
 <p>进入 nfs目录，查看你的共享目录有哪些。比如我的共享目录有如下图所示：</p>
-
 <blockquote>
 <p>cd /nfs</p>
 </blockquote>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/import_my_cloud/6822a363-9172-4e35-b77c-5318ea01c50a.png">
 </p>
 </div>
-
 <p>其中 <strong>Public</strong> 是我想要Mount到Lomorage的目录。</p>
-
 <h2 id="3-编辑exports文件">3. 编辑exports文件</h2>
-
 <p>在SSH 客户端运行如下命令：</p>
-
 <blockquote>
 <p>sudo vi /etc/exports</p>
 </blockquote>
-
 <p>然后黏贴如下的一行：</p>
-
 <blockquote>
-<p>/nfs/Public 192.168.0.<sup>1</sup>&frasl;<sub>24</sub>(rw,subtree_check,secure)</p>
+<p>/nfs/Public 192.168.0.1/24(rw,subtree_check,secure)</p>
 </blockquote>
-
 <p>如下图：</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/import_my_cloud/ad38c19b-10b1-4b82-92ec-68b6f2481601-1.png">
 </p>
 </div>
-
 <p>其中 <strong>192.168.0.1</strong> 是你的路由器的地址, <strong>请做相应的改动！</strong></p>
-
 <p>然后 保存 退出。如果对VI不熟悉的，可以自行google或者百度。
 或者在本站联系Lomorage支持。
 到此为止，MyCloud的配置算是完成了。</p>
-
 <h1 id="加载mycloud的目录到lomorage上">加载MyCloud的目录到Lomorage上</h1>
-
 <h2 id="1-用ssh客户端连上lomorage服务器">1. 用SSH客户端连上Lomorage服务器</h2>
-
 <p>在SSH客户端里，运行如下命令：</p>
-
 <blockquote>
-<p>ssh pi@192.168.0.40</p>
+<p>ssh <a href="mailto:pi@192.168.0.40">pi@192.168.0.40</a></p>
 </blockquote>
-
 <p>pi 用户的默认密码是 raspberry</p>
-
 <h2 id="2-加载mycloud目录">2. 加载MyCloud目录</h2>
-
 <p>新建一个目录：</p>
-
 <blockquote>
 <p>cd /home/pi</p>
-
 <p>sudo mkdir mycloud</p>
 </blockquote>
-
 <p>运行以下命令加载MyCloud的目录</p>
-
 <blockquote>
 <p>sudo mount 192.168.0.24:/nfs/Public /home/pi/mycloud</p>
 </blockquote>
-
 <p><strong>192.168.0.24</strong> 是前面步骤里MyCloud的IP地址，此处应改成你的MyCloud的IP地址。</p>
-
 <p>如果上述命令有错误输出，请输入：</p>
-
 <blockquote>
 <p>sudo rpcbind start</p>
 </blockquote>
-
 <p>然后再重复 第一个命令:</p>
-
 <blockquote>
 <p>sudo mount 192.168.0.24:/nfs/Public /home/pi/mycloud</p>
 </blockquote>
-
 <h2 id="3-查看mycloud文件">3. 查看MyCloud文件</h2>
-
 <blockquote>
 <p>cd /home/pi/mycloud</p>
 </blockquote>
-
 <p>这里你就可以看到MyCloud上的文件了。恭喜你，关键步骤成功了！！</p>
-
 <h1 id="开始导入mycloud到lomorage">开始导入MyCloud到Lomorage</h1>
-
 <h2 id="1-扫描文件信息">1. 扫描文件信息</h2>
-
 <p>运行如下命令扫描你mount的目录</p>
-
 <blockquote>
 <p>cd /opt/lomorage/bin</p>
-
+</blockquote>
+<blockquote>
 <p>./lomoc s /home/pi/mycloud</p>
 </blockquote>
-
 <p>[mycloud 是你mount过来的MyCloud（西部数据磁盘）的目录]</p>
-
 <p>如果照片视频多的话，这个过程可能需要花点时间。</p>
-
 <p>扫描完之后，可以进入</p>
-
 <blockquote>
 <p>~/.lomo</p>
 </blockquote>
-
 <p>来看看您有哪些是没有被分类的，因为有些照片和视频没有时间信息。
 比如下面的图：</p>
-
 <pre><code>pi@raspberrypi-lomorage:~/.lomo/links/unclassfied $ ls -l
 total 20
 drwxr-xr-x 2 pi pi 4096 May 17 16:42  aisnote
@@ -381,49 +330,33 @@ drwxr-xr-x 13 pi pi 4096 May 17 16:42 2019
 drwxr-xr-x  2 pi pi 4096 May 17 16:42 xiaomi
 drwxr-xr-x  2 pi pi 4096 May 17 16:42 来自：iPhone
 pi@raspberrypi-lomorage:~/.lomo/links/unclassfied/Shared Pictures $
-</code></pre>
-
-<h2 id="2-安装tmux">2. 安装tmux</h2>
-
+</code></pre><h2 id="2-安装tmux">2. 安装tmux</h2>
 <p>这一个步骤对于熟练使用Linux的人，可以忽略。</p>
-
 <p>因为SSH登录linux，运行某个命令，如果你关闭了SSH 客户端，那个命令就退出了。
 为了让导入工作持续在Lomorage服务器上运行，建议运行如下命令安装 tmux，可以google或者baidu一下如何使用tmux。
 <a href="https://www.ruanyifeng.com/blog/2019/10/tmux.html">点这里有个简单的教程</a></p>
-
 <blockquote>
 <p>sudo apt install tmux</p>
 </blockquote>
-
 <p>然后</p>
-
 <blockquote>
 <p>tmux</p>
 </blockquote>
-
 <h2 id="3-开始导入到lomorage">3. 开始导入到Lomorage</h2>
-
 <p>此时，已经进入 tmux 会话，运行如下命令：</p>
-
 <blockquote>
 <p>cd /opt/lomorage/bin</p>
-
+</blockquote>
+<blockquote>
 <p>./lomoc import -y [lomorage username] [password]</p>
 </blockquote>
-
 <p><strong>请注意</strong>： 这里的username 和 password 是你手机APP登录Lomorage的用户名。</p>
-
 <p>接下来，lomoc 程序会发现当前网络下有多少个Lomorage的服务器，按照提示选择。</p>
-
 <p>开始导入的信息会打印输出到屏幕，像下面的一样：</p>
-
 <pre><code>success upload /home/pi/.lomo/links/classfied/2010/09/16/Does a Kangaroo Have a Mother, Too_ Book Read Aloud, written by Eric Carle.mp4
 success upload /home/pi/.lomo/links/classfied/2010/10/07/If the Dinosaurs Came Back.m4v.mp4
 success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows That Type by - Doreen Cronin.mp4
-</code></pre>
-
-<h1 id="后记">后记</h1>
-
+</code></pre><h1 id="后记">后记</h1>
 <p><strong>Lomorage会提供新的API，未来这个导入过程将可以在手机APP上进行，待续！</strong></p>
                         </div>
                         
@@ -616,7 +549,6 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
             <h4>关于我们</h4>
 
             我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
-                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

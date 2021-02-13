@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.80.0" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -112,13 +112,13 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/features/">Features</a>
+                    <a href="/lomorage.pdf">Roadmap</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/installation/">Installation</a>
+                    <a href="https://docs.lomorage.com">Documentation</a>
                     
                   </li>
                   
@@ -195,70 +195,51 @@
 
                         <div id="post-content">
                           <p>Though Lomorage already provide Windows Native MSI package, But if you like to run Docker image in Windows, please follow below steps to do so. Esp. on Windows Server, Docker can leverage the Windows HYPER-v technology，and let the Lomorage running faster. If you do not know what is Docker, you also can download the native Lomorage installer for Windows, <a href="https://lomorage.com/zh/installation-win/">Download Lomorage Windows Installer</a>。</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/win-docker/docker.png">
 </p>
 </div>
-
 <h1 id="1-dwownload-docker">1. Dwownload Docker</h1>
-
 <p>Just go to Docker official site to downlad the Docker Windows installer, and double click to run the setup with the default settings.
 Please restart the Windows machine after finish the docker installing.</p>
-
 <h1 id="2-pull-lomorage-image">2. Pull Lomorage Image</h1>
-
 <p>Use one kind of terminal like: Windows Terminal or Git-bash or Windows Power Shell：</p>
-
 <p>(<strong>Suggest</strong> to use git-bash, you can download from here: <a href="https://gitforwindows.org/">https://gitforwindows.org/)</a></p>
-
 <blockquote>
 <p>docker pull lomorage/raspberrypi-lomorage:latest</p>
 </blockquote>
-
 <h1 id="3-run-docker-image">3. Run Docker image</h1>
-
 <p>Please download this script <a href="https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh">https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh</a></p>
-
 <p>And then do some change</p>
-
 <p><strong>from</strong></p>
-
 <blockquote>
 <p>docker run &ndash;user=*****</p>
 </blockquote>
-
 <p><strong>to</strong></p>
-
 <blockquote>
 <p>docker run &ndash;user=root:root</p>
 </blockquote>
-
 <p>Then in terminal run below command:</p>
-
 <blockquote>
 <p>$ ./run.sh -d -m h:/docker-lomorage -b h:/var/lomorage -h 192.168.0.63</p>
 </blockquote>
-
 <p><strong>Please note</strong> h:/docker-lomorage is your Windows directoy，so does for h:/var/lomorage。 192.168.0.63 is your Windows IP.</p>
-
 <h1 id="4-check-the-docker-is-successful">4. Check the docker is successful</h1>
-
 <ul>
-<li><p>Open Lomorage APP in your phone，input IP address and port, on this case, IP is: 192.168.0.53, Port is: 8000</p></li>
-
-<li><p>Open browser， input： <a href="http://192.168.0.63:8001">http://192.168.0.63:8001</a>, should has below image:</p></li>
+<li>
+<p>Open Lomorage APP in your phone，input IP address and port, on this case, IP is: 192.168.0.53, Port is: 8000</p>
+</li>
+<li>
+<p>Open browser， input： http://192.168.0.63:8001, should has below image:</p>
+</li>
 </ul>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/win-docker/web-client.png">
 </p>
 </div>
-
 <p>Also, you can changed the <strong>run.sh</strong> script if you familiar with Docker to meet your requirements.</p>
-
 <p>Enjoy and happy Lomorage!</p>
                         </div>
                         
@@ -442,7 +423,6 @@ Please restart the Windows machine after finish the docker installing.</p>
         <li>Store your data securely on your own devices</li>
         <li>Backup and duplicate storage by adding more devices</li>
         <li>No one can access your assets without permission</li>-->
-        
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

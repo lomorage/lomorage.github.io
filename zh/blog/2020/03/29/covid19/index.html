@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.80.0" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -112,13 +112,13 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/zh/features/">特性</a>
+                    <a href="/lomorage.zh.pdf">产品路线图</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/zh/installation/">安装</a>
+                    <a href="https://docs.lomorage.com/zh">文档</a>
                     
                   </li>
                   
@@ -195,61 +195,45 @@
 
                         <div id="post-content">
                           <p>新冠病毒肆掠全球，虽然现在可以很容易的在手机上查看新闻和数据，但是设置一个专门的电子看板，显示新闻和统计会更加方便。下面会讲解如何一步步的在树莓派上安装和配置“新冠病毒电子看板”。</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/covid19/dashboard-zh.png">
 </p>
 </div>
-
 <h1 id="目录">目录</h1>
-
 <ul>
-<li><a href="#准备工作">准备工作</a></li>
-<li><a href="#工作原理">工作原理</a></li>
-<li><a href="#安装">安装</a>
-
+<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
+<li><a href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">工作原理</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
 <ul>
-<li><a href="#1-安装最新版本的nodejs">1. 安装最新版本的NodeJS</a></li>
-<li><a href="#2-安装magicmirror">2. 安装MagicMirror</a></li>
-<li><a href="#3-使用默认的配置模版">3. 使用默认的配置模版</a></li>
-<li><a href="#4-安装mmm-covid19模块">4. 安装MMM-COVID19模块</a></li>
-<li><a href="#5-为mmm-covid19添加更多的数据源">5. 为MMM-COVID19添加更多的数据源</a></li>
-<li><a href="#6-获取更多的模块">6. 获取更多的模块</a></li>
-</ul></li>
-<li><a href="#准备投入使用">准备投入使用</a>
-
-<ul>
-<li><a href="#1-配置树莓派">1. 配置树莓派</a></li>
-<li><a href="#2-开机启动magicmirror">2. 开机启动MagicMirror</a></li>
-<li><a href="#3-添加cronjob启动关闭magicmirror">3. 添加Cronjob启动关闭MagicMirror</a></li>
-</ul></li>
+<li><a href="#1-%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84nodejs">1. 安装最新版本的NodeJS</a></li>
+<li><a href="#2-%E5%AE%89%E8%A3%85magicmirror">2. 安装MagicMirror</a></li>
+<li><a href="#3-%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E7%9A%84%E9%85%8D%E7%BD%AE%E6%A8%A1%E7%89%88">3. 使用默认的配置模版</a></li>
+<li><a href="#4-%E5%AE%89%E8%A3%85mmm-covid19%E6%A8%A1%E5%9D%97">4. 安装MMM-COVID19模块</a></li>
+<li><a href="#5-%E4%B8%BAmmm-covid19%E6%B7%BB%E5%8A%A0%E6%9B%B4%E5%A4%9A%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90">5. 为MMM-COVID19添加更多的数据源</a></li>
+<li><a href="#6-%E8%8E%B7%E5%8F%96%E6%9B%B4%E5%A4%9A%E7%9A%84%E6%A8%A1%E5%9D%97">6. 获取更多的模块</a></li>
 </ul>
-
+</li>
+<li><a href="#%E5%87%86%E5%A4%87%E6%8A%95%E5%85%A5%E4%BD%BF%E7%94%A8">准备投入使用</a>
+<ul>
+<li><a href="#1-%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE">1. 配置树莓派</a></li>
+<li><a href="#2-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8magicmirror">2. 开机启动MagicMirror</a></li>
+<li><a href="#3-%E6%B7%BB%E5%8A%A0cronjob%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADmagicmirror">3. 添加Cronjob启动关闭MagicMirror</a></li>
+</ul>
+</li>
+</ul>
 <h1 id="准备工作">准备工作</h1>
-
 <p>您需要一个树莓派和HDMI的显示器，你可以放置一个大屏幕在客厅，也可以在桌面上放置一个小屏幕作为摆台。</p>
-
-<p><strong>注意: 树莓派0/1不支持，NodeJS不支持&rdquo;armv6l&rdquo;平台了。</strong></p>
-
+<p><strong>注意: 树莓派0/1不支持，NodeJS不支持&quot;armv6l&quot;平台了。</strong></p>
 <h1 id="工作原理">工作原理</h1>
-
 <p>使用的开源软件有<a href="https://github.com/MichMich/MagicMirror">MagicMirror</a>和<a href="https://github.com/bibaldo/MMM-COVID19">covid-19模块</a>.</p>
-
 <p>MagicMirror是一个开源的智能镜子平台, 但实际上使用它并不需要一面镜子，它可以被用来定制电子看板。MagicMirror的客户端和服务器程序使用了Nodejs，服务器通过http提供看板服务，客户端使用Electron，运行<a href="https://www.kioware.com/resources.aspx?resid=45">Kiosk模式</a>, 也就是浏览器的全屏模式, 您也可以运行<a href="https://docs.magicmirror.builders/getting-started/installation.html#usage">&ldquo;服务器模式&rdquo;</a>，并在另外一台电脑的浏览器上访问电子看板。</p>
-
 <p>MagicMirror定义的如下的布局，您可以选择把模块放置的看板特定的位置。</p>
-
-<p><img src="/img/blog/covid19/layout.png" alt="layout" /></p>
-
+<p><img src="/img/blog/covid19/layout.png" alt="layout"></p>
 <p>模块定义了如何获取和显示数据。</p>
-
 <p>大体上来说就这么简单!</p>
-
 <h1 id="安装">安装</h1>
-
 <p>如果您使用的是lite的系统镜像，您需要先安装桌面系统。</p>
-
 <pre><code>sudo apt-get update 
 sudo apt-get -y dist-upgrade
 sudo apt-get install raspberrypi-ui-mods -y
@@ -259,61 +243,35 @@ sudo gdk-pixbuf-query-loaders --update-cache -y
 sudo apt install ca-certificates python-certifi python3-certifi -y
 sudo apt-get install -y --reinstall ca-certificates
 sudo update-ca-certificates --fresh
-</code></pre>
-
-<h2 id="1-安装最新版本的nodejs">1. 安装最新版本的NodeJS</h2>
-
+</code></pre><h2 id="1-安装最新版本的nodejs">1. 安装最新版本的NodeJS</h2>
 <p><a href="https://github.com/audstanley/NodeJs-Raspberry-Pi">NodeJs-Raspberry-Pi</a>能非常方便的一行命令安装NodeJS:</p>
-
 <pre><code>$ wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash; node -v
-</code></pre>
-
-<p><em>使用&rdquo;apt install&rdquo;很有可能不会安装新版本的NodeJS，MagicMirror在后续的安装过程只会报错。</em></p>
-
+</code></pre><p><em>使用&quot;apt install&quot;很有可能不会安装新版本的NodeJS，MagicMirror在后续的安装过程只会报错。</em></p>
 <h2 id="2-安装magicmirror">2. 安装MagicMirror</h2>
-
 <pre><code>$ git clone https://github.com/MichMich/MagicMirror
 $ cd MagicMirror/
 $ npm install
-</code></pre>
-
-<h2 id="3-使用默认的配置模版">3. 使用默认的配置模版</h2>
-
+</code></pre><h2 id="3-使用默认的配置模版">3. 使用默认的配置模版</h2>
 <p>MagicMirror已经安装了一些<a href="https://docs.magicmirror.builders/getting-started/configuration.html#general">默认模块</a>.</p>
-
 <pre><code># 假设在MagicMirror目录
 $ cp config/config.js.sample config/config.js
 
 # 可以使用&quot;ctrl+c&quot;停止, 下面的运行方式仅仅用于测试
 $ npm run
-</code></pre>
-
-<p>您可以尝试去修改&rdquo;config.js&rdquo;中模块的选项，比如，您可以给&rdquo;News Feed&rdquo;模块添加更多的<a href="https://docs.rsshub.app/">RSS源</a>:</p>
-
+</code></pre><p>您可以尝试去修改&quot;config.js&quot;中模块的选项，比如，您可以给&quot;News Feed&quot;模块添加更多的<a href="https://docs.rsshub.app/">RSS源</a>:</p>
 <pre><code>{
    title: &quot;BBC&quot;,
    url: &quot;http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=us&quot;
 },
-</code></pre>
-
-<p>您也可以更加上面的布局图来修改模块的位置（&rdquo;position&rdquo;参数）。</p>
-
-<p>您也可以修改默认的语言（&rdquo;language&rdquo;参数)，<a href="https://github.com/MichMich/MagicMirror/tree/master/translations">https://github.com/MichMich/MagicMirror/tree/master/translations</a>可以查看所有可用的语言选项。改成其他语言要记得安装相关的字体，比如中文字体:</p>
-
+</code></pre><p>您也可以更加上面的布局图来修改模块的位置（&ldquo;position&quot;参数）。</p>
+<p>您也可以修改默认的语言（&ldquo;language&quot;参数)，<a href="https://github.com/MichMich/MagicMirror/tree/master/translations">https://github.com/MichMich/MagicMirror/tree/master/translations</a>可以查看所有可用的语言选项。改成其他语言要记得安装相关的字体，比如中文字体:</p>
 <pre><code>sudo apt install -y fonts-arphic-uming ttf-wqy-microhei
-</code></pre>
-
-<h2 id="4-安装mmm-covid19模块">4. 安装MMM-COVID19模块</h2>
-
-<p>将模块安装在&rdquo;modules&rdquo;目录下:</p>
-
+</code></pre><h2 id="4-安装mmm-covid19模块">4. 安装MMM-COVID19模块</h2>
+<p>将模块安装在&quot;modules&quot;目录下:</p>
 <pre><code># 假设在MagicMirror目录
 $ cd modules
 $ git clone https://github.com/bibaldo/MMM-COVID19
-</code></pre>
-
-<p>然后在&rdquo;config/config.js&rdquo;文件中添加模块的配置, 在<a href="https://rapidapi.com/">https://rapidapi.com/</a>注册，将下面的&rdquo;get-your-api-key&rdquo;替换为您自己的API密钥。<a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a>，&rdquo;X-RapidAPI-Key&rdquo;就是API密钥。</p>
-
+</code></pre><p>然后在&quot;config/config.js&quot;文件中添加模块的配置, 在<a href="https://rapidapi.com/">https://rapidapi.com/</a>注册，将下面的&quot;get-your-api-key&quot;替换为您自己的API密钥。<a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a>，&ldquo;X-RapidAPI-Key&quot;就是API密钥。</p>
 <pre><code>  {
     module: 'MMM-COVID19',
     position: &quot;bottom_bar&quot;,
@@ -327,60 +285,39 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
       rapidapiKey: &quot;get-your-api-key&quot;,
    }
   },
-</code></pre>
-
-<p>修改了&rdquo;config/config.js&rdquo;后，您需要重启MagicMirror。</p>
-
+</code></pre><p>修改了&quot;config/config.js&quot;后，您需要重启MagicMirror。</p>
 <h2 id="5-为mmm-covid19添加更多的数据源">5. 为MMM-COVID19添加更多的数据源</h2>
-
 <p>默认的数据源缺少一些详细信息，比如没有美国每个郡县的统计，没有中国城市的统计。您也可以添加其他的数据源，但那个就不仅仅是简单的配置了，需要修改一些代码，因为不同的数据源的格式不一样。</p>
-
 <p>这里有个<a href="https://github.com/fuji246/MMM-COVID19/commit/42356ae5f922359a0b961328a43eddb0d61c4058">改动示例</a>添加了美国郡县的统计数据，并做了汉化。这个<a href="https://github.com/fuji246/MMM-COVID19/commit/e4d9850a1faf3631bebf10b11fd70133a8921296">改动示例</a>添加了中国城市的统计数据。</p>
-
 <p>美国的数据来源<a href="https://github.com/ExpDev07/coronavirus-tracker-api">https://github.com/ExpDev07/coronavirus-tracker-api</a>，中国的数据来源<a href="https://c.m.163.com/ug/api/wuhan/app/data/list-total">https://c.m.163.com/ug/api/wuhan/app/data/list-total</a>，都不需要申请API密钥。</p>
-
 <p>其他的数据源<a href="https://github.com/pomber/covid19">https://github.com/pomber/covid19</a>, 您也可以自行去网上查找合适的数据源，并对代码做相应的改动。</p>
-
 <h2 id="6-获取更多的模块">6. 获取更多的模块</h2>
-
 <p>这个<a href="https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules">wiki</a>列举了所有的第三方模块。最上面的示例图片使用了下面的模块:</p>
-
 <ul>
-<li><p><a href="https://github.com/KirAsh4/calendar_monthly/">calendar_monthly</a></p></li>
-
-<li><p><a href="https://github.com/eouia/worldclock">worldclock</a></p></li>
+<li>
+<p><a href="https://github.com/KirAsh4/calendar_monthly/">calendar_monthly</a></p>
+</li>
+<li>
+<p><a href="https://github.com/eouia/worldclock">worldclock</a></p>
+</li>
 </ul>
-
 <p>您也可以根据自己的需求尝试其他的模块。</p>
-
 <h1 id="准备投入使用">准备投入使用</h1>
-
 <p>测试好电子看板后，您还需要一些额外的配置，才能将其投入使用。</p>
-
 <h2 id="1-配置树莓派">1. 配置树莓派</h2>
-
 <p>您需要关掉屏保，禁止无线网卡的休眠模式，打开OpenGL驱动，参考<a href="https://github.com/MichMich/MagicMirror/wiki/Configuring-the-Raspberry-Pi">wiki</a>进行配置。</p>
-
-<p><em>注意: 关闭屏保那一步，在修改&rdquo;/etc/xdg/lxsession/LXDE-pi/autostart&rdquo;文件时, 需要注释掉这一行&rdquo;@xscreensaver -no-splash&rdquo;（使用#），这个在上面的说明里面没有</em></p>
-
+<p><em>注意: 关闭屏保那一步，在修改&rdquo;/etc/xdg/lxsession/LXDE-pi/autostart&quot;文件时, 需要注释掉这一行&rdquo;@xscreensaver -no-splash&rdquo;（使用#），这个在上面的说明里面没有</em></p>
 <pre><code>@lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 #@xscreensaver -no-splash
 @xset s noblank
 @xset s off
 @xset -dpms
-</code></pre>
-
-<h2 id="2-开机启动magicmirror">2. 开机启动MagicMirror</h2>
-
+</code></pre><h2 id="2-开机启动magicmirror">2. 开机启动MagicMirror</h2>
 <p>参考<a href="https://github.com/MichMich/MagicMirror/wiki/Auto-Starting-MagicMirror">wiki</a>设置MagicMirror开机启动。</p>
-
-<p><em>注意: 如果安装了pm2后却找不到这个命令，您需要将<code>PATH=&quot;/opt/nodejs/bin:$PATH&quot;</code>添加到&rdquo;~/.profile&rdquo;文件中，然后<code>source ~/.profile</code>更新PATH环境变量</em></p>
-
+<p><em>注意: 如果安装了pm2后却找不到这个命令，您需要将<code>PATH=&quot;/opt/nodejs/bin:$PATH&quot;</code>添加到&quot;~/.profile&quot;文件中，然后<code>source ~/.profile</code>更新PATH环境变量</em></p>
 <h2 id="3-添加cronjob启动关闭magicmirror">3. 添加Cronjob启动关闭MagicMirror</h2>
-
-<p>在&rdquo;/var/spool/cron/crontabs/pi&rdquo;文件中添加如下的内容，控制MagicMirror在早上8 am启动，晚上9 pm关闭，并打开和关闭HDMI显示器。</p>
-
+<p>在&quot;/var/spool/cron/crontabs/pi&quot;文件中添加如下的内容，控制MagicMirror在早上8 am启动，晚上9 pm关闭，并打开和关闭HDMI显示器。</p>
 <pre><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
 00 21 * * * vcgencmd display_power 0;pm2 stop mm
 </code></pre>
@@ -575,7 +512,6 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
             <h4>关于我们</h4>
 
             我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
-                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 

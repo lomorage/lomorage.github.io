@@ -27,7 +27,7 @@
   <meta name="description" content="Lomorage Site">	
   
 
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.80.0" />
 
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
@@ -112,13 +112,13 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/zh/features/">特性</a>
+                    <a href="/lomorage.zh.pdf">产品路线图</a>
                     
                   </li>
                   
                   <li class="dropdown">
                     
-                    <a href="/zh/installation/">安装</a>
+                    <a href="https://docs.lomorage.com/zh">文档</a>
                     
                   </li>
                   
@@ -195,58 +195,43 @@
 
                         <div id="post-content">
                           <p>虽然Lomorage已经提供了Windows原生安装包，但对于喜欢使用Docker的人来说，用Docker来配置Lomorage服务器，也是一个非常好的选择，尤其在Windows Server上可以极大的发挥HYPER-v技术，让Lomorage的服务器健步如飞。本篇适合有Docker使用经验的人员，如果您不知道Docker是啥，请<a href="https://lomorage.com/zh/installation-win/">直接下载Lomorage原生安装包</a>。</p>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/win-docker/docker.png">
 </p>
 </div>
-
 <h1 id="1-下载docker">1. 下载Docker</h1>
-
 <p>这个不必多说，直接去 Docker 的官网下载Windows 的安装包，双击默认设置安装，根据提示重启机器。</p>
-
 <h1 id="2-pull-lomorage的docker-镜像">2. PUll lomorage的Docker 镜像</h1>
-
 <p>使用Windows Terminal 或者 Git-bash，或者Windows 的Power Shell 或者CMD：</p>
-
 <blockquote>
 <p>docker pull lomorage/raspberrypi-lomorage:latest</p>
 </blockquote>
-
 <h1 id="3-运行您的lomorage-服务器">3. 运行您的Lomorage 服务器</h1>
-
 <p>先下载 <a href="https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh">https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh</a>
 这个脚本。</p>
-
 <p>然后把里面的：</p>
-
 <blockquote>
 <p>docker run &ndash;user=*****</p>
 </blockquote>
-
 <p>改成</p>
-
 <blockquote>
 <p>docker run &ndash;user=root:root</p>
 </blockquote>
-
 <p>最后在你熟悉的Terminal里运行：</p>
-
 <blockquote>
 <p>$ ./run.sh -d -m h:/docker-lomorage -b h:/var/lomorage -h 192.168.0.63</p>
 </blockquote>
-
 <p><strong>请注意</strong> h:/docker-lomorage 是您Windows 机器的盘符，同理 h:/var/lomorage。 192.168.0.63 是您Windows 机器的iP</p>
-
 <h1 id="4-检查是否成功">4. 检查是否成功</h1>
-
 <ul>
-<li><p>打开手机APP，手工输入 IP 地址，和 端口号， 尝试去创建一个用户。</p></li>
-
-<li><p>打开browser， 输入： <a href="http://192.168.0.63:8001">http://192.168.0.63:8001</a>, 应该会打开如下的页面：</p></li>
+<li>
+<p>打开手机APP，手工输入 IP 地址，和 端口号， 尝试去创建一个用户。</p>
+</li>
+<li>
+<p>打开browser， 输入： http://192.168.0.63:8001, 应该会打开如下的页面：</p>
+</li>
 </ul>
-
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/win-docker/web-client.png">
@@ -443,7 +428,6 @@
             <h4>关于我们</h4>
 
             我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
-                    
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
