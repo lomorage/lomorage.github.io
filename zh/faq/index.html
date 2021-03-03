@@ -201,6 +201,7 @@
 <li><a href="#6-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD">6. 如何设置冗余备份?</a></li>
 <li><a href="#7-%E7%BC%96%E8%BE%91%E5%90%8E%E7%9A%84%E7%85%A7%E7%89%87%E8%A7%86%E9%A2%91%E6%94%AF%E6%8C%81%E5%90%97">7. 编辑后的照片视频支持吗?</a></li>
 <li><a href="#8-%E4%BB%80%E4%B9%88%E6%98%AF%E5%90%8E%E5%8F%B0%E5%A4%87%E4%BB%BD">8. 什么是后台备份?</a></li>
+<li><a href="#9-raspbian%E4%B8%8D%E8%83%BD%E5%90%AF%E5%8A%A8%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D">9. Raspbian不能启动如何恢复?</a></li>
 </ul>
 <h2 id="1-怎么想到lomorage这个名字">1. 怎么想到&quot;Lomorage&quot;这个名字?</h2>
 <p>&ldquo;Lomorage&quot;结合了&quot;Lomography&quot;和&quot;Storage&quot;两个单词.</p>
@@ -228,6 +229,16 @@
 <p>开启后台备份后，无需打开Lomorage APP就可以备份照片视频。</p>
 <p>但是由于苹果平台的限制，第三方应用并不能像iCloud那样做到一直在后台备份，只能通过一些hack的方式，现在是通过两种方式来触发应用在后台运行，一种是在系统空闲时，通过后台获更新的机制来触发应用后台运行，另一种是通过地理位置的大范围的变化来触发应用后台运行，所以开启后台备份功能后会请求获取地理位置的权限，这些都只能持续很短的时间。</p>
 <p>当手机操作讲Lomorage APP放后台后，原有的上传还是会继续，只是下次个文件上传需要等到下一次将Lomorage APP切换到前台，或者通过上述的两种Hack的方式让APP在后台继续运行。</p>
+<h2 id="9-raspbian不能启动如何恢复">9. Raspbian不能启动如何恢复?</h2>
+<p>不用担心，您的相片存储在硬盘中，而且数据库也都备份到硬盘中了。您只需要将备份的数据库恢复即可。</p>
+<ol>
+<li>将硬盘插入到PC中，您可以发现在Lomorage的每个用户名目录下都有一个assets.db文件，这些文件都是一样的。</li>
+<li>重新安装Lomorage Raspbian镜像。</li>
+<li>树莓派接上硬盘。</li>
+<li>从任意一个用户的目录拷贝assets.db到树莓派的<code>/opt/lomorage/var/</code>目录下。</li>
+<li>树莓派上重启Lomorage服务程序: <code>sudo service lomod restart</code>。</li>
+</ol>
+<p>Armbian下的恢复类似。</p>
 <hr>
 <blockquote>
 <p>如果您有更多的问题没有在这里找到答案，请<a href="/zh/contact">联系我们</a></p>

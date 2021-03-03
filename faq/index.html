@@ -201,6 +201,7 @@
 <li><a href="#6-how-to-set-a-secondary-backup">6. How to set a secondary backup?</a></li>
 <li><a href="#7-does-lomorage-support-backup-edited-file">7. Does Lomorage support backup edited file?</a></li>
 <li><a href="#8-what-is-background-backup">8. What is background backup?</a></li>
+<li><a href="#9-how-to-recover-from-raspbian-boot-failure">9. How to recover from Raspbian boot failure?</a></li>
 </ul>
 <h2 id="1-how-comes-the-name-lomorage">1. How comes the name &ldquo;Lomorage&rdquo;?</h2>
 <p>If you know what Lomography is, then &ldquo;Lomorage&rdquo; is just a combination of &ldquo;Lomography&rdquo; and &ldquo;Storage&rdquo;.</p>
@@ -227,6 +228,16 @@
 <p>Background backup means you don&rsquo;t need to open Lomorage app to backup the assets.</p>
 <p>Background backup on iOS is not expected to work the same way as iCloud, Apple restricts 3rd party tools to run in the background. Currently there is only two hacks to trigger Lomorage running in the background, one is background fetch, which might be triggered when system is idle, another one is triggered when significant location changes, that is why background backup requires location permission. Both won&rsquo;t last long and can only run in background for a limited time.</p>
 <p>Moving Lomorage app into background, the existing upload is still running in the background but the next upload has to wait either it&rsquo;s back to foreground or the above two hack condition triggers the upload.</p>
+<h2 id="9-how-to-recover-from-raspbian-boot-failure">9. How to recover from Raspbian boot failure?</h2>
+<p>Don&rsquo;t worry, your Photo are stored on hard drive, and the database is backup to hard drive as well. You just need to recovery the backup database.</p>
+<ol>
+<li>plugin in your hard drive to PC, and you can find that assets.db in each user&rsquo;s Lomorage home directory, they are exactly the same.</li>
+<li>reinstall Lomorage Raspbian image.</li>
+<li>attach hard drive to Raspberry Pi.</li>
+<li>copy assets.db from one user&rsquo;s Lomorage home directory on hard drive to <code>/opt/lomorage/var/</code> on Raspberry Pi.</li>
+<li>restart Lomorage service on Raspberry Pi: <code>sudo service lomod restart</code>.</li>
+</ol>
+<p>This applies to Armbian as well.</p>
 <hr>
 <blockquote>
 <p>In case you haven&rsquo;t found the answer to your question please feel free to <a href="/contact">contact us</a>, we will be happy to help you.</p>
