@@ -197,7 +197,9 @@
 <p>比如，云服务主要按不同的存储空间容量大小来定价，其他的一些功能则没有差别；而对于那些放置在自家的硬件产品，价格的差别主要在于硬件的配置，同一厂商的不同型号软件功能没有太大差异。在所有的功能中，备份是最基础的功能，其他的高级功能都是构建在这个基础上的。</p>
 <p>Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果您使用Windows或Mac电脑，也就无需另外购置额外的硬件，但如果想更好但利用改系统，将其作为一个7x24小时的私有云，您可以选择树莓派。即便是购买树莓派，也比市面上的方案更加经济实用。软件方面有些高级功能现在还在开发中，但基本的存储备份功能安全稳定，没有任何隐形费用，没有任何用户锁定，不泄漏隐私，为什么不试试呢？</p>
 <h2 id="和云服务的比较">和云服务的比较</h2>
+<p><strong>我们不排斥云存储，云存储可以作为本地存储的一个备份，本地存储是建议都保留的。</strong></p>
 <p>下面的按<strong>年费</strong>来比较,  下面的表格的空单元格表示没有对应的选项。比如Apple iCloud只提供了5 GB, 50 GB, 200 GB and 2 TB的选项, 对Lomorage而言，现在比较难买到新的硬盘是小于500G的。Lomorage的基础功能都是免费的，所以下面的价格主要是考虑的硬件，和硬件的损耗，还有电费。</p>
+<p>百度云的价格是非常有优势的，但也有用户抱怨隐私政策，流量限制等，可以作为本地存储之外的可选备份方案。</p>
 
 
 
@@ -207,7 +209,7 @@
 <thead>
 <tr>
 <th style="text-align:right"></th>
-<th>Lomorage</th>
+<th>Lomorage (双备份) 年费<br />假设4年升级一次设备</th>
 <th>Apple iCloud</th>
 <th>Google Photo</th>
 <th>Amazon Photo</th>
@@ -263,7 +265,7 @@
 </tr>
 <tr>
 <td style="text-align:right">500 GB</td>
-<td>¥ 307</td>
+<td>¥ 223.67</td>
 <td></td>
 <td></td>
 <td></td>
@@ -272,7 +274,7 @@
 </tr>
 <tr>
 <td style="text-align:right">1 TB</td>
-<td>¥ 332</td>
+<td>¥ 248.67</td>
 <td></td>
 <td></td>
 <td>¥ 425.59</td>
@@ -281,7 +283,7 @@
 </tr>
 <tr>
 <td style="text-align:right">2 TB</td>
-<td>¥ 391</td>
+<td>¥ 308.17</td>
 <td>¥ 816</td>
 <td>¥ 709.36</td>
 <td>¥ 851.17</td>
@@ -290,7 +292,7 @@
 </tr>
 <tr>
 <td style="text-align:right">3 TB</td>
-<td>¥ 481</td>
+<td>¥ 398.17</td>
 <td></td>
 <td></td>
 <td>¥ 1276.76</td>
@@ -299,7 +301,7 @@
 </tr>
 <tr>
 <td style="text-align:right">4 TB</td>
-<td>¥ 522</td>
+<td>¥ 438.67</td>
 <td></td>
 <td></td>
 <td>¥ 1702.35</td>
@@ -317,7 +319,7 @@
 </tr>
 <tr>
 <td style="text-align:right">6 TB</td>
-<td>¥ 805</td>
+<td>¥ 722.17</td>
 <td></td>
 <td></td>
 <td>¥ 2553.52</td>
@@ -326,7 +328,7 @@
 </tr>
 <tr>
 <td style="text-align:right">8 TB</td>
-<td>¥ 877</td>
+<td>¥ 794.17</td>
 <td></td>
 <td></td>
 <td>¥ 3404.70</td>
@@ -340,15 +342,13 @@
 <blockquote>
 <p>通常来讲，硬盘的使用寿命是3-5年。在线备份公司BackBlaze分析他们运行的25,000个运行的硬盘的失败率得出的<a href="https://www.backblaze.com/blog/how-long-do-disk-drives-last/">结论</a>。他们发现90%的硬盘都能用到3年以上，80%的硬盘都能用到4年以上。但这个和不同品牌有些关系，西部数据和日立的硬盘寿命比希捷的就长不少。</p>
 </blockquote>
-<p><strong>在线备份的硬盘使用率相对比较高，一般硬盘都会超过4年的使用寿命。<strong>下面已4年作为硬盘的使用寿命来计算，那需要至少</strong>两块硬盘来做冗余备份</strong>，那存储的价格就是<code>硬盘价格 * 2 / 4</code>, 树莓派通常可以用<a href="https://www.raspberrypi.org/forums/viewtopic.php?t=2856">10年以上</a>, 那假设像个人电脑一样每4年更新换代一次, 加上外接的供电USB分线器，设备的费用总的有<code>(硬盘价格 * 2 + 树莓派套装 + 供电USB分线器) / 4</code>,  加上每年的<a href="https://www.v2ex.com/t/279166">¥30电费</a>，算下来总的费用<code>(硬盘价格 * 2 + 树莓派套装 + 供电USB分线器) / 4  + 30</code> per year.</p>
-<p><a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.6.2f5f261eeGhB9s&amp;id=601506908618&amp;cm_id=140105335569ed55e27b&amp;abbucket=2&amp;skuId=4379917402113">树莓派基础套装</a>:</p>
+<p><strong>在线备份的硬盘使用率相对比较高，一般硬盘都会超过4年的使用寿命。<strong>下面已4年作为硬盘的使用寿命来计算，那需要至少</strong>两块硬盘来做冗余备份</strong>，那存储的价格就是<code>硬盘价格 * 2 / 4</code>, 假设像个人电脑一样每4年更新换代一次, 加上外接的供电USB分线器，设备的费用总的有<code>(硬盘价格 * 2 + Orange Pi Zero套装 + 供电USB分线器) / 4</code>。</p>
+<p><a href="https://detail.tmall.com/item.htm?id=609102556118&amp;spm=a1z09.2.0.0.a9ab2e8dVQlVPy&amp;_u=71e0t1k2c66">Orange Pi Zero套装</a>:</p>
 <ul>
-<li>树莓派4B/2G主板</li>
+<li>OrangePi zero LTS</li>
 <li>外壳</li>
-<li>USB-C电源</li>
+<li>电源</li>
 <li>16 GB microSD Card</li>
-<li>散热片</li>
-<li>micro HDMI线</li>
 </ul>
 <p>供电USB分线器:</p>
 <ul>
@@ -364,8 +364,8 @@
 <thead>
 <tr>
 <th>单个磁盘空间</th>
-<th>磁盘价格 (单盘)</th>
-<th>树莓派基础套装</th>
+<th>磁盘价格 (双盘位)</th>
+<th>Orange Pi Zero套装</th>
 <th>供电USB分线器</th>
 <th>均摊年费（按4年算）</th>
 <th>设备总费用 (双盘双备份)</th>
@@ -374,59 +374,59 @@
 <tbody>
 <tr>
 <td>500 GB</td>
-<td>¥ 299</td>
-<td>¥ 383</td>
+<td>¥ 299 x 2</td>
+<td>¥ 168.69</td>
 <td>¥ 128</td>
-<td>¥ 307</td>
-<td>¥ 1109</td>
+<td>¥ 223.67</td>
+<td>¥ 894.69</td>
 </tr>
 <tr>
 <td>1 TB</td>
-<td>¥ 349</td>
-<td>¥ 383</td>
+<td>¥ 349 x 2</td>
+<td>¥ 168.69</td>
 <td>¥ 128</td>
-<td>¥ 332</td>
-<td>¥ 1209</td>
+<td>¥ 248.67</td>
+<td>¥ 994.69</td>
 </tr>
 <tr>
 <td>2 TB</td>
-<td>¥ 468</td>
-<td>¥ 383</td>
+<td>¥ 468 x 2</td>
+<td>¥ 168.69</td>
 <td>¥ 128</td>
-<td>¥ 391</td>
-<td>¥ 1447</td>
+<td>¥ 308.17</td>
+<td>¥ 1232.69</td>
 </tr>
 <tr>
 <td>3 TB</td>
-<td>¥ 648</td>
-<td>¥ 383</td>
+<td>¥ 648 x 2</td>
+<td>¥ 168.69</td>
 <td>¥ 128</td>
-<td>¥ 481</td>
-<td>¥ 1807</td>
+<td>¥ 398.17</td>
+<td>¥ 1592.69</td>
 </tr>
 <tr>
 <td>4 TB</td>
-<td>¥ 729</td>
-<td>¥ 383</td>
+<td>¥ 729 x 2</td>
+<td>¥ 168.69</td>
 <td>¥ 128</td>
-<td>¥ 522</td>
-<td>¥ 1969</td>
+<td>¥ 438.67</td>
+<td>¥ 1754.69</td>
 </tr>
 <tr>
 <td>6 TB</td>
-<td>¥ 648 x 2</td>
-<td>¥ 383</td>
+<td>¥ 648 x 4</td>
+<td>¥ 168.69</td>
 <td>¥ 128</td>
-<td>¥ 805</td>
-<td>¥ 3103</td>
+<td>¥ 722.17</td>
+<td>¥ 2888.69</td>
 </tr>
 <tr>
 <td>8 TB</td>
-<td>¥ 720 x 2</td>
-<td>¥ 383</td>
+<td>¥ 720 x 4</td>
+<td>¥ 168.69</td>
 <td>¥ 128</td>
-<td>¥ 877</td>
-<td>¥ 3391</td>
+<td>¥ 794.17</td>
+<td>¥ 3176.69</td>
 </tr>
 </tbody>
 </table>
@@ -450,9 +450,9 @@
 <tbody>
 <tr>
 <td>Lomorage</td>
-<td>(树莓派基础套装 + 供电USB分线器)<br /><br />¥ 511</td>
-<td>(树莓派基础套装 + 供电USB分线器 + 2个2TB硬盘)<br /><br /> ¥ 1447</td>
-<td>(树莓派基础套装 + 1个1TB硬盘)<br /><br /> ¥ 732</td>
+<td>¥ 296.69</td>
+<td>¥ 1232.69</td>
+<td>¥ 517.69</td>
 </tr>
 <tr>
 <td>群晖 DS218+</td>

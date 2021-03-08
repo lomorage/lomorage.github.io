@@ -193,9 +193,10 @@
 
                         <div>
                           <h1 id="price-comparison">Price Comparison</h1>
-<p><strong>The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Raspberry Pi 4 or other single board computer to DIY yourself if you are expert.</strong></p>
+<p><strong>The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Orange Pi Zero or other single board computer to DIY yourself if you are expert.</strong></p>
+<p><strong>We are not against cloud storage, it can be as good backup for local storage, and we suggest user keep the local copy.</strong></p>
 <p>For example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations. Among all the features, backup is the fundamental requirements, and all other fancy features is built on that.</p>
-<p>Lomorage is more cost efficient and more flexible compared with existing solutions, the software cost you nothing, and even get the hardware setup using Raspberry Pi 4 is cheaper.  If you use the Windows or Mac application, it&rsquo;s $0. There are some features currently missing but they are planned, and the basic backup feature is solid and stable for almost 2 years, no hidden fees, no lock down, no privacy concern, why not give it a try?</p>
+<p>Lomorage is more cost efficient and more flexible compared with existing solutions, the software cost you nothing, and even get the hardware setup using Orange Pi Zero is cheaper.  If you use the Windows or Mac application, it&rsquo;s $0. There are some features currently missing but they are planned, and the basic backup feature is solid and stable for almost 2 years, no hidden fees, no lock down, no privacy concern, why not give it a try?</p>
 <h2 id="compare-with-cloud-service">Compare with cloud service</h2>
 <p>The following are <strong>yearly fees</strong>,  those cells leave blank are not available, for example, Apple iCloud only provides 5 GB, 50 GB, 200 GB and 2 TB options, for Lomorage, it would be hard to get new hard drive smaller than 500 GB nowadays.</p>
 <p>Lomorage software is 100% free for the the essential functions, thus here will only take device and energy cost into account, and yearly cost is calculated as <a href="https://www.profitbooks.net/what-is-depreciation/">depreciation expense</a>. See below for more details.</p>
@@ -208,7 +209,7 @@
 <thead>
 <tr>
 <th style="text-align:right"></th>
-<th>Lomorage</th>
+<th>Lomorage (2-Bays) yearly fee<br />assuming upgrade every 4 years</th>
 <th>Apple iCloud</th>
 <th>Google Photo</th>
 <th>Amazon Photo</th>
@@ -258,7 +259,7 @@
 </tr>
 <tr>
 <td style="text-align:right">500 GB</td>
-<td>$ 45.18</td>
+<td>$ 33.52</td>
 <td></td>
 <td></td>
 <td></td>
@@ -266,7 +267,7 @@
 </tr>
 <tr>
 <td style="text-align:right">1 TB</td>
-<td>$ 54.55</td>
+<td>$ 42.89</td>
 <td></td>
 <td></td>
 <td>$ 59.99</td>
@@ -274,7 +275,7 @@
 </tr>
 <tr>
 <td style="text-align:right">2 TB</td>
-<td>$ 59.18</td>
+<td>$ 47.53</td>
 <td>$ 119.88</td>
 <td>$ 99.99</td>
 <td>$ 119.98</td>
@@ -282,7 +283,7 @@
 </tr>
 <tr>
 <td style="text-align:right">3 TB</td>
-<td>$ 66.68</td>
+<td>$ 55.03</td>
 <td></td>
 <td></td>
 <td>$ 179.97</td>
@@ -290,7 +291,7 @@
 </tr>
 <tr>
 <td style="text-align:right">4 TB</td>
-<td>$ 76.68</td>
+<td>$ 65.03</td>
 <td></td>
 <td></td>
 <td>$ 239.96</td>
@@ -298,7 +299,7 @@
 </tr>
 <tr>
 <td style="text-align:right">6 TB</td>
-<td>$ 106.68</td>
+<td>$ 95.02</td>
 <td></td>
 <td></td>
 <td>$ 359.94</td>
@@ -306,7 +307,7 @@
 </tr>
 <tr>
 <td style="text-align:right">8 TB</td>
-<td>$ 126.68</td>
+<td>$ 115.02</td>
 <td></td>
 <td></td>
 <td>$ 479.92</td>
@@ -319,19 +320,21 @@
 <blockquote>
 <p>Generally speaking, you can rely on your hard drive for three to five years on average. The online backup company BackBlaze analysed the failure rates of their 25,000 running hard drives. They found that 90% of hard drives survive for three years, and 80% for four years. But this number varied across brands. Western Digital and Hitachi hard drives lasted much longer than Seagate’s in Backblaze’s <a href="https://www.backblaze.com/blog/how-long-do-disk-drives-last/">study</a>.</p>
 </blockquote>
-<p>Assuming the average of hard drive use for 4 years,  and setup duplicate backup to ensure safety. So the price for storage price per year will be <code>hard drive * 2 / 4</code>, and Raspberry Pi most likely will <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=2856">last for 10 years</a>, but let&rsquo;s assume you upgrade it for more powerful and efficient one every 4 years like computer, plus the extra USB hub which assuming last 4 years. The equipment cost per year will be <code>(hard drive * 2 + Raspberry Pi suite + usb hub) / 4 </code>,  plus the <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">$ 5 energy cost</a> per year, the total cost will be <code>(hard drive * 2 + Raspberry Pi suite + usb hub) / 4  + 5</code> per year.</p>
-<p>The <a href="https://www.pishop.us/product/raspberry-pi-4-model-b-2gb/?src=raspberrypi">Raspberry Pi 4 Starter Kit</a> includes:</p>
+<p>Assuming the average of hard drive use for 4 years,  and setup duplicate backup to ensure safety. So the price for storage price per year will be <code>hard drive * 2 / 4</code>, and let&rsquo;s assume you upgrade it for more powerful and efficient one every 4 years like computer, plus the extra USB hub which assuming last 4 years. The equipment cost per year will be <code>(hard drive * 2 + Orange Pi Zero + usb hub) / 4 </code>,  plus the $5 energy cost per year, the total cost will be <code>(hard drive * 2 + Orange Pi Zero + usb hub) / 4  + 5</code> per year.</p>
+<p>The <a href="https://www.aliexpress.com/item/4001117923064.html?spm=2114.12010615.8148356.5.2988111fCvoZ8G">Orange Pi Zero</a> includes:</p>
 <ul>
-<li>Raspberry Pi 4 Model B/2GB</li>
-<li>HighPi Raspberry Pi Case for Pi4</li>
-<li>USB-C Power Supply, 5.1V 3.0A</li>
-<li>16 GB microSD Card</li>
-<li>Aluminum Heatsink</li>
+<li>Orange Pi Zero LTS 512MB</li>
+<li>Protective White Case</li>
+<li>OTG Power Supply</li>
 </ul>
 <p>USB hub with power supply:</p>
 <ul>
 <li><a href="https://www.walmart.com/ip/Plugable-USB-Hub-USB-2-0-7-Port-15W/134245816">Plugable USB 2.0 7-Port High Speed Hub with 15W Power Adapter</a></li>
 <li><a href="https://www.adafruit.com/product/961">USB 2.0 Powered Hub - 7 Ports with 5V 2A Power Supply</a></li>
+</ul>
+<p>MicroSD Card</p>
+<ul>
+<li><a href="https://www.amazon.com/SanDisk-Ultra-Micro-Adapter-SDSQUNC-016G-GN6MA/dp/B010Q57SEE/ref=sr_1_26?dchild=1&amp;keywords=sd+card&amp;qid=1615094086&amp;refinements=p_n_feature_two_browse-bin%3A6518303011&amp;rnid=172282&amp;s=pc&amp;sr=1-26">SanDisk Ultra 16GB</a></li>
 </ul>
 
 
@@ -342,9 +345,8 @@
 <thead>
 <tr>
 <th>storage/drive</th>
-<th>Hard drive  (1 drives)</th>
-<th>Raspberry Pi 4 Starter Kit</th>
-<th>USB hub</th>
+<th>Hard drive  (1 drive)</th>
+<th>Lomorage</th>
 <th>Yearly Fee</th>
 <th>Total devices expense (2 drives)</th>
 </tr>
@@ -352,59 +354,52 @@
 <tbody>
 <tr>
 <td>500 GB</td>
-<td>$ 36.99</td>
-<td>$ 64.80</td>
-<td>$ 21.95</td>
-<td>$ 45.18</td>
-<td>$ 160.73</td>
+<td>$ 36.99 x 2</td>
+<td>$ 60.13</td>
+<td>$ 33.52</td>
+<td>$ 134.10</td>
 </tr>
 <tr>
 <td>1 TB</td>
-<td>$ 55.72</td>
-<td>$ 64.80</td>
-<td>$ 21.95</td>
-<td>$ 54.55</td>
-<td>$ 198.19</td>
+<td>$ 55.72 x 2</td>
+<td>$ 60.13</td>
+<td>$ 42.89</td>
+<td>$ 171.57</td>
 </tr>
 <tr>
 <td>2 TB</td>
-<td>$ 64.99</td>
-<td>$ 64.80</td>
-<td>$ 21.95</td>
-<td>$ 59.18</td>
-<td>$ 216.73</td>
+<td>$ 64.99 x 2</td>
+<td>$ 60.13</td>
+<td>$ 47.53</td>
+<td>$ 190.11</td>
 </tr>
 <tr>
 <td>3 TB</td>
-<td>$ 79.99</td>
-<td>$ 64.80</td>
-<td>$ 21.95</td>
-<td>$ 66.68</td>
-<td>$ 246.73</td>
+<td>$ 79.99 x 2</td>
+<td>$ 60.13</td>
+<td>$ 55.03</td>
+<td>$ 220.11</td>
 </tr>
 <tr>
 <td>4 TB</td>
-<td>$ 99.99</td>
-<td>$ 64.80</td>
-<td>$ 21.95</td>
-<td>$ 76.68</td>
-<td>$ 286.73</td>
+<td>$ 99.99 x 2</td>
+<td>$ 60.13</td>
+<td>$ 65.03</td>
+<td>$ 260.11</td>
 </tr>
 <tr>
 <td>6 TB</td>
-<td>$ 79.99 x 2</td>
-<td>$ 64.80</td>
-<td>$ 21.95</td>
-<td>$ 106.68</td>
-<td>$ 406.71</td>
+<td>$ 79.99 x 4</td>
+<td>$ 60.13</td>
+<td>$ 95.02</td>
+<td>$ 380.09</td>
 </tr>
 <tr>
 <td>8 TB</td>
-<td>$ 99.99 x 2</td>
-<td>$ 64.80</td>
-<td>$ 21.95</td>
-<td>$ 126.68</td>
-<td>$ 486.71</td>
+<td>$ 99.99 x 4</td>
+<td>$ 60.13</td>
+<td>$ 115.02</td>
+<td>$ 460.09</td>
 </tr>
 </tbody>
 </table>
@@ -428,9 +423,9 @@
 <tbody>
 <tr>
 <td>Lomorage</td>
-<td>(Raspberry Pi 4 starter kit + power USB hub)<br /><br />$ 86.75</td>
-<td>(Raspberry Pi 4 starter kit + power USB hub + 2 x 2 TB)<br /><br />$ 216.73</td>
-<td>(Raspberry Pi 4 starter kit + 1 TB)<br /><br />$ 120.52</td>
+<td>$ 60.13</td>
+<td>$ 190.11</td>
+<td>$ 93.9</td>
 </tr>
 <tr>
 <td>Synology 2 bay NAS DiskStation DS218+</td>

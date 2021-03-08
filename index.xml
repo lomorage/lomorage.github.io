@@ -62,7 +62,7 @@ You can also join our slack channel.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/faq/</guid>
-      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. What is the business model? 3. How to setup redundancy backup? 4. What file systems supported? 5. Why the date time seems not correct? 6. How to set a secondary backup? 7. Does Lomorage support backup edited file? 8. What is background backup? 9. How to recover from Raspbian boot failure?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just a combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.</description>
+      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. What is the cost of Lomorage? 3. What is the business model? 4. How to setup redundancy backup? 5. What file systems supported? 6. Why the date time seems not correct? 7. How to set a secondary backup? 8. Does Lomorage support backup edited file? 9. What is background backup? 10. How to recover from Raspbian boot failure?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;?</description>
     </item>
     
     <item>
@@ -71,8 +71,8 @@ You can also join our slack channel.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/compare/</guid>
-      <description>Price Comparison The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Raspberry Pi 4 or other single board computer to DIY yourself if you are expert.
-For example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations.</description>
+      <description>Price Comparison The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Orange Pi Zero or other single board computer to DIY yourself if you are expert.
+We are not against cloud storage, it can be as good backup for local storage, and we suggest user keep the local copy.</description>
     </item>
     
   </channel>
