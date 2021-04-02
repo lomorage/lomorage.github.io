@@ -359,4 +359,18 @@
                 />
   </url>
   
+  <url>
+    <loc>https://lomorage.com/zh/survey/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/survey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/survey/"
+                />
+  </url>
+  
 </urlset>
