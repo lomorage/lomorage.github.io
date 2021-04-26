@@ -373,4 +373,18 @@
                 />
   </url>
   
+  <url>
+    <loc>https://lomorage.com/zh/buy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/buy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/buy/"
+                />
+  </url>
+  
 </urlset>

@@ -283,6 +283,20 @@
   </url>
   
   <url>
+    <loc>https://lomorage.com/buy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/buy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/buy/"
+                />
+  </url>
+  
+  <url>
     <loc>https://lomorage.com/contact/</loc>
     <xhtml:link
                 rel="alternate"
