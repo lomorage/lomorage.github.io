@@ -46,6 +46,11 @@
     background-image: url(/img/installation/armbian.svg);
 }
 
+.badge.ubuntu {
+    background-color: #5e2750;
+    background-image: url(/img/installation/ubuntu.svg);
+}
+
 .screenshoot {
     background-color:#EAF0FB;
     padding: 25px;

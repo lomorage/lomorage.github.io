@@ -47,99 +47,12 @@ keep the computer on to copy the files to MyCloud disk.
     </item>
     
     <item>
-      <title></title>
-      <link>https://lomorage.com/external-access/</link>
+      <title>Buy</title>
+      <link>https://lomorage.com/buy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/external-access/</guid>
-      <description>External Access Configuration Currently, external access need some manual setup and some technical background, we will make the process more user-friendly later.
-There are a few tunnel services available for free use, most tunnel services require a client application running on your device, and set up a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the URL with that subdomain, the tunnel service will forward the traffic/request to the client application.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/install-frame/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/install-frame/</guid>
-      <description>Table of Contents  Install Lomo-frame Setup Lomo-frame  Quickstart Turn Frame ON/OFF Stop/Start lomo-frame Service Schedule Frame ON/OFF time Playback Order Customize playlist Playback Media Type Keyboard control Setup multiple digital frame  1. Install Lomo-frame 2. Setup WiFi connection 3. Check IP address of primary Raspberry Pi 4. Find the mount directory on primary Raspberry Pi 5. Mount on Raspberry Pi zero w 6. Reboot      Install Lomo-frame Lomo-frame only supports on Raspberry Pi, Windows/Mac or the docker version is not supported</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/installation-android/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation-android/</guid>
-      <description>Install Lomorage App in Android phone Currently you can install the app on Android phone, the minimal version is 7.1.
-Click below icon to go to Goole Play Store to download.
-After launching Lomorage, it will take a few minutes to import all your photos and videos on phone in the first time.
-Then you can click the right up more menu to Manage account.
-At there, the app will automatically find the Lomorage service if you installed on Mac/Windows or Raspberry pi.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/installation-armbian/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation-armbian/</guid>
-      <description>Install Lomorage Service on Armbian Currently it supports Armbian Focal. If you have other needs please reach us for support.
-sudo apt install -y ca-certificates python-certifi python3-certifisudo update-ca-certificates --freshwget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -echo &amp;quot;deb https://lomoware.github.io/debian/focal focal main&amp;quot; | sudo tee /etc/apt/sources.list.d/lomoware.listsudo apt updatesudo apt install lomo-base lomo-vips lomo-backend lomo-web -y</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/installation-ios/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation-ios/</guid>
-      <description>Install Lomorage iOS client You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3.
---After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use. If Lomorage service can&amp;rsquo;t be discovered automatically, you can discover the service via QRCode Scanning when using Windows or MacOS LomoAgent (open settings in LomoAgent to show the QRCode), or you can input the IP address and port manually.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/installation-osx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation-osx/</guid>
-      <description>Install Lomorage Service on MacOS 1. Click the link below to download Lomorage Service Application.
-macOS2. Double click &amp;ldquo;LomoAgent.dmg&amp;rdquo; to start installation, and follow the steps below to finish the installation.
-3. Run LomoAgent Application，please allow network access for LomoAgent if firewall is triggered.
-4. After launch the Lomorage application，You need to set the &amp;ldquo;Home directory&amp;rdquo; before using Lomorage，&amp;ldquo;Home directory&amp;rdquo; is used to save the photos and videos uploading from your phone。You can also set up a backup directory which served as redundancy backup.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/installation-pi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation-pi/</guid>
-      <description>Table of Contents  Install Lomorage Service on Raspberry Pi  Install with prebuild OS image Docker installation  1. Install Docker on Raspberry Pi 2. Get Docker image 3. Run   Apt installation  1. Add lomoware source 2. Install Lomorage 3. Change mount directory and username if needed 4. Run      Install Lomorage Service on Raspberry Pi To run on Raspberry Pi, you need to order a Raspberry Pi, we have tested the image the following models:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/installation-web/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation-web/</guid>
-      <description>Install Lomorage Web client You can use Lomorage Web client to upload photos/videos from desktop/laptop using browser, and you can use the gallery to view the photos/videos stored in Lomorage.
-If you are using Lomorage Service in MacOS, then you can just click &amp;ldquo;import&amp;rdquo; menu item in LomoAgent Application, and it will open the web application.
-If you are using Lomorage Service in Raspberry Pi, then you can use the following command to install Lomorage Web client on your raspberry Pi:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://lomorage.com/installation-win/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation-win/</guid>
-      <description>Install Lomorage Service on Windows 1. Click the Windows icon link below to download Lomorage Server For Windows.
-Click to download == Windows 2. double click &amp;ldquo;lomoagent.msi&amp;rdquo; to start installation. If Windows Defender shows &amp;ldquo;lomoagent.msi&amp;rdquo; as unknown application, please follow the steps below to allow it to run.
- 3. Follow the wizard to finish the installation, in the End-User License Agreement, please checked the box as below.
- 4. Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent.</description>
+      <guid>https://lomorage.com/buy/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -158,28 +71,7 @@ You can also join our slack channel.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/faq/</guid>
-      <description>1. Why not just use cloud? 2. How about NAS? 3. Any other similiar solutions? 4. Why Lomorage? 5. What is the cost? 6. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 7. What is the business model? 8. How to setup redundancy backup? 9. What file systems supported? 10. Why the date time seems not correct? 11. How to set a secondary backup? 12. Does Lomorage support backup edited file? 13. What is background backup?</description>
-    </item>
-    
-    <item>
-      <title>Feature Highlight</title>
-      <link>https://lomorage.com/features/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/features/</guid>
-      <description>-- Privacy Matters Lomorage is a private cloud service which runs on your private network, which gives you the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
-You can also set up multiple Lomorage services in your private network, for different family members, which are completely isolated with each other.
- Cross-Platform There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&amp;rsquo;s request.</description>
-    </item>
-    
-    <item>
-      <title>Installation Guide</title>
-      <link>https://lomorage.com/installation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/installation/</guid>
-      <description>Installation Guide 1. Overview To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store. Once you run the Lomorage service, the client APP is supposed to find the service running automatically with zero configuration, then you can upload photos on the Phone.
-2. Install Lomorage Service The first step is to set up the Lomorage service.</description>
+      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. What is the cost of Lomorage? 3. What is the business model? 4. How to setup redundancy backup? 5. What file systems supported? 6. Why the date time seems not correct? 7. How to set a secondary backup? 8. Does Lomorage support backup edited file? 9. What is background backup? 10. How to recover from Raspbian boot failure? 11. I forget password, how to reset?</description>
     </item>
     
     <item>
@@ -188,8 +80,17 @@ You can also set up multiple Lomorage services in your private network, for diff
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lomorage.com/compare/</guid>
-      <description>Price Comparison The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Raspberry Pi 4 or other single board computer to DIY yourself if you are expert.
-For example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations.</description>
+      <description>Price Comparison The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Orange Pi Zero or other single board computer to DIY yourself if you are expert.
+We are not against cloud storage, it can be as good backup for local storage, and we suggest user keep the local copy.</description>
+    </item>
+    
+    <item>
+      <title>Survey</title>
+      <link>https://lomorage.com/survey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/survey/</guid>
+      <description>loading…</description>
     </item>
     
   </channel>

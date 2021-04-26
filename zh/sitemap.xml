@@ -318,141 +318,6 @@
   </url>
   
   <url>
-    <loc>https://lomorage.com/zh/external-access/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/external-access/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/external-access/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/install-frame/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/install-frame/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/install-frame/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation-android/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation-android/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation-android/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation-armbian/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation-armbian/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation-armbian/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation-ios/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation-ios/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation-ios/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation-osx/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation-osx/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation-osx/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation-pi/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation-pi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation-pi/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation-web/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation-web/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation-web/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation-win/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation-win/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation-win/"
-                />
-  </url>
-  
-  <url>
     <loc>https://lomorage.com/zh/compare/</loc>
     <xhtml:link
                 rel="alternate"
@@ -463,20 +328,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://lomorage.com/zh/compare/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/zh/installation/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/installation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/installation/"
                 />
   </url>
   
@@ -495,20 +346,6 @@
   </url>
   
   <url>
-    <loc>https://lomorage.com/zh/features/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/features/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/features/"
-                />
-  </url>
-  
-  <url>
     <loc>https://lomorage.com/zh/contact/</loc>
     <xhtml:link
                 rel="alternate"
@@ -519,6 +356,34 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://lomorage.com/zh/contact/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/zh/survey/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/survey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/survey/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://lomorage.com/zh/buy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lomorage.com/buy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://lomorage.com/zh/buy/"
                 />
   </url>
   
