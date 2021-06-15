@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Covid-19 on Lomorage</title>
-    <link>https://lomorage.com/tags/covid-19/</link>
+    <link>http://lomorage.com/tags/covid-19/</link>
     <description>Recent content in Covid-19 on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/tags/covid-19/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Mar 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/tags/covid-19/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup Covid-19 dashboard using Raspberry Pi</title>
-      <link>https://lomorage.com/blog/2020/03/29/covid19/</link>
+      <link>http://lomorage.com/blog/2020/03/29/covid19/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2020/03/29/covid19/</guid>
+      <guid>http://lomorage.com/blog/2020/03/29/covid19/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.&lt;/p&gt;</description>
     </item>
     

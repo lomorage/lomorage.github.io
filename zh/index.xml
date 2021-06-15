@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lomorage</title>
-    <link>https://lomorage.com/zh/</link>
-    <description>Recent content on Lomorage</description>
+    <title>主页 on Lomorage</title>
+    <link>http://lomorage.com/zh/</link>
+    <description>Recent content in 主页 on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在Windows 10 上安装Lomorage容器镜像</title>
-      <link>https://lomorage.com/zh/blog/2020/11/16/windows-docker/</link>
+      <link>http://lomorage.com/zh/blog/2020/11/16/windows-docker/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/blog/2020/11/16/windows-docker/</guid>
+      <guid>http://lomorage.com/zh/blog/2020/11/16/windows-docker/</guid>
       <description>&lt;p&gt;虽然Lomorage已经提供了Windows原生安装包，但对于喜欢使用Docker的人来说，用Docker来配置Lomorage服务器，也是一个非常好的选择，尤其在Windows Server上可以极大的发挥HYPER-v技术，让Lomorage的服务器健步如飞。本篇适合有Docker使用经验的人员，如果您不知道Docker是啥，请&lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;直接下载Lomorage原生安装包&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Lomorage帮您解决iCloud的痛点</title>
-      <link>https://lomorage.com/zh/blog/2020/07/19/mypains/</link>
+      <link>http://lomorage.com/zh/blog/2020/07/19/mypains/</link>
       <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/blog/2020/07/19/mypains/</guid>
+      <guid>http://lomorage.com/zh/blog/2020/07/19/mypains/</guid>
       <description>&lt;p&gt;我的照片很多，一部分放在移动硬盘里，一部分放在U盘里，无论移动硬盘和U盘，我都放两份。
 自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>迁移MyCloud的数据到Lomorage</title>
-      <link>https://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</link>
+      <link>http://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</link>
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</guid>
+      <guid>http://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</guid>
       <description>&lt;p&gt;&lt;strong&gt;曾经&lt;/strong&gt;买了一个WD-西部数据的MyCloud 6T的存储，用来存照片和视频。因为它的App不好用，
 所以每次都是用USB线把手机连上电脑，然后开着电脑把手机的照片拷贝到MyCloud的共享盘里。
 下面我们来看看如何把MyCloud的东西迁移到Lomorage。&lt;/p&gt;</description>
@@ -39,37 +39,51 @@
     
     <item>
       <title>使用树莓派制作新冠病毒电子看板</title>
-      <link>https://lomorage.com/zh/blog/2020/03/29/covid19/</link>
+      <link>http://lomorage.com/zh/blog/2020/03/29/covid19/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/blog/2020/03/29/covid19/</guid>
+      <guid>http://lomorage.com/zh/blog/2020/03/29/covid19/</guid>
       <description>&lt;p&gt;新冠病毒肆掠全球，虽然现在可以很容易的在手机上查看新闻和数据，但是设置一个专门的电子看板，显示新闻和统计会更加方便。下面会讲解如何一步步的在树莓派上安装和配置“新冠病毒电子看板”。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>利用lomorage把照片和视频传到Windows</title>
-      <link>https://lomorage.com/zh/blog/2019/12/24/transfer2pc/</link>
+      <link>http://lomorage.com/zh/blog/2019/12/24/transfer2pc/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/blog/2019/12/24/transfer2pc/</guid>
+      <guid>http://lomorage.com/zh/blog/2019/12/24/transfer2pc/</guid>
       <description>&lt;p&gt;之前我有一个老的iPhone，里面有很多照片和视频，习惯于在Windows工作的我，花了好久都没找到一个简单好用的软件可以帮我把照片和视频传到Windows上，并且帮我按年月日自动分好类。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>树莓派设置冗余备份</title>
-      <link>https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</link>
+      <link>http://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</guid>
+      <guid>http://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</guid>
       <description>&lt;p&gt;珍贵的照片和视频仅仅保存一份是不够的，我们至少需要保存两份，最好还能有一个远程的备份。Lomorage当前提供了冗余备份的功能。可以有下面的几种方式来设置冗余备份。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>价格比较</title>
-      <link>https://lomorage.com/zh/compare/</link>
+      <title>Lomorage照片云存储</title>
+      <link>http://lomorage.com/zh/buy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/compare/</guid>
+      <guid>http://lomorage.com/zh/buy/</guid>
+      <description>Lomorage照片云存储 - 珍藏美好回忆，享受精彩瞬间 我们是一群硅谷的工程师，在使用过一些现有的照片存储备份管理产品后，我们觉得需要有更加简单易用，更加稳定，经济实用，涵盖照片视频的备份，管理，分享和展示的一套完整方案。出于对家庭的热爱，对隐私的关注，我们开发了Lomorage，我们是深度用户，我们倾听用户的声音，我们希望Lomorage能成为一个物美价廉品质优的大众产品。
+您可以自行下载安装到您已有到设备，或者您也可以直接购买即插即用的Lomorage照片云存储，迷你版和标准版硬件分别基于Orange Pi Zero和Raspberry Pi 4，预装了定制的Lomorage系统。
+淘宝购买链接 1. 问题痛点  手机里面太多照片和视频，怎么备份好？ 懒得整理照片，照片存放的七零八落，还有重复？ 习惯文档拍照备份，但不能文字查找？ 能不能秒开备份的照片视频，就像存本地一样？ 担心备份照片的硬盘坏掉？ 担心隐私泄露？ 担心备份照片视频被压缩？ 担心上车被坑，限速收费，变相收费，甚至停止运营？  2. 特色功能  手机照片，轻松下拉备份，是否备份成功一目了然。 支持增量差异上传，不会重复备份。 支持断点续传，再大的视频都不怕。 完美支持动态照片Live Photo，慢动作视频和DNG格式，支持所有主流照片视频格式。 原始文件备份，质量无损耗，时间地理位置等信息统统保留。 有相同的照片，照片去重无需存储多次。 相似图片分析，可以方便选择最好的留下。 多台手机平板，登陆同一账号，照片即可访问。 家庭成员不同账号，保护隐私。 有小秘密，加密存储。（即将推出） 照片分享，不占手机内存。 备份的照片无需手动下载到本地，也能轻松分享到社交网络。 换手机了照片也能随时访问。 一键批量导出备份照片到手机。（即将推出） 离线智能缓存，手机没网也能看海量照片视频。 按地点，时间，图片文字等智能查找。 历史的今天，让您的照片不再封存在硬盘里。 支持手动整理相册，打标签，让你按自己的方式组织照片。（即将推出） 多重备份，大大降低数据丢失风险。 硬盘照片导入，把繁琐的照片管理工作交给专业的Lomorage。 不限速，不限账号数，硬盘备份数据一目了然，拒绝绑架用户。 硬盘即插即用，无需重新格式化。  更多信息，猛击查看
+3. Lomorage实拍图 Lomorage迷你版：小身板，低功耗，功能一个不少。  手机APP：轻松下拉备份，离线缓存，超省空间，智能查找，快速定位。  Lomorage网页版：相机照片，硬盘照片，拖入即可方便导入。  4. 常见问题   除了能做照片备份管理之外还能做什么？ **Lomorage专注照片备份和管理，我们的现阶段的目标是把这块功能做的易用稳定完善，做一个值得信赖的产品。**但我们使用的是一个基于Linux的开放系统，所以如果您想要有一些动辄上千元的NAS才具备的功能，Lomorage都可以安装相关的软件，比如下载可以安装Transmission，个人媒体中心可以安装Jellyfin。而轻NAS的其他文件的备份，通过SAMBA可以轻松做到，默认已经启用。
+  容量多大？ Lomorage不自带硬盘，您的硬盘通过USB接上就能用，无论是机械硬盘，SSD，还是U盘，有多大我们都支持，实测16T可用。
+  可以接多块硬盘吗？ 可以，但需要通过带电源的USB集线器才行，默认的功率只能支持一块硬盘。</description>
+    </item>
+    
+    <item>
+      <title>价格比较</title>
+      <link>http://lomorage.com/zh/compare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/compare/</guid>
       <description>价格比较 下面的比较主要考虑的是每个产品的最大卖点，并假设用户的主要需求是照片的备份和管理，如果您需要的功能超出那个范围，您可能需要考虑一下直接用NAS，或者如果您是专家可以使用树莓派或其他的单板计算机DIY一个。
 比如，云服务主要按不同的存储空间容量大小来定价，其他的一些功能则没有差别；而对于那些放置在自家的硬件产品，价格的差别主要在于硬件的配置，同一厂商的不同型号软件功能没有太大差异。在所有的功能中，备份是最基础的功能，其他的高级功能都是构建在这个基础上的。
 Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果您使用Windows或Mac电脑，也就无需另外购置额外的硬件，但如果想更好但利用改系统，将其作为一个7x24小时的私有云，您可以选择树莓派。即便是购买树莓派，也比市面上的方案更加经济实用。软件方面有些高级功能现在还在开发中，但基本的存储备份功能安全稳定，没有任何隐形费用，没有任何用户锁定，不泄漏隐私，为什么不试试呢？
@@ -82,10 +96,10 @@ Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果
     
     <item>
       <title>常见问题</title>
-      <link>https://lomorage.com/zh/faq/</link>
+      <link>http://lomorage.com/zh/faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/faq/</guid>
+      <guid>http://lomorage.com/zh/faq/</guid>
       <description>怎么想到&amp;quot;Lomorage&amp;quot;这个名字? Lomorage的费用是多少? 如何设置冗余备份? 支持那些文件系统? 为什么硬盘上的目录命名的时间看起来不对? 如何设置冗余备份? 编辑后的照片视频支持吗? 什么是后台备份? Raspbian不能启动如何恢复? 密码重置 除了能做照片备份管理之外还能做什么？ 容量多大？ 可以接多块硬盘吗？ 闲置硬盘可以用吗？ 伤硬盘吗？ 如何安装使用？ 备份的照片怎么看？ 是否支持远程访问？ 支持导出照片到手机吗？  怎么想到&amp;quot;Lomorage&amp;quot;这个名字? &amp;ldquo;Lomorage&amp;quot;结合了&amp;quot;Lomography&amp;quot;和&amp;quot;Storage&amp;quot;两个单词.
 Lomorage的费用是多少? 软件免费，硬件用户自己可以购买，基于Orange Pi Zero套件，价格不到200人民币。具体的价格比较和配置可以参考这里。绝无任何变相收费。
 如何设置冗余备份? 如果您是在macOS上运行Lomorage服务（Windows暂时还没有支持），您可以打开LomoAgent应用程序的设置窗口，设置冗余备份。
@@ -105,35 +119,21 @@ Raspbian不能启动如何恢复? 不用担心，您的相片存储在硬盘中�
     
     <item>
       <title>联系我们</title>
-      <link>https://lomorage.com/zh/contact/</link>
+      <link>http://lomorage.com/zh/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/contact/</guid>
+      <guid>http://lomorage.com/zh/contact/</guid>
       <description>客户服务 如果您有任何的问题，建议，新需求，请联系我们，我们洗耳恭听。
 您也可以加入我们的slack channel</description>
     </item>
     
     <item>
       <title>调查问卷</title>
-      <link>https://lomorage.com/zh/survey/</link>
+      <link>http://lomorage.com/zh/survey/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/survey/</guid>
+      <guid>http://lomorage.com/zh/survey/</guid>
       <description>loading… 点击这里查看结果。</description>
-    </item>
-    
-    <item>
-      <title>购买</title>
-      <link>https://lomorage.com/zh/buy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lomorage.com/zh/buy/</guid>
-      <description>Lomorage - 珍藏美好回忆，享受精彩瞬间 我们是一群硅谷的工程师，在使用过一些现有的照片存储备份管理产品后，我们觉得需要有更加简单易用，更加稳定，经济实用，涵盖照片视频的备份，管理，分享和展示的一套完整方案。出于对家庭的热爱，对隐私的关注，我们开发了Lomorage，我们是深度用户，我们倾听用户的声音，我们希望Lomorage能成为一个物美价廉品质优的大众产品。
-淘宝购买链接: https://item.taobao.com/item.htm?spm=a230r.1.14.3.780169a6MMIJyO&amp;amp;id=642763751535&amp;amp;ns=1&amp;amp;abbucket=15#detail 1. 问题痛点  手机里面太多照片和视频，怎么备份好？ 懒得整理照片，照片存放的七零八落，还有重复？ 习惯文档拍照备份，但不能文字查找？ 能不能秒开备份的照片视频，就像存本地一样？ 担心备份照片的硬盘坏掉？ 担心隐私泄露？ 担心备份照片视频被压缩？ 担心上车被坑，限速收费，变相收费，甚至停止运营？  2. 特色功能  手机照片，轻松下拉备份，是否备份成功一目了然。 支持增量差异上传，不会重复备份。 支持断点续传，再大的视频都不怕。 完美支持动态照片Live Photo，慢动作视频和DNG格式，支持所有主流照片视频格式。 原始文件备份，质量无损耗，时间地理位置等信息统统保留。 有相同的照片，照片去重无需存储多次。 相似图片分析，可以方便选择最好的留下。 多台手机平板，登陆同一账号，照片即可访问。 家庭成员不同账号，保护隐私。 有小秘密，加密存储。（即将推出） 照片分享，不占手机内存。 备份的照片无需手动下载到本地，也能轻松分享到社交网络。 换手机了照片也能随时访问。 一键批量导出备份照片到手机。（即将推出） 离线智能缓存，手机没网也能看海量照片视频。 按地点，时间，图片文字等智能查找。 历史的今天，让您的照片不再封存在硬盘里。 支持手动整理相册，打标签，让你按自己的方式组织照片。（即将推出） 多重备份，大大降低数据丢失风险。 硬盘照片导入，把繁琐的照片管理工作交给专业的Lomorage。 不限速，不限账号数，硬盘备份数据一目了然，拒绝绑架用户。 硬盘即插即用，无需重新格式化。  更多信息，猛击查看
-3. Lomorage实拍图 Lomorage迷你版：小身板，低功耗，功能一个不少。  手机APP：轻松下拉备份，离线缓存，超省空间，智能查找，快速定位。  Lomorage网页版：相机照片，硬盘照片，拖入即可方便导入。  4. 常见问题   除了能做照片备份管理之外还能做什么？ **Lomorage专注照片备份和管理，我们的现阶段的目标是把这块功能做的易用稳定完善，做一个值得信赖的产品。**但我们使用的是一个基于Linux的开放系统，所以如果您想要有一些动辄上千元的NAS才具备的功能，Lomorage都可以安装相关的软件，比如下载可以安装Transmission，个人媒体中心可以安装Jellyfin。而轻NAS的其他文件的备份，通过SAMBA可以轻松做到，默认已经启用。
-  容量多大？ Lomorage不自带硬盘，您的硬盘通过USB接上就能用，无论是机械硬盘，SSD，还是U盘，有多大我们都支持，实测16T可用。
-  可以接多块硬盘吗？ 可以，但需要通过带电源的USB集线器才行，默认的功率只能支持一块硬盘。
-  闲置硬盘可以用吗？ 可以，硬盘无需格式化，支持所有主流的文件系统（FAT32, NTFS, EXT等），即插即用。</description>
     </item>
     
   </channel>

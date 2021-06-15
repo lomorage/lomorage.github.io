@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Lomorage</title>
-    <link>https://lomorage.com/blog/</link>
+    <link>http://lomorage.com/blog/</link>
     <description>Recent content in Blogs on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run Lomoage Docker in Windows 10</title>
-      <link>https://lomorage.com/blog/2020/11/16/windows-docker/</link>
+      <link>http://lomorage.com/blog/2020/11/16/windows-docker/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2020/11/16/windows-docker/</guid>
+      <guid>http://lomorage.com/blog/2020/11/16/windows-docker/</guid>
       <description>&lt;p&gt;Though Lomorage already provide Windows Native MSI package, But if you like to run Docker image in Windows, please follow below steps to do so. Esp. on Windows Server, Docker can leverage the Windows HYPER-v technology，and let the Lomorage running faster. If you do not know what is Docker, you also can download the native Lomorage installer for Windows, &lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;Download Lomorage Windows Installer&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Move MyCloud to Lomorage</title>
-      <link>https://lomorage.com/blog/2020/05/17/import_my_cloud/</link>
+      <link>http://lomorage.com/blog/2020/05/17/import_my_cloud/</link>
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2020/05/17/import_my_cloud/</guid>
+      <guid>http://lomorage.com/blog/2020/05/17/import_my_cloud/</guid>
       <description>&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt; have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the
 My Cloud app is not good to use, so everything I have to connect to my phone with USB cable, and
 keep the computer on to copy the files to MyCloud disk.
@@ -30,19 +30,19 @@ keep the computer on to copy the files to MyCloud disk.
     
     <item>
       <title>Setup Covid-19 dashboard using Raspberry Pi</title>
-      <link>https://lomorage.com/blog/2020/03/29/covid19/</link>
+      <link>http://lomorage.com/blog/2020/03/29/covid19/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2020/03/29/covid19/</guid>
+      <guid>http://lomorage.com/blog/2020/03/29/covid19/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setup Lomorage secondary backup with Raspberry Pi</title>
-      <link>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</link>
+      <link>http://lomorage.com/blog/2019/12/24/raspberrypi-hd/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</guid>
+      <guid>http://lomorage.com/blog/2019/12/24/raspberrypi-hd/</guid>
       <description>&lt;p&gt;Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.&lt;/p&gt;</description>
     </item>
     
