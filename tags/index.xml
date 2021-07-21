@@ -2,125 +2,125 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lomorage</title>
-    <link>https://lomorage.com/tags/</link>
+    <link>http://lomorage.com/tags/</link>
     <description>Recent content in Tags on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Container</title>
-      <link>https://lomorage.com/tags/container/</link>
+      <link>http://lomorage.com/tags/container/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/container/</guid>
+      <guid>http://lomorage.com/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://lomorage.com/tags/docker/</link>
+      <link>http://lomorage.com/tags/docker/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/docker/</guid>
+      <guid>http://lomorage.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lomorage</title>
-      <link>https://lomorage.com/tags/lomorage/</link>
+      <link>http://lomorage.com/tags/lomorage/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/lomorage/</guid>
+      <guid>http://lomorage.com/tags/lomorage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MyCloud</title>
-      <link>https://lomorage.com/tags/mycloud/</link>
+      <link>http://lomorage.com/tags/mycloud/</link>
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/mycloud/</guid>
+      <guid>http://lomorage.com/tags/mycloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>迁移</title>
-      <link>https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</link>
+      <link>http://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</link>
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</guid>
+      <guid>http://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Covid-19</title>
-      <link>https://lomorage.com/tags/covid-19/</link>
+      <link>http://lomorage.com/tags/covid-19/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/covid-19/</guid>
+      <guid>http://lomorage.com/tags/covid-19/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dashboard</title>
-      <link>https://lomorage.com/tags/dashboard/</link>
+      <link>http://lomorage.com/tags/dashboard/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/dashboard/</guid>
+      <guid>http://lomorage.com/tags/dashboard/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberry Pi</title>
-      <link>https://lomorage.com/tags/raspberry-pi/</link>
+      <link>http://lomorage.com/tags/raspberry-pi/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/raspberry-pi/</guid>
+      <guid>http://lomorage.com/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flash Drive</title>
-      <link>https://lomorage.com/tags/flash-drive/</link>
+      <link>http://lomorage.com/tags/flash-drive/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/flash-drive/</guid>
+      <guid>http://lomorage.com/tags/flash-drive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hard Disk</title>
-      <link>https://lomorage.com/tags/hard-disk/</link>
+      <link>http://lomorage.com/tags/hard-disk/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/hard-disk/</guid>
+      <guid>http://lomorage.com/tags/hard-disk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Restore</title>
-      <link>https://lomorage.com/tags/restore/</link>
+      <link>http://lomorage.com/tags/restore/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/restore/</guid>
+      <guid>http://lomorage.com/tags/restore/</guid>
       <description></description>
     </item>
     
     <item>
       <title>secondary backup</title>
-      <link>https://lomorage.com/tags/secondary-backup/</link>
+      <link>http://lomorage.com/tags/secondary-backup/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/secondary-backup/</guid>
+      <guid>http://lomorage.com/tags/secondary-backup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>USB Hub</title>
-      <link>https://lomorage.com/tags/usb-hub/</link>
+      <link>http://lomorage.com/tags/usb-hub/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/tags/usb-hub/</guid>
+      <guid>http://lomorage.com/tags/usb-hub/</guid>
       <description></description>
     </item>
     

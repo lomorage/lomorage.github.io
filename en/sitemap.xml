@@ -3,352 +3,337 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lomorage.com/blog/</loc>
+    <loc>http://lomorage.com/blog/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/blog/"
+                href="http://lomorage.com/zh/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/blog/"
+                href="http://lomorage.com/blog/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/categories/</loc>
+    <loc>http://lomorage.com/categories/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/categories/"
+                href="http://lomorage.com/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/categories/"
+                href="http://lomorage.com/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/container/</loc>
+    <loc>http://lomorage.com/tags/container/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/docker/</loc>
+    <loc>http://lomorage.com/tags/docker/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/tags/docker/"
+                href="http://lomorage.com/zh/tags/docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/tags/docker/"
+                href="http://lomorage.com/tags/docker/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/categories/docker/</loc>
+    <loc>http://lomorage.com/categories/docker/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/lomorage/</loc>
-    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://lomorage.com/zh/tags/lomorage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lomorage.com/tags/lomorage/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lomorage.com/</loc>
+    <loc>http://lomorage.com/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/"
+                href="http://lomorage.com/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/"
+                href="http://lomorage.com/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/blog/2020/11/16/windows-docker/</loc>
+    <loc>http://lomorage.com/tags/lomorage/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/blog/2020/11/16/windows-docker/"
+                href="http://lomorage.com/zh/tags/lomorage/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/blog/2020/11/16/windows-docker/"
+                href="http://lomorage.com/tags/lomorage/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/</loc>
+    <loc>http://lomorage.com/blog/2020/11/16/windows-docker/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://lomorage.com/es/tags/"
+                href="http://lomorage.com/zh/blog/2020/11/16/windows-docker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/tags/"
+                href="http://lomorage.com/blog/2020/11/16/windows-docker/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/categories/blog/</loc>
+    <loc>http://lomorage.com/tags/</loc>
+    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/categories/blog/</loc>
     <lastmod>2020-05-17T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/categories/blog/"
+                href="http://lomorage.com/zh/categories/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/categories/blog/"
+                href="http://lomorage.com/categories/blog/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/blog/2020/05/17/import_my_cloud/</loc>
+    <loc>http://lomorage.com/blog/2020/05/17/import_my_cloud/</loc>
     <lastmod>2020-05-17T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/blog/2020/05/17/import_my_cloud/"
+                href="http://lomorage.com/zh/blog/2020/05/17/import_my_cloud/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/blog/2020/05/17/import_my_cloud/"
+                href="http://lomorage.com/blog/2020/05/17/import_my_cloud/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/mycloud/</loc>
+    <loc>http://lomorage.com/tags/mycloud/</loc>
     <lastmod>2020-05-17T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/tags/mycloud/"
+                href="http://lomorage.com/zh/tags/mycloud/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/tags/mycloud/"
+                href="http://lomorage.com/tags/mycloud/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</loc>
+    <loc>http://lomorage.com/tags/%E8%BF%81%E7%A7%BB/</loc>
     <lastmod>2020-05-17T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/"
+                href="http://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/tags/%E8%BF%81%E7%A7%BB/"
+                href="http://lomorage.com/tags/%E8%BF%81%E7%A7%BB/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/covid-19/</loc>
+    <loc>http://lomorage.com/tags/covid-19/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/categories/dashboard/</loc>
+    <loc>http://lomorage.com/categories/dashboard/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/dashboard/</loc>
+    <loc>http://lomorage.com/tags/dashboard/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/raspberry-pi/</loc>
+    <loc>http://lomorage.com/tags/raspberry-pi/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/blog/2020/03/29/covid19/</loc>
+    <loc>http://lomorage.com/blog/2020/03/29/covid19/</loc>
     <lastmod>2020-03-29T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/blog/2020/03/29/covid19/"
+                href="http://lomorage.com/zh/blog/2020/03/29/covid19/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/blog/2020/03/29/covid19/"
+                href="http://lomorage.com/blog/2020/03/29/covid19/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/categories/faq/</loc>
+    <loc>http://lomorage.com/categories/faq/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/categories/faq/"
+                href="http://lomorage.com/zh/categories/faq/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/categories/faq/"
+                href="http://lomorage.com/categories/faq/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/flash-drive/</loc>
+    <loc>http://lomorage.com/tags/flash-drive/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/hard-disk/</loc>
+    <loc>http://lomorage.com/tags/hard-disk/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/restore/</loc>
+    <loc>http://lomorage.com/tags/restore/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/secondary-backup/</loc>
+    <loc>http://lomorage.com/tags/secondary-backup/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</loc>
+    <loc>http://lomorage.com/blog/2019/12/24/raspberrypi-hd/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/"
+                href="http://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/blog/2019/12/24/raspberrypi-hd/"
+                href="http://lomorage.com/blog/2019/12/24/raspberrypi-hd/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/tags/usb-hub/</loc>
+    <loc>http://lomorage.com/tags/usb-hub/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lomorage.com/buy/</loc>
+    <loc>http://lomorage.com/buy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/buy/"
+                href="http://lomorage.com/zh/buy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/buy/"
+                href="http://lomorage.com/buy/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/contact/</loc>
+    <loc>http://lomorage.com/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/contact/"
+                href="http://lomorage.com/zh/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/contact/"
+                href="http://lomorage.com/contact/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/faq/</loc>
+    <loc>http://lomorage.com/faq/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/faq/"
+                href="http://lomorage.com/zh/faq/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/faq/"
+                href="http://lomorage.com/faq/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/compare/</loc>
+    <loc>http://lomorage.com/compare/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/compare/"
+                href="http://lomorage.com/zh/compare/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/compare/"
+                href="http://lomorage.com/compare/"
                 />
   </url>
   
   <url>
-    <loc>https://lomorage.com/survey/</loc>
+    <loc>http://lomorage.com/survey/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lomorage.com/zh/survey/"
+                href="http://lomorage.com/zh/survey/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lomorage.com/survey/"
+                href="http://lomorage.com/survey/"
                 />
   </url>
   

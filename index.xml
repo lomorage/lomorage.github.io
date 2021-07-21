@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lomorage</title>
-    <link>https://lomorage.com/</link>
-    <description>Recent content on Lomorage</description>
+    <title>Home on Lomorage</title>
+    <link>http://lomorage.com/</link>
+    <description>Recent content in Home on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run Lomoage Docker in Windows 10</title>
-      <link>https://lomorage.com/blog/2020/11/16/windows-docker/</link>
+      <link>http://lomorage.com/blog/2020/11/16/windows-docker/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2020/11/16/windows-docker/</guid>
+      <guid>http://lomorage.com/blog/2020/11/16/windows-docker/</guid>
       <description>&lt;p&gt;Though Lomorage already provide Windows Native MSI package, But if you like to run Docker image in Windows, please follow below steps to do so. Esp. on Windows Server, Docker can leverage the Windows HYPER-v technology，and let the Lomorage running faster. If you do not know what is Docker, you also can download the native Lomorage installer for Windows, &lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;Download Lomorage Windows Installer&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Move MyCloud to Lomorage</title>
-      <link>https://lomorage.com/blog/2020/05/17/import_my_cloud/</link>
+      <link>http://lomorage.com/blog/2020/05/17/import_my_cloud/</link>
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2020/05/17/import_my_cloud/</guid>
+      <guid>http://lomorage.com/blog/2020/05/17/import_my_cloud/</guid>
       <description>&lt;p&gt;&lt;strong&gt;I&lt;/strong&gt; have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the 
 My Cloud app is not good to use, so everything I have to connect to my phone with USB cable, and
 keep the computer on to copy the files to MyCloud disk. 
@@ -30,67 +30,67 @@ keep the computer on to copy the files to MyCloud disk.
     
     <item>
       <title>Setup Covid-19 dashboard using Raspberry Pi</title>
-      <link>https://lomorage.com/blog/2020/03/29/covid19/</link>
+      <link>http://lomorage.com/blog/2020/03/29/covid19/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2020/03/29/covid19/</guid>
+      <guid>http://lomorage.com/blog/2020/03/29/covid19/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Setup Lomorage secondary backup with Raspberry Pi</title>
-      <link>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</link>
+      <link>http://lomorage.com/blog/2019/12/24/raspberrypi-hd/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/blog/2019/12/24/raspberrypi-hd/</guid>
+      <guid>http://lomorage.com/blog/2019/12/24/raspberrypi-hd/</guid>
       <description>&lt;p&gt;Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Buy</title>
-      <link>https://lomorage.com/buy/</link>
+      <link>http://lomorage.com/buy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/buy/</guid>
+      <guid>http://lomorage.com/buy/</guid>
       <description>Lomorage - Save the moments, enjoy the memories We build Lomorage with love of the family, and we care about privacy, we are the users of Lomorage, and we constantly improve it with user&amp;rsquo;s feedback.
 Online store coming soon 1. Pain points  So many photos in Phone, how to backup? Don&amp;rsquo;t have time to clean up the photo, the backup on hard drive is everywhere with duplicates? Getting used to take screenshot for documents, but can&amp;rsquo;t find it via text search?</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://lomorage.com/contact/</link>
+      <link>http://lomorage.com/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/contact/</guid>
+      <guid>http://lomorage.com/contact/</guid>
       <description>We are here to help you Report problems, having new requirements? we are glad to hear from you, that will help us to polish the products.
 You can also join our slack channel.</description>
     </item>
     
     <item>
       <title>FAQ</title>
-      <link>https://lomorage.com/faq/</link>
+      <link>http://lomorage.com/faq/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/faq/</guid>
+      <guid>http://lomorage.com/faq/</guid>
       <description>How comes the name &amp;ldquo;Lomorage&amp;rdquo;? What is the cost of Lomorage? How to setup redundancy backup? What file systems supported? Why folders named with date time seem not correct on hard drive? How to setup a secondary backup? Does Lomorage support backup edited file? What is background backup? How to recover from Raspbian boot failure? I forget password, how to reset? What can it do besides photo backup and management?</description>
     </item>
     
     <item>
       <title>Price Comparison</title>
-      <link>https://lomorage.com/compare/</link>
+      <link>http://lomorage.com/compare/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/compare/</guid>
+      <guid>http://lomorage.com/compare/</guid>
       <description>Price Comparison The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Orange Pi Zero or other single board computer to DIY yourself if you are expert.
 We are not against cloud storage, it can be as good backup for local storage, and we suggest user keep the local copy.</description>
     </item>
     
     <item>
       <title>Survey</title>
-      <link>https://lomorage.com/survey/</link>
+      <link>http://lomorage.com/survey/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lomorage.com/survey/</guid>
+      <guid>http://lomorage.com/survey/</guid>
       <description>loading…</description>
     </item>
     

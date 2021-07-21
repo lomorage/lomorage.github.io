@@ -2,170 +2,170 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lomorage</title>
-    <link>https://lomorage.com/zh/tags/</link>
+    <link>http://lomorage.com/zh/tags/</link>
     <description>Recent content in Tags on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="https://lomorage.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>https://lomorage.com/zh/tags/docker/</link>
+      <link>http://lomorage.com/zh/tags/docker/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/docker/</guid>
+      <guid>http://lomorage.com/zh/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lomorage</title>
-      <link>https://lomorage.com/zh/tags/lomorage/</link>
+      <link>http://lomorage.com/zh/tags/lomorage/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/lomorage/</guid>
+      <guid>http://lomorage.com/zh/tags/lomorage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>容器</title>
-      <link>https://lomorage.com/zh/tags/%E5%AE%B9%E5%99%A8/</link>
+      <link>http://lomorage.com/zh/tags/%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E5%AE%B9%E5%99%A8/</guid>
+      <guid>http://lomorage.com/zh/tags/%E5%AE%B9%E5%99%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>iCloud</title>
-      <link>https://lomorage.com/zh/tags/icloud/</link>
+      <link>http://lomorage.com/zh/tags/icloud/</link>
       <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/icloud/</guid>
+      <guid>http://lomorage.com/zh/tags/icloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>痛点</title>
-      <link>https://lomorage.com/zh/tags/%E7%97%9B%E7%82%B9/</link>
+      <link>http://lomorage.com/zh/tags/%E7%97%9B%E7%82%B9/</link>
       <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E7%97%9B%E7%82%B9/</guid>
+      <guid>http://lomorage.com/zh/tags/%E7%97%9B%E7%82%B9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>重复照片</title>
-      <link>https://lomorage.com/zh/tags/%E9%87%8D%E5%A4%8D%E7%85%A7%E7%89%87/</link>
+      <link>http://lomorage.com/zh/tags/%E9%87%8D%E5%A4%8D%E7%85%A7%E7%89%87/</link>
       <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E9%87%8D%E5%A4%8D%E7%85%A7%E7%89%87/</guid>
+      <guid>http://lomorage.com/zh/tags/%E9%87%8D%E5%A4%8D%E7%85%A7%E7%89%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MyCloud</title>
-      <link>https://lomorage.com/zh/tags/mycloud/</link>
+      <link>http://lomorage.com/zh/tags/mycloud/</link>
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/mycloud/</guid>
+      <guid>http://lomorage.com/zh/tags/mycloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>迁移</title>
-      <link>https://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/</link>
+      <link>http://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/</link>
       <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/</guid>
+      <guid>http://lomorage.com/zh/tags/%E8%BF%81%E7%A7%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>新冠病毒</title>
-      <link>https://lomorage.com/zh/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/</link>
+      <link>http://lomorage.com/zh/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/</guid>
+      <guid>http://lomorage.com/zh/tags/%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92/</guid>
       <description></description>
     </item>
     
     <item>
       <title>树莓派</title>
-      <link>https://lomorage.com/zh/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
+      <link>http://lomorage.com/zh/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
+      <guid>http://lomorage.com/zh/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>看板</title>
-      <link>https://lomorage.com/zh/tags/%E7%9C%8B%E6%9D%BF/</link>
+      <link>http://lomorage.com/zh/tags/%E7%9C%8B%E6%9D%BF/</link>
       <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E7%9C%8B%E6%9D%BF/</guid>
+      <guid>http://lomorage.com/zh/tags/%E7%9C%8B%E6%9D%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>USB分线器</title>
-      <link>https://lomorage.com/zh/tags/usb%E5%88%86%E7%BA%BF%E5%99%A8/</link>
+      <link>http://lomorage.com/zh/tags/usb%E5%88%86%E7%BA%BF%E5%99%A8/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/usb%E5%88%86%E7%BA%BF%E5%99%A8/</guid>
+      <guid>http://lomorage.com/zh/tags/usb%E5%88%86%E7%BA%BF%E5%99%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>U盘</title>
-      <link>https://lomorage.com/zh/tags/u%E7%9B%98/</link>
+      <link>http://lomorage.com/zh/tags/u%E7%9B%98/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/u%E7%9B%98/</guid>
+      <guid>http://lomorage.com/zh/tags/u%E7%9B%98/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows</title>
-      <link>https://lomorage.com/zh/tags/windows/</link>
+      <link>http://lomorage.com/zh/tags/windows/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/windows/</guid>
+      <guid>http://lomorage.com/zh/tags/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>冗余备份</title>
-      <link>https://lomorage.com/zh/tags/%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD/</link>
+      <link>http://lomorage.com/zh/tags/%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD/</guid>
+      <guid>http://lomorage.com/zh/tags/%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD/</guid>
       <description></description>
     </item>
     
     <item>
       <title>恢复</title>
-      <link>https://lomorage.com/zh/tags/%E6%81%A2%E5%A4%8D/</link>
+      <link>http://lomorage.com/zh/tags/%E6%81%A2%E5%A4%8D/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E6%81%A2%E5%A4%8D/</guid>
+      <guid>http://lomorage.com/zh/tags/%E6%81%A2%E5%A4%8D/</guid>
       <description></description>
     </item>
     
     <item>
       <title>手机传电脑</title>
-      <link>https://lomorage.com/zh/tags/%E6%89%8B%E6%9C%BA%E4%BC%A0%E7%94%B5%E8%84%91/</link>
+      <link>http://lomorage.com/zh/tags/%E6%89%8B%E6%9C%BA%E4%BC%A0%E7%94%B5%E8%84%91/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E6%89%8B%E6%9C%BA%E4%BC%A0%E7%94%B5%E8%84%91/</guid>
+      <guid>http://lomorage.com/zh/tags/%E6%89%8B%E6%9C%BA%E4%BC%A0%E7%94%B5%E8%84%91/</guid>
       <description></description>
     </item>
     
     <item>
       <title>硬盘</title>
-      <link>https://lomorage.com/zh/tags/%E7%A1%AC%E7%9B%98/</link>
+      <link>http://lomorage.com/zh/tags/%E7%A1%AC%E7%9B%98/</link>
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
-      <guid>https://lomorage.com/zh/tags/%E7%A1%AC%E7%9B%98/</guid>
+      <guid>http://lomorage.com/zh/tags/%E7%A1%AC%E7%9B%98/</guid>
       <description></description>
     </item>
     
