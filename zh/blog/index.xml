@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>零成本打造Lomorage电子相框</title>
+      <link>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</guid>
+      <description>&lt;p&gt;我家里有个&lt;strong&gt;android的平板已经积了很多灰尘了&lt;/strong&gt;，扔掉它觉得舍不得而且还污染地球。
+既然照片已经都存在Lomorage服务器上，能否用android平板来展示我想看的照片呢？&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>在Windows 10 上安装Lomorage容器镜像</title>
       <link>http://lomorage.com/zh/blog/2020/11/16/windows-docker/</link>

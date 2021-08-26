@@ -6,7 +6,16 @@
     <description>Recent content on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/tags/lomorage/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/tags/lomorage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turn your old android tablet to lomorage photo frame</title>
+      <link>http://lomorage.com/blog/2021/08/26/zero-cost-android-frame/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/blog/2021/08/26/zero-cost-android-frame/</guid>
+      <description>&lt;p&gt;I have and old android tablet at home, how to turn it to as photo frame to display my pictures?&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Run Lomoage Docker in Windows 10</title>
       <link>http://lomorage.com/blog/2020/11/16/windows-docker/</link>
