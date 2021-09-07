@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://lomorage.com/categories/blog/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/categories/blog/"
+                />
+  </url>
+  
+  <url>
     <loc>http://lomorage.com/blog/</loc>
-    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -19,7 +34,7 @@
   
   <url>
     <loc>http://lomorage.com/categories/</loc>
-    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -29,6 +44,101 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://lomorage.com/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/image-processing/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/jpeg/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/blog/2021/09/01/piq-size/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/webp/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/android-tablet/</loc>
+    <lastmod>2021-08-26T10:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/categories/lomoframe/</loc>
+    <lastmod>2021-08-26T10:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/lomorage/</loc>
+    <lastmod>2021-08-26T10:38:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/tags/lomorage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/tags/lomorage/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/photo-frame/</loc>
+    <lastmod>2021-08-26T10:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/blog/2021/08/26/zero-cost-android-frame/</loc>
+    <lastmod>2021-08-26T10:38:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/blog/2021/08/26/zero-cost-android-frame/"
                 />
   </url>
   
@@ -58,36 +168,6 @@
   </url>
   
   <url>
-    <loc>http://lomorage.com/</loc>
-    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://lomorage.com/tags/lomorage/</loc>
-    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/tags/lomorage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/tags/lomorage/"
-                />
-  </url>
-  
-  <url>
     <loc>http://lomorage.com/blog/2020/11/16/windows-docker/</loc>
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
@@ -99,36 +179,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://lomorage.com/blog/2020/11/16/windows-docker/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://lomorage.com/tags/</loc>
-    <lastmod>2020-11-16T22:43:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://lomorage.com/categories/blog/</loc>
-    <lastmod>2020-05-17T13:43:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/categories/blog/"
                 />
   </url>
   

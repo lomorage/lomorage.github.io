@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Sep 2021 21:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Image Processing</title>
+      <link>http://lomorage.com/tags/image-processing/</link>
+      <pubDate>Wed, 01 Sep 2021 21:43:40 +0000</pubDate>
+      
+      <guid>http://lomorage.com/tags/image-processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jpeg</title>
+      <link>http://lomorage.com/tags/jpeg/</link>
+      <pubDate>Wed, 01 Sep 2021 21:43:40 +0000</pubDate>
+      
+      <guid>http://lomorage.com/tags/jpeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webp</title>
+      <link>http://lomorage.com/tags/webp/</link>
+      <pubDate>Wed, 01 Sep 2021 21:43:40 +0000</pubDate>
+      
+      <guid>http://lomorage.com/tags/webp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android tablet</title>
+      <link>http://lomorage.com/tags/android-tablet/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/tags/android-tablet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lomorage</title>
+      <link>http://lomorage.com/tags/lomorage/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/tags/lomorage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>photo frame</title>
+      <link>http://lomorage.com/tags/photo-frame/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/tags/photo-frame/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Container</title>
       <link>http://lomorage.com/tags/container/</link>
@@ -22,15 +76,6 @@
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
       <guid>http://lomorage.com/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lomorage</title>
-      <link>http://lomorage.com/tags/lomorage/</link>
-      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
-      
-      <guid>http://lomorage.com/tags/lomorage/</guid>
       <description></description>
     </item>
     

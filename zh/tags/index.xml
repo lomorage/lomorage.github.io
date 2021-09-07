@@ -6,22 +6,40 @@
     <description>Recent content in Tags on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lomorage</title>
+      <link>http://lomorage.com/zh/tags/lomorage/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/tags/lomorage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>安卓平板</title>
+      <link>http://lomorage.com/zh/tags/%E5%AE%89%E5%8D%93%E5%B9%B3%E6%9D%BF/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/tags/%E5%AE%89%E5%8D%93%E5%B9%B3%E6%9D%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>电子相框</title>
+      <link>http://lomorage.com/zh/tags/%E7%94%B5%E5%AD%90%E7%9B%B8%E6%A1%86/</link>
+      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/tags/%E7%94%B5%E5%AD%90%E7%9B%B8%E6%A1%86/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Docker</title>
       <link>http://lomorage.com/zh/tags/docker/</link>
       <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
       
       <guid>http://lomorage.com/zh/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lomorage</title>
-      <link>http://lomorage.com/zh/tags/lomorage/</link>
-      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
-      
-      <guid>http://lomorage.com/zh/tags/lomorage/</guid>
       <description></description>
     </item>
     
