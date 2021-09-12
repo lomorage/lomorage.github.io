@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Lomorage</title>
+    <link>http://lomorage.com/zh/categories/windows/</link>
+    <description>Recent content in Windows on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lomorage Windows 服务器常见问题与解决方法</title>
+      <link>http://lomorage.com/zh/blog/2021/08/29/lomorage_win_faq/</link>
+      <pubDate>Sun, 29 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/blog/2021/08/29/lomorage_win_faq/</guid>
+      <description>&lt;p&gt;Windows 做服务器，简单易操作，下面总结了几个常见的用户碰到的问题：&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

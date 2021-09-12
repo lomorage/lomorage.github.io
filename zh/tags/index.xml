@@ -6,13 +6,22 @@
     <description>Recent content in Tags on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lomorage</title>
       <link>http://lomorage.com/zh/tags/lomorage/</link>
-      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
+      <pubDate>Sun, 29 Aug 2021 10:38:00 +0000</pubDate>
       
       <guid>http://lomorage.com/zh/tags/lomorage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>http://lomorage.com/zh/tags/windows/</link>
+      <pubDate>Sun, 29 Aug 2021 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/tags/windows/</guid>
       <description></description>
     </item>
     
@@ -139,15 +148,6 @@
       <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
       
       <guid>http://lomorage.com/zh/tags/u%E7%9B%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>http://lomorage.com/zh/tags/windows/</link>
-      <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
-      
-      <guid>http://lomorage.com/zh/tags/windows/</guid>
       <description></description>
     </item>
     
