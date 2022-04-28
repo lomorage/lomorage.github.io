@@ -3,23 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://lomorage.com/categories/blog/</loc>
-    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/categories/blog/"
-                />
+    <loc>http://lomorage.com/tags/ai/</loc>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/categories/ai/</loc>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://lomorage.com/blog/</loc>
-    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -34,7 +29,7 @@
   
   <url>
     <loc>http://lomorage.com/categories/</loc>
-    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -49,7 +44,7 @@
   
   <url>
     <loc>http://lomorage.com/</loc>
-    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -59,6 +54,81 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://lomorage.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/lomorage/</loc>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/tags/lomorage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/tags/lomorage/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/photoprism/</loc>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/tags/photoprism/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/tags/photoprism/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/blog/2022/02/11/photoprism/</loc>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/blog/2022/02/11/photoprism/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/blog/2022/02/11/photoprism/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/tags/</loc>
+    <lastmod>2022-02-11T10:38:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://lomorage.com/categories/blog/</loc>
+    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://lomorage.com/zh/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://lomorage.com/categories/blog/"
                 />
   </url>
   
@@ -78,21 +148,6 @@
   </url>
   
   <url>
-    <loc>http://lomorage.com/tags/</loc>
-    <lastmod>2021-09-01T21:43:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>http://lomorage.com/tags/webp/</loc>
     <lastmod>2021-09-01T21:43:40+00:00</lastmod>
   </url>
@@ -105,21 +160,6 @@
   <url>
     <loc>http://lomorage.com/categories/lomoframe/</loc>
     <lastmod>2021-08-26T10:38:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lomorage.com/tags/lomorage/</loc>
-    <lastmod>2021-08-26T10:38:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/tags/lomorage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/tags/lomorage/"
-                />
   </url>
   
   <url>
@@ -315,20 +355,6 @@
   <url>
     <loc>http://lomorage.com/tags/usb-hub/</loc>
     <lastmod>2019-12-24T13:43:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://lomorage.com/buy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://lomorage.com/zh/buy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://lomorage.com/buy/"
-                />
   </url>
   
   <url>

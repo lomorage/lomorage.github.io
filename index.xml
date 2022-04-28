@@ -6,7 +6,16 @@
     <description>Recent content in Home on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Sep 2021 21:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Feb 2022 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PhotoPrism: Open Source AI Photo Management tool</title>
+      <link>http://lomorage.com/blog/2022/02/11/photoprism/</link>
+      <pubDate>Fri, 11 Feb 2022 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/blog/2022/02/11/photoprism/</guid>
+      <description>&lt;p&gt;PhotoPrism is an Open Source AI Photo Management tool, and it works very well along with Lomorage.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Small image compression size comparison between Jpeg and Webp</title>
       <link>http://lomorage.com/blog/2021/09/01/piq-size/</link>
@@ -63,16 +72,6 @@ keep the computer on to copy the files to MyCloud disk.
       
       <guid>http://lomorage.com/blog/2019/12/24/raspberrypi-hd/</guid>
       <description>&lt;p&gt;Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Buy</title>
-      <link>http://lomorage.com/buy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lomorage.com/buy/</guid>
-      <description>Lomorage - Save the moments, enjoy the memories We build Lomorage with love of the family, and we care about privacy, we are the users of Lomorage, and we constantly improve it with user&amp;rsquo;s feedback.
-Online store coming soon 1. Pain points  So many photos in Phone, how to backup? Don&amp;rsquo;t have time to clean up the photo, the backup on hard drive is everywhere with duplicates? Getting used to take screenshot for documents, but can&amp;rsquo;t find it via text search?</description>
     </item>
     
     <item>

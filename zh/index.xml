@@ -6,7 +6,16 @@
     <description>Recent content in 主页 on Lomorage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Feb 2022 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PhotoPrism:开源的智能AI照片视频管理工具</title>
+      <link>http://lomorage.com/zh/blog/2022/02/11/photoprism/</link>
+      <pubDate>Fri, 11 Feb 2022 10:38:00 +0000</pubDate>
+      
+      <guid>http://lomorage.com/zh/blog/2022/02/11/photoprism/</guid>
+      <description>&lt;p&gt;PhotoPrism是一款开源的智能AI照片视频管理工具，能非常好的搭配Lomorage使用。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>零成本打造Lomorage电子相框</title>
       <link>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</link>
@@ -75,20 +84,6 @@
     </item>
     
     <item>
-      <title>Lomorage照片云存储</title>
-      <link>http://lomorage.com/zh/buy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://lomorage.com/zh/buy/</guid>
-      <description>Lomorage照片云存储 - 珍藏美好回忆，享受精彩瞬间 我们是一群硅谷的工程师，在使用过一些现有的照片存储备份管理产品后，我们觉得需要有更加简单易用，更加稳定，经济实用，涵盖照片视频的备份，管理，分享和展示的一套完整方案。出于对家庭的热爱，对隐私的关注，我们开发了Lomorage，我们是深度用户，我们倾听用户的声音，我们希望Lomorage能成为一个物美价廉品质优的大众产品。
-您可以自行下载安装到您已有到设备，或者您也可以直接购买即插即用的Lomorage照片云存储，迷你版和标准版硬件分别基于Orange Pi Zero和Raspberry Pi 4，预装了定制的Lomorage系统。
-淘宝购买链接 1. 问题痛点  手机里面太多照片和视频，怎么备份好？ 懒得整理照片，照片存放的七零八落，还有重复？ 习惯文档拍照备份，但不能文字查找？ 能不能秒开备份的照片视频，就像存本地一样？ 担心备份照片的硬盘坏掉？ 担心隐私泄露？ 担心备份照片视频被压缩？ 担心上车被坑，限速收费，变相收费，甚至停止运营？  2. 特色功能  手机照片，轻松下拉备份，是否备份成功一目了然。 支持增量差异上传，不会重复备份。 支持断点续传，再大的视频都不怕。 完美支持动态照片Live Photo，慢动作视频和DNG格式，支持所有主流照片视频格式。 原始文件备份，质量无损耗，时间地理位置等信息统统保留。 有相同的照片，照片去重无需存储多次。 相似图片分析，可以方便选择最好的留下。 多台手机平板，登陆同一账号，照片即可访问。 家庭成员不同账号，保护隐私。 有小秘密，加密存储。（即将推出） 照片分享，不占手机内存。 备份的照片无需手动下载到本地，也能轻松分享到社交网络。 换手机了照片也能随时访问。 一键批量导出备份照片到手机。（即将推出） 离线智能缓存，手机没网也能看海量照片视频。 按地点，时间，图片文字等智能查找。 历史的今天，让您的照片不再封存在硬盘里。 支持手动整理相册，打标签，让你按自己的方式组织照片。（即将推出） 多重备份，大大降低数据丢失风险。 硬盘照片导入，把繁琐的照片管理工作交给专业的Lomorage。 不限速，不限账号数，硬盘备份数据一目了然，拒绝绑架用户。 硬盘即插即用，无需重新格式化。  更多信息，猛击查看
-3. Lomorage实拍图 Lomorage迷你版：小身板，低功耗，功能一个不少。  手机APP：轻松下拉备份，离线缓存，超省空间，智能查找，快速定位。  Lomorage网页版：相机照片，硬盘照片，拖入即可方便导入。  4. 常见问题   除了能做照片备份管理之外还能做什么？ **Lomorage专注照片备份和管理，我们的现阶段的目标是把这块功能做的易用稳定完善，做一个值得信赖的产品。**但我们使用的是一个基于Linux的开放系统，所以如果您想要有一些动辄上千元的NAS才具备的功能，Lomorage都可以安装相关的软件，比如下载可以安装Transmission，个人媒体中心可以安装Jellyfin。而轻NAS的其他文件的备份，通过SAMBA可以轻松做到，默认已经启用。
-  容量多大？ Lomorage不自带硬盘，您的硬盘通过USB接上就能用，无论是机械硬盘，SSD，还是U盘，有多大我们都支持，实测16T可用。
-  可以接多块硬盘吗？ 可以，但需要通过带电源的USB集线器才行，默认的功率只能支持一块硬盘。</description>
-    </item>
-    
-    <item>
       <title>价格比较</title>
       <link>http://lomorage.com/zh/compare/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -110,7 +105,7 @@ Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lomorage.com/zh/faq/</guid>
-      <description>怎么想到&amp;quot;Lomorage&amp;quot;这个名字? Lomorage的费用是多少? 如何设置冗余备份? 支持那些文件系统? 为什么硬盘上的目录命名的时间看起来不对? 如何设置冗余备份? 编辑后的照片视频支持吗? 什么是后台备份? Raspbian不能启动如何恢复? 密码重置 除了能做照片备份管理之外还能做什么？ 容量多大？ 可以接多块硬盘吗？ 闲置硬盘可以用吗？ 伤硬盘吗？ 如何安装使用？ 备份的照片怎么看？ 是否支持远程访问？ 支持导出照片到手机吗？  怎么想到&amp;quot;Lomorage&amp;quot;这个名字? &amp;ldquo;Lomorage&amp;quot;结合了&amp;quot;Lomography&amp;quot;和&amp;quot;Storage&amp;quot;两个单词.
+      <description>怎么想到&amp;quot;Lomorage&amp;quot;这个名字? Lomorage的费用是多少? 如何设置冗余备份? 支持那些文件系统? 为什么硬盘上的目录命名的时间看起来不对? 如何设置冗余备份? 编辑后的照片视频支持吗? 什么是后台备份? Raspbian不能启动如何恢复? 密码重置 除了能做照片备份管理之外还能做什么？ 容量多大？ 可以接多块硬盘吗？ 闲置硬盘可以用吗？ 伤硬盘吗？ 如何安装使用？ 备份的照片怎么看？ 是否支持远程访问？ 支持导出照片到手机吗？ 无法更新Linux服务?  怎么想到&amp;quot;Lomorage&amp;quot;这个名字? &amp;ldquo;Lomorage&amp;quot;结合了&amp;quot;Lomography&amp;quot;和&amp;quot;Storage&amp;quot;两个单词.
 Lomorage的费用是多少? 软件免费，硬件用户自己可以购买，基于Orange Pi Zero套件，价格不到200人民币。具体的价格比较和配置可以参考这里。绝无任何变相收费。
 如何设置冗余备份? 如果您是在macOS上运行Lomorage服务（Windows暂时还没有支持），您可以打开LomoAgent应用程序的设置窗口，设置冗余备份。
 如果您是在树莓派上运行Lomorage服务，插入新的硬盘后，打开iOS手机客户端，在设置选项卡里可以设置冗余备份。
@@ -143,7 +138,7 @@ Raspbian不能启动如何恢复? 不用担心，您的相片存储在硬盘中�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://lomorage.com/zh/survey/</guid>
-      <description>loading… 点击这里查看结果。</description>
+      <description>loading… </description>
     </item>
     
   </channel>
