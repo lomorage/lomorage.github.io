@@ -1,0 +1,150 @@
+<!doctype html><html lang=en-us><head><script type=text/javascript>var userLang=navigator.language||navigator.userLanguage;console.log(window.location.pathname),userLang.startsWith("zh")&&window.location.pathname=="/"&&(window.location.href="/zh/")</script><script type=text/javascript src=//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js data-dojo-config="usePlainJson: true, isDebug: false"></script><script type=text/javascript>window.dojoRequire(["mojo/signup-forms/Loader"],function(e){e.start({baseUrl:"mc.us4.list-manage.com",uuid:"6ace4137554cb923d96ec92c7",lid:"36ce78d7a8",uniqueMethods:!0})})</script>
+<script async src=https://cdn.splitbee.io/sb.js></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Deploy NPS tunnel service on fly.io for Lomorage remote access | Lomorage</title><link href="https://fonts.googleapis.com/css?family=Lato:400" rel=stylesheet><script defer src=https://use.fontawesome.com/releases/v5.15.3/js/all.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-138235951-1","auto"),ga("send","pageview"))</script><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.8.1/css/all.css integrity=sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf crossorigin=anonymous><link rel=stylesheet href=//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon><link rel=apple-touch-icon href=/img/apple-touch-icon.png><link rel=stylesheet type=text/css href=/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css></head><body><div class="navbar navbar--extended"><nav class=nav__mobile></nav><div class=container><div class=navbar__inner><a href=/ class=navbar__logo>Lomorage</a><nav class=navbar__menu><ul><li><a href=/>Home</a></li><li><a href=https://lomosw.lomorage.com/en/index.html class="button button__accent">Download Now</a></li><li><a href=/survey/>Survey</a></li><li><a href=/faq/>FAQ</a></li><li><a href=/blog/>Blog</a></li><li><a href=/contact/>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header><div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner><div class=container><div class=page__header__content><div class=page__header__content__inner id=navConverter><h1 class=page__header__title>Deploy NPS tunnel service on fly.io for Lomorage remote access</h1></div></div></div></div></div><div class=page><div class=container><div class=page__inner><div class=page__main><div class=text-container><h1 id=what-is-nps>What is NPS</h1><p><a href=https://github.com/ehang-io/nps/blob/master/README.md>NPS</a> is a tunnel service similar with Ngrok, it&rsquo;s a reverse proxy used to access local service behind the NAT/Firewall. If you are running self-hosted service like Lomorage at home, and you are outside and want to access Lomorage, then you can use NPS.</p><p><img src=https://camo.githubusercontent.com/c38e5f8cf24e62a3a2482897d4653b70e7d42649549b48cea4d90e873c5480c3/68747470733a2f2f6e67726f6b2e636f6d2f7374617469632f696d672f6f766572766965772e706e67 alt=Ngrok></p><p><img src=https://raw.githubusercontent.com/ehang-io/nps/master/image/web.png alt=NPS></p><p>However NPS need to run somewhere with public access, there are lots of service providers there, <a href=https://fly.io>fly.io</a> has a <a href=https://fly.io/docs/about/pricing/#free-allowances>free plan</a> without binding any credit card, and it supports docker deployment, and the servers runs in <a href=https://fly.io/docs/reference/regions/>datacenters around the world</a> so that the service can be deployed close to the users.</p><h1 id=nps-config>NPS config</h1><p>Now we need to pull the NPS source code:</p><pre tabindex=0><code>git clone https://github.com/ehang-io/nps.git
+</code></pre><p>NPS need config directory and config files to run, so we have to modify the Dockerfile to copy the config files when building the docker image. Creaet a file in nps directory named &ldquo;Dockerfile&rdquo; and input the following content:</p><pre tabindex=0><code>FROM golang:1.15 as builder
+ARG GOPROXY=direct
+WORKDIR /go/src/ehang.io/nps
+COPY . .
+RUN go get -d -v ./... 
+RUN CGO_ENABLED=0 go build -ldflags=&#34;-w -s -extldflags -static&#34; ./cmd/nps/nps.go
+
+FROM scratch
+COPY --from=builder /go/src/ehang.io/nps/nps /
+COPY --from=builder /go/src/ehang.io/nps/web /web
+VOLUME /conf
+COPY ./conf/nps.conf /conf/nps.conf
+COPY ./conf/multi_account.conf /conf/multi_account.conf
+COPY ./conf/server.key /conf/server.key
+COPY ./conf/server.pem /conf/server.pem
+COPY ./conf/clients.json /conf/clients.json
+COPY ./conf/tasks.json /conf/tasks.json
+COPY ./conf/hosts.json /conf/hosts.json
+CMD [&#34;/nps&#34;]
+</code></pre><p>We also need to change following &ldquo;conf/nps.conf&rdquo;,</p><ul><li><p>public_vkey: remove to disable public key access</p></li><li><p>web_username: username for admin portal login</p></li><li><p>web_password: password for admin portal login</p></li><li><p>allow_user_login: allow multi-user login and config</p></li><li><p>allow_user_register: open for public registration</p></li></ul><pre tabindex=0><code>@@ -18,7 +18,7 @@ bridge_ip=0.0.0.0
+ 
+ # Public password, which clients can use to connect to the server
+ # After the connection, the server will be able to open relevant ports and parse related domain names according to its own configuration file.
+-public_vkey=123
++public_vkey=
+ 
+ #Traffic data persistence interval(minute)
+ #Ignorance means no persistence
+@@ -36,9 +36,9 @@ log_level=7
+ #p2p_port=6000
+ 
+ #web
+-web_username=admin
+-web_password=123
++web_username=changeUserName
++web_password=changePassword
+ web_port = 8080
+ web_ip=0.0.0.0
+ web_base_url=
+@@ -56,8 +56,8 @@ auth_crypt_key =1234567812345678
+ #allow_ports=9001-9009,10001,11000-12000
+ 
+ #Web management multi-user login
+-allow_user_login=false
+-allow_user_register=false
++allow_user_login=true
++allow_user_register=true
+ allow_user_change_username=false
+</code></pre><h1 id=deploy-on-flyio>Deploy on fly.io</h1><p>Flyctl is a command-line utility that lets you work with the Fly.io platform, you can follow the <a href=https://fly.io/docs/hands-on/install-flyctl/>steps</a> to install flyctl on your local environment. Once you sign up an account on <a href=https://fly.io>https://fly.io</a>, you can sign in.</p><p>create file &ldquo;fly.toml&rdquo;, in this config file we expose port 8024 which is the NPS tunnel service port, port 8080 which is the NPS web admin portal, and port 443 which is the NPS reverse proxy service port. Basically you access the web admin portal to config the tunnel service and get a credential, and then run the NPC (client running locally connected with NPS) with the credential and forward the request to service you run locally, when you are outside and don&rsquo;t have the access to local network, you can use NPS reverse proxy service to send request to the local service.</p><p>In the following example, we will use subdomain for the tunnel service, so we can use ONE 443 NPS reverse proxy service port for different users and services.</p><pre tabindex=0><code># fly.toml file generated for nps on 2022-10-11T14:44:40-07:00
+
+app = &#34;nps&#34;
+kill_signal = &#34;SIGINT&#34;
+kill_timeout = 5
+processes = []
+
+[env]
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 80
+  protocol = &#34;tcp&#34;
+  script_checks = []
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = &#34;connections&#34;
+
+  [[services.ports]]
+    handlers = [&#34;tls&#34;, &#34;http&#34;]
+    port = 443
+
+  [[services.tcp_checks]]
+    grace_period = &#34;1s&#34;
+    interval = &#34;15s&#34;
+    restart_limit = 0
+    timeout = &#34;2s&#34;
+
+[[services]]
+  http_checks = []
+  internal_port = 8080
+  protocol = &#34;tcp&#34;
+  script_checks = []
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = &#34;connections&#34;
+
+  [[services.ports]]
+    handlers = [&#34;tls&#34;, &#34;http&#34;]
+    port = 8080
+
+  [[services.tcp_checks]]
+    grace_period = &#34;1s&#34;
+    interval = &#34;15s&#34;
+    restart_limit = 0
+    timeout = &#34;2s&#34;
+
+
+[[services]]
+  http_checks = []
+  internal_port = 8024
+  protocol = &#34;tcp&#34;
+  script_checks = []
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = &#34;connections&#34;
+
+  [[services.ports]]
+    port = 8024
+
+  [[services.tcp_checks]]
+    grace_period = &#34;1s&#34;
+    interval = &#34;15s&#34;
+    restart_limit = 0
+    timeout = &#34;2s&#34;
+</code></pre><p>now you can deploy the service:</p><pre tabindex=0><code>fly launch
+fly deploy
+</code></pre><h1 id=custom-domain>Custom Domain</h1><p>Since we are going to use subdomain for the tunnel service, we need configure the DNS records, the following example will use &ldquo;lomorage.com&rdquo; as an example.</p><p>First find the ip address used for fly depolyment:</p><pre tabindex=0><code> % flyctl ips list         
+Update available 0.0.412 -&gt; v0.0.413.
+Run &#34;flyctl version update&#34; to upgrade.
+VERSION	IP               	TYPE  	REGION	CREATED AT           
+v4     	137.66.35.87     	public	global	2022-10-11T21:53:48Z	
+v6     	2a09:8280:1::851b	public	global	2022-10-11T21:53:51Z
+</code></pre><p>Then add two A records:</p><pre tabindex=0><code>A   *       137.66.35.87
+A   nps     137.66.35.87
+</code></pre><h1 id=https-configuration>Https configuration</h1><p>Use the following command to create a certificate for your custom domain:</p><pre tabindex=0><code>% flyctl certs create &#34;*.lomorage.com&#34;
+
+Update available 0.0.411 -&gt; v0.0.413.
+Run &#34;flyctl version update&#34; to upgrade.
+You are creating a wildcard certificate for *.lomorage.com
+We are using lets_encrypt for this certificate.
+
+You can validate your ownership of *.lomorage.com by:
+
+1: Adding an CNAME record to your DNS service which reads:
+
+    CNAME _acme-challenge.lomorage.com =&gt; lomorage.com.o2nlp5.flydns.net.
+</code></pre><p>Then add CNAME DNS record for DNS Validation, it&rsquo;s used to validate you have the control of the domain.</p><pre tabindex=0><code>CNAME   _acme-challenge.lomorage.com    lomorage.com.o2nlp5.flydns.net
+</code></pre><p>It may take a while to take effect, when succeed, <a href=https://nps.lomorage.com:8080>https://nps.lomorage.com:8080</a> will be accessible.</p><p>Now NPS is deployed and configured successfully.</p><h1 id=use-nps-tunnel-service>Use NPS tunnel service</h1><p>You can login <a href=https://nps.lomorage.com:8080>https://nps.lomorage.com:8080</a> with the <code>web_username</code> and <code>web_password</code> configured above.</p><p>The first step is to create a Client, you can just create with the default settings and it will generate an &ldquo;Unique verify Key&rdquo;.</p><p>Then you need to run the client to connect with NPS, you can either <a href=https://github.com/ehang-io/nps/releases>download</a> the client binary or compile it from source code, or run with <a href=https://hub.docker.com/r/ffdfgdfg/npc>docker</a>. To compile from source code:</p><pre tabindex=0><code>go get -u ehang.io/nps
+go build cmd/npc/npc.go
+</code></pre><p>Once you have npc binary ready, you can run it with the &ldquo;Unique verify Key&rdquo; generated above:</p><pre tabindex=0><code>npc -server=nps.lomorage.com:8024 -vkey=Unique_verify_Key
+</code></pre><p>And then you can go to &ldquo;<a href=https://nps.lomorage.com:8080/index/hostlist%22>https://nps.lomorage.com:8080/index/hostlist"</a> and create a host record, fill in the <code>Client ID</code> you just created, and choose custom subdomain <code>Host</code>, like &ldquo;bob.lomorage.com&rdquo; and farward the traffic to <code>Target</code> lomod service running on <code>192.168.1.169:8000</code>.</p><p>Now you can access local Lomorage service using <a href=https://bob.lomorage.com>https://bob.lomorage.com</a>.</p></div><div id=comments><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lomorage.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div></div></div><div class="footer footer--dark"><div class=container><div class=footer__inner><a href=/ class=footer__textLogo>Lomorage</a><div class=footer__data><div class=footer__data__item><div class=footer__row><a href=https://github.com/lomorage/homepage target=_blank style=opacity:1><i class='fab fa-2x fa-github'></i></a></div></div><div class=footer__data__item><div class=footer__row><a href=https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM target=_blank style=opacity:1><i class='fab fa-2x fa-slack'></i></a></div></div><div class=footer__data__item><div class=footer__row><a href=mailto:support@lomorage.com target=_blank style=opacity:1><i class='fa fa-2x fa-envelope'></i></a></div></div></div></div><div class=footer__inner></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script><div class=scripts><script type=text/javascript src=/js/scripts.min.0ace95f16c4ea7b11cb1ffa10c2fe8f2f87bea22847c95cdb98e86138a51e7fe.js></script></div></body></html>
