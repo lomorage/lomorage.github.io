@@ -16,7 +16,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Categories</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -67,9 +67,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Categories" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/es/categories//" />
+  <meta property="og:url" content="/zh/installation-armbian//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -88,13 +88,13 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Categories logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Categories logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Categories - ir a inicio</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
+                    <span class="sr-only"> - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">Cambiar Navegación</span>
+                      <span class="sr-only">切换导航</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -103,6 +103,42 @@
 
             <div class="navbar-collapse collapse" id="navigation">
                 <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh">主页</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/features/">特性</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/installation/">安装</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/faq/">常见问题</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/contact/">联系</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/zh/blog/">博客</a>
+                    
+                  </li>
                   
                 </ul>
             </div>
@@ -139,7 +175,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Categories</h1>
+                <h1></h1>
             </div>
         </div>
     </div>
@@ -147,84 +183,34 @@
 
 
         <div id="content">
+            
+
             <div class="container">
+
                 <div class="row">
-                    
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-12">
 
-                        
-                        
-
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Más reciente</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Más antiguo &rarr;</a></li>
-                            
-                        </ul>
-                    </div>
-                    
-
-                    
-
-                    
-
-                    <div class="col-md-3">
-
-                        
-
-                        
-
-<div class="panel panel-default sidebar-menu">
-
-    <div class="panel-heading">
-      <h3 class="panel-title">Buscar</h3>
-    </div>
-
-    <div class="panel-body">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
-            <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="Buscar">
-                <input type="hidden" name="sitesearch" value="https://lomorage.com/">
-                <span class="input-group-btn">
-                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        
+                        <div>
+                          <h1 id="在armbian上安装lomorage服务程序">在Armbian上安装Lomorage服务程序</h1>
+<p>当前支持Armbian Focal。如果你有其他的需求请联系我们。</p>
+<pre><code>sudo apt install -y ca-certificates python-certifi python3-certifi
+sudo update-ca-certificates --fresh
+wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+echo &quot;deb https://lomoware.github.io/debian/focal focal main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+sudo apt update
+sudo apt install lomo-base lomo-vips lomo-backend lomo-web -y
+</code></pre>
+                        </div>
 
                     </div>
-                    
-
-                    
 
                 </div>
                 
+
             </div>
+            
+
             
         </div>
         
@@ -234,15 +220,9 @@
 
         
         <div class="col-md-4 col-sm-6">
-            <h4>Sobre nosotros</h4>
+            <h4>关于我们</h4>
 
-            We are a small team believe that distributed web is the future,
-        and we focus on building the private photo cloud based on DWeb technologies in the first place.
-        <!--
-        <li>Easy to setup, use and maintain as existing cloud service</li>
-        <li>Store your data securely on your own devices</li>
-        <li>Backup and duplicate storage by adding more devices</li>
-        <li>No one can access your assets without permission</li>-->
+            我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -276,7 +256,7 @@
             <p class="pull-left">Copyright (c) 2018 - 2019, Lomoware; all rights reserved.</p>
             
             <p class="pull-right">
-              Plantilla creada por <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              模板来自 <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
               

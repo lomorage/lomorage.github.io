@@ -16,7 +16,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Categories</title>
+  <title>Installation Guide</title>
   <meta name="author" content="" />
 
   
@@ -67,9 +67,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Categories" />
+  <meta property="og:title" content="Installation Guide" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/es/categories//" />
+  <meta property="og:url" content="/installation//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -88,13 +88,13 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Categories logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Categories logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Categories - ir a inicio</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Installation Guide logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Installation Guide - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">Cambiar Navegación</span>
+                      <span class="sr-only">Toggle Navigation</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -103,6 +103,42 @@
 
             <div class="navbar-collapse collapse" id="navigation">
                 <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/features/">Features</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/installation/">Installation</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
                   
                 </ul>
             </div>
@@ -139,7 +175,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Categories</h1>
+                <h1>Installation Guide</h1>
             </div>
         </div>
     </div>
@@ -147,84 +183,58 @@
 
 
         <div id="content">
+            
+
             <div class="container">
+
                 <div class="row">
-                    
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-12">
 
-                        
-                        
+                        <div>
+                          <h1 id="installation-guide">Installation Guide</h1>
+<h2 id="1-overview">1. Overview</h2>
+<p>To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store. Once you run the Lomorage service, the client APP is supposed to find the service running automatically with zero configuration, then you can upload photos on the Phone.</p>
+<h2 id="2-install-lomorage-service">2. Install Lomorage Service</h2>
+<p>The first step is to set up the Lomorage service.</p>
+<p><strong>You can choose which version of Lomorage Service to download based on your preference</strong>. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don&rsquo;t need to worry about the electricity bill, it is only <a href="https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day">about 5$ a year</a></p>
+<p align="center">
+<a href="/installation-win" title="Install Lomorage service on Windows" class="badge windows">Windows</a>
+&nbsp;
+<a href="/installation-osx" title="Install Lomorage service on macOS" class="badge">macOS</a>
+&nbsp;
+<a href="/installation-pi" title="Install Lomorage service on Raspberry Pi" class="badge raspberrypi">Raspbian</a>
+&nbsp;
+<a href="/installation-pi/#1-install-docker-on-raspberry-pi" title="Install Lomorage service using Docker" class="badge docker">Docker</a>
+&nbsp;
+<a href="/installation-armbian" title="Install Lomorage service on Armbian" class="badge armbian">Armbian</a>
+</p>
+<h2 id="3-install-lomorage-client">3. Install Lomorage Client</h2>
+<p>After running Lomorage Service, you can then install Lomorage client on smart phone.</p>
+<p>You can also use the web client to upload assets on your desktop/laptop, or use it to browser the photo/video gallery.</p>
+<p align="center">
+<a href="/installation-android"><img alt="Download Android client" src="/img/installation/app-store-google.svg" width="220"></a>
+<a href="/installation-ios"><img alt="Lomorage iOS client" src="/img/installation/app-store-ios.svg" width="220"></a>
+&nbsp;
+<a href="/installation-web"><img alt="Lomorage web client" src="/img/installation/browser.png" width="220"></a>
+</p>
+<h2 id="4-external-access-optional">4. External Access (optional)</h2>
+<p>Lomorage can run within your private network with no Internet access, but if you want to access Lomorage from outside, then you can enable the external access, currently it support free 3rd party tunnel services. Check the <a href="/external-access">configuration</a> for external access.</p>
+<h2 id="5-setup-digital-frame-optional">5. Setup Digital Frame (optional)</h2>
+<p>You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w and access your digital assets via WiFi. Check <a href="/install-frame">here</a> for digital frame setup instructions.</p>
+<p><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Más reciente</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Más antiguo &rarr;</a></li>
-                            
-                        </ul>
-                    </div>
-                    
-
-                    
-
-                    
-
-                    <div class="col-md-3">
-
-                        
-
-                        
-
-<div class="panel panel-default sidebar-menu">
-
-    <div class="panel-heading">
-      <h3 class="panel-title">Buscar</h3>
-    </div>
-
-    <div class="panel-body">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
-            <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="Buscar">
-                <input type="hidden" name="sitesearch" value="https://lomorage.com/">
-                <span class="input-group-btn">
-                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        
+                        </div>
 
                     </div>
-                    
-
-                    
 
                 </div>
                 
+
             </div>
+            
+
             
         </div>
         
@@ -234,7 +244,7 @@
 
         
         <div class="col-md-4 col-sm-6">
-            <h4>Sobre nosotros</h4>
+            <h4>About us</h4>
 
             We are a small team believe that distributed web is the future,
         and we focus on building the private photo cloud based on DWeb technologies in the first place.
@@ -276,7 +286,7 @@
             <p class="pull-left">Copyright (c) 2018 - 2019, Lomoware; all rights reserved.</p>
             
             <p class="pull-right">
-              Plantilla creada por <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
               

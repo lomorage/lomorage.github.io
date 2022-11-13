@@ -16,7 +16,7 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Categories</title>
+  <title></title>
   <meta name="author" content="" />
 
   
@@ -67,9 +67,9 @@
   <link rel="alternate" href="https://lomorage.com/index.xml" type="application/rss+xml" title="Lomorage">
 
   
-  <meta property="og:title" content="Categories" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/es/categories//" />
+  <meta property="og:url" content="/installation-armbian//" />
   <meta property="og:image" content="img/logo-lomo-flip.png" />
 
 </head>
@@ -88,13 +88,13 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="https://lomorage.com/">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Categories logo" class="hidden-xs hidden-sm">
-                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt="Categories logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Categories - ir a inicio</span>
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="hidden-xs hidden-sm">
+                    <img src="https://lomorage.com/img/logo-lomo-flip.png" alt=" logo" class="visible-xs visible-sm">
+                    <span class="sr-only"> - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">Cambiar Navegación</span>
+                      <span class="sr-only">Toggle Navigation</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>
@@ -103,6 +103,42 @@
 
             <div class="navbar-collapse collapse" id="navigation">
                 <ul class="nav navbar-nav navbar-right">
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">Home</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/features/">Features</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/installation/">Installation</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">FAQ</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">Contact</a>
+                    
+                  </li>
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">Blog</a>
+                    
+                  </li>
                   
                 </ul>
             </div>
@@ -139,7 +175,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Categories</h1>
+                <h1></h1>
             </div>
         </div>
     </div>
@@ -147,84 +183,34 @@
 
 
         <div id="content">
+            
+
             <div class="container">
+
                 <div class="row">
-                    
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-12">
 
-                        
-                        
-
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Más reciente</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Más antiguo &rarr;</a></li>
-                            
-                        </ul>
-                    </div>
-                    
-
-                    
-
-                    
-
-                    <div class="col-md-3">
-
-                        
-
-                        
-
-<div class="panel panel-default sidebar-menu">
-
-    <div class="panel-heading">
-      <h3 class="panel-title">Buscar</h3>
-    </div>
-
-    <div class="panel-body">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
-            <div class="input-group">
-                <input type="search" name="q" class="form-control" placeholder="Buscar">
-                <input type="hidden" name="sitesearch" value="https://lomorage.com/">
-                <span class="input-group-btn">
-                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
-                </span>
-            </div>
-        </form>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        
+                        <div>
+                          <h1 id="install-lomorage-service-on-armbian">Install Lomorage Service on Armbian</h1>
+<p>Currently it supports Armbian Focal. If you have other needs please reach us for support.</p>
+<pre><code>sudo apt install -y ca-certificates python-certifi python3-certifi
+sudo update-ca-certificates --fresh
+wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+echo &quot;deb https://lomoware.github.io/debian/focal focal main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+sudo apt update
+sudo apt install lomo-base lomo-vips lomo-backend lomo-web -y
+</code></pre>
+                        </div>
 
                     </div>
-                    
-
-                    
 
                 </div>
                 
+
             </div>
+            
+
             
         </div>
         
@@ -234,7 +220,7 @@
 
         
         <div class="col-md-4 col-sm-6">
-            <h4>Sobre nosotros</h4>
+            <h4>About us</h4>
 
             We are a small team believe that distributed web is the future,
         and we focus on building the private photo cloud based on DWeb technologies in the first place.
@@ -276,7 +262,7 @@
             <p class="pull-left">Copyright (c) 2018 - 2019, Lomoware; all rights reserved.</p>
             
             <p class="pull-right">
-              Plantilla creada por <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               
 
               
