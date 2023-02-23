@@ -1,0 +1,69 @@
+<!doctype html><html lang=en-us><head><script type=text/javascript>var userLang=navigator.language||navigator.userLanguage;console.log(window.location.pathname),userLang.startsWith("zh")&&window.location.pathname=="/"&&(window.location.href="/zh/")</script><script type=text/javascript src=//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js data-dojo-config="usePlainJson: true, isDebug: false"></script><script type=text/javascript>window.dojoRequire(["mojo/signup-forms/Loader"],function(e){e.start({baseUrl:"mc.us4.list-manage.com",uuid:"6ace4137554cb923d96ec92c7",lid:"36ce78d7a8",uniqueMethods:!0})})</script>
+<script async src=https://cdn.splitbee.io/sb.js></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Set WD MyCloud as Lomorage redundancy backup disk on Windows | Lomorage</title><link href="https://fonts.googleapis.com/css?family=Lato:400" rel=stylesheet><script defer src=https://use.fontawesome.com/releases/v5.15.3/js/all.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-138235951-1","auto"),ga("send","pageview"))</script><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.8.1/css/all.css integrity=sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf crossorigin=anonymous><link rel=stylesheet href=//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon><link rel=apple-touch-icon href=/img/apple-touch-icon.png><link rel=stylesheet type=text/css href=/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css></head><body><div class="navbar navbar--extended"><nav class=nav__mobile></nav><div class=container><div class=navbar__inner><a href=/ class=navbar__logo>Lomorage</a><nav class=navbar__menu><ul><li><a href=/>Home</a></li><li><a href=https://lomosw.lomorage.com/en/index.html class="button button__accent">Download Now</a></li><li><a href=/survey/>Survey</a></li><li><a href=/faq/>FAQ</a></li><li><a href=/blog/>Blog</a></li><li><a href=/contact/>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header><div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner><div class=container><div class=page__header__content><div class=page__header__content__inner id=navConverter><h1 class=page__header__title>Set WD MyCloud as Lomorage redundancy backup disk on Windows</h1></div></div></div></div></div><div class=page><div class=container><div class=page__inner><div class=page__main><div class=text-container><p><strong>Setup WD MyCloud as Lomorage Redundancy backup disk on Windows.</strong></p><h1 id=table-of-contents>Table of Contents</h1><ul><li><a href=#table-of-contents>Table of Contents</a></li><li><a href=#1-mount-wd-mycloud-as-windows-disk>1. Mount WD MyCloud as Windows Disk</a></li><li><a href=#2-setup-redundancy-backup>2. Setup Redundancy Backup</a></li><li><a href=#3-test-redundancy-backup-and-trouble-shooting>3. Test redundancy backup and trouble shooting</a><ul><li><a href=#if-you-meet-some-issue-like-the-below>If you meet some issue like the below:</a></li><li><a href=#solution-is>Solution is:</a></li></ul></li></ul><h1 id=1-mount-wd-mycloud-as-windows-disk>1. Mount WD MyCloud as Windows Disk</h1><p>The detail introduction from WD is here: <strong><a href=https://support-en.wd.com/app/answers/detailweb/a_id/25436/h/p2#subject2>How to mount WD MyCloud on Windows</a></strong></p><p>Below picture is my case:</p><div align=center><p class=screenshoot><img width=100% src=/img/blog/set_wd_as_backup/mount.png style="border:2px solid #000"></p></div><h1 id=2-setup-redundancy-backup>2. Setup Redundancy Backup</h1><p>Open Lomorage Photo Assistant in your Windows, and set as blow:</p><div align=center><p class=screenshoot><img width=100% src=/img/blog/set_wd_as_backup/set_redundancy_agent.png></p></div><h1 id=3-test-redundancy-backup-and-trouble-shooting>3. Test redundancy backup and trouble shooting</h1><p>And click the <strong>&ldquo;Start redundancy backup&mldr;&rdquo;</strong> button to see the files will copy from
+D:\imagebk to W:\wd-test.</p><h2 id=if-you-meet-some-issue-like-the-below>If you meet some issue like the below:</h2><pre tabindex=0><code>rdiff-backup.exe --force  -v5 --print-statistics D:/imagebk W:/
+WARNING: this command line interface is deprecated and will disappear, start using the new one as described with &#39;--new --help&#39;.
+* Using repository &#39;W:/&#39;
+NOTE: Found interrupted initial backup in data directory W:/rdiff-backup-data. Removing...
+* Hardlinks disabled by default on Windows
+* Unable to import module (py)xattr. Extended attributes not supported on filesystem at path D:/imagebk
+* Unable to import module posix1e from pylibacl package. POSIX ACLs not supported on filesystem at path D:/imagebk
+* -----------------------------------------------------------------
+Detected abilities for source (read only) file system:
+  Access control lists                         Off
+  Extended attributes                          Off
+  Windows access control lists                 On
+  Case sensitivity                             Off
+  Escape DOS devices                           On
+  Escape trailing spaces                       On
+  Mac OS X style resource forks                Off
+  Mac OS X Finder information                  Off
+-----------------------------------------------------------------
+* Directories on file system at path W:/rdiff-backup-data/rdiff-backup.tmp.0 are not fsyncable. Assuming it&#39;s unnecessary.
+* Unable to import module (py)xattr. Extended attributes not supported on filesystem at path W:/rdiff-backup-data/rdiff-backup.tmp.0
+* Unable to import module posix1e from pylibacl package. POSIX ACLs not supported on filesystem at path W:/rdiff-backup-data/rdiff-backup.tmp.0
+* -----------------------------------------------------------------
+Detected abilities for destination (read/write) file system:
+  Ownership changing                           Off
+  Hard linking                                 On
+  fsync() directories                          Off
+  Directory inc permissions                    Off
+  High-bit permissions                         On
+  Symlink permissions                          Off
+  Extended filenames                           On
+  Windows reserved filenames                   On
+  Access control lists                         Off
+  Extended attributes                          Off
+  Windows access control lists                 On
+  Case sensitivity                             Off
+  Escape DOS devices                           On
+  Escape trailing spaces                       On
+  Mac OS X style resource forks                Off
+  Mac OS X Finder information                  Off
+-----------------------------------------------------------------
+* Backup: escape_dos_devices = False
+* Backup: escape_trailing_spaces = False
+* Enabled use_compatible_timestamps
+NOTE: Symbolic links excluded by default on Windows
+* Given repository doesn&#39;t need to be regressed
+NOTE: Starting mirror from source path D:/imagebk to destination path W:/
+* Processing file .
+* Processing file .WDSyncHistory
+* Processing file .WDSyncHistory/.WD Hidden Files
+* Processing file Garbage Dispenser2.mp4
+* Cleaning up
+Traceback (most recent call last):
+  File &#34;rdiffbackup\run.py&#34;, line 170, in &lt;module&gt;
+  File &#34;rdiffbackup\run.py&#34;, line 37, in main
+  File &#34;rdiffbackup\run.py&#34;, line 105, in main_run
+  File &#34;rdiffbackup\actions\backup.py&#34;, line 159, in run
+  File &#34;rdiff_backup\backup.py&#34;, line 39, in mirror_compat200
+  File &#34;rdiff_backup\backup.py&#34;, line 197, in patch
+  File &#34;rdiff_backup\rorpiter.py&#34;, line 142, in __call__
+  File &#34;rdiff_backup\rorpiter.py&#34;, line 179, in _finish_branches
+  File &#34;rdiff_backup\backup.py&#34;, line 641, in end_process_directory
+  File &#34;rdiff_backup\rpath.py&#34;, line 807, in rmdir
+PermissionError: [WinError 5] Access is denied: b&#39;W:/.WDSyncHistory/.WD Hidden Files&#39;
+[2528] Failed to execute script &#39;run&#39; due to unhandled exception!
+</code></pre><h2 id=solution-is>Solution is:</h2><p><strong>Please go to W:\wd-test, to remove some hidden files.</strong></p><p><strong>Support</strong>: <a href=mailto:support@lomorage.com>support@lomorage.com</a> or <a href=mailto:lomorage@gmail.com>lomorage@gmail.com</a>.</p></div><div id=comments><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lomorage.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div></div></div><div class="footer footer--dark"><div class=container><div class=footer__inner><a href=/ class=footer__textLogo>Lomorage</a><div class=footer__data><div class=footer__data__item><div class=footer__row><a href=https://github.com/lomorage/homepage target=_blank style=opacity:1><i class='fab fa-2x fa-github'></i></a></div></div><div class=footer__data__item><div class=footer__row><a href=https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM target=_blank style=opacity:1><i class='fab fa-2x fa-slack'></i></a></div></div><div class=footer__data__item><div class=footer__row><a href=mailto:support@lomorage.com target=_blank style=opacity:1><i class='fa fa-2x fa-envelope'></i></a></div></div></div></div><div class=footer__inner></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script><div class=scripts><script type=text/javascript src=/js/scripts.min.0ace95f16c4ea7b11cb1ffa10c2fe8f2f87bea22847c95cdb98e86138a51e7fe.js></script></div></body></html>
