@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Lomorage</title><link>http://lomorage.com/categories/docker/</link><description>Recent content in Docker on Lomorage</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/categories/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Run Lomoage Docker in Windows 10</title><link>http://lomorage.com/blog/2020/11/16/windows-docker/</link><pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate><guid>http://lomorage.com/blog/2020/11/16/windows-docker/</guid><description>&lt;p>Though Lomorage already provide Windows Native MSI package, But if you like to run Docker image in Windows, please follow below steps to do so. Esp. on Windows Server, Docker can leverage the Windows HYPER-v technology，and let the Lomorage running faster. If you do not know what is Docker, you also can download the native Lomorage installer for Windows, &lt;a href="https://lomorage.com/zh/installation-win/">Download Lomorage Windows Installer&lt;/a>。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Lomorage</title>
+    <link>http://lomorage.com/categories/docker/</link>
+    <description>Recent content in Docker on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Nov 2020 22:43:40 +0000</lastBuildDate>
+    <atom:link href="http://lomorage.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run Lomoage Docker in Windows 10</title>
+      <link>http://lomorage.com/blog/2020/11/16/windows-docker/</link>
+      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
+      <guid>http://lomorage.com/blog/2020/11/16/windows-docker/</guid>
+      <description>&lt;p&gt;Though Lomorage already provide Windows Native MSI package, But if you like to run Docker image in Windows, please follow below steps to do so. Esp. on Windows Server, Docker can leverage the Windows HYPER-v technology，and let the Lomorage running faster. If you do not know what is Docker, you also can download the native Lomorage installer for Windows, &lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;Download Lomorage Windows Installer&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Image Processing on Lomorage</title><link>http://lomorage.com/tags/image-processing/</link><description>Recent content in Image Processing on Lomorage</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 21:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/tags/image-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>Small image compression size comparison between Jpeg and Webp</title><link>http://lomorage.com/blog/2021/09/01/piq-size/</link><pubDate>Wed, 01 Sep 2021 21:43:40 +0000</pubDate><guid>http://lomorage.com/blog/2021/09/01/piq-size/</guid><description>Motivation Lomorage is free private photo cloud solution that puts you in control of your photos and videos. To get best user experience among different platforms, such as iOS, Android, web, it utilizes smaller size thumbnail image to allow the clients to load image faster initially.
-At the same time, unlike desktop applications, mobile clients have limited storage, and a good mobile application should take it into consideration and provide better user experience while require system resources as little as possible.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Processing on Lomorage</title>
+    <link>http://lomorage.com/tags/image-processing/</link>
+    <description>Recent content in Image Processing on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Sep 2021 21:43:40 +0000</lastBuildDate>
+    <atom:link href="http://lomorage.com/tags/image-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Small image compression size comparison between Jpeg and Webp</title>
+      <link>http://lomorage.com/blog/2021/09/01/piq-size/</link>
+      <pubDate>Wed, 01 Sep 2021 21:43:40 +0000</pubDate>
+      <guid>http://lomorage.com/blog/2021/09/01/piq-size/</guid>
+      <description>Motivation Lomorage is free private photo cloud solution that puts you in control of your photos and videos. To get best user experience among different platforms, such as iOS, Android, web, it utilizes smaller size thumbnail image to allow the clients to load image faster initially.
+At the same time, unlike desktop applications, mobile clients have limited storage, and a good mobile application should take it into consideration and provide better user experience while require system resources as little as possible.</description>
+    </item>
+  </channel>
+</rss>

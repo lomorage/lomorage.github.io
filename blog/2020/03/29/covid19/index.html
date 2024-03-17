@@ -1,6 +1,181 @@
-<!doctype html><html lang=en-us><head><script type=text/javascript>var userLang=navigator.language||navigator.userLanguage;console.log(window.location.pathname),userLang.startsWith("zh")&&window.location.pathname=="/"&&(window.location.href="/zh/")</script><script type=text/javascript src=//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js data-dojo-config="usePlainJson: true, isDebug: false"></script><script type=text/javascript>window.dojoRequire(["mojo/signup-forms/Loader"],function(e){e.start({baseUrl:"mc.us4.list-manage.com",uuid:"6ace4137554cb923d96ec92c7",lid:"36ce78d7a8",uniqueMethods:!0})})</script>
-<script async src=https://cdn.splitbee.io/sb.js></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Setup Covid-19 dashboard using Raspberry Pi | Lomorage</title><link href="https://fonts.googleapis.com/css?family=Lato:400" rel=stylesheet><script defer src=https://use.fontawesome.com/releases/v5.15.3/js/all.js></script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-138235951-1","auto"),ga("send","pageview"))</script><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.8.1/css/all.css integrity=sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf crossorigin=anonymous><link rel=stylesheet href=//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon><link rel=apple-touch-icon href=/img/apple-touch-icon.png><link rel=stylesheet type=text/css href=/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css></head><body><div class="navbar navbar--extended"><nav class=nav__mobile></nav><div class=container><div class=navbar__inner><a href=/ class=navbar__logo>Lomorage</a><nav class=navbar__menu><ul><li><a href=/>Home</a></li><li><a href=https://lomosw.lomorage.com/en/index.html class="button button__accent">Download Now</a></li><li><a href=/survey/>Survey</a></li><li><a href=/faq/>FAQ</a></li><li><a href=/blog/>Blog</a></li><li><a href=/contact/>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header><div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner><div class=container><div class=page__header__content><div class=page__header__content__inner id=navConverter><h1 class=page__header__title>Setup Covid-19 dashboard using Raspberry Pi</h1></div></div></div></div></div><div class=page><div class=container><div class=page__inner><div class=page__main><div class=text-container><p>It&rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.</p><div align=center><p class=screenshoot><img width=100% src=/img/blog/covid19/dashboard-en.png></p></div><h1 id=table-of-contents>Table of Contents</h1><ul><li><a href=#table-of-contents>Table of Contents</a></li><li><a href=#prepare>Prepare</a></li><li><a href=#how-it-works>How it works</a></li><li><a href=#installation>Installation</a><ul><li><a href=#1-install-latest-nodejs>1. Install latest NodeJS</a></li><li><a href=#2-install-magicmirror>2. Install MagicMirror</a></li><li><a href=#3-try-run-with-the-sample-config>3. Try run with the sample config</a></li><li><a href=#4-install-mmm-covid19-module>4. Install MMM-COVID19 module</a></li><li><a href=#5-add-more-data-sources-for-mmm-covid19>5. Add more data sources for MMM-COVID19</a></li><li><a href=#6-get-more-modules>6. Get more modules</a></li></ul></li><li><a href=#ready-to-use>Ready to use</a><ul><li><a href=#1-configuring-the-raspberry-pi>1. Configuring the Raspberry Pi</a></li><li><a href=#2-auto-starting-magicmirror>2. Auto Starting MagicMirror</a></li><li><a href=#3-add-cronjob-to-startstop-magicmirror>3. Add cronjob to start/stop MagicMirror</a>)</li></ul></li></ul><h1 id=prepare>Prepare</h1><p>The setup the dashboard, you need Raspberry Pi and a HDMI monitor, you can either use big screen in the living room, or use smaller one on the desk. <strong>Notes: This won&rsquo;t work for Raspberry Pi zero/one, there is no NodeJS support for &ldquo;armv6l&rdquo; any more.</strong></p><h1 id=how-it-works>How it works</h1><p>It&rsquo;s using <a href=https://github.com/MichMich/MagicMirror>MagicMirror</a> and <a href=https://github.com/bibaldo/MMM-COVID19>covid-19 module</a>.</p><p>MagicMirror is an open source modular smart mirror platform, but it doesn&rsquo;t have to be a mirror, it can be used to setup customized dashboard. MagicMirror is using Nodejs for both client and server, the server provides http service for the dashboard and client is using Electron and run it in <a href="https://www.kioware.com/resources.aspx?resid=45">Kiosk mode</a>, which is actually running a browser in fullscreen mode, actually you can just one the <a href=https://docs.magicmirror.builders/getting-started/installation.html#usage>&ldquo;server only mode&rdquo;</a> and open the dashboard in browser on another machine which can access the network.</p><p>MagicMirror defines layout below, and you can put dashboard provided by the modules at specific locations.</p><p><img src=/img/blog/covid19/layout.png alt=layout></p><p>The modules can define how to fetch the data and how to present it.</p><p>That is it!</p><h1 id=installation>Installation</h1><p>If you are using lite image, you need install desktop first to run MagicMirror.</p><pre tabindex=0><code>sudo apt-get update 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<script type="text/javascript">
+		var userLang = navigator.language || navigator.userLanguage;
+		console.log(window.location.pathname);
+		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+				window.location.href = '/zh/';
+		}
+	</script>
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"6ace4137554cb923d96ec92c7","lid":"36ce78d7a8","uniqueMethods":true}) })</script>
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Setup Covid-19 dashboard using Raspberry Pi | Lomorage</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+	
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-HZV662YYMW', { 'anonymize_ip': false });
+}
+</script>
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	<link rel="stylesheet" type="text/css" href="/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css" />
+</head>
+
+	<body>
+		
+<div class="navbar navbar--extended">
+	<nav class="nav__mobile"></nav>
+	<div class="container">
+		<div class="navbar__inner">
+			<a href="/" class="navbar__logo">Lomorage </a>
+			<nav class="navbar__menu">
+				
+				<ul>
+					
+					
+					<li><a href="/">Home</a></li>
+					
+					
+					
+					<li><a href="https://lomosw.lomorage.com/en/index.html" class="button button__accent">Download Now</a></li>
+					
+					
+					
+					<li><a href="/survey/">Survey</a></li>
+					
+					
+					
+					<li><a href="/faq/">FAQ</a></li>
+					
+					
+					
+					<li><a href="/blog/">Blog</a></li>
+					
+					
+					
+					<li><a href="/contact/">Contact</a></li>
+					
+					
+				</ul>
+			</nav>
+			
+			<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+		</div>
+	</div>
+</div>
+
+
+
+		
+
+<div class="page__header">
+	<div class="hero__overlay hero__overlay--gradient"></div>
+	<div class="hero__mask"></div>
+	<div class="page__header__inner">
+		<div class="container">
+			<div class="page__header__content">
+				<div class="page__header__content__inner" id="navConverter">
+					<h1 class="page__header__title">Setup Covid-19 dashboard using Raspberry Pi</h1>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page">
+	<div class="container">
+		<div class="page__inner">
+			
+			
+			<div class="page__main">
+				<div class="text-container"><p>It&rsquo;s hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.</p>
+<div align="center">
+<p class="screenshoot">
+  <img width="100%" src="/img/blog/covid19/dashboard-en.png">
+</p>
+</div>
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#prepare">Prepare</a></li>
+<li><a href="#how-it-works">How it works</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#1-install-latest-nodejs">1. Install latest NodeJS</a></li>
+<li><a href="#2-install-magicmirror">2. Install MagicMirror</a></li>
+<li><a href="#3-try-run-with-the-sample-config">3. Try run with the sample config</a></li>
+<li><a href="#4-install-mmm-covid19-module">4. Install MMM-COVID19 module</a></li>
+<li><a href="#5-add-more-data-sources-for-mmm-covid19">5. Add more data sources for MMM-COVID19</a></li>
+<li><a href="#6-get-more-modules">6. Get more modules</a></li>
+</ul>
+</li>
+<li><a href="#ready-to-use">Ready to use</a>
+<ul>
+<li><a href="#1-configuring-the-raspberry-pi">1. Configuring the Raspberry Pi</a></li>
+<li><a href="#2-auto-starting-magicmirror">2. Auto Starting MagicMirror</a></li>
+<li><a href="#3-add-cronjob-to-startstop-magicmirror">3. Add cronjob to start/stop MagicMirror</a>)</li>
+</ul>
+</li>
+</ul>
+<h1 id="prepare">Prepare</h1>
+<p>The setup the dashboard, you need Raspberry Pi and a HDMI monitor, you can either use big screen in the living room, or use smaller one on the desk. <strong>Notes: This won&rsquo;t work for Raspberry Pi zero/one, there is no NodeJS support for &ldquo;armv6l&rdquo; any more.</strong></p>
+<h1 id="how-it-works">How it works</h1>
+<p>It&rsquo;s using <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a> and <a href="https://github.com/bibaldo/MMM-COVID19">covid-19 module</a>.</p>
+<p>MagicMirror is an open source modular smart mirror platform, but it doesn&rsquo;t have to be a mirror, it can be used to setup customized dashboard. MagicMirror is using Nodejs for both client and server, the server provides http service for the dashboard and client is using Electron and run it in <a href="https://www.kioware.com/resources.aspx?resid=45">Kiosk mode</a>, which is actually running a browser in fullscreen mode, actually you can just one the <a href="https://docs.magicmirror.builders/getting-started/installation.html#usage">&ldquo;server only mode&rdquo;</a> and open the dashboard in browser on another machine which can access the network.</p>
+<p>MagicMirror defines layout below, and you can put dashboard provided by the modules at specific locations.</p>
+<p><img src="/img/blog/covid19/layout.png" alt="layout"></p>
+<p>The modules can define how to fetch the data and how to present it.</p>
+<p>That is it!</p>
+<h1 id="installation">Installation</h1>
+<p>If you are using lite image, you need install desktop first to run MagicMirror.</p>
+<pre tabindex="0"><code>sudo apt-get update 
 sudo apt-get -y dist-upgrade
 sudo apt-get install raspberrypi-ui-mods -y
 sudo apt-get install libgdk-pixbuf2.0-dev -y
@@ -9,23 +184,35 @@ sudo gdk-pixbuf-query-loaders --update-cache -y
 sudo apt install ca-certificates python-certifi python3-certifi -y
 sudo apt-get install -y --reinstall ca-certificates
 sudo update-ca-certificates --fresh
-</code></pre><h2 id=1-install-latest-nodejs>1. Install latest NodeJS</h2><p><a href=https://github.com/audstanley/NodeJs-Raspberry-Pi>NodeJs-Raspberry-Pi</a> is very convinient to setup latest NodeJS with one command:</p><pre tabindex=0><code>$ wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash; node -v
-</code></pre><p><em>Most likely using &ldquo;apt install&rdquo; won&rsquo;t get the latest version and MagicMirror will complaint when installation.</em></p><h2 id=2-install-magicmirror>2. Install MagicMirror</h2><pre tabindex=0><code>$ git clone https://github.com/MichMich/MagicMirror
+</code></pre><h2 id="1-install-latest-nodejs">1. Install latest NodeJS</h2>
+<p><a href="https://github.com/audstanley/NodeJs-Raspberry-Pi">NodeJs-Raspberry-Pi</a> is very convinient to setup latest NodeJS with one command:</p>
+<pre tabindex="0"><code>$ wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash; node -v
+</code></pre><p><em>Most likely using &ldquo;apt install&rdquo; won&rsquo;t get the latest version and MagicMirror will complaint when installation.</em></p>
+<h2 id="2-install-magicmirror">2. Install MagicMirror</h2>
+<pre tabindex="0"><code>$ git clone https://github.com/MichMich/MagicMirror
 $ cd MagicMirror/
 $ npm install
-</code></pre><h2 id=3-try-run-with-the-sample-config>3. Try run with the sample config</h2><p>MagicMirror comes with some <a href=https://docs.magicmirror.builders/getting-started/configuration.html#general>default modules</a>.</p><pre tabindex=0><code># assuming in MagicMirror directory
+</code></pre><h2 id="3-try-run-with-the-sample-config">3. Try run with the sample config</h2>
+<p>MagicMirror comes with some <a href="https://docs.magicmirror.builders/getting-started/configuration.html#general">default modules</a>.</p>
+<pre tabindex="0"><code># assuming in MagicMirror directory
 $ cp config/config.js.sample config/config.js
 
 # use &#34;ctrl+c&#34; to stop, this way of running is for testing
 $ npm run
-</code></pre><p>You can try play with the options provided by the modules in &ldquo;config.js&rdquo;, for example, you can add more <a href=https://docs.rsshub.app/>RSS feed</a> to the &ldquo;News Feed&rdquo; module:</p><pre tabindex=0><code>{
+</code></pre><p>You can try play with the options provided by the modules in &ldquo;config.js&rdquo;, for example, you can add more <a href="https://docs.rsshub.app/">RSS feed</a> to the &ldquo;News Feed&rdquo; module:</p>
+<pre tabindex="0"><code>{
    title: &#34;BBC&#34;,
    url: &#34;http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=us&#34;
 },
-</code></pre><p>Or you can change the position referring to the layout mentioned above.</p><p>You can also change the language by changing &ldquo;language&rdquo; in &ldquo;config.js&rdquo;, check <a href=https://github.com/MichMich/MagicMirror/tree/master/translations>https://github.com/MichMich/MagicMirror/tree/master/translations</a> for languages available.</p><h2 id=4-install-mmm-covid19-module>4. Install MMM-COVID19 module</h2><p>Install in modules directory:</p><pre tabindex=0><code># assuming in MagicMirror directory
+</code></pre><p>Or you can change the position referring to the layout mentioned above.</p>
+<p>You can also change the language by changing &ldquo;language&rdquo; in &ldquo;config.js&rdquo;, check <a href="https://github.com/MichMich/MagicMirror/tree/master/translations">https://github.com/MichMich/MagicMirror/tree/master/translations</a> for languages available.</p>
+<h2 id="4-install-mmm-covid19-module">4. Install MMM-COVID19 module</h2>
+<p>Install in modules directory:</p>
+<pre tabindex="0"><code># assuming in MagicMirror directory
 $ cd modules
 $ git clone https://github.com/bibaldo/MMM-COVID19
-</code></pre><p>Then config the module in &ldquo;config/config.js&rdquo;, register account at <a href=https://rapidapi.com/>https://rapidapi.com/</a> and replace the &ldquo;get-your-api-key&rdquo; below with your own API key. After registered, go to <a href=https://rapidapi.com/astsiatsko/api/coronavirus-monitor>https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a> and you can find the API key with name &ldquo;X-RapidAPI-Key&rdquo;.</p><pre tabindex=0><code>  {
+</code></pre><p>Then config the module in &ldquo;config/config.js&rdquo;, register account at <a href="https://rapidapi.com/">https://rapidapi.com/</a> and replace the &ldquo;get-your-api-key&rdquo; below with your own API key. After registered, go to <a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a> and you can find the API key with name &ldquo;X-RapidAPI-Key&rdquo;.</p>
+<pre tabindex="0"><code>  {
     module: &#39;MMM-COVID19&#39;,
     position: &#34;bottom_bar&#34;,
     config: {
@@ -38,19 +225,143 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
       rapidapiKey: &#34;get-your-api-key&#34;,
    }
   },
-</code></pre><p>After making changes to &ldquo;config/config.js&rdquo;, you can restart MagicMirror.</p><h2 id=5-add-more-data-sources-for-mmm-covid19>5. Add more data sources for MMM-COVID19</h2><p>The default data sources is lacking details, for example it won&rsquo;t have the data for counties in USA, and no data for cities in China. You can add other data sources, but it won&rsquo;t be a simple configuration, and requires some code changes since the data format is not compatible.</p><p>Here is the <a href=https://github.com/fuji246/MMM-COVID19/commit/42356ae5f922359a0b961328a43eddb0d61c4058>changes</a> made to show counties statistics in USA and to add Chinese translation.</p><p>The data source used for USA counties is from <a href=https://github.com/ExpDev07/coronavirus-tracker-api>https://github.com/ExpDev07/coronavirus-tracker-api</a>, no API key required.</p><p>Another options people using in other projects is <a href=https://github.com/pomber/covid19>https://github.com/pomber/covid19</a>, there are some other source available on internet for your country with more details and you can just search with google, and make changes to the code.</p><h2 id=6-get-more-modules>6. Get more modules</h2><p>There is a <a href=https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules>wiki</a> on 3rd party modules. The demo dashborad shows on top using the following modules:</p><ul><li><p><a href=https://github.com/KirAsh4/calendar_monthly/>calendar_monthly</a></p></li><li><p><a href=https://github.com/eouia/worldclock>worldclock</a></p></li></ul><p>You can try other modules based on your needs.</p><h1 id=ready-to-use>Ready to use</h1><p>After you tested the dashboard, you still need some configuration to make it ready to use.</p><h2 id=1-configuring-the-raspberry-pi>1. Configuring the Raspberry Pi</h2><p>You need disable the screensaver, disable the WiFi power save mode and enable OpenGL driver, follow the <a href=https://github.com/MichMich/MagicMirror/wiki/Configuring-the-Raspberry-Pi>wiki</a> to config the system.</p><p><em>Notes: I have only one problem with disabling screensaver, when changing &ldquo;/etc/xdg/lxsession/LXDE-pi/autostart&rdquo;, have to comment line &ldquo;@xscreensaver -no-splash&rdquo; to make it work besides adding those 3 lines below it</em></p><pre tabindex=0><code>@lxpanel --profile LXDE-pi
+</code></pre><p>After making changes to &ldquo;config/config.js&rdquo;, you can restart MagicMirror.</p>
+<h2 id="5-add-more-data-sources-for-mmm-covid19">5. Add more data sources for MMM-COVID19</h2>
+<p>The default data sources is lacking details, for example it won&rsquo;t have the data for counties in USA, and no data for cities in China. You can add other data sources, but it won&rsquo;t be a simple configuration, and requires some code changes since the data format is not compatible.</p>
+<p>Here is the <a href="https://github.com/fuji246/MMM-COVID19/commit/42356ae5f922359a0b961328a43eddb0d61c4058">changes</a> made to show counties statistics in USA and to add Chinese translation.</p>
+<p>The data source used for USA counties is from <a href="https://github.com/ExpDev07/coronavirus-tracker-api">https://github.com/ExpDev07/coronavirus-tracker-api</a>, no API key required.</p>
+<p>Another options people using in other projects is <a href="https://github.com/pomber/covid19">https://github.com/pomber/covid19</a>, there are some other source available on internet for your country with more details and you can just search with google, and make changes to the code.</p>
+<h2 id="6-get-more-modules">6. Get more modules</h2>
+<p>There is a <a href="https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules">wiki</a> on 3rd party modules. The demo dashborad shows on top using the following modules:</p>
+<ul>
+<li>
+<p><a href="https://github.com/KirAsh4/calendar_monthly/">calendar_monthly</a></p>
+</li>
+<li>
+<p><a href="https://github.com/eouia/worldclock">worldclock</a></p>
+</li>
+</ul>
+<p>You can try other modules based on your needs.</p>
+<h1 id="ready-to-use">Ready to use</h1>
+<p>After you tested the dashboard, you still need some configuration to make it ready to use.</p>
+<h2 id="1-configuring-the-raspberry-pi">1. Configuring the Raspberry Pi</h2>
+<p>You need disable the screensaver, disable the WiFi power save mode and enable OpenGL driver, follow the <a href="https://github.com/MichMich/MagicMirror/wiki/Configuring-the-Raspberry-Pi">wiki</a> to config the system.</p>
+<p><em>Notes: I have only one problem with disabling screensaver, when changing &ldquo;/etc/xdg/lxsession/LXDE-pi/autostart&rdquo;, have to comment line &ldquo;@xscreensaver -no-splash&rdquo; to make it work besides adding those 3 lines below it</em></p>
+<pre tabindex="0"><code>@lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 #@xscreensaver -no-splash
 @xset s noblank
 @xset s off
 @xset -dpms
-</code></pre><h2 id=2-auto-starting-magicmirror>2. Auto Starting MagicMirror</h2><p>Follow the steps on the <a href=https://github.com/MichMich/MagicMirror/wiki/Auto-Starting-MagicMirror>wiki</a> to enable auto start of MagicMirror when system start.</p><p><em>Notes: If after installing pm2 but it&rsquo;s not found, you probably need to add <code>PATH="/opt/nodejs/bin:$PATH"</code> in &ldquo;~/.profile&rdquo; and then <code>source ~/.profile</code></em></p><h2 id=3-add-cronjob-to-startstop-magicmirror>3. Add cronjob to start/stop MagicMirror</h2><p>Add the following lines in &ldquo;/var/spool/cron/crontabs/pi&rdquo; which start MagicMirror at 8 am and stop at 9 pm, it also turns on/off the monitor accordingly.</p><pre tabindex=0><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
+</code></pre><h2 id="2-auto-starting-magicmirror">2. Auto Starting MagicMirror</h2>
+<p>Follow the steps on the <a href="https://github.com/MichMich/MagicMirror/wiki/Auto-Starting-MagicMirror">wiki</a> to enable auto start of MagicMirror when system start.</p>
+<p><em>Notes: If after installing pm2 but it&rsquo;s not found, you probably need to add <code>PATH=&quot;/opt/nodejs/bin:$PATH&quot;</code> in &ldquo;~/.profile&rdquo; and then <code>source ~/.profile</code></em></p>
+<h2 id="3-add-cronjob-to-startstop-magicmirror">3. Add cronjob to start/stop MagicMirror</h2>
+<p>Add the following lines in &ldquo;/var/spool/cron/crontabs/pi&rdquo; which start MagicMirror at 8 am and stop at 9 pm, it also turns on/off the monitor accordingly.</p>
+<pre tabindex="0"><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
 00 21 * * * vcgencmd display_power 0;pm2 stop mm
-</code></pre><h2 id=4-increase-swap-size>4. Increase swap size</h2><p>If you add more plugins, you can use <a href=https://github.com/edward-shen/MMM-pages>MMM-pages</a> to put them in several pages, and most likely MagicMirror may consume a lot of memory, which will cause system unresponsive. Increase swap size helps.</p><ol><li>Stop the swap</li></ol><pre tabindex=0><code>sudo dphys-swapfile swapoff
-</code></pre><ol start=2><li>Modify the size, edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE to 1024, then create and initialize the file</li></ol><pre tabindex=0><code>dphys-swapfile setup
-</code></pre><ol start=3><li>Start the swap</li></ol><pre tabindex=0><code>sudo dphys-swapfile swapon
-</code></pre><h2 id=5-setup-plex>5. Setup Plex</h2><pre tabindex=0><code>curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
+</code></pre><h2 id="4-increase-swap-size">4. Increase swap size</h2>
+<p>If you add more plugins, you can use <a href="https://github.com/edward-shen/MMM-pages">MMM-pages</a> to put them in several pages, and most likely MagicMirror may consume a lot of memory, which will cause system unresponsive. Increase swap size helps.</p>
+<ol>
+<li>Stop the swap</li>
+</ol>
+<pre tabindex="0"><code>sudo dphys-swapfile swapoff
+</code></pre><ol start="2">
+<li>Modify the size, edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE to 1024, then create and initialize the file</li>
+</ol>
+<pre tabindex="0"><code>dphys-swapfile setup
+</code></pre><ol start="3">
+<li>Start the swap</li>
+</ol>
+<pre tabindex="0"><code>sudo dphys-swapfile swapon
+</code></pre><h2 id="5-setup-plex">5. Setup Plex</h2>
+<pre tabindex="0"><code>curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
 sudo apt update
 sudo apt install plexmediaserver
-</code></pre></div><div id=comments><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lomorage.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div></div></div><div class="footer footer--dark"><div class=container><div class=footer__inner><a href=/ class=footer__textLogo>Lomorage</a><div class=footer__data><div class=footer__data__item><div class=footer__row><a href=https://github.com/lomorage/homepage target=_blank style=opacity:1><i class='fab fa-2x fa-github'></i></a></div></div><div class=footer__data__item><div class=footer__row><a href=https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM target=_blank style=opacity:1><i class='fab fa-2x fa-slack'></i></a></div></div><div class=footer__data__item><div class=footer__row><a href=mailto:support@lomorage.com target=_blank style=opacity:1><i class='fa fa-2x fa-envelope'></i></a></div></div></div></div><div class=footer__inner></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
-<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script><div class=scripts><script type=text/javascript src=/js/scripts.min.0ace95f16c4ea7b11cb1ffa10c2fe8f2f87bea22847c95cdb98e86138a51e7fe.js></script></div></body></html>
+</code></pre></div>
+
+				
+				<div id="comments">
+					<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lomorage" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+				</div>
+			
+			</div>
+			
+
+			
+		</div>
+	</div>
+</div>
+
+
+
+		<div class="footer footer--dark">
+	<div class="container">
+		<div class="footer__inner">
+			<a href="/" class="footer__textLogo">Lomorage</a>
+
+			<div class="footer__data">
+				<div class="footer__data__item">
+					
+					<div class="footer__row"><a href="https://github.com/lomorage/homepage" target="_blank" style="opacity: 1;"><i class='fab fa-2x fa-github'></i></a></div>
+					
+				</div>
+				<div class="footer__data__item">
+					
+				</div>
+				<div class="footer__data__item">
+					
+					<div class="footer__row"><a href="mailto:support@lomorage.com" target="_blank" style="opacity: 1;"><i class='fa fa-2x fa-envelope'></i></a></div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="footer__inner">
+			
+		</div>
+		
+	</div>
+</div>
+
+
+		<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"
+></script>
+
+<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+
+<div class="scripts">
+	
+	
+	
+	
+	<script type="text/javascript" src="/js/scripts.min.caff6ee377cf7b5bba65c3bf59df8c4cf6195bd8ee6d3a05bd557591a16bac13.js"></script>
+</div>
+
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742347659519137"
+     crossorigin="anonymous"></script>
+	</body>
+</html>
