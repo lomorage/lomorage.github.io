@@ -1,94 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>主页 on Lomorage</title>
-    <link>http://lomorage.com/zh/</link>
-    <description>Recent content in 主页 on Lomorage</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 02 Mar 2023 13:43:40 +0000</lastBuildDate>
-    <atom:link href="http://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>简单快速地迁移数据和扩展存储空间</title>
-      <link>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</link>
-      <pubDate>Thu, 02 Mar 2023 13:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;简单快速地迁移数据和扩展存储空间&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;最近有个用户因为原先的存储盘已经满了，想把数据直接从原先的PI服务器迁移到Windows服务器上，并且扩大存储盘，让我们来看看最快的数据迁移扩展方法，本文也可以用来指导数据恢复。本文以Windows为例，其它平台操作也类似。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>把WD MyCloud设置为Lomorage的冗余备份盘</title>
-      <link>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</link>
-      <pubDate>Wed, 22 Feb 2023 13:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;在Windows上，把WD MyCloud设置为Lomorage的冗余备份盘&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>PhotoPrism配合Lomorage，完美替换Google Photo的完美方案</title>
-      <link>http://lomorage.com/zh/blog/2022/02/11/photoprism/</link>
-      <pubDate>Fri, 11 Feb 2022 10:38:00 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2022/02/11/photoprism/</guid>
-      <description>&lt;p&gt;PhotoPrism是一款开源的智能AI照片视频管理工具，能非常好的搭配Lomorage使用。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>零成本打造Lomorage电子相框</title>
-      <link>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</link>
-      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</guid>
-      <description>&lt;p&gt;我家里有个&lt;strong&gt;android的平板已经积了很多灰尘了&lt;/strong&gt;，扔掉它觉得舍不得而且还污染地球。
-既然照片已经都存在Lomorage服务器上，能否用android平板来展示我想看的照片呢？&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>在Windows 10 上安装Lomorage容器镜像</title>
-      <link>http://lomorage.com/zh/blog/2020/11/16/windows-docker/</link>
-      <pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2020/11/16/windows-docker/</guid>
-      <description>&lt;p&gt;虽然Lomorage已经提供了Windows原生安装包，但对于喜欢使用Docker的人来说，用Docker来配置Lomorage服务器，也是一个非常好的选择，尤其在Windows Server上可以极大的发挥HYPER-v技术，让Lomorage的服务器健步如飞。本篇适合有Docker使用经验的人员，如果您不知道Docker是啥，请&lt;a href=&#34;https://lomorage.com/zh/installation-win/&#34;&gt;直接下载Lomorage原生安装包&lt;/a&gt;。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lomorage帮您解决iCloud的痛点</title>
-      <link>http://lomorage.com/zh/blog/2020/07/19/mypains/</link>
-      <pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2020/07/19/mypains/</guid>
-      <description>&lt;p&gt;我的照片很多，一部分放在移动硬盘里，一部分放在U盘里，无论移动硬盘和U盘，我都放两份。
-自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>迁移MyCloud的数据到Lomorage</title>
-      <link>http://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</link>
-      <pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;曾经&lt;/strong&gt;买了一个WD-西部数据的MyCloud 6T的存储，用来存照片和视频。因为它的App不好用，
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>主页 on Lomorage</title><link>http://lomorage.com/zh/</link><description>Recent content in 主页 on Lomorage</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Thu, 02 Mar 2023 13:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml"/><item><title>简单快速地迁移数据和扩展存储空间</title><link>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</link><pubDate>Thu, 02 Mar 2023 13:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</guid><description>&lt;p>&lt;strong>简单快速地迁移数据和扩展存储空间&lt;/strong>&lt;/p>
+&lt;p>最近有个用户因为原先的存储盘已经满了，想把数据直接从原先的PI服务器迁移到Windows服务器上，并且扩大存储盘，让我们来看看最快的数据迁移扩展方法，本文也可以用来指导数据恢复。本文以Windows为例，其它平台操作也类似。&lt;/p></description></item><item><title>把WD MyCloud设置为Lomorage的冗余备份盘</title><link>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</link><pubDate>Wed, 22 Feb 2023 13:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</guid><description>&lt;p>&lt;strong>在Windows上，把WD MyCloud设置为Lomorage的冗余备份盘&lt;/strong>&lt;/p></description></item><item><title>PhotoPrism配合Lomorage，完美替换Google Photo的完美方案</title><link>http://lomorage.com/zh/blog/2022/02/11/photoprism/</link><pubDate>Fri, 11 Feb 2022 10:38:00 +0000</pubDate><guid>http://lomorage.com/zh/blog/2022/02/11/photoprism/</guid><description>&lt;p>PhotoPrism是一款开源的智能AI照片视频管理工具，能非常好的搭配Lomorage使用。&lt;/p></description></item><item><title>零成本打造Lomorage电子相框</title><link>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</link><pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate><guid>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</guid><description>&lt;p>我家里有个&lt;strong>android的平板已经积了很多灰尘了&lt;/strong>，扔掉它觉得舍不得而且还污染地球。
+既然照片已经都存在Lomorage服务器上，能否用android平板来展示我想看的照片呢？&lt;/p></description></item><item><title>在Windows 10 上安装Lomorage容器镜像</title><link>http://lomorage.com/zh/blog/2020/11/16/windows-docker/</link><pubDate>Mon, 16 Nov 2020 22:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2020/11/16/windows-docker/</guid><description>&lt;p>虽然Lomorage已经提供了Windows原生安装包，但对于喜欢使用Docker的人来说，用Docker来配置Lomorage服务器，也是一个非常好的选择，尤其在Windows Server上可以极大的发挥HYPER-v技术，让Lomorage的服务器健步如飞。本篇适合有Docker使用经验的人员，如果您不知道Docker是啥，请&lt;a href="https://lomorage.com/zh/installation-win/">直接下载Lomorage原生安装包&lt;/a>。&lt;/p></description></item><item><title>Lomorage帮您解决iCloud的痛点</title><link>http://lomorage.com/zh/blog/2020/07/19/mypains/</link><pubDate>Sun, 19 Jul 2020 21:04:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2020/07/19/mypains/</guid><description>&lt;p>我的照片很多，一部分放在移动硬盘里，一部分放在U盘里，无论移动硬盘和U盘，我都放两份。
+自从手机拍照很方便以来，手机上的照片都没导出来过，我都存在苹果的icloud和百度云里，也是存两份。&lt;/p></description></item><item><title>迁移MyCloud的数据到Lomorage</title><link>http://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</link><pubDate>Sun, 17 May 2020 13:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2020/05/17/import_my_cloud/</guid><description>&lt;p>&lt;strong>曾经&lt;/strong>买了一个WD-西部数据的MyCloud 6T的存储，用来存照片和视频。因为它的App不好用，
 所以每次都是用USB线把手机连上电脑，然后开着电脑把手机的照片拷贝到MyCloud的共享盘里。
-下面我们来看看如何把MyCloud的东西迁移到Lomorage。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>使用树莓派制作新冠病毒电子看板</title>
-      <link>http://lomorage.com/zh/blog/2020/03/29/covid19/</link>
-      <pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2020/03/29/covid19/</guid>
-      <description>&lt;p&gt;新冠病毒肆掠全球，虽然现在可以很容易的在手机上查看新闻和数据，但是设置一个专门的电子看板，显示新闻和统计会更加方便。下面会讲解如何一步步的在树莓派上安装和配置“新冠病毒电子看板”。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>利用lomorage把照片和视频传到Windows</title>
-      <link>http://lomorage.com/zh/blog/2019/12/24/transfer2pc/</link>
-      <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2019/12/24/transfer2pc/</guid>
-      <description>&lt;p&gt;之前我有一个老的iPhone，里面有很多照片和视频，习惯于在Windows工作的我，花了好久都没找到一个简单好用的软件可以帮我把照片和视频传到Windows上，并且帮我按年月日自动分好类。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>树莓派设置冗余备份</title>
-      <link>http://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</link>
-      <pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</guid>
-      <description>&lt;p&gt;珍贵的照片和视频仅仅保存一份是不够的，我们至少需要保存两份，最好还能有一个远程的备份。Lomorage当前提供了冗余备份的功能。可以有下面的几种方式来设置冗余备份。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>常见问题</title>
-      <link>http://lomorage.com/zh/faq/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://lomorage.com/zh/faq/</guid>
-      <description>怎么想到&amp;quot;Lomorage&amp;quot;这个名字? Lomorage的费用是多少? 如何设置冗余备份? 支持那些文件系统? 为什么硬盘上的目录命名的时间看起来不对? 如何设置冗余备份? 编辑后的照片视频支持吗? 什么是后台备份? Raspbian不能启动如何恢复? 密码重置 除了能做照片备份管理之外还能做什么？ 容量多大？ 可以接多块硬盘吗？ 闲置硬盘可以用吗？ 伤硬盘吗？ 如何安装使用？ 备份的照片怎么看？ 是否支持远程访问？ 支持导出照片到手机吗？ 无法更新Linux服务? 怎么想到&amp;quot;Lomorage&amp;quot;这个名字? &amp;ldquo;Lomorage&amp;quot;结合了&amp;quot;Lomography&amp;quot;和&amp;quot;Storage&amp;quot;两个单词.
+下面我们来看看如何把MyCloud的东西迁移到Lomorage。&lt;/p></description></item><item><title>使用树莓派制作新冠病毒电子看板</title><link>http://lomorage.com/zh/blog/2020/03/29/covid19/</link><pubDate>Sun, 29 Mar 2020 22:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2020/03/29/covid19/</guid><description>&lt;p>新冠病毒肆掠全球，虽然现在可以很容易的在手机上查看新闻和数据，但是设置一个专门的电子看板，显示新闻和统计会更加方便。下面会讲解如何一步步的在树莓派上安装和配置“新冠病毒电子看板”。&lt;/p></description></item><item><title>利用lomorage把照片和视频传到Windows</title><link>http://lomorage.com/zh/blog/2019/12/24/transfer2pc/</link><pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2019/12/24/transfer2pc/</guid><description>&lt;p>之前我有一个老的iPhone，里面有很多照片和视频，习惯于在Windows工作的我，花了好久都没找到一个简单好用的软件可以帮我把照片和视频传到Windows上，并且帮我按年月日自动分好类。&lt;/p></description></item><item><title>树莓派设置冗余备份</title><link>http://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</link><pubDate>Tue, 24 Dec 2019 13:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2019/12/24/raspberrypi-hd/</guid><description>&lt;p>珍贵的照片和视频仅仅保存一份是不够的，我们至少需要保存两份，最好还能有一个远程的备份。Lomorage当前提供了冗余备份的功能。可以有下面的几种方式来设置冗余备份。&lt;/p></description></item><item><title>常见问题</title><link>http://lomorage.com/zh/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://lomorage.com/zh/faq/</guid><description>怎么想到&amp;quot;Lomorage&amp;quot;这个名字? Lomorage的费用是多少? 如何设置冗余备份? 支持那些文件系统? 为什么硬盘上的目录命名的时间看起来不对? 如何设置冗余备份? 编辑后的照片视频支持吗? 什么是后台备份? Raspbian不能启动如何恢复? 密码重置 除了能做照片备份管理之外还能做什么？ 容量多大？ 可以接多块硬盘吗？ 闲置硬盘可以用吗？ 伤硬盘吗？ 如何安装使用？ 备份的照片怎么看？ 是否支持远程访问？ 支持导出照片到手机吗？ 无法更新Linux服务? 怎么想到&amp;quot;Lomorage&amp;quot;这个名字? &amp;ldquo;Lomorage&amp;quot;结合了&amp;quot;Lomography&amp;quot;和&amp;quot;Storage&amp;quot;两个单词.
 Lomorage的费用是多少? 软件免费，硬件用户自己可以购买，基于Orange Pi Zero套件，价格不到200人民币。具体的价格比较和配置可以参考这里。绝无任何变相收费。
 如何设置冗余备份? 如果您是在macOS上运行Lomorage服务（Windows暂时还没有支持），您可以打开LomoAgent应用程序的设置窗口，设置冗余备份。
 如果您是在树莓派上运行Lomorage服务，插入新的硬盘后，打开iOS手机客户端，在设置选项卡里可以设置冗余备份。
@@ -103,36 +18,12 @@ Lomorage的费用是多少? 软件免费，硬件用户自己可以购买，基�
 当手机操作讲Lomorage APP放后台后，原有的上传还是会继续，只是下次个文件上传需要等到下一次将Lomorage APP切换到前台，或者通过上述的两种Hack的方式让APP在后台继续运行。
 Raspbian不能启动如何恢复? 不用担心，您的相片存储在硬盘中，而且数据库也都备份到硬盘中了。您只需要将备份的数据库恢复即可。
 将硬盘插入到PC中，您可以发现在Lomorage的每个用户名目录下都有一个assets.db文件，这些文件都是一样的。 重新安装Lomorage Raspbian镜像。 树莓派接上硬盘。 从任意一个用户的目录拷贝assets.db到树莓派的/opt/lomorage/var/目录下。 树莓派上重启Lomorage服务程序: sudo service lomod restart。 Armbian下的恢复类似。
-密码重置 如果您忘记了密码，服务端使用的是Linux系统，运行/opt/lomorage/bin/lomoc reset passsword --db /opt/lomorage/var/assets.</description>
-    </item>
-    <item>
-      <title>调查问卷</title>
-      <link>http://lomorage.com/zh/survey/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://lomorage.com/zh/survey/</guid>
-      <description>loading… </description>
-    </item>
-    <item>
-      <title>价格比较</title>
-      <link>http://lomorage.com/zh/compare/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://lomorage.com/zh/compare/</guid>
-      <description>价格比较 下面的比较主要考虑的是每个产品的最大卖点，并假设用户的主要需求是照片的备份和管理，如果您需要的功能超出那个范围，您可能需要考虑一下直接用NAS，或者如果您是专家可以使用树莓派或其他的单板计算机DIY一个。
+密码重置 如果您忘记了密码，服务端使用的是Linux系统，运行/opt/lomorage/bin/lomoc reset passsword --db /opt/lomorage/var/assets.</description></item><item><title>调查问卷</title><link>http://lomorage.com/zh/survey/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://lomorage.com/zh/survey/</guid><description>loading…</description></item><item><title>价格比较</title><link>http://lomorage.com/zh/compare/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://lomorage.com/zh/compare/</guid><description>价格比较 下面的比较主要考虑的是每个产品的最大卖点，并假设用户的主要需求是照片的备份和管理，如果您需要的功能超出那个范围，您可能需要考虑一下直接用NAS，或者如果您是专家可以使用树莓派或其他的单板计算机DIY一个。
 比如，云服务主要按不同的存储空间容量大小来定价，其他的一些功能则没有差别；而对于那些放置在自家的硬件产品，价格的差别主要在于硬件的配置，同一厂商的不同型号软件功能没有太大差异。在所有的功能中，备份是最基础的功能，其他的高级功能都是构建在这个基础上的。
 Lomorage相比而言更加经济实用，也更加灵活，软件免费，如果您使用Windows或Mac电脑，也就无需另外购置额外的硬件，但如果想更好但利用改系统，将其作为一个7x24小时的私有云，您可以选择树莓派。即便是购买树莓派，也比市面上的方案更加经济实用。软件方面有些高级功能现在还在开发中，但基本的存储备份功能安全稳定，没有任何隐形费用，没有任何用户锁定，不泄漏隐私，为什么不试试呢？
 和云服务的比较 我们不排斥云存储，云存储可以作为本地存储的一个备份，本地存储是建议都保留的。
 下面的按年费来比较, 下面的表格的空单元格表示没有对应的选项。比如Apple iCloud只提供了5 GB, 50 GB, 200 GB and 2 TB的选项, 对Lomorage而言，现在比较难买到新的硬盘是小于500G的。Lomorage的基础功能都是免费的，所以下面的价格主要是考虑的硬件，和硬件的损耗，还有电费。
 百度云的价格是非常有优势的，但也有用户抱怨隐私政策，流量限制等，可以作为本地存储之外的可选备份方案。
 Lomorage (双备份) 年费
-假设4年升级一次设备 Apple iCloud Google Photo Amazon Photo OneDrive 百度云 5 GB 免费 免费 免费 15 GB 免费 50 GB ¥ 72 100 GB ¥ 141.82 ¥ 141.82 200 GB ¥ 252 ¥ 212.76 500 GB ¥ 223.67 1 TB ¥ 248.67 ¥ 425.59 ¥ 398 2 TB ¥ 308.</description>
-    </item>
-    <item>
-      <title>联系我们</title>
-      <link>http://lomorage.com/zh/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://lomorage.com/zh/contact/</guid>
-      <description>客户服务 如果您有任何的问题，建议，新需求，请联系我们，我们洗耳恭听。
-[email](mailto: support@lomorage.com)</description>
-    </item>
-  </channel>
-</rss>
+假设4年升级一次设备 Apple iCloud Google Photo Amazon Photo OneDrive 百度云 5 GB 免费 免费 免费 15 GB 免费 50 GB ¥ 72 100 GB ¥ 141.82 ¥ 141.82 200 GB ¥ 252 ¥ 212.76 500 GB ¥ 223.67 1 TB ¥ 248.67 ¥ 425.59 ¥ 398 2 TB ¥ 308.</description></item><item><title>联系我们</title><link>http://lomorage.com/zh/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://lomorage.com/zh/contact/</guid><description>客户服务 如果您有任何的问题，建议，新需求，请联系我们，我们洗耳恭听。
+[email](mailto: support@lomorage.com)</description></item></channel></rss>

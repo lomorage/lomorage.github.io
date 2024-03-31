@@ -1,20 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>电子相框 on Lomorage</title>
-    <link>http://lomorage.com/zh/categories/%E7%94%B5%E5%AD%90%E7%9B%B8%E6%A1%86/</link>
-    <description>Recent content in 电子相框 on Lomorage</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 26 Aug 2021 10:38:00 +0000</lastBuildDate>
-    <atom:link href="http://lomorage.com/zh/categories/%E7%94%B5%E5%AD%90%E7%9B%B8%E6%A1%86/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>零成本打造Lomorage电子相框</title>
-      <link>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</link>
-      <pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</guid>
-      <description>&lt;p&gt;我家里有个&lt;strong&gt;android的平板已经积了很多灰尘了&lt;/strong&gt;，扔掉它觉得舍不得而且还污染地球。
-既然照片已经都存在Lomorage服务器上，能否用android平板来展示我想看的照片呢？&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>电子相框 on Lomorage</title><link>http://lomorage.com/zh/categories/%E7%94%B5%E5%AD%90%E7%9B%B8%E6%A1%86/</link><description>Recent content in 电子相框 on Lomorage</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Thu, 26 Aug 2021 10:38:00 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/categories/%E7%94%B5%E5%AD%90%E7%9B%B8%E6%A1%86/index.xml" rel="self" type="application/rss+xml"/><item><title>零成本打造Lomorage电子相框</title><link>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</link><pubDate>Thu, 26 Aug 2021 10:38:00 +0000</pubDate><guid>http://lomorage.com/zh/blog/2021/08/26/zero-cost-android-frame/</guid><description>&lt;p>我家里有个&lt;strong>android的平板已经积了很多灰尘了&lt;/strong>，扔掉它觉得舍不得而且还污染地球。
+既然照片已经都存在Lomorage服务器上，能否用android平板来展示我想看的照片呢？&lt;/p></description></item></channel></rss>

@@ -1,27 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Redundancy on Lomorage</title>
-    <link>http://lomorage.com/zh/tags/redundancy/</link>
-    <description>Recent content in Redundancy on Lomorage</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 02 Mar 2023 13:43:40 +0000</lastBuildDate>
-    <atom:link href="http://lomorage.com/zh/tags/redundancy/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>简单快速地迁移数据和扩展存储空间</title>
-      <link>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</link>
-      <pubDate>Thu, 02 Mar 2023 13:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;简单快速地迁移数据和扩展存储空间&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;最近有个用户因为原先的存储盘已经满了，想把数据直接从原先的PI服务器迁移到Windows服务器上，并且扩大存储盘，让我们来看看最快的数据迁移扩展方法，本文也可以用来指导数据恢复。本文以Windows为例，其它平台操作也类似。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>把WD MyCloud设置为Lomorage的冗余备份盘</title>
-      <link>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</link>
-      <pubDate>Wed, 22 Feb 2023 13:43:40 +0000</pubDate>
-      <guid>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;在Windows上，把WD MyCloud设置为Lomorage的冗余备份盘&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Redundancy on Lomorage</title><link>http://lomorage.com/zh/tags/redundancy/</link><description>Recent content in Redundancy on Lomorage</description><generator>Hugo -- gohugo.io</generator><language>zh</language><lastBuildDate>Thu, 02 Mar 2023 13:43:40 +0000</lastBuildDate><atom:link href="http://lomorage.com/zh/tags/redundancy/index.xml" rel="self" type="application/rss+xml"/><item><title>简单快速地迁移数据和扩展存储空间</title><link>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</link><pubDate>Thu, 02 Mar 2023 13:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/</guid><description>&lt;p>&lt;strong>简单快速地迁移数据和扩展存储空间&lt;/strong>&lt;/p>
+&lt;p>最近有个用户因为原先的存储盘已经满了，想把数据直接从原先的PI服务器迁移到Windows服务器上，并且扩大存储盘，让我们来看看最快的数据迁移扩展方法，本文也可以用来指导数据恢复。本文以Windows为例，其它平台操作也类似。&lt;/p></description></item><item><title>把WD MyCloud设置为Lomorage的冗余备份盘</title><link>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</link><pubDate>Wed, 22 Feb 2023 13:43:40 +0000</pubDate><guid>http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/</guid><description>&lt;p>&lt;strong>在Windows上，把WD MyCloud设置为Lomorage的冗余备份盘&lt;/strong>&lt;/p></description></item></channel></rss>
