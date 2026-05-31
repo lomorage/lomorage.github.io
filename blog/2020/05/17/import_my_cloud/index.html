@@ -3,8 +3,7 @@
 	<head>
 	<script type="text/javascript">
 		var userLang = navigator.language || navigator.userLanguage;
-		console.log(window.location.pathname);
-		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+		if (userLang.startsWith("zh") && window.location.pathname == "/" && !sessionStorage.getItem("prevent_lang_redirect")) {
 				window.location.href = '/zh/';
 		}
 	</script>
@@ -14,23 +13,24 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>Move MyCloud to Lomorage | Lomorage</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 
 	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-138235951-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HZV662YYMW');
+        }
+      </script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
@@ -66,26 +66,27 @@ if (!doNotTrack) {
 
 	
 
-	<link rel="stylesheet" type="text/css" href="/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.7148358b44ba429fee8152a56dc9ca0672f9227638ec3089ac499401a69d9f9b.min.css" />
 </head>
 
 	<body>
 		
-<div class="navbar navbar--extended">
+<div class="navbar navbar--extended glass-navbar">
 	<nav class="nav__mobile"></nav>
 	<div class="container">
 		<div class="navbar__inner">
-			<a href="/" class="navbar__logo">Lomorage </a>
+			<a href="/" class="navbar__logo">Lomorage<span class="logo-dot">.</span></a>
 			<nav class="navbar__menu">
 				
 				<ul>
+					
 					
 					
 					<li><a href="/">Home</a></li>
 					
 					
 					
-					<li><a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent">Download Now</a></li>
+					<li><a href="https://lomosw.lomorage.com/en/index.html" class="button button__accent nav-button">Download Now</a></li>
 					
 					
 					
@@ -103,6 +104,9 @@ if (!doNotTrack) {
 					
 					<li><a href="/contact/">Contact</a></li>
 					
+					
+					
+					<li><a href="/zh/" class="nav-lang-switch" onclick="sessionStorage.removeItem('prevent_lang_redirect');"><i class="fas fa-globe"></i> 中文</a></li>
 					
 				</ul>
 			</nav>
@@ -137,31 +141,31 @@ if (!doNotTrack) {
 			
 			
 			<div class="page__main">
-				<div class="text-container"><p><strong>I</strong> have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the 
+				<div class="text-container"><p><strong>I</strong> have ever bought one MyCloud 6T storage to save my photos and videos, but you know, the
 My Cloud app is not good to use, so everything I have to connect to my phone with USB cable, and
-keep the computer on to copy the files to MyCloud disk. 
+keep the computer on to copy the files to MyCloud disk.
 <strong>Now</strong> let me introduce how to import / move MyCloud data to Lomorage.</p>
 <h1 id="table-of-contents">Table of Contents</h1>
 <ul>
 <li>[Config your MyCloud](#Config your MyCloud)
 <ul>
-<li><a href="#1-Turn-on-SSH-on-MyCloud-admin-page">1. Turn on SSH on MyCloud admin page</a></li>
-<li><a href="#2-Connect-to-MyCloud-with-SSH">2. Connect to MyCloud with SSH</a></li>
-<li><a href="#3-Edit-exports-file-on-MyCloud">3. Edit exports file on MyCloud</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#1-Turn-on-SSH-on-MyCloud-admin-page">1. Turn on SSH on MyCloud admin page</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#2-Connect-to-MyCloud-with-SSH">2. Connect to MyCloud with SSH</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#3-Edit-exports-file-on-MyCloud">3. Edit exports file on MyCloud</a></li>
 </ul>
 </li>
-<li><a href="#Mount-MyCloud-folder-to-Lomorage-server">Mount MyCloud folder to Lomorage server</a>
+<li><a href="/blog/2020/05/17/import_my_cloud/#Mount-MyCloud-folder-to-Lomorage-server">Mount MyCloud folder to Lomorage server</a>
 <ul>
-<li><a href="#1-Connect-to-Lomorage-server-with-SSH">1. Connect to Lomorage server with SSH</a></li>
-<li><a href="#2-Mount-MyCloud-folder">2. Mount MyCloud folder</a></li>
-<li><a href="#3-Check-MyCloud-mounted-folder">3. Check MyCloud mounted folder</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#1-Connect-to-Lomorage-server-with-SSH">1. Connect to Lomorage server with SSH</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#2-Mount-MyCloud-folder">2. Mount MyCloud folder</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#3-Check-MyCloud-mounted-folder">3. Check MyCloud mounted folder</a></li>
 </ul>
 </li>
-<li><a href="#Start-import-MyCloud-data-to-Lomorage">Start import MyCloud data to Lomorage</a>
+<li><a href="/blog/2020/05/17/import_my_cloud/#Start-import-MyCloud-data-to-Lomorage">Start import MyCloud data to Lomorage</a>
 <ul>
-<li><a href="#1-Scan-files">1. Scan files </a></li>
-<li><a href="#2-Install-tmux">2. Install tmux</a></li>
-<li><a href="#3-Start-import-to-Lomorage">3. Start import to Lomorage</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#1-Scan-files">1. Scan files </a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#2-Install-tmux">2. Install tmux</a></li>
+<li><a href="/blog/2020/05/17/import_my_cloud/#3-Start-import-to-Lomorage">3. Start import to Lomorage</a></li>
 </ul>
 </li>
 </ul>
@@ -247,14 +251,14 @@ keep the computer on to copy the files to MyCloud disk.
 <p>~/.lomo</p>
 </blockquote>
 <p>Some assets will be categorized if the EXIF info there. Like below:</p>
-<pre><code>pi@raspberrypi-lomorage:~/.lomo/links/unclassfied $ ls -l
+<pre tabindex="0"><code>pi@raspberrypi-lomorage:~/.lomo/links/unclassfied $ ls -l
 total 20
 drwxr-xr-x 2 pi pi 4096 May 17 16:42  aisnote
 drwxr-xr-x 6 pi pi 4096 May 17 16:42  mydoc
 drwxr-xr-x 4 pi pi 4096 May 17 16:42  myphone
-drwxr-xr-x 9 pi pi 4096 May 17 16:42 'Shared Pictures'
-drwxr-xr-x 6 pi pi 4096 May 17 16:42 'Shared Videos'
-pi@raspberrypi-lomorage:~/.lomo/links/unclassfied $ cd 'Shared Pictures'/
+drwxr-xr-x 9 pi pi 4096 May 17 16:42 &#39;Shared Pictures&#39;
+drwxr-xr-x 6 pi pi 4096 May 17 16:42 &#39;Shared Videos&#39;
+pi@raspberrypi-lomorage:~/.lomo/links/unclassfied $ cd &#39;Shared Pictures&#39;/
 pi@raspberrypi-lomorage:~/.lomo/links/unclassfied/Shared Pictures $ ls -l
 total 28
 drwxr-xr-x  3 pi pi 4096 May 17 16:42 2015
@@ -286,7 +290,7 @@ pi@raspberrypi-lomorage:~/.lomo/links/unclassfied/Shared Pictures $
 <p><strong>Note</strong>： the username and password here is the info which you used to login Lomorage on Phone APP.</p>
 <p>Then lomoc application will discovering how many Lomorage servers in your home network, please do that as screen messages.</p>
 <p>The log will be print out like below if import success.</p>
-<pre><code>success upload /home/pi/.lomo/links/classfied/2010/09/16/Does a Kangaroo Have a Mother, Too_ Book Read Aloud, written by Eric Carle.mp4
+<pre tabindex="0"><code>success upload /home/pi/.lomo/links/classfied/2010/09/16/Does a Kangaroo Have a Mother, Too_ Book Read Aloud, written by Eric Carle.mp4
 success upload /home/pi/.lomo/links/classfied/2010/10/07/If the Dinosaurs Came Back.m4v.mp4
 success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows That Type by - Doreen Cronin.mp4
 </code></pre><h1 id="btw">BTW</h1>
@@ -296,8 +300,8 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
 				
 				<div id="comments">
 					<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -313,8 +317,9 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
 				</div>
 			
 			</div>
@@ -327,10 +332,10 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
 
 
 
-		<div class="footer footer--dark">
+		<div class="footer footer--dark modern-footer">
 	<div class="container">
 		<div class="footer__inner">
-			<a href="/" class="footer__textLogo">Lomorage</a>
+			<a href="/" class="footer__textLogo">Lomorage<span class="logo-dot">.</span></a>
 
 			<div class="footer__data">
 				<div class="footer__data__item">
@@ -339,8 +344,6 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
 					
 				</div>
 				<div class="footer__data__item">
-					
-					<div class="footer__row"><a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM" target="_blank" style="opacity: 1;"><i class='fab fa-2x fa-slack'></i></a></div>
 					
 				</div>
 				<div class="footer__data__item">
@@ -351,26 +354,8 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
 			</div>
 		</div>
 
-		<div class="footer__inner">
-			<a href="https://www.iplaysoft.com/lomorage.html">
-				<img src="/img/links/iplaysoft.png"/ height="80">
-			</a>
-
-			<a href="https://www.canalapps.com/apps/alternativas-google-fotos-almacenamiento-gratuito-3983/">
-				<img src="/img/links/canalapps.png"/ height="80">
-			</a>
-			
-			<a href="https://futurezone.at/produkte/google-fotos-wird-kostenpflichtig-die-besten-alternativen/401099544">
-				<img src="/img/links/futurezone.png"/ height="80">
-			</a>
-			
-			<a href="https://nxtrung87.medium.com/use-raspberry-to-back-up-photos-instead-of-google-photo-5101165d3b83">
-				<img src="/img/links/medium.png"/ height="80">
-			</a>
-			
-			<a href="https://www.appinn.com/lomorage-backup-photos/">
-				<img src="/img/links/appinn.png"/ height="80">
-			</a>
+		<div class="footer__inner footer__bottom">
+			<p class="footer__copy">&copy; 2026 Lomorage. All rights reserved.</p>
 		</div>
 		
 	</div>
@@ -390,8 +375,11 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
 	
 	
 	
-	<script type="text/javascript" src="/js/scripts.min.3e88525d3fcba7eb1e0e1489b0f00e01dd0f09d8da8b94910ccd04343e6915e9.js"></script>
+	<script type="text/javascript" src="/js/scripts.min.4299f832bfae93d067120fd0dfde38091f24b4c0bcd939591bb8840a0a80a51e.js"></script>
 </div>
 
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742347659519137"
+     crossorigin="anonymous"></script>
 	</body>
 </html>

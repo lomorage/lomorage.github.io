@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh">
 	<head>
 	<script type="text/javascript">
 		var userLang = navigator.language || navigator.userLanguage;
-		console.log(window.location.pathname);
-		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+		if (userLang.startsWith("zh") && window.location.pathname == "/" && !sessionStorage.getItem("prevent_lang_redirect")) {
 				window.location.href = '/zh/';
 		}
 	</script>
@@ -14,23 +13,24 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>使用树莓派制作新冠病毒电子看板 | Lomorage</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 
 	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-138235951-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HZV662YYMW');
+        }
+      </script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
@@ -66,26 +66,27 @@ if (!doNotTrack) {
 
 	
 
-	<link rel="stylesheet" type="text/css" href="/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.7148358b44ba429fee8152a56dc9ca0672f9227638ec3089ac499401a69d9f9b.min.css" />
 </head>
 
 	<body>
 		
-<div class="navbar navbar--extended">
+<div class="navbar navbar--extended glass-navbar">
 	<nav class="nav__mobile"></nav>
 	<div class="container">
 		<div class="navbar__inner">
-			<a href="/" class="navbar__logo">Lomorage </a>
+			<a href="/zh/" class="navbar__logo">Lomorage<span class="logo-dot">.</span></a>
 			<nav class="navbar__menu">
 				
 				<ul>
+					
 					
 					
 					<li><a href="/zh">主页</a></li>
 					
 					
 					
-					<li><a href="https://docs.lomorage.com/zh/docs/Installation/" class="button button__accent">立即下载</a></li>
+					<li><a href="https://lomosw.lomorage.com/zh/index.html" class="button button__accent nav-button">立即下载</a></li>
 					
 					
 					
@@ -103,6 +104,9 @@ if (!doNotTrack) {
 					
 					<li><a href="/zh/contact/">联系</a></li>
 					
+					
+					
+					<li><a href="/" class="nav-lang-switch" onclick="sessionStorage.setItem('prevent_lang_redirect', 'true');"><i class="fas fa-globe"></i> EN</a></li>
 					
 				</ul>
 			</nav>
@@ -145,23 +149,23 @@ if (!doNotTrack) {
 </div>
 <h1 id="目录">目录</h1>
 <ul>
-<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">工作原理</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<li><a href="/zh/blog/2020/03/29/covid19/#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c">准备工作</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86">工作原理</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#%e5%ae%89%e8%a3%85">安装</a>
 <ul>
-<li><a href="#1-%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84nodejs">1. 安装最新版本的NodeJS</a></li>
-<li><a href="#2-%E5%AE%89%E8%A3%85magicmirror">2. 安装MagicMirror</a></li>
-<li><a href="#3-%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E7%9A%84%E9%85%8D%E7%BD%AE%E6%A8%A1%E7%89%88">3. 使用默认的配置模版</a></li>
-<li><a href="#4-%E5%AE%89%E8%A3%85mmm-covid19%E6%A8%A1%E5%9D%97">4. 安装MMM-COVID19模块</a></li>
-<li><a href="#5-%E4%B8%BAmmm-covid19%E6%B7%BB%E5%8A%A0%E6%9B%B4%E5%A4%9A%E7%9A%84%E6%95%B0%E6%8D%AE%E6%BA%90">5. 为MMM-COVID19添加更多的数据源</a></li>
-<li><a href="#6-%E8%8E%B7%E5%8F%96%E6%9B%B4%E5%A4%9A%E7%9A%84%E6%A8%A1%E5%9D%97">6. 获取更多的模块</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#1-%e5%ae%89%e8%a3%85%e6%9c%80%e6%96%b0%e7%89%88%e6%9c%ac%e7%9a%84nodejs">1. 安装最新版本的NodeJS</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#2-%e5%ae%89%e8%a3%85magicmirror">2. 安装MagicMirror</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#3-%e4%bd%bf%e7%94%a8%e9%bb%98%e8%ae%a4%e7%9a%84%e9%85%8d%e7%bd%ae%e6%a8%a1%e7%89%88">3. 使用默认的配置模版</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#4-%e5%ae%89%e8%a3%85mmm-covid19%e6%a8%a1%e5%9d%97">4. 安装MMM-COVID19模块</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#5-%e4%b8%bammm-covid19%e6%b7%bb%e5%8a%a0%e6%9b%b4%e5%a4%9a%e7%9a%84%e6%95%b0%e6%8d%ae%e6%ba%90">5. 为MMM-COVID19添加更多的数据源</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#6-%e8%8e%b7%e5%8f%96%e6%9b%b4%e5%a4%9a%e7%9a%84%e6%a8%a1%e5%9d%97">6. 获取更多的模块</a></li>
 </ul>
 </li>
-<li><a href="#%E5%87%86%E5%A4%87%E6%8A%95%E5%85%A5%E4%BD%BF%E7%94%A8">准备投入使用</a>
+<li><a href="/zh/blog/2020/03/29/covid19/#%e5%87%86%e5%a4%87%e6%8a%95%e5%85%a5%e4%bd%bf%e7%94%a8">准备投入使用</a>
 <ul>
-<li><a href="#1-%E9%85%8D%E7%BD%AE%E6%A0%91%E8%8E%93%E6%B4%BE">1. 配置树莓派</a></li>
-<li><a href="#2-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8magicmirror">2. 开机启动MagicMirror</a></li>
-<li><a href="#3-%E6%B7%BB%E5%8A%A0cronjob%E5%90%AF%E5%8A%A8%E5%85%B3%E9%97%ADmagicmirror">3. 添加Cronjob启动关闭MagicMirror</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#1-%e9%85%8d%e7%bd%ae%e6%a0%91%e8%8e%93%e6%b4%be">1. 配置树莓派</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#2-%e5%bc%80%e6%9c%ba%e5%90%af%e5%8a%a8magicmirror">2. 开机启动MagicMirror</a></li>
+<li><a href="/zh/blog/2020/03/29/covid19/#3-%e6%b7%bb%e5%8a%a0cronjob%e5%90%af%e5%8a%a8%e5%85%b3%e9%97%admagicmirror">3. 添加Cronjob启动关闭MagicMirror</a></li>
 </ul>
 </li>
 </ul>
@@ -177,7 +181,7 @@ if (!doNotTrack) {
 <p>大体上来说就这么简单!</p>
 <h1 id="安装">安装</h1>
 <p>如果您使用的是lite的系统镜像，您需要先安装桌面系统。</p>
-<pre><code>sudo apt-get update 
+<pre tabindex="0"><code>sudo apt-get update 
 sudo apt-get -y dist-upgrade
 sudo apt-get install raspberrypi-ui-mods -y
 sudo apt-get install libgdk-pixbuf2.0-dev -y
@@ -188,44 +192,44 @@ sudo apt-get install -y --reinstall ca-certificates
 sudo update-ca-certificates --fresh
 </code></pre><h2 id="1-安装最新版本的nodejs">1. 安装最新版本的NodeJS</h2>
 <p><a href="https://github.com/audstanley/NodeJs-Raspberry-Pi">NodeJs-Raspberry-Pi</a>能非常方便的一行命令安装NodeJS:</p>
-<pre><code>$ wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash; node -v
+<pre tabindex="0"><code>$ wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash; node -v
 </code></pre><p><em>使用&quot;apt install&quot;很有可能不会安装新版本的NodeJS，MagicMirror在后续的安装过程只会报错。</em></p>
 <h2 id="2-安装magicmirror">2. 安装MagicMirror</h2>
-<pre><code>$ git clone https://github.com/MichMich/MagicMirror
+<pre tabindex="0"><code>$ git clone https://github.com/MichMich/MagicMirror
 $ cd MagicMirror/
 $ npm install
 </code></pre><h2 id="3-使用默认的配置模版">3. 使用默认的配置模版</h2>
 <p>MagicMirror已经安装了一些<a href="https://docs.magicmirror.builders/getting-started/configuration.html#general">默认模块</a>.</p>
-<pre><code># 假设在MagicMirror目录
+<pre tabindex="0"><code># 假设在MagicMirror目录
 $ cp config/config.js.sample config/config.js
 
-# 可以使用&quot;ctrl+c&quot;停止, 下面的运行方式仅仅用于测试
+# 可以使用&#34;ctrl+c&#34;停止, 下面的运行方式仅仅用于测试
 $ npm run
 </code></pre><p>您可以尝试去修改&quot;config.js&quot;中模块的选项，比如，您可以给&quot;News Feed&quot;模块添加更多的<a href="https://docs.rsshub.app/">RSS源</a>:</p>
-<pre><code>{
-   title: &quot;BBC&quot;,
-   url: &quot;http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=us&quot;
+<pre tabindex="0"><code>{
+   title: &#34;BBC&#34;,
+   url: &#34;http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=us&#34;
 },
 </code></pre><p>您也可以更加上面的布局图来修改模块的位置（&ldquo;position&quot;参数）。</p>
 <p>您也可以修改默认的语言（&ldquo;language&quot;参数)，<a href="https://github.com/MichMich/MagicMirror/tree/master/translations">https://github.com/MichMich/MagicMirror/tree/master/translations</a>可以查看所有可用的语言选项。改成其他语言要记得安装相关的字体，比如中文字体:</p>
-<pre><code>sudo apt install -y fonts-arphic-uming ttf-wqy-microhei
+<pre tabindex="0"><code>sudo apt install -y fonts-arphic-uming ttf-wqy-microhei
 </code></pre><h2 id="4-安装mmm-covid19模块">4. 安装MMM-COVID19模块</h2>
 <p>将模块安装在&quot;modules&quot;目录下:</p>
-<pre><code># 假设在MagicMirror目录
+<pre tabindex="0"><code># 假设在MagicMirror目录
 $ cd modules
 $ git clone https://github.com/bibaldo/MMM-COVID19
 </code></pre><p>然后在&quot;config/config.js&quot;文件中添加模块的配置, 在<a href="https://rapidapi.com/">https://rapidapi.com/</a>注册，将下面的&quot;get-your-api-key&quot;替换为您自己的API密钥。<a href="https://rapidapi.com/astsiatsko/api/coronavirus-monitor">https://rapidapi.com/astsiatsko/api/coronavirus-monitor</a>，&ldquo;X-RapidAPI-Key&quot;就是API密钥。</p>
-<pre><code>  {
-    module: 'MMM-COVID19',
-    position: &quot;bottom_bar&quot;,
+<pre tabindex="0"><code>  {
+    module: &#39;MMM-COVID19&#39;,
+    position: &#34;bottom_bar&#34;,
     config: {
-      headerRowClass: &quot;big&quot;,
-      infoRowClass: &quot;big&quot;,
+      headerRowClass: &#34;big&#34;,
+      infoRowClass: &#34;big&#34;,
       worldStats: true,
-      countries: [&quot;USA&quot;, &quot;China&quot;],
+      countries: [&#34;USA&#34;, &#34;China&#34;],
       lastUpdateInfo: true,
       delta: true,
-      rapidapiKey: &quot;get-your-api-key&quot;,
+      rapidapiKey: &#34;get-your-api-key&#34;,
    }
   },
 </code></pre><p>修改了&quot;config/config.js&quot;后，您需要重启MagicMirror。</p>
@@ -250,7 +254,7 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 <h2 id="1-配置树莓派">1. 配置树莓派</h2>
 <p>您需要关掉屏保，禁止无线网卡的休眠模式，打开OpenGL驱动，参考<a href="https://github.com/MichMich/MagicMirror/wiki/Configuring-the-Raspberry-Pi">wiki</a>进行配置。</p>
 <p><em>注意: 关闭屏保那一步，在修改&rdquo;/etc/xdg/lxsession/LXDE-pi/autostart&quot;文件时, 需要注释掉这一行&rdquo;@xscreensaver -no-splash&rdquo;（使用#），这个在上面的说明里面没有</em></p>
-<pre><code>@lxpanel --profile LXDE-pi
+<pre tabindex="0"><code>@lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 #@xscreensaver -no-splash
 @xset s noblank
@@ -261,15 +265,15 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 <p><em>注意: 如果安装了pm2后却找不到这个命令，您需要将<code>PATH=&quot;/opt/nodejs/bin:$PATH&quot;</code>添加到&quot;~/.profile&quot;文件中，然后<code>source ~/.profile</code>更新PATH环境变量</em></p>
 <h2 id="3-添加cronjob启动关闭magicmirror">3. 添加Cronjob启动关闭MagicMirror</h2>
 <p>在&quot;/var/spool/cron/crontabs/pi&quot;文件中添加如下的内容，控制MagicMirror在早上8 am启动，晚上9 pm关闭，并打开和关闭HDMI显示器。</p>
-<pre><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
+<pre tabindex="0"><code>00 08 * * * vcgencmd display_power 1;pm2 start mm
 00 21 * * * vcgencmd display_power 0;pm2 stop mm
 </code></pre></div>
 
 				
 				<div id="comments">
 					<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -285,8 +289,9 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
 				</div>
 			
 			</div>
@@ -299,10 +304,10 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 
 
 
-		<div class="footer footer--dark">
+		<div class="footer footer--dark modern-footer">
 	<div class="container">
 		<div class="footer__inner">
-			<a href="/" class="footer__textLogo">Lomorage</a>
+			<a href="/zh/" class="footer__textLogo">Lomorage<span class="logo-dot">.</span></a>
 
 			<div class="footer__data">
 				<div class="footer__data__item">
@@ -311,8 +316,6 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 					
 				</div>
 				<div class="footer__data__item">
-					
-					<div class="footer__row"><a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM" target="_blank" style="opacity: 1;"><i class='fab fa-2x fa-slack'></i></a></div>
 					
 				</div>
 				<div class="footer__data__item">
@@ -323,26 +326,8 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 			</div>
 		</div>
 
-		<div class="footer__inner">
-			<a href="https://www.iplaysoft.com/lomorage.html">
-				<img src="/img/links/iplaysoft.png"/ height="80">
-			</a>
-
-			<a href="https://www.canalapps.com/apps/alternativas-google-fotos-almacenamiento-gratuito-3983/">
-				<img src="/img/links/canalapps.png"/ height="80">
-			</a>
-			
-			<a href="https://futurezone.at/produkte/google-fotos-wird-kostenpflichtig-die-besten-alternativen/401099544">
-				<img src="/img/links/futurezone.png"/ height="80">
-			</a>
-			
-			<a href="https://nxtrung87.medium.com/use-raspberry-to-back-up-photos-instead-of-google-photo-5101165d3b83">
-				<img src="/img/links/medium.png"/ height="80">
-			</a>
-			
-			<a href="https://www.appinn.com/lomorage-backup-photos/">
-				<img src="/img/links/appinn.png"/ height="80">
-			</a>
+		<div class="footer__inner footer__bottom">
+			<p class="footer__copy">&copy; 2026 Lomorage. All rights reserved.</p>
 		</div>
 		
 	</div>
@@ -362,8 +347,11 @@ $ git clone https://github.com/bibaldo/MMM-COVID19
 	
 	
 	
-	<script type="text/javascript" src="/js/scripts.min.3e88525d3fcba7eb1e0e1489b0f00e01dd0f09d8da8b94910ccd04343e6915e9.js"></script>
+	<script type="text/javascript" src="/js/scripts.min.4299f832bfae93d067120fd0dfde38091f24b4c0bcd939591bb8840a0a80a51e.js"></script>
 </div>
 
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742347659519137"
+     crossorigin="anonymous"></script>
 	</body>
 </html>

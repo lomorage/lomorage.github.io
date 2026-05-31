@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh">
 	<head>
-	<meta name="generator" content="Hugo 0.78.1" />
+	<meta name="generator" content="Hugo 0.162.1">
 	<script type="text/javascript">
 		var userLang = navigator.language || navigator.userLanguage;
-		console.log(window.location.pathname);
-		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+		if (userLang.startsWith("zh") && window.location.pathname == "/" && !sessionStorage.getItem("prevent_lang_redirect")) {
 				window.location.href = '/zh/';
 		}
 	</script>
@@ -15,23 +14,24 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>主页 | Lomorage</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 
 	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-138235951-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HZV662YYMW');
+        }
+      </script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
@@ -67,26 +67,27 @@ if (!doNotTrack) {
 
 	
 
-	<link rel="stylesheet" type="text/css" href="/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.7148358b44ba429fee8152a56dc9ca0672f9227638ec3089ac499401a69d9f9b.min.css" />
 </head>
 
 	<body>
 		
-<div class="navbar navbar--extended">
+<div class="navbar navbar--extended glass-navbar">
 	<nav class="nav__mobile"></nav>
 	<div class="container">
 		<div class="navbar__inner">
-			<a href="/" class="navbar__logo">Lomorage </a>
+			<a href="/zh/" class="navbar__logo">Lomorage<span class="logo-dot">.</span></a>
 			<nav class="navbar__menu">
 				
 				<ul>
+					
 					
 					
 					<li><a href="/zh">主页</a></li>
 					
 					
 					
-					<li><a href="https://docs.lomorage.com/zh/docs/Installation/" class="button button__accent">立即下载</a></li>
+					<li><a href="https://lomosw.lomorage.com/zh/index.html" class="button button__accent nav-button">立即下载</a></li>
 					
 					
 					
@@ -105,6 +106,9 @@ if (!doNotTrack) {
 					<li><a href="/zh/contact/">联系</a></li>
 					
 					
+					
+					<li><a href="/" class="nav-lang-switch" onclick="sessionStorage.setItem('prevent_lang_redirect', 'true');"><i class="fas fa-globe"></i> EN</a></li>
+					
 				</ul>
 			</nav>
 			
@@ -121,37 +125,29 @@ if (!doNotTrack) {
 <div class="hero">
 	<div class="hero__overlay hero__overlay--gradient"></div>
 	<div class="hero__mask"></div>
+	<div class="hero__glow-blob"></div>
+	<div class="hero__glow-blob hero__glow-blob--2"></div>
 	<div class="hero__inner">
 		<div class="container">
 			<div class="hero__content">
 				<div class="hero__content__inner" id="navConverter">
-					<h1 class="hero__title">您的免费私有照片云</h1>
-					<p class="hero__text">Lomorage是一套免费的私有照片云解决方案，您可以搭建自己的私有云服务，管理照片视频，并能方便的从多台设备进行备份和访问。</p>
-					
-
-					
-
-					<a href="/video/Lomorage-tutorial.zh.mp4" class="button hero__button">查看视频</a>
-
-					
-
-					
-
-					
-
-					<a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent">立即下载</a>
-
-					
-
-					
-
-					
-
-					<a href="" class="button hero__button scroll">了解更多</a>
-
-					
-
-					
+					<h1 class="hero__title">您的私有照片云</h1>
+					<p class="hero__text">Lomorage是一套私有照片云解决方案，您可以搭建自己的私有云服务，管理照片视频，并能方便的从多台设备进行备份和访问。</p>
+					<div class="hero__actions">
+						
+						
+						<a href="/video/Lomorage-tutorial.zh.mp4" class="button hero__button hero-button-secondary">查看视频</a>
+						
+						
+						
+						<a href="https://lomosw.lomorage.com/zh/index.html" class="button button__accent hero-button-primary">立即下载</a>
+						
+						
+						
+						<a href="" class="button hero__button scroll hero-button-outline">了解更多</a>
+						
+						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -165,129 +161,102 @@ if (!doNotTrack) {
 </div>
 
 
-<div class="steps landing__section">
+<div class="features-section landing__section">
 	<div class="container">
-		<h2>什么是Lomorage？</h2>
-		<p>Lomorage可以让您将任意设备上的照片视频备份到自己的服务器上，并通过AI进行智能管理。安装Lomorage服务器，下载手机客户端; 保存美好回忆，享受精彩瞬间！</p>
-	</div>
-	<div class="container">
-		<div class="steps__inner">
-			
-
-			
+		<div class="features-section__header">
+			<h2 class="features-section__title">什么是Lomorage？</h2>
+			<p class="features-section__subtitle">Lomorage可以让您将任意设备上的照片视频备份到自己的服务器上，并通过AI进行智能管理。安装Lomorage服务器，下载手机客户端; 保存美好回忆，享受精彩瞬间！</p>
 		</div>
-		<div class="steps__inner">
+		<div class="features-grid">
 			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/data-storage-svgrepo-com.svg" alt="自动备份" class="step__image" /></div>
-						<h4>自动备份</h4>
-						<p class="step__text">自动备份可以将您手机或电脑里面的照片视频备份到您自己的硬盘中; 使用冗余备份降低数据丢失的风险。永不限速。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/data-storage-svgrepo-com.svg" alt="自动备份" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">自动备份</h4>
+				<p class="feature-card__text">自动备份可以将您手机或电脑里面的照片视频备份到您自己的硬盘中; 使用冗余备份降低数据丢失的风险。永不限速。</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/raw-svgrepo-com.svg" alt="原始质量" class="step__image" /></div>
-						<h4>原始质量</h4>
-						<p class="step__text">无论拍摄5千万像素的raw格式的照片，还是数小时的4K HD视频，无任何修改的备份您的高质量图片和视频，拍下来是什么，存的就是什么。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/raw-svgrepo-com.svg" alt="原始质量" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">原始质量</h4>
+				<p class="feature-card__text">无论拍摄5千万像素的raw格式的照片，还是数小时的4K HD视频，无任何修改的备份您的高质量图片和视频，拍下来是什么，存的就是什么。</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/file-storage-svgrepo-com.svg" alt="智能分类" class="step__image" /></div>
-						<h4>智能分类</h4>
-						<p class="step__text">使用AI技术将您的照片按地点，时间，任务，场景进行分类管理；搜索图片中的文字，检查相似图片，移除重复的照片视频；查看历史的今天。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/file-storage-svgrepo-com.svg" alt="智能分类" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">智能分类</h4>
+				<p class="feature-card__text">使用AI技术将您的照片按时间，地点，人物，场景进行分类管理；搜索图片中的文字，检查相似图片，移除重复的照片视频；查看历史的今天。</p>
 			</div>
 			
-
-			
-		</div>
-		<div class="steps__inner">
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/family-svgrepo-com.svg" alt="无限账号" class="step__image" /></div>
-						<h4>无限账号</h4>
-						<p class="step__text">所有的家庭成员都可以拥有自己的独立账号；账号个数不受限制；方便分享。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/family-svgrepo-com.svg" alt="无限账号" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">无限账号</h4>
+				<p class="feature-card__text">所有的家庭成员都可以拥有自己的独立账号；账号个数不受限制；方便分享。</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/undraw-devices.svg" alt="随时查看" class="step__image" /></div>
-						<h4>随时查看</h4>
-						<p class="step__text">从Android， iOS， Chromecast， Fire TV或者浏览器查看您的照片和视频；不再担心手机空间不够用。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/undraw-devices.svg" alt="随时查看" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">随时查看</h4>
+				<p class="feature-card__text">从Android， iOS， Chromecast， Fire TV或者浏览器查看您的照片和视频；不再担心手机空间不够用。</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/security-svgrepo-com.svg" alt="您的数据" class="step__image" /></div>
-						<h4>您的数据</h4>
-						<p class="step__text">绝无任何形式的绑定。我们也不会收集用户隐私数据，您可以选择发送数据和日志以方便我们帮助您诊断问题，发现服务。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/security-svgrepo-com.svg" alt="您的数据" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">您的数据</h4>
+				<p class="feature-card__text">绝无任何形式的绑定。我们也不会收集用户隐私数据，您可以选择发送数据和日志以方便我们帮助您诊断问题，发现服务。</p>
 			</div>
 			
-
-			
-		</div>
-		<div class="steps__inner">
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/hard-disk-svgrepo-com.svg" alt="Flexible Storage" class="step__image" /></div>
-						<h4>灵活的存储</h4>
-						<p class="step__text">支持所有主流的文件系统(FAT32, NTFS, EXT etc)；磁盘无需重新格式化即可使用，最大支持单盘16TB。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/hard-disk-svgrepo-com.svg" alt="Flexible Storage" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">灵活的存储</h4>
+				<p class="feature-card__text">支持所有主流的文件系统(FAT32, NTFS, EXT etc)；磁盘无需重新格式化即可使用，最大支持单盘16TB。</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/platform-svgrepo-com.svg" alt="跨平台" class="step__image" /></div>
-						<h4>跨平台</h4>
-						<p class="step__text">原生iOS， Android客户端，Web客户端。跨平台服务器软件(MAC/Linux/Windows)，可以将服务器运行在任意设备上。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/platform-svgrepo-com.svg" alt="跨平台" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">跨平台</h4>
+				<p class="feature-card__text">原生iOS， Android客户端，Web客户端。跨平台服务器软件(MAC/Linux/Windows)，可以将服务器运行在任意设备上。</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/delivery-truck-free-svgrepo-com.svg" alt="完全免费" class="step__image" /></div>
-						<h4>完全免费</h4>
-						<p class="step__text">无须任何费用，绝无隐藏收费。在任意闲置的笔记本服务器，台式机或者单版计算机上，都可安装免费的Lomorage服务器程序和客户端程序。</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/delivery-truck-free-svgrepo-com.svg" alt="完全免费" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">完全免费</h4>
+				<p class="feature-card__text">无须任何费用，绝无隐藏收费。在任意闲置的笔记本服务器，台式机或者单版计算机上，都可安装免费的Lomorage服务器程序和客户端程序。</p>
 			</div>
 			
 		</div>
@@ -300,12 +269,17 @@ if (!doNotTrack) {
 
 
 
-<div class="cta cta--reverse">
+<div class="cta-section landing__section">
 	<div class="container">
-		<div class="cta__inner">
-			<h2 class="cta__title"></h2>
-			<p class="cta__sub cta__sub--center"></p>
-			<a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent">立即下载</a>
+		<div class="cta-card">
+			<div class="cta-card__glow"></div>
+			<div class="cta-card__inner">
+				
+				
+				
+				<a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent cta-card__button">立即下载</a>
+				
+			</div>
 		</div>
 	</div>
 </div>
@@ -314,10 +288,10 @@ if (!doNotTrack) {
 
 
 
-		<div class="footer footer--dark">
+		<div class="footer footer--dark modern-footer">
 	<div class="container">
 		<div class="footer__inner">
-			<a href="/" class="footer__textLogo">Lomorage</a>
+			<a href="/zh/" class="footer__textLogo">Lomorage<span class="logo-dot">.</span></a>
 
 			<div class="footer__data">
 				<div class="footer__data__item">
@@ -326,8 +300,6 @@ if (!doNotTrack) {
 					
 				</div>
 				<div class="footer__data__item">
-					
-					<div class="footer__row"><a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM" target="_blank" style="opacity: 1;"><i class='fab fa-2x fa-slack'></i></a></div>
 					
 				</div>
 				<div class="footer__data__item">
@@ -338,26 +310,8 @@ if (!doNotTrack) {
 			</div>
 		</div>
 
-		<div class="footer__inner">
-			<a href="https://www.iplaysoft.com/lomorage.html">
-				<img src="/img/links/iplaysoft.png"/ height="80">
-			</a>
-
-			<a href="https://www.canalapps.com/apps/alternativas-google-fotos-almacenamiento-gratuito-3983/">
-				<img src="/img/links/canalapps.png"/ height="80">
-			</a>
-			
-			<a href="https://futurezone.at/produkte/google-fotos-wird-kostenpflichtig-die-besten-alternativen/401099544">
-				<img src="/img/links/futurezone.png"/ height="80">
-			</a>
-			
-			<a href="https://nxtrung87.medium.com/use-raspberry-to-back-up-photos-instead-of-google-photo-5101165d3b83">
-				<img src="/img/links/medium.png"/ height="80">
-			</a>
-			
-			<a href="https://www.appinn.com/lomorage-backup-photos/">
-				<img src="/img/links/appinn.png"/ height="80">
-			</a>
+		<div class="footer__inner footer__bottom">
+			<p class="footer__copy">&copy; 2026 Lomorage. All rights reserved.</p>
 		</div>
 		
 	</div>
@@ -377,8 +331,11 @@ if (!doNotTrack) {
 	
 	
 	
-	<script type="text/javascript" src="/js/scripts.min.3e88525d3fcba7eb1e0e1489b0f00e01dd0f09d8da8b94910ccd04343e6915e9.js"></script>
+	<script type="text/javascript" src="/js/scripts.min.4299f832bfae93d067120fd0dfde38091f24b4c0bcd939591bb8840a0a80a51e.js"></script>
 </div>
 
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742347659519137"
+     crossorigin="anonymous"></script>
 	</body>
 </html>

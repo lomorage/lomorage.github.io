@@ -1,8 +1,7 @@
 <head>
 	<script type="text/javascript">
 		var userLang = navigator.language || navigator.userLanguage;
-		console.log(window.location.pathname);
-		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+		if (userLang.startsWith("zh") && window.location.pathname == "/" && !sessionStorage.getItem("prevent_lang_redirect")) {
 				window.location.href = '/zh/';
 		}
 	</script>
@@ -12,23 +11,24 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>Categories | Lomorage</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 
 	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-138235951-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HZV662YYMW');
+        }
+      </script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
@@ -64,7 +64,7 @@ if (!doNotTrack) {
 
 	
 
-	<link rel="stylesheet" type="text/css" href="/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.7148358b44ba429fee8152a56dc9ca0672f9227638ec3089ac499401a69d9f9b.min.css" />
 </head>
 
 
@@ -73,10 +73,17 @@ if (!doNotTrack) {
 <ul class="terms">
   
   <li>
+    <a href="/categories/ai">
+      ai
+    </a>
+    (1)
+  </li>
+  
+  <li>
     <a href="/categories/blog">
       blog
     </a>
-    (2)
+    (4)
   </li>
   
   <li>
@@ -107,12 +114,19 @@ if (!doNotTrack) {
     (1)
   </li>
   
+  <li>
+    <a href="/categories/remote-access">
+      remote access
+    </a>
+    (1)
+  </li>
+  
 </ul>
 
-<div class="footer footer--dark">
+<div class="footer footer--dark modern-footer">
 	<div class="container">
 		<div class="footer__inner">
-			<a href="/" class="footer__textLogo">Lomorage</a>
+			<a href="/" class="footer__textLogo">Lomorage<span class="logo-dot">.</span></a>
 
 			<div class="footer__data">
 				<div class="footer__data__item">
@@ -121,8 +135,6 @@ if (!doNotTrack) {
 					
 				</div>
 				<div class="footer__data__item">
-					
-					<div class="footer__row"><a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM" target="_blank" style="opacity: 1;"><i class='fab fa-2x fa-slack'></i></a></div>
 					
 				</div>
 				<div class="footer__data__item">
@@ -133,26 +145,8 @@ if (!doNotTrack) {
 			</div>
 		</div>
 
-		<div class="footer__inner">
-			<a href="https://www.iplaysoft.com/lomorage.html">
-				<img src="/img/links/iplaysoft.png"/ height="80">
-			</a>
-
-			<a href="https://www.canalapps.com/apps/alternativas-google-fotos-almacenamiento-gratuito-3983/">
-				<img src="/img/links/canalapps.png"/ height="80">
-			</a>
-			
-			<a href="https://futurezone.at/produkte/google-fotos-wird-kostenpflichtig-die-besten-alternativen/401099544">
-				<img src="/img/links/futurezone.png"/ height="80">
-			</a>
-			
-			<a href="https://nxtrung87.medium.com/use-raspberry-to-back-up-photos-instead-of-google-photo-5101165d3b83">
-				<img src="/img/links/medium.png"/ height="80">
-			</a>
-			
-			<a href="https://www.appinn.com/lomorage-backup-photos/">
-				<img src="/img/links/appinn.png"/ height="80">
-			</a>
+		<div class="footer__inner footer__bottom">
+			<p class="footer__copy">&copy; 2026 Lomorage. All rights reserved.</p>
 		</div>
 		
 	</div>

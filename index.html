@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-	<meta name="generator" content="Hugo 0.78.1" />
+	<meta name="generator" content="Hugo 0.162.1">
 	<script type="text/javascript">
 		var userLang = navigator.language || navigator.userLanguage;
-		console.log(window.location.pathname);
-		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+		if (userLang.startsWith("zh") && window.location.pathname == "/" && !sessionStorage.getItem("prevent_lang_redirect")) {
 				window.location.href = '/zh/';
 		}
 	</script>
@@ -15,23 +14,24 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>Home | Lomorage</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 
 	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-138235951-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HZV662YYMW');
+        }
+      </script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
@@ -67,26 +67,27 @@ if (!doNotTrack) {
 
 	
 
-	<link rel="stylesheet" type="text/css" href="/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.7148358b44ba429fee8152a56dc9ca0672f9227638ec3089ac499401a69d9f9b.min.css" />
 </head>
 
 	<body>
 		
-<div class="navbar navbar--extended">
+<div class="navbar navbar--extended glass-navbar">
 	<nav class="nav__mobile"></nav>
 	<div class="container">
 		<div class="navbar__inner">
-			<a href="/" class="navbar__logo">Lomorage </a>
+			<a href="/" class="navbar__logo">Lomorage<span class="logo-dot">.</span></a>
 			<nav class="navbar__menu">
 				
 				<ul>
+					
 					
 					
 					<li><a href="/">Home</a></li>
 					
 					
 					
-					<li><a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent">Download Now</a></li>
+					<li><a href="https://lomosw.lomorage.com/en/index.html" class="button button__accent nav-button">Download Now</a></li>
 					
 					
 					
@@ -105,6 +106,9 @@ if (!doNotTrack) {
 					<li><a href="/contact/">Contact</a></li>
 					
 					
+					
+					<li><a href="/zh/" class="nav-lang-switch" onclick="sessionStorage.removeItem('prevent_lang_redirect');"><i class="fas fa-globe"></i> 中文</a></li>
+					
 				</ul>
 			</nav>
 			
@@ -121,37 +125,29 @@ if (!doNotTrack) {
 <div class="hero">
 	<div class="hero__overlay hero__overlay--gradient"></div>
 	<div class="hero__mask"></div>
+	<div class="hero__glow-blob"></div>
+	<div class="hero__glow-blob hero__glow-blob--2"></div>
 	<div class="hero__inner">
 		<div class="container">
 			<div class="hero__content">
 				<div class="hero__content__inner" id="navConverter">
 					<h1 class="hero__title">Your Free Private Photo Cloud</h1>
 					<p class="hero__text">Lomorage is free private photo cloud solution that puts you in control of your photos and videos. Enjoy the moments from any device with your own server, with no strings attached. Your photos, your videos, your disks, your way.</p>
-					
-
-					
-
-					<a href="/video/Lomorage-tutorial.mp4" class="button hero__button">See it in Action</a>
-
-					
-
-					
-
-					
-
-					<a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent">Download Now</a>
-
-					
-
-					
-
-					
-
-					<a href="" class="button hero__button scroll">Learn More</a>
-
-					
-
-					
+					<div class="hero__actions">
+						
+						
+						<a href="/video/Lomorage-tutorial.mp4" class="button hero__button hero-button-secondary">See it in Action</a>
+						
+						
+						
+						<a href="https://lomosw.lomorage.com/en/index.html" class="button button__accent hero-button-primary">Download Now</a>
+						
+						
+						
+						<a href="" class="button hero__button scroll hero-button-outline">Learn More</a>
+						
+						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -165,129 +161,102 @@ if (!doNotTrack) {
 </div>
 
 
-<div class="steps landing__section">
+<div class="features-section landing__section">
 	<div class="container">
-		<h2>What is Lomorage?</h2>
-		<p>Lomorage enables you to backup photos / videos from any devices to your self-hosted server, and intelligently manages these personal assets via AI. Run the Lomorage server at your home, download mobile client to save the memories, and enjoy the moments.</p>
-	</div>
-	<div class="container">
-		<div class="steps__inner">
-			
-
-			
+		<div class="features-section__header">
+			<h2 class="features-section__title">What is Lomorage?</h2>
+			<p class="features-section__subtitle">Lomorage enables you to backup photos / videos from any devices to your self-hosted server, and intelligently manages these personal assets via AI. Run the Lomorage server at your home, download mobile client to save the memories, and enjoy the moments.</p>
 		</div>
-		<div class="steps__inner">
+		<div class="features-grid">
 			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/data-storage-svgrepo-com.svg" alt="Automatic Back Up" class="step__image" /></div>
-						<h4>Automatic Back Up</h4>
-						<p class="step__text">Automatically backs up all your photos from smartphones and computers to your own hard drive; Redundancy backup lowers the risk of losing data. No rate limits.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/data-storage-svgrepo-com.svg" alt="Automatic Back Up" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Automatic Back Up</h4>
+				<p class="feature-card__text">Automatically backs up all your photos from smartphones and computers to your own hard drive; Redundancy backup lowers the risk of losing data. No rate limits.</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/raw-svgrepo-com.svg" alt="Quality" class="step__image" /></div>
-						<h4>Original Quality</h4>
-						<p class="step__text">Whether it&rsquo;s a 50 megapixel raw photo or hour long 4K HD video, back up your high resolution content as it is without any modification. What you take is what is saved.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/raw-svgrepo-com.svg" alt="Quality" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Original Quality</h4>
+				<p class="feature-card__text">Whether it&rsquo;s a 50 megapixel raw photo or hour long 4K HD video, back up your high resolution content as it is without any modification. What you take is what is saved.</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/file-storage-svgrepo-com.svg" alt="Intelligent Organization" class="step__image" /></div>
-						<h4>Intelligent Organization</h4>
-						<p class="step__text">Use AI to sort your photos by date, location, person, scene; search by texts in photos; detect similar photos; remove duplicated assets; history of today reminder.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/file-storage-svgrepo-com.svg" alt="Intelligent Organization" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Intelligent Organization</h4>
+				<p class="feature-card__text">Use AI to sort your photos by date, location, person, scene; search by texts in photos; detect similar photos; remove duplicated assets; history of today reminder.</p>
 			</div>
 			
-
-			
-		</div>
-		<div class="steps__inner">
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/family-svgrepo-com.svg" alt="Unlimited Accounts" class="step__image" /></div>
-						<h4>Unlimited Accounts</h4>
-						<p class="step__text">One server for all family members while each member has its own account, no account number limits. Share becomes easy.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/family-svgrepo-com.svg" alt="Unlimited Accounts" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Unlimited Accounts</h4>
+				<p class="feature-card__text">One server for all family members while each member has its own account, no account number limits. Share becomes easy.</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/undraw-devices.svg" alt="Your Photos, Wherever You Are" class="step__image" /></div>
-						<h4>Your Photos, Wherever You Are</h4>
-						<p class="step__text">Browse ALL your photos and videos from apps on your Android, iOS, Chromecast, Fire TV device, or a web browser; No need to worry about the phone space.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/undraw-devices.svg" alt="Your Photos, Wherever You Are" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Your Photos, Wherever You Are</h4>
+				<p class="feature-card__text">Browse ALL your photos and videos from apps on your Android, iOS, Chromecast, Fire TV device, or a web browser; No need to worry about the phone space.</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/security-svgrepo-com.svg" alt="It&#39;s Your Data" class="step__image" /></div>
-						<h4>It&rsquo;s Your Data</h4>
-						<p class="step__text">No tracking. We believe in privacy is super important for everyone, and anything we might collect (crash logs, discovery, etc.) is opt-in only. no vendor lock in.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/security-svgrepo-com.svg" alt="It&#39;s Your Data" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">It&rsquo;s Your Data</h4>
+				<p class="feature-card__text">No tracking. We believe in privacy is super important for everyone, and anything we might collect (crash logs, discovery, etc.) is opt-in only. no vendor lock in.</p>
 			</div>
 			
-
-			
-		</div>
-		<div class="steps__inner">
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/hard-disk-svgrepo-com.svg" alt="Flexible Storage" class="step__image" /></div>
-						<h4>Flexible Storage</h4>
-						<p class="step__text">All major file systems(FAT32, NTFS, EXT etc) are supported; Choose your own hard drive, no re-format needed; Up to 16T hard drive is supported.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/hard-disk-svgrepo-com.svg" alt="Flexible Storage" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Flexible Storage</h4>
+				<p class="feature-card__text">All major file systems(FAT32, NTFS, EXT etc) are supported; Choose your own hard drive, no re-format needed; Up to 16T hard drive is supported.</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/platform-svgrepo-com.svg" alt="Cross Platform" class="step__image" /></div>
-						<h4>Cross Platform</h4>
-						<p class="step__text">Native iOS, Android client and Web client. Multiple platform server software (MAC/Linux/Windows) can let you choose any devices as self-host server.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/platform-svgrepo-com.svg" alt="Cross Platform" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Cross Platform</h4>
+				<p class="feature-card__text">Native iOS, Android client and Web client. Multiple platform server software (MAC/Linux/Windows) can let you choose any devices as self-host server.</p>
 			</div>
 			
-
-			
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="/img/delivery-truck-free-svgrepo-com.svg" alt="Yes, it really costs nothing" class="step__image" /></div>
-						<h4>Yes, it really costs nothing</h4>
-						<p class="step__text">No costs, no hidden fees. Setup on any old laptops, servers, or Single Board Computers, reuse your hard drives, install free Lomorage server software and client APP, then you are ready to go.</p>
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="/img/delivery-truck-free-svgrepo-com.svg" alt="Yes, it really costs nothing" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">Yes, it really costs nothing</h4>
+				<p class="feature-card__text">No costs, no hidden fees. Setup on any old laptops, servers, or Single Board Computers, reuse your hard drives, install free Lomorage server software and client APP, then you are ready to go.</p>
 			</div>
 			
 		</div>
@@ -300,12 +269,17 @@ if (!doNotTrack) {
 
 
 
-<div class="cta cta--reverse">
+<div class="cta-section landing__section">
 	<div class="container">
-		<div class="cta__inner">
-			<h2 class="cta__title"></h2>
-			<p class="cta__sub cta__sub--center"></p>
-			<a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent">Download Now</a>
+		<div class="cta-card">
+			<div class="cta-card__glow"></div>
+			<div class="cta-card__inner">
+				
+				
+				
+				<a href="https://docs.lomorage.com/docs/Installation/" class="button button__accent cta-card__button">Download Now</a>
+				
+			</div>
 		</div>
 	</div>
 </div>
@@ -314,10 +288,10 @@ if (!doNotTrack) {
 
 
 
-		<div class="footer footer--dark">
+		<div class="footer footer--dark modern-footer">
 	<div class="container">
 		<div class="footer__inner">
-			<a href="/" class="footer__textLogo">Lomorage</a>
+			<a href="/" class="footer__textLogo">Lomorage<span class="logo-dot">.</span></a>
 
 			<div class="footer__data">
 				<div class="footer__data__item">
@@ -326,8 +300,6 @@ if (!doNotTrack) {
 					
 				</div>
 				<div class="footer__data__item">
-					
-					<div class="footer__row"><a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM" target="_blank" style="opacity: 1;"><i class='fab fa-2x fa-slack'></i></a></div>
 					
 				</div>
 				<div class="footer__data__item">
@@ -338,26 +310,8 @@ if (!doNotTrack) {
 			</div>
 		</div>
 
-		<div class="footer__inner">
-			<a href="https://www.iplaysoft.com/lomorage.html">
-				<img src="/img/links/iplaysoft.png"/ height="80">
-			</a>
-
-			<a href="https://www.canalapps.com/apps/alternativas-google-fotos-almacenamiento-gratuito-3983/">
-				<img src="/img/links/canalapps.png"/ height="80">
-			</a>
-			
-			<a href="https://futurezone.at/produkte/google-fotos-wird-kostenpflichtig-die-besten-alternativen/401099544">
-				<img src="/img/links/futurezone.png"/ height="80">
-			</a>
-			
-			<a href="https://nxtrung87.medium.com/use-raspberry-to-back-up-photos-instead-of-google-photo-5101165d3b83">
-				<img src="/img/links/medium.png"/ height="80">
-			</a>
-			
-			<a href="https://www.appinn.com/lomorage-backup-photos/">
-				<img src="/img/links/appinn.png"/ height="80">
-			</a>
+		<div class="footer__inner footer__bottom">
+			<p class="footer__copy">&copy; 2026 Lomorage. All rights reserved.</p>
 		</div>
 		
 	</div>
@@ -377,8 +331,11 @@ if (!doNotTrack) {
 	
 	
 	
-	<script type="text/javascript" src="/js/scripts.min.3e88525d3fcba7eb1e0e1489b0f00e01dd0f09d8da8b94910ccd04343e6915e9.js"></script>
+	<script type="text/javascript" src="/js/scripts.min.4299f832bfae93d067120fd0dfde38091f24b4c0bcd939591bb8840a0a80a51e.js"></script>
 </div>
 
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742347659519137"
+     crossorigin="anonymous"></script>
 	</body>
 </html>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh">
 	<head>
 	<script type="text/javascript">
 		var userLang = navigator.language || navigator.userLanguage;
-		console.log(window.location.pathname);
-		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+		if (userLang.startsWith("zh") && window.location.pathname == "/" && !sessionStorage.getItem("prevent_lang_redirect")) {
 				window.location.href = '/zh/';
 		}
 	</script>
@@ -14,23 +13,24 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>MyCloud | Lomorage</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 
 	
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-138235951-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HZV662YYMW');
+        }
+      </script>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
@@ -66,26 +66,27 @@ if (!doNotTrack) {
 
 	
 
-	<link rel="stylesheet" type="text/css" href="/css/style.a2d4ddf024fd938e5bbbf2d62c2f17987b805f53b4cc89d360109c27d51e9458.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.7148358b44ba429fee8152a56dc9ca0672f9227638ec3089ac499401a69d9f9b.min.css" />
 </head>
 
 	<body>
 		
-<div class="navbar navbar--extended">
+<div class="navbar navbar--extended glass-navbar">
 	<nav class="nav__mobile"></nav>
 	<div class="container">
 		<div class="navbar__inner">
-			<a href="/" class="navbar__logo">Lomorage </a>
+			<a href="/zh/" class="navbar__logo">Lomorage<span class="logo-dot">.</span></a>
 			<nav class="navbar__menu">
 				
 				<ul>
+					
 					
 					
 					<li><a href="/zh">主页</a></li>
 					
 					
 					
-					<li><a href="https://docs.lomorage.com/zh/docs/Installation/" class="button button__accent">立即下载</a></li>
+					<li><a href="https://lomosw.lomorage.com/zh/index.html" class="button button__accent nav-button">立即下载</a></li>
 					
 					
 					
@@ -103,6 +104,9 @@ if (!doNotTrack) {
 					
 					<li><a href="/zh/contact/">联系</a></li>
 					
+					
+					
+					<li><a href="/" class="nav-lang-switch" onclick="sessionStorage.setItem('prevent_lang_redirect', 'true');"><i class="fas fa-globe"></i> EN</a></li>
 					
 				</ul>
 			</nav>
@@ -146,6 +150,75 @@ if (!doNotTrack) {
 			<div class="col-md-9" id="blog-listing-medium">
 
 				
+				
+				<section class="post">
+					<div class="row">
+						<div class="col-md-4">
+						  <div class="image">
+							  <a href="http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/">
+								  
+								  <img src="http://lomorage.com//img/blog/migrate_from_pi_win/migrate_pi_win.jpg" class="img-responsive" alt="">
+								  
+							  </a>
+						  </div>
+						</div>
+						<div class="col-md-8">
+							<h2><a href="http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/">简单快速地迁移数据和扩展存储空间</a></h2>
+							<div class="clearfix">
+								<p class="author-category">
+								  
+								  
+								  
+								  in <a href="http://lomorage.com/categories/blog">BLOG</a>
+								  
+								  
+
+								</p>
+								<p class="date-comments">
+									<a href="http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/"><i class="fa fa-calendar-o"></i> March 2, 2023</a>
+								</p>
+							</div>
+							<p class="intro"><p><strong>简单快速地迁移数据和扩展存储空间</strong></p>
+<p>最近有个用户因为原先的存储盘已经满了，想把数据直接从原先的PI服务器迁移到Windows服务器上，并且扩大存储盘，让我们来看看最快的数据迁移扩展方法，本文也可以用来指导数据恢复。本文以Windows为例，其它平台操作也类似。</p></p>
+							<p class="read-more"><a href="http://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/" class="btn btn-template-main">继续阅读</a>
+							</p>
+						</div>
+					</div>
+				</section>
+				
+				<section class="post">
+					<div class="row">
+						<div class="col-md-4">
+						  <div class="image">
+							  <a href="http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/">
+								  
+								  <img src="http://lomorage.com//img/blog/set_wd_as_backup/set_wd_as_backup.jpg" class="img-responsive" alt="">
+								  
+							  </a>
+						  </div>
+						</div>
+						<div class="col-md-8">
+							<h2><a href="http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/">把WD MyCloud设置为Lomorage的冗余备份盘</a></h2>
+							<div class="clearfix">
+								<p class="author-category">
+								  
+								  
+								  
+								  in <a href="http://lomorage.com/categories/blog">BLOG</a>
+								  
+								  
+
+								</p>
+								<p class="date-comments">
+									<a href="http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/"><i class="fa fa-calendar-o"></i> February 22, 2023</a>
+								</p>
+							</div>
+							<p class="intro"><p><strong>在Windows上，把WD MyCloud设置为Lomorage的冗余备份盘</strong></p></p>
+							<p class="read-more"><a href="http://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/" class="btn btn-template-main">继续阅读</a>
+							</p>
+						</div>
+					</div>
+				</section>
 				
 				<section class="post">
 					<div class="row">
@@ -222,10 +295,10 @@ if (!doNotTrack) {
 
 
 
-		<div class="footer footer--dark">
+		<div class="footer footer--dark modern-footer">
 	<div class="container">
 		<div class="footer__inner">
-			<a href="/" class="footer__textLogo">Lomorage</a>
+			<a href="/zh/" class="footer__textLogo">Lomorage<span class="logo-dot">.</span></a>
 
 			<div class="footer__data">
 				<div class="footer__data__item">
@@ -234,8 +307,6 @@ if (!doNotTrack) {
 					
 				</div>
 				<div class="footer__data__item">
-					
-					<div class="footer__row"><a href="https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM" target="_blank" style="opacity: 1;"><i class='fab fa-2x fa-slack'></i></a></div>
 					
 				</div>
 				<div class="footer__data__item">
@@ -246,26 +317,8 @@ if (!doNotTrack) {
 			</div>
 		</div>
 
-		<div class="footer__inner">
-			<a href="https://www.iplaysoft.com/lomorage.html">
-				<img src="/img/links/iplaysoft.png"/ height="80">
-			</a>
-
-			<a href="https://www.canalapps.com/apps/alternativas-google-fotos-almacenamiento-gratuito-3983/">
-				<img src="/img/links/canalapps.png"/ height="80">
-			</a>
-			
-			<a href="https://futurezone.at/produkte/google-fotos-wird-kostenpflichtig-die-besten-alternativen/401099544">
-				<img src="/img/links/futurezone.png"/ height="80">
-			</a>
-			
-			<a href="https://nxtrung87.medium.com/use-raspberry-to-back-up-photos-instead-of-google-photo-5101165d3b83">
-				<img src="/img/links/medium.png"/ height="80">
-			</a>
-			
-			<a href="https://www.appinn.com/lomorage-backup-photos/">
-				<img src="/img/links/appinn.png"/ height="80">
-			</a>
+		<div class="footer__inner footer__bottom">
+			<p class="footer__copy">&copy; 2026 Lomorage. All rights reserved.</p>
 		</div>
 		
 	</div>
@@ -285,8 +338,11 @@ if (!doNotTrack) {
 	
 	
 	
-	<script type="text/javascript" src="/js/scripts.min.3e88525d3fcba7eb1e0e1489b0f00e01dd0f09d8da8b94910ccd04343e6915e9.js"></script>
+	<script type="text/javascript" src="/js/scripts.min.4299f832bfae93d067120fd0dfde38091f24b4c0bcd939591bb8840a0a80a51e.js"></script>
 </div>
 
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742347659519137"
+     crossorigin="anonymous"></script>
 	</body>
 </html>
