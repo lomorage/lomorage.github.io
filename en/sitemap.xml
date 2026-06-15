@@ -19,13 +19,13 @@
     <lastmod>2023-03-02T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
-                href="http://localhost:1313/blog/"
+                hreflang="zh"
+                href="http://localhost:1313/zh/blog/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/blog/"
+                hreflang="en-us"
+                href="http://localhost:1313/blog/"
                 />
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -110,13 +110,13 @@
     <lastmod>2023-03-02T13:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
-                href="http://localhost:1313/tags/wd/"
+                hreflang="zh"
+                href="http://localhost:1313/zh/tags/wd/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/tags/wd/"
+                hreflang="en-us"
+                href="http://localhost:1313/tags/wd/"
                 />
   </url><url>
     <loc>http://localhost:1313/blog/2023/02/22/set_wd_as_backup/</loc>
@@ -236,13 +236,13 @@
     <lastmod>2020-11-16T22:43:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/tags/docker/"
+                hreflang="en-us"
+                href="http://localhost:1313/tags/docker/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en-us"
-                href="http://localhost:1313/tags/docker/"
+                hreflang="zh"
+                href="http://localhost:1313/zh/tags/docker/"
                 />
   </url><url>
     <loc>http://localhost:1313/blog/2020/11/16/windows-docker/</loc>
