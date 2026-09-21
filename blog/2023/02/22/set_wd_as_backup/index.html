@@ -1,7 +1,61 @@
-<!doctype html><html lang=en-us><head><script type=text/javascript>var userLang=navigator.language||navigator.userLanguage;userLang.startsWith("zh")&&window.location.pathname=="/"&&!sessionStorage.getItem("prevent_lang_redirect")&&(window.location.href="/zh/")</script><script type=text/javascript src=//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js data-dojo-config="usePlainJson: true, isDebug: false"></script><script type=text/javascript>window.dojoRequire(["mojo/signup-forms/Loader"],function(e){e.start({baseUrl:"mc.us4.list-manage.com",uuid:"6ace4137554cb923d96ec92c7",lid:"36ce78d7a8",uniqueMethods:!0})})</script><script async src=https://cdn.splitbee.io/sb.js></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Set WD MyCloud as Lomorage redundancy backup disk on Windows | Lomorage</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel=stylesheet><script defer src=https://use.fontawesome.com/releases/v5.15.3/js/all.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-HZV662YYMW"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-HZV662YYMW")}</script><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.8.1/css/all.css integrity=sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf crossorigin=anonymous><link rel=stylesheet href=//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon><link rel=apple-touch-icon href=/img/apple-touch-icon.png><link rel=stylesheet type=text/css href=/css/style.6eb27b868a73e70ff2e3039055b3628b55e105080e2869634de99c163cbc1205.min.css></head><body><div class="navbar navbar--extended glass-navbar"><nav class=nav__mobile></nav><div class=container><div class=navbar__inner><a href=/ class=navbar__logo>Lomorage<span class=logo-dot>.</span></a><nav class=navbar__menu><ul><li><a href=/>Home</a></li><li><a href=https://lomosw.lomorage.com/en/index.html class="button button__accent nav-button">Download Now</a></li><li><a href=/survey/>Survey</a></li><li><a href=/faq/>FAQ</a></li><li><a href=/blog/>Blog</a></li><li><a href=/contact/>Contact</a></li><li><a href=/zh/ class=nav-lang-switch onclick='sessionStorage.removeItem("prevent_lang_redirect")'><i class="fas fa-globe"></i> 中文</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" viewBox="0 0 448 512"><path d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""/></svg></a></div></div></div></div><div class=page__header><div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner><div class=container><div class=page__header__content><div class=page__header__content__inner id=navConverter><h1 class=page__header__title>Set WD MyCloud as Lomorage redundancy backup disk on Windows</h1></div></div></div></div></div><div class=page><div class=container><div class=page__inner><div class=page__main><div class=text-container><p><strong>Setup WD MyCloud as Lomorage Redundancy backup disk on Windows.</strong></p><h1 id=table-of-contents>Table of Contents</h1><ul><li><a href=/blog/2023/02/22/set_wd_as_backup/#table-of-contents>Table of Contents</a></li><li><a href=/blog/2023/02/22/set_wd_as_backup/#1-mount-wd-mycloud-as-windows-disk>1. Mount WD MyCloud as Windows Disk</a></li><li><a href=/blog/2023/02/22/set_wd_as_backup/#2-setup-redundancy-backup>2. Setup Redundancy Backup</a></li><li><a href=/blog/2023/02/22/set_wd_as_backup/#3-test-redundancy-backup-and-trouble-shooting>3. Test redundancy backup and trouble shooting</a><ul><li><a href=/blog/2023/02/22/set_wd_as_backup/#if-you-meet-some-issue-like-the-below>If you meet some issue like the below:</a></li><li><a href=/blog/2023/02/22/set_wd_as_backup/#solution-is>Solution is:</a></li></ul></li></ul><h1 id=1-mount-wd-mycloud-as-windows-disk>1. Mount WD MyCloud as Windows Disk</h1><p>The detail introduction from WD is here: <strong><a href=https://support-en.wd.com/app/answers/detailweb/a_id/25436/h/p2#subject2>How to mount WD MyCloud on Windows</a></strong></p><p>Below picture is my case:</p><div align=center><p class=screenshoot><img width=100% src=/img/blog/set_wd_as_backup/mount.png style="border:2px solid #000"></p></div><h1 id=2-setup-redundancy-backup>2. Setup Redundancy Backup</h1><p>Open Lomorage Photo Assistant in your Windows, and set as blow:</p><blockquote><p><strong>Make sure there is no content under the folder <strong>W:\wd-test</strong></strong></p></blockquote><div align=center><p class=screenshoot><img width=100% src=/img/blog/set_wd_as_backup/set_redundancy_agent.png></p></div><h1 id=3-test-redundancy-backup-and-trouble-shooting>3. Test redundancy backup and trouble shooting</h1><p>And click the <strong>&ldquo;Start redundancy backup&mldr;&rdquo;</strong> button to see the files will copy from
-D:\imagebk to W:\wd-test.</p><h2 id=if-you-meet-some-issue-like-the-below>If you meet some issue like the below:</h2><pre tabindex=0><code>rdiff-backup.exe --force  -v5 --print-statistics D:/imagebk W:/
-WARNING: this command line interface is deprecated and will disappear, start using the new one as described with &#39;--new --help&#39;.
-* Using repository &#39;W:/&#39;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Set WD MyCloud as Lomorage redundancy backup disk on Windows · Lomorage</title><meta name="description" content="Setup WD MyCloud as Lomorage Redundancy backup disk on Windows."><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Set WD MyCloud as Lomorage redundancy backup disk on Windows · Lomorage"><meta property="og:description" content="Setup WD MyCloud as Lomorage Redundancy backup disk on Windows."><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/blog/2023/02/22/set_wd_as_backup/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/blog/2023/02/22/set_wd_as_backup/"><link rel="alternate" hreflang="en" href="https://lomorage.com/blog/2023/02/22/set_wd_as_backup/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/blog/2023/02/22/set_wd_as_backup/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/blog/2023/02/22/set_wd_as_backup/" lang="zh">中文</a><a class="button button-small" href="/#download">Get started <span aria-hidden="true">↗</span></a></div></header>
+
+<main id="main" class="wrap document-page">
+<a class="text-link" href="/">← home</a>
+<h1>Set WD MyCloud as Lomorage redundancy backup disk on Windows</h1>
+<div class="prose"><p><strong>Setup WD MyCloud as Lomorage Redundancy backup disk on Windows.</strong></p>
+<!--more--> 
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#1-mount-wd-mycloud-as-windows-disk">1. Mount WD MyCloud as Windows Disk</a></li>
+<li><a href="#2-setup-redundancy-backup">2. Setup Redundancy Backup</a></li>
+<li><a href="#3-test-redundancy-backup-and-trouble-shooting">3. Test redundancy backup and trouble shooting</a>
+<ul>
+<li><a href="#if-you-meet-some-issue-like-the-below">If you meet some issue like the below:</a></li>
+<li><a href="#solution-is">Solution is:</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1.-mount-wd-mycloud-as-windows-disk">1. Mount WD MyCloud as Windows Disk</h1>
+<p>The detail introduction from WD is here: <strong><a href="https://support-en.wd.com/app/answers/detailweb/a_id/25436/h/p2#subject2">How to mount WD MyCloud on Windows</a></strong></p>
+<p>Below picture is my case:</p>
+ <div align="center">
+<p class="screenshoot">
+  <img width="100%" src="/img/blog/set_wd_as_backup/mount.png" style="border:2px solid black;"  />
+</p>
+</div> 
+<h1 id="2.-setup-redundancy-backup">2. Setup Redundancy Backup</h1>
+<p>Open Lomorage Photo Assistant in your Windows, and set as blow:</p>
+<blockquote>
+<p><strong>Make sure there is no content under the folder <strong>W:\wd-test</strong></strong></p>
+</blockquote>
+ <div align="center">
+<p class="screenshoot">
+  <img width="100%" src="/img/blog/set_wd_as_backup/set_redundancy_agent.png">
+</p>
+</div> 
+<h1 id="3.-test-redundancy-backup-and-trouble-shooting">3. Test redundancy backup and trouble shooting</h1>
+<p>And click the <strong>&quot;Start redundancy backup...&quot;</strong> button to see the files will copy from
+D:\imagebk to W:\wd-test.</p>
+<h2 id="if-you-meet-some-issue-like-the-below">If you meet some issue like the below:</h2>
+<pre><code>rdiff-backup.exe --force  -v5 --print-statistics D:/imagebk W:/
+WARNING: this command line interface is deprecated and will disappear, start using the new one as described with '--new --help'.
+* Using repository 'W:/'
 NOTE: Found interrupted initial backup in data directory W:/rdiff-backup-data. Removing...
 * Hardlinks disabled by default on Windows
 * Unable to import module (py)xattr. Extended attributes not supported on filesystem at path D:/imagebk
@@ -17,7 +71,7 @@ Detected abilities for source (read only) file system:
   Mac OS X style resource forks                Off
   Mac OS X Finder information                  Off
 -----------------------------------------------------------------
-* Directories on file system at path W:/rdiff-backup-data/rdiff-backup.tmp.0 are not fsyncable. Assuming it&#39;s unnecessary.
+* Directories on file system at path W:/rdiff-backup-data/rdiff-backup.tmp.0 are not fsyncable. Assuming it's unnecessary.
 * Unable to import module (py)xattr. Extended attributes not supported on filesystem at path W:/rdiff-backup-data/rdiff-backup.tmp.0
 * Unable to import module posix1e from pylibacl package. POSIX ACLs not supported on filesystem at path W:/rdiff-backup-data/rdiff-backup.tmp.0
 * -----------------------------------------------------------------
@@ -43,7 +97,7 @@ Detected abilities for destination (read/write) file system:
 * Backup: escape_trailing_spaces = False
 * Enabled use_compatible_timestamps
 NOTE: Symbolic links excluded by default on Windows
-* Given repository doesn&#39;t need to be regressed
+* Given repository doesn't need to be regressed
 NOTE: Starting mirror from source path D:/imagebk to destination path W:/
 * Processing file .
 * Processing file .WDSyncHistory
@@ -51,16 +105,26 @@ NOTE: Starting mirror from source path D:/imagebk to destination path W:/
 * Processing file Garbage Dispenser2.mp4
 * Cleaning up
 Traceback (most recent call last):
-  File &#34;rdiffbackup\run.py&#34;, line 170, in &lt;module&gt;
-  File &#34;rdiffbackup\run.py&#34;, line 37, in main
-  File &#34;rdiffbackup\run.py&#34;, line 105, in main_run
-  File &#34;rdiffbackup\actions\backup.py&#34;, line 159, in run
-  File &#34;rdiff_backup\backup.py&#34;, line 39, in mirror_compat200
-  File &#34;rdiff_backup\backup.py&#34;, line 197, in patch
-  File &#34;rdiff_backup\rorpiter.py&#34;, line 142, in __call__
-  File &#34;rdiff_backup\rorpiter.py&#34;, line 179, in _finish_branches
-  File &#34;rdiff_backup\backup.py&#34;, line 641, in end_process_directory
-  File &#34;rdiff_backup\rpath.py&#34;, line 807, in rmdir
-PermissionError: [WinError 5] Access is denied: b&#39;W:/.WDSyncHistory/.WD Hidden Files&#39;
-[2528] Failed to execute script &#39;run&#39; due to unhandled exception!
-</code></pre><h2 id=solution-is>Solution is:</h2><p><strong>Please go to W:\wd-test, to remove some hidden files.</strong></p><p><strong>Support</strong>: <a href=mailto:support@lomorage.com>support@lomorage.com</a> or <a href=mailto:lomorage@gmail.com>lomorage@gmail.com</a>.</p></div><div id=comments><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//lomorage.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div></div></div></div><div class="footer footer--dark modern-footer"><div class=container><div class=footer__inner><a href=/ class=footer__textLogo>Lomorage<span class=logo-dot>.</span></a><div class=footer__data><div class=footer__data__item><div class=footer__row><a href=https://github.com/lomorage/homepage target=_blank style=opacity:1><i class='fab fa-2x fa-github'></i></a></div></div><div class=footer__data__item></div><div class=footer__data__item><div class=footer__row><a href=mailto:support@lomorage.com target=_blank style=opacity:1><i class='fa fa-2x fa-envelope'></i></a></div></div></div></div><div class="footer__inner footer__bottom"><p class=footer__copy>&copy; 2026 Lomorage. All rights reserved.</p></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script><script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script><div class=scripts><script type=text/javascript src=/js/scripts.min.de10d70e5c6c488829902b9982f2ef2824e4459619f987d4d16d27062caee8cc.js></script></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9742347659519137" crossorigin=anonymous></script></body></html>
+  File &quot;rdiffbackup\run.py&quot;, line 170, in &lt;module&gt;
+  File &quot;rdiffbackup\run.py&quot;, line 37, in main
+  File &quot;rdiffbackup\run.py&quot;, line 105, in main_run
+  File &quot;rdiffbackup\actions\backup.py&quot;, line 159, in run
+  File &quot;rdiff_backup\backup.py&quot;, line 39, in mirror_compat200
+  File &quot;rdiff_backup\backup.py&quot;, line 197, in patch
+  File &quot;rdiff_backup\rorpiter.py&quot;, line 142, in __call__
+  File &quot;rdiff_backup\rorpiter.py&quot;, line 179, in _finish_branches
+  File &quot;rdiff_backup\backup.py&quot;, line 641, in end_process_directory
+  File &quot;rdiff_backup\rpath.py&quot;, line 807, in rmdir
+PermissionError: [WinError 5] Access is denied: b'W:/.WDSyncHistory/.WD Hidden Files'
+[2528] Failed to execute script 'run' due to unhandled exception!
+
+</code></pre>
+<h2 id="solution-is">Solution is:</h2>
+<p><strong>Please go to W:\wd-test,  to remove some hidden files.</strong></p>
+<p><strong>Support</strong>: <a href="mailto:support@lomorage.com">support@lomorage.com</a> or <a href="mailto:lomorage@gmail.com">lomorage@gmail.com</a>.</p>
+</div>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+</body>
+</html>
