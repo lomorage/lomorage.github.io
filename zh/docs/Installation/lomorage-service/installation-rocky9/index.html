@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rocky Linux 9 · Lomorage</title><meta name="description" content="在Rocky Linux 9上安装&quot;Lomorage照片助手&quot;
+
+当前我们只支持x86/AMD64 Rocky Linux 9（以及包格式相同的RHEL/AlmaLinux 9）。
+
+ 1. 启用 EPEL 和 RPM Fusion
+
+perl-Image-ExifTool需要EPEL(https://docs.fedoraproject.org/en-US"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Rocky Linux 9 · Lomorage"><meta property="og:description" content="在Rocky Linux 9上安装&quot;Lomorage照片助手&quot;
+
+当前我们只支持x86/AMD64 Rocky Linux 9（以及包格式相同的RHEL/AlmaLinux 9）。
+
+ 1. 启用 EPEL 和 RPM Fusion
+
+perl-Image-ExifTool需要EPEL(https://docs.fedoraproject.org/en-US"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-rocky9/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-rocky9/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-rocky9/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-rocky9/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap"><a class="brand" href="/zh/" aria-label="Lomorage 首页"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="主导航"><a href="/zh/#why">为什么选 Lomorage</a><a href="/zh/#how">如何使用</a><a href="/zh/docs/">使用指南</a><a href="/zh/#questions">常见问题</a></nav><div class="header-actions"><a class="language" href="/docs/Installation/lomorage-service/installation-rocky9/" lang="en">EN</a><a class="button button-small" href="/zh/#download">下载 <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="帮助与指南">
+    <a class="docs-home-link" href="/zh/docs/">帮助与指南</a>
+    <label class="docs-search"><span class="visually-hidden">筛选指南</span><input type="search" data-doc-filter placeholder="Windows、NAS、家庭共享……"></label>
+    <nav><section data-doc-group><h2>从这里开始</h2><a href="/zh/docs/">选择适合你的方案</a><a href="/zh/docs/Installation/">安装 Lomorage</a><a href="/zh/docs/Installation/lomorage-service/">电脑或家庭服务器</a></section><section data-doc-group><h2>电脑与服务器</h2><a href="/zh/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/zh/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/zh/docs/Installation/lomorage-service/installation-synology/">群晖 NAS</a><a href="/zh/docs/Installation/lomorage-service/installation-raspbian/">树莓派</a><a href="/zh/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/zh/docs/Installation/lomorage-service/">更多 Linux 系统</a></section><section data-doc-group><h2>应用与照片</h2><a href="/zh/docs/Installation/lomorage-client/">手机与网页应用</a><a href="/zh/docs/Installation/lomorage-client/installation-ios/">iPhone 与 iPad</a><a href="/zh/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/zh/docs/Installation/lomorage-client/installation-web/">网页浏览</a><a href="/zh/docs/Installation/lomorage-importer/">导入已有照片</a></section><section data-doc-group><h2>更多使用方式</h2><a href="/zh/docs/Usage/">家人、分享与日常使用</a><a href="/zh/docs/Usage/customized-view/">自定义视图</a><a href="/zh/docs/Usage/external-access/">在外访问</a><a href="/zh/docs/Usage/Update/">更新与维护</a><a href="/zh/docs/Installation/lomo-frame/">电子相框</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/zh/docs/">← 文档首页</a>
+    <h1>Rocky Linux 9</h1>
+    <div class="prose docs-prose"><h1 id="在rocky-linux-9上安装lomorage照片助手">在Rocky Linux 9上安装&quot;Lomorage照片助手&quot;</h1>
+<p><strong>当前我们只支持x86/AMD64 Rocky Linux 9（以及包格式相同的RHEL/AlmaLinux 9）。</strong></p>
+<h2 id="1.-启用-epel-和-rpm-fusion">1. 启用 EPEL 和 RPM Fusion</h2>
+<p><code>perl-Image-ExifTool</code>需要<a href="https://docs.fedoraproject.org/en-US/epel/">EPEL</a>，<code>ffmpeg</code>（视频处理需要）需要
+<a href="https://rpmfusion.org/">RPM Fusion</a>，两者都不在默认源中：</p>
+<pre><code class="language-bash">sudo dnf install epel-release -y
+sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm -y
+</code></pre>
+<h2 id="2.-安装lomoware源">2. 安装lomoware源</h2>
+<pre><code class="language-bash">sudo tee /etc/yum.repos.d/lomoware.repo &gt; /dev/null &lt;&lt;'EOF'
+[lomoware-rocky9]
+name=Lomoware Rocky Linux 9 Repository
+baseurl=https://lomoware.lomorage.com/rpm/rocky9
+enabled=1
+gpgcheck=1
+gpgkey=https://lomoware.lomorage.com/rpm/rocky9/repodata/repomd.xml.key
+EOF
+</code></pre>
+<h2 id="3.-安装lomorage">3. 安装Lomorage</h2>
+<p>和Fedora不同，Rocky 9的默认源里完全没有<code>vips</code>，所以这里需要用从源码编译的
+<code>lomo-vips</code>，和Debian/Ubuntu的情况一样。</p>
+<pre><code class="language-bash">sudo dnf install lomo-vips lomo-backend -y
+</code></pre>
+<p>确保当前用户sudo不用密码, 如果不行，可以通过下面的命令添加:</p>
+<pre><code class="language-bash">echo &quot;$USER ALL=(ALL:ALL) NOPASSWD: ALL&quot; | sudo tee /etc/sudoers.d/$USER
+</code></pre>
+<h3 id="4.-按需修改运行参数">4. 按需修改运行参数</h3>
+<p>用户可以在&quot;/opt/lomorage/etc/environment&quot;设置环境变量来修改某些运行参数。用户可以根据自己实际情况加以调整。</p>
+<h4 id="4.1-修改磁盘mount目录">4.1 修改磁盘mount目录</h4>
+<p>如果USB磁盘没有加载到&quot;/media&quot;路径下，您需要指定加载目录。</p>
+<p>要指定加载目录&quot;/media/pi&quot;, 请添加环境变量<code>LOMOD_MOUNT_DIR=/media/pi</code>在<code>/opt/lomorage/etc/environment</code>，比如</p>
+<pre><code>echo &quot;LOMOD_MOUNT_DIR=/media/pi&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<p><strong>请确保您的用户有上面设置的&quot;mount-dir&quot;的读写权限, 另外改参数必须是mount的父目录，比如mount到&quot;/media/pi/disk0&quot;下面，就必须指定为&quot;/media/pi&quot;</strong></p>
+<h4 id="4.2-http-监听端口">4.2 HTTP 监听端口</h4>
+<p>Lomod缺省监听端口是8000，如果需要自定义，清使用环境变量<code>LOMOD_PORT_HTTP</code>，比如</p>
+<pre><code>echo &quot;LOMOD_PORT_HTTP=8888&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<p>另外的方案是<code>cp /lib/systemd/system/lomod.service /etc/systemd/system/lomod.service</code>，然后编辑&quot;/etc/systemd/system/lomod.service&quot;，修改&quot;ExecStart&quot;指定要用的参数(运行<code>/opt/lomorage/bin/lomod -h</code>查看可用的参数)，然后运行<code>sudo systemctl daemon-reload</code>之后，就会使用&quot;/etc/systemd/system/lomod.service&quot;的配置了。 &quot;/lib/systemd/system/lomod.service&quot;在升级时会被覆盖。</p>
+<h2 id="5.-运行">5. 运行</h2>
+<p>重启&quot;Lomorage照片助手&quot;程序:</p>
+<pre><code class="language-bash">sudo systemctl restart lomod
+</code></pre>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>本页内容</strong><a class="toc-level-2" href="#1.-启用-epel-和-rpm-fusion">1. 启用 EPEL 和 RPM Fusion</a><a class="toc-level-2" href="#2.-安装lomoware源">2. 安装lomoware源</a><a class="toc-level-2" href="#3.-安装lomorage">3. 安装Lomorage</a><a class="toc-level-3" href="#4.-按需修改运行参数">4. 按需修改运行参数</a><a class="toc-level-2" href="#5.-运行">5. 运行</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/zh/">lomorage</a><p>留住此刻，回味时光。</p></div><nav aria-label="更多链接"><a href="/zh/docs/">使用指南</a><a href="/zh/blog/">博客</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">隐私政策</a><a href="/zh/contact/">联系我们</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

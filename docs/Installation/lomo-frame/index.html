@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lomorage Frame · Lomorage</title><meta name="description" content="Lomorage Frame
+
+ Install
+
+You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w a"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Lomorage Frame · Lomorage"><meta property="og:description" content="Lomorage Frame
+
+ Install
+
+You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w a"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomo-frame/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomo-frame/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomo-frame/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomo-frame/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomo-frame/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/" aria-current="page">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Lomorage Frame</h1>
+    <div class="prose docs-prose"><h1 id="lomorage-frame">Lomorage Frame</h1>
+<h2 id="install">Install</h2>
+<p>You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w and access your digital assets via WiFi.</p>
+<aside class="doc-note doc-warning"><p>Lomo-frame only supports on Raspberry Pi, Windows/Mac or the docker version is not supported</p>
+</aside>
+<p>If you install the latest Lomorage Raspberry Pi OS image, you should already have the Lomo-frame application installed in that image.</p>
+<p>If you don't use Lomorage Raspberry Pi OS image, follow the instruction <a href="/docs/Installation/lomorage-service/installation-raspbian/#1-add-lomoware-source">here</a> to add lomoware source, then you can run the following command to install it:</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install lomo-frame
+</code></pre>
+<h2 id="setup">Setup</h2>
+<p>You have several options:</p>
+<ol>
+<li>
+<p>Run &quot;Lomorage Photo Assistant&quot; and Lomo-frame on the same Raspberry Pi.</p>
+</li>
+<li>
+<p>Run &quot;Lomorage Photo Assistant&quot; on one Raspberry Pi, and run Lomo-frame on other Raspberry Pis. For example, you can run Lomo-frame on the cheap Raspberry Pi zero, and run &quot;Lomorage Photo Assistant&quot; on more powerful Raspberry Pi 4.</p>
+</li>
+</ol>
+<p>Once you have Lomo-frame running, it will show a QRCode on the screen, and you can use iOS or Android APP to register the frame in settings, once success, you can share photos with the digital frame just like share with other contacts in Lomorage APP.</p>
+<h3 id="quickstart">Quickstart</h3>
+<p>If you have Lomo-frame installed, it will launch on boot.</p>
+<p>If the Raspberry Pi is not connected to the network, you need to connect it first, if you prefer to use WiFi, connect HDMI and keyboard with Raspberry Pi and reboot, follow the instruction on screen to enter in terminal and login Raspberry Pi, then you can use the command <code>wifi_switch.sh client [wifi-ssid] [wifi-password]</code>, replace &quot;[wifi-ssid]&quot; and &quot;[wifi-password]&quot; with those of your wifi network.</p>
+<aside class="doc-note doc-warning"><p>You probably will have the problem that &quot;Wi-Fi is currently blocked by rfkill&quot;. You can confirm this by running:</p>
+<pre><code>pi@raspberrypi:~ $ sudo rfkill list all
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+1: hci0: Bluetooth
+	Soft blocked: yes
+	Hard blocked: no
+</code></pre>
+<p>And you can enable WiFi by running:</p>
+<pre><code>sudo rfkill unblock 0
+</code></pre>
+<p>assuming 0 is the index of Wireless LAN.</p>
+<p>After this, you can try <code>wifi_switch.sh</code> again.</p>
+</aside>
+<p>Once setup network, reboot and it will show a QRCode, you can go to &quot;Settings&quot; Tab in Lomorage iOS APP to register the frame, then you can use either Lomorage iOS APP or Lomorage Android APP to share photos with the digital frame.</p>
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/frame-register-ios.png">
+  <img width="30%" src="/img/installation/frame-share-ios.png">
+</p>
+</div>
+<p>If you don't need more configuration, you can skip the below sections.</p>
+<h3 id="turn-frame-onoff">Turn Frame ON/OFF</h3>
+<p>Lomo-frame will start after system boot automatically, but if you want manual control, you can use the following commands to turn it on: <code>framectrl.sh on</code>, or turn it off: <code>framectrl.sh off</code>. <strong>It will turn on/off the monitor as well as the Lomo-frame service.</strong></p>
+<h3 id="stop-or-start-lomo-frame-service">Stop or Start Lomo-frame Service</h3>
+<p>If you just want to quit Lomo-frame service, while keep the monitor on, you can either:</p>
+<ul>
+<li>
+<p>press &quot;esc&quot; on the keyboard if Raspberry Pi connected with keyboard.</p>
+</li>
+<li>
+<p><code>sudo service supervisor stop</code> if you use ssh to access Raspberry Pi.</p>
+</li>
+</ul>
+<p>You can use <code>sudo service supervisor start</code> to start the Lomo-frame service.</p>
+<h3 id="schedule-frame-onoff-time">Schedule Frame ON/OFF time</h3>
+<p><strong>The default turn on time is &quot;08:00 am&quot;, and turn off time is &quot;21:00 pm&quot;.</strong></p>
+<p>You can change that use the following command, which changes the on time to &quot;10:00 am&quot; and off time to &quot;18:00&quot;:</p>
+<pre><code class="language-bash">framectr.sh add --on-hour 10 --off-hour 18
+</code></pre>
+<p>You can also change that to &quot;10:30 am&quot; and off time to &quot;18:30&quot;</p>
+<pre><code class="language-bash">framectr.sh add --on-hour 10 --on-min 30 --off-hour 18 --off-min 30
+</code></pre>
+<p>Or if you want to keep it on 7x24, just remove the schedule:</p>
+<pre><code class="language-bash">framectr.sh remove
+</code></pre>
+<h3 id="playback-order">Playback Order</h3>
+<p><strong>By default, it's random</strong>, but if you prefer to playback sequentially:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/is_random =.*/is_random = false/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<p>Or you can change it back to random:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/is_random =.*/is_random = true/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<h3 id="customize-playlist">Customize playlist</h3>
+<p>You can edit/create &quot;/opt/lomorage/var/lomo-playlist.txt&quot;, the format is one media file path per line.</p>
+<h3 id="playback-media-type">Playback Media Type</h3>
+<p><strong>By default, it will play videos and images</strong>, but if you need to play only images, you can change the &quot;media_type&quot; in &quot;/opt/lomorage/var/video_looper.ini&quot;:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/media_type =.*/media_type = image/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<p>or play only video:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/media_type =.*/media_type = video/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<p>or restore to play all media assets:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/media_type =.*/media_type = all/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<h3 id="keyboard-control">Keyboard control</h3>
+<p>If you have keyboard connect with Raspberry Pi, you can press the following key to control:</p>
+<ul>
+<li>
+<p>&quot;r&quot;: rescan playlist.</p>
+</li>
+<li>
+<p>&quot;k&quot;: skip to next.</p>
+</li>
+<li>
+<p>&quot;s&quot;: pause/resume play</p>
+</li>
+<li>
+<p>&quot;esc&quot;: quit Lomo-frame</p>
+</li>
+</ul>
+<h3 id="setup-multiple-digital-frame">Setup multiple digital frame</h3>
+<p>This setup need some expertise, sorry, will make it easier in the future using phone APP.</p>
+<p>If you already have one Raspberry Pi (Primary Raspberry Pi) setup for running &quot;Lomorage Photo Assistant&quot;, and having all the hard drivers connected with that device, you probably keep it in the storage room connected to the router with wired network, and want to setup the digital frame in bedroom or living room.</p>
+<p>You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital assets via WiFi, it works pretty well, the video playback is very smooth.</p>
+<ul>
+<li>
+<ol>
+<li>Install Lomo-frame</li>
+</ol>
+</li>
+</ul>
+<p>You can follow the instructions on the top of the page.</p>
+<ul>
+<li>
+<ol start="2">
+<li>Setup WiFi connection</li>
+</ol>
+</li>
+</ul>
+<p>Connect keyboard with Raspberry Pi zero W and login, if you installed Lomorage Raspberry Pi OS image, the default user name is &quot;lomoware&quot; and password is &quot;lomorage&quot;, you can use the command <code>wifi_switch.sh client [wifi-ssid] [wifi-password]</code>, replace &quot;[wifi-ssid]&quot; and &quot;[wifi-password]&quot; with those of your wifi network; otherwise, you can refer to other docs online to set the WiFi connection.</p>
+<ul>
+<li>
+<ol start="3">
+<li>Check IP address of primary Raspberry Pi</li>
+</ol>
+</li>
+</ul>
+<p>You can find the IP address using iPhone APP, in &quot;settings&quot; tab, section &quot;LOCAL SERVICE&quot;, the host field is the IP address.</p>
+<ul>
+<li>
+<ol start="4">
+<li>Find the mount directory on primary Raspberry Pi</li>
+</ol>
+</li>
+</ul>
+<p>You can mount the &quot;media&quot; directory on primary Raspberry Pi onto your desktop/laptop via SAMBA, with user name &quot;pi&quot; and password &quot;raspberry&quot;, and you will find the directory name store media assets mounted under &quot;media&quot; directory.</p>
+<ul>
+<li>
+<ol start="5">
+<li>Mount on Raspberry Pi zero w</li>
+</ol>
+</li>
+</ul>
+<p>Say if directory with name &quot;/media/WD_90C27F73C27F5C82&quot; store media assets mounted on primary Raspberry Pi (with IP 192.168.1.155), you can mount it on your Raspberry Pi zero w, login to Raspberry Pi zero and then:</p>
+<pre><code class="language-bash">sudo mkdir /media/WD_90C27F73C27F5C82
+echo &quot;//192.168.1.124/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
+sudo mount -a
+</code></pre>
+<ul>
+<li>
+<ol start="6">
+<li>Reboot</li>
+</ol>
+</li>
+</ul>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+<p>After reboot, you should be able to see it starts scanning the media files to generate playlist.</p>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#install">Install</a><a class="toc-level-2" href="#setup">Setup</a><a class="toc-level-3" href="#quickstart">Quickstart</a><a class="toc-level-3" href="#turn-frame-onoff">Turn Frame ON/OFF</a><a class="toc-level-3" href="#stop-or-start-lomo-frame-service">Stop or Start Lomo-frame Service</a><a class="toc-level-3" href="#schedule-frame-onoff-time">Schedule Frame ON/OFF time</a><a class="toc-level-3" href="#playback-order">Playback Order</a><a class="toc-level-3" href="#customize-playlist">Customize playlist</a><a class="toc-level-3" href="#playback-media-type">Playback Media Type</a><a class="toc-level-3" href="#keyboard-control">Keyboard control</a><a class="toc-level-3" href="#setup-multiple-digital-frame">Setup multiple digital frame</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

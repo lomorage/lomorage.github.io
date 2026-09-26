@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docker · Lomorage</title><meta name="description" content="Docker installation
+
+Please refer to lomo-docker(https://github.com/lomorage/lomo-docker) for installation with docker image. You can either use the arm image &quot;lomorage/raspberrypi"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Docker · Lomorage"><meta property="og:description" content="Docker installation
+
+Please refer to lomo-docker(https://github.com/lomorage/lomo-docker) for installation with docker image. You can either use the arm image &quot;lomorage/raspberrypi"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-docker/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-service/installation-docker/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-docker/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-docker/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomorage-service/installation-docker/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/" aria-current="page">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Docker</h1>
+    <div class="prose docs-prose"><h1 id="docker-installation">Docker installation</h1>
+<p>Please refer to <a href="https://github.com/lomorage/lomo-docker">lomo-docker</a> for installation with docker image. You can either use the arm image &quot;lomorage/raspberrypi-lomorage:latest&quot; or amd64 image &quot;lomorage/amd64-lomorage:latest&quot; based on the host architecture.</p>
+<p>Below is an example to run lomo-docker on Raspberry Pi OS (64-bit) with desktop.</p>
+<p>docker-compose.yml:</p>
+<pre><code>version: &quot;3.9&quot;
+services:
+  lomo:
+    image: ${IMG}
+    container_name: lomorage
+    privileged: true
+    environment:
+      - LOMOD_DISABLE_MOUNT_MONITOR=1
+    cap_add:
+      - ALL
+    volumes:
+      - ${HOME_MEDIA_DIR}:/media/WD_36AA8D42AA8D001B
+      - ${HOME_MEDIA_BAKUP_DIR}:/media/WD_90C27F73C27F5C82
+      - ${HOME_LOMO_DIR}:/lomo
+      - /dev:/dev
+    ports:
+      - ${LOMOD_PORT}:${LOMOD_PORT}
+      - 8004:8004
+    command: $LOMOD_PORT
+
+  watchtower:
+    image: ${AUTO_UPDATE_IMG}
+    container_name: watchtower
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: lomorage --cleanup
+</code></pre>
+<p>.env file:</p>
+<pre><code>IMG=lomorage/arm64-lomorage:latest
+AUTO_UPDATE_IMG=containrrr/watchtower:arm64v8-latest
+
+# IMG=lomorage/amd64-lomorage:latest
+# AUTO_UPDATE_IMG=containrrr/watchtower:amd64-latest
+
+LOMOD_PORT=8000
+
+# change the directories in your env
+HOME_MEDIA_DIR=&quot;/media/jeromy/My Passport1&quot;
+HOME_MEDIA_BAKUP_DIR=&quot;/media/jeromy/My Passport&quot;
+HOME_LOMO_DIR=&quot;/home/jeromy/lomo&quot;
+
+# mdns works in vlan, change vlan settings in your env
+NETWORK_TYPE=ipvlan # macvlan
+NETWORK_INF=eth0
+SUBNET=192.168.1.0/24
+GATEWAY=192.168.1.1
+VLAN_ADDR=192.168.1.79
+</code></pre>
+</div>
+  </article>
+  
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lomorage Command Line Client · Lomorage</title><meta name="description" content="Lomorage Command Line Client
+
+Lomorage command line client is a tool to allow user to control backend directly. Its name is lomoc and installed under /opt/lomorage/bin. It provides"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Lomorage Command Line Client · Lomorage"><meta property="og:description" content="Lomorage Command Line Client
+
+Lomorage command line client is a tool to allow user to control backend directly. Its name is lomoc and installed under /opt/lomorage/bin. It provides"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Usage/lomorage-client/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Usage/lomorage-client/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Usage/lomorage-client/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Usage/lomorage-client/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Usage/lomorage-client/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Lomorage Command Line Client</h1>
+    <div class="prose docs-prose"><h1 id="lomorage-command-line-client">Lomorage Command Line Client</h1>
+<p>Lomorage command line client is a tool to allow user to control backend directly. Its name is <code>lomoc</code> and installed under /opt/lomorage/bin. It provides some options to configure the backend.</p>
+<h2 id="reset-users-backup-home-directory-and-backup-directory">Reset user's backup home directory and backup directory</h2>
+<p>After one user is created through mobile application, people can use <code>lomoc</code> command line option to reset home directory and backup directory. Firstly, people need copy specific user's or all users' asset directories to the new directory. For example, if new media directory is <code>/media/newdisk</code>, and there are 2 users <code>alice</code> and <code>bob</code>, the new tree would be like</p>
+<pre><code>/media/newdisk/
+|-- alice
+|   `-- Photos
+|       |-- master
+|       |   |-- 2003
+|       |   |   |-- 01
+|       |   |   |   `-- 17
+|       |   |   |       `-- 20030117_4.jpg
+|       |   |   `-- 11
+|       |   |       |-- 01
+|       |   |       |   |-- 20031101_2.jpg
+|       |   |       |   `-- 20031101_3.jpg
+|       |   |       `-- 23
+|       |   |           |-- 20031123_1.jpg
+|       |   |           |-- 20031123_11.webp
+|       |   |           |-- 20031123_12.dng
+|       |   |           `-- 20031123_13.heic
+|       |   |-- 2004
+|       |   |   `-- 01
+|       |   |       `-- 21
+|       |   |           `-- 20040121_5.jpg
+|       |   `-- 2013
+|       |       |-- 07
+|       |       |   `-- 28
+|       |       |       `-- 20130728_7.png
+`-- bob
+    `-- Photos
+        |-- master
+        |   `-- 2013
+        |       |-- 08
+        |       |   `-- 08
+        |       |       `-- 20130808_6.mp4
+        |       `-- 11
+        |           `-- 23
+        |               |-- 20131123_10.zip
+        |               |-- 20131123_10_image.heic
+        |               |-- 20131123_8.zip
+        |               |-- 20131123_8_image.jpg
+        |               `-- 20131123_9.heic
+</code></pre>
+<p>Note:</p>
+<ul>
+<li>If <code>[user name]</code> is supplied, it only updates the given user's home directory or backup directory; otherwise, it will replace all users' home directory or backup directory to the new given media directory.</li>
+<li>By default, the client will read data from /opt/lomorage/var/assets.db. If you installed the lomod to different directory, you can use <code>--db</code> option to supply new DB file location</li>
+</ul>
+<pre><code>$ /opt/lomorage/bin/lomoc reset home-dir -h
+NAME:
+   lomoc reset home-dir - reset users' home directory in DB, and input dir must be media dir. If username is not specified, it will reset all users' home directory
+
+USAGE:
+   lomoc reset home-dir [command options] [new media dir] ([user name])
+
+OPTIONS:
+   --db value  db filename with full path (default: &quot;/opt/lomorage/var/assets.db&quot;)
+
+$ /opt/lomorage/bin/lomoc reset backup-dir -h
+NAME:
+   lomoc reset backup-dir - reset users' backup directory in DB, and input dir must be media backup dir. If username is not specified, it will reset all users' backup directory
+
+USAGE:
+   lomoc reset backup-dir [command options] [new backup dir] ([user name])
+
+OPTIONS:
+   --db value  db filename with full path (default: &quot;/opt/lomorage/var/assets.db&quot;)
+
+</code></pre>
+<h2 id="import-from-one-existing-folders">Import from one existing folders</h2>
+<p>Command line tool is for advanced user when the existing assets are in attached USB or Local/NFS/CIFS mounted disks along with  &quot;Lomorage Photo Assistant&quot;. It can avoid unnecessary back-and-forth network traffic as well as disk operation. During import, the tool will move existing assets to the directories created by lomorage for each user, or not move asset while inserting record only if supply <code>--no-move</code> option. All import logs are saved under /opt/lomorage/var/log/import_[import directory].log. Below is usage for the tool.</p>
+<p><strong>Should be notice that the import will creates albums automatically according to the directories structures</strong></p>
+<pre><code>$ /opt/lomorage/bin/lomoc import -h
+NAME:
+   lomoc import - Import all photos from given directory into lomo backend with given username and password
+
+USAGE:
+   lomoc import [command options] [username] [password] [directory]
+
+OPTIONS:
+   --port value, -p value  (default: 8000)
+   --no-move, -n           not moving original photos/videos, and only insert record in db
+   --no-video, --nv        not scan video files. This is to speed up the first import process
+</code></pre>
+<p>Note:</p>
+<ul>
+<li><code>--port</code> is listen port of <code>lomod</code> backend service. It is 8000 by default.</li>
+<li><code>--no-move</code> is to hint backend service not moving assets, and only insert record in DB. By default it is false, and import will <strong>MOVE</strong> all assets and consolidate them into one location</li>
+<li><code>--no-video</code> is to hint backend service not scanning video files. This is to speed up the first import process. Since backend always check assets exists or not by their SHA, you can safely import video at the 2nd time.</li>
+</ul>
+<p>Example:</p>
+<pre><code>$ /opt/lomorage/bin/lomoc import alice password /media/STEC_838C-1111/test/video
+-m
+Login localhost successfully
+import photos/videos from /media/STEC_838C-1111/test
+please check import log /opt/lomorage/var/log/import_media_STEC_838C-1111_test.log
+
+$ cat /opt/lomorage/var/log/import_media_STEC_838C-1111_test.log
+start import /media/STEC_838C-1111/test/img/11_2014_01_21.webp
+finish import /media/STEC_838C-1111/test/img/11_2014_01_21.webp to /media/STEC_838C-1111/alice/Photos/master/2021/09/20/20210920_9391.webp
+start import /media/STEC_838C-1111/test/img/12_2014_01_21.heic
+finish import /media/STEC_838C-1111/test/img/12_2014_01_21.heic to /media/STEC_838C-1111/alice/Photos/master/2021/09/20/20210920_9392.heic
+start import /media/STEC_838C-1111/test/img/14_2017_09_13.heic
+finish import /media/STEC_838C-1111/test/img/14_2017_09_13.heic to /media/STEC_838C-1111/alice/Photos/master/2017/09/13/20170913_9393.heic
+start import /media/STEC_838C-1111/test/img/1_2003_01_17.jpg
+finish import /media/STEC_838C-1111/test/img/1_2003_01_17.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/01/17/20030117_9394.jpg
+start import /media/STEC_838C-1111/test/img/3_2003_11_01.jpg
+finish import /media/STEC_838C-1111/test/img/3_2003_11_01.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/01/20031101_9395.jpg
+start import /media/STEC_838C-1111/test/img/4_2003_11_01.jpg
+finish import /media/STEC_838C-1111/test/img/4_2003_11_01.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/01/20031101_9396.jpg
+start import /media/STEC_838C-1111/test/img/5_2003_11_23.jpg
+finish import /media/STEC_838C-1111/test/img/5_2003_11_23.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/23/20031123_9397.jpg
+start import /media/STEC_838C-1111/test/img/6_2004_01_21.jpg
+finish import /media/STEC_838C-1111/test/img/6_2004_01_21.jpg to /media/STEC_838C-1111/alice/Photos/master/2004/01/21/20040121_9398.jpg
+start import /media/STEC_838C-1111/test/img/7_2004_09_12.webp
+finish import /media/STEC_838C-1111/test/img/7_2004_09_12.webp to /media/STEC_838C-1111/alice/Photos/master/2004/09/12/20040912_9399.webp
+start import /media/STEC_838C-1111/test/img/8_2008_12_14.dng
+finish import /media/STEC_838C-1111/test/img/8_2008_12_14.dng to /media/STEC_838C-1111/alice/Photos/master/2008/12/14/20081214_9400.dng
+start import /media/STEC_838C-1111/test/img/9_2013_07_28.png
+finish import /media/STEC_838C-1111/test/img/9_2013_07_28.png to /media/STEC_838C-1111/alice/Photos/master/2021/09/20/20210920_9401.png
+start import /media/STEC_838C-1111/test/img/preview.jpg
+finish import /media/STEC_838C-1111/test/img/preview.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/23/20031123_9402.jpg
+FINISH: totally scanned 1 directories, and imported 12 media files
+</code></pre>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#reset-users-backup-home-directory-and-backup-directory">Reset user&#39;s backup home directory and backup directory</a><a class="toc-level-2" href="#import-from-one-existing-folders">Import from one existing folders</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

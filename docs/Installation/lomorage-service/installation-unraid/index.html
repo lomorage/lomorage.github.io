@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unraid · Lomorage</title><meta name="description" content="Unraid
+
+ 1. Search lomorage from app store
+
+
+  
+
+
+Once lomorage is found, you can also click info icon to learn more about lomorage support at unraid forum
+
+
+  
+
+
+ 2. Click install"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Unraid · Lomorage"><meta property="og:description" content="Unraid
+
+ 1. Search lomorage from app store
+
+
+  
+
+
+Once lomorage is found, you can also click info icon to learn more about lomorage support at unraid forum
+
+
+  
+
+
+ 2. Click install"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-unraid/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-service/installation-unraid/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-unraid/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-unraid/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomorage-service/installation-unraid/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Unraid</h1>
+    <div class="prose docs-prose"><h1 id="unraid">Unraid</h1>
+<h2 id="1.-search-lomorage-from-app-store">1. Search lomorage from app store</h2>
+<p align="center">
+  <img style="max-width:100%; object-fit: contain;"  src="/img/installation/unraid1.png">
+</p>
+<p>Once lomorage is found, you can also click <code>info</code> icon to learn more about lomorage support at unraid forum</p>
+<p align="center">
+  <img style="max-width:100%; object-fit: contain;"  src="/img/installation/unraid2.png">
+</p>
+<h2 id="2.-click-install.-you-are-done">2. Click install. You are done!</h2>
+<p align="center">
+  <img style="max-width:100%; object-fit: contain;"  src="/img/installation/unraid3.png">
+</p>
+<h2 id="unraid-template-customization">Unraid template customization</h2>
+<p>Below is the explanation on template configuration.</p>
+<p align="center">
+  <img style="max-width:100%; object-fit: contain;"  src="/img/installation/unraid4.png">
+</p>
+<ul>
+<li>Network: Default value is <code>host</code> mode because mobile client uses MDNS to auto-discover &quot;Lomorage Photo Assistant&quot; listen address and port. It can be changed to <code>bridge</code> mode if user wants to configure these information from mobile client by yourselves.</li>
+<li>ExtraParams: Default value is <code>99:100</code>. This parameter need combined together with <code>User</code> mount configuration. It is to make sure uploaded photos/videos have right user/group permission, and can be browsed via unraid share feature. 99 is user ID of <code>nobody</code>, and 100 is group ID of <code>nobody</code>. User can customize it based on his own user configuration.</li>
+<li>PostArgs: Default value is <code>8000</code> which is Lomorage API backend listening port</li>
+<li>Config
+<ul>
+<li>MediaDir: This is uploaded media storage directory. Default value is <code>/mnt/user/</code></li>
+<li>AppDir: This directory stores configuration file, database file, log files, etc, used by &quot;Lomorage Photo Assistant&quot;. Default value is <code>/mnt/user/appdata</code></li>
+<li>User: This mount file is to ensure &quot;Lomorage Photo Assistant&quot; uses the same user ID and group ID as host unraid OS. Lomorage will never read the confidential data inside the file</li>
+</ul>
+</li>
+</ul>
+<h2 id="nginx-proxy-manager-integration">Nginx Proxy Manager integration</h2>
+<p>Nginx Proxy Manager is a popular self-host tool to easily forward your websites running at home to the public internet. It has one official app on Unraid community, and user can install by their own.</p>
+<ol>
+<li>Click <code>Add Proxy Host</code>, then set your own domain name and forward ip as below screen. Schema is <code>http</code>, and forward port is the listen port configured for Lomorage container, 8000 is default listen port.</li>
+</ol>
+<p align="center">
+  <img style="max-width:100%; object-fit: contain;"  src="/img/installation/npm1.png">
+</p>
+<ol start="2">
+<li>Enable <code>SSL</code> configuration and set certificate domain name as your own domain name</li>
+</ol>
+<p align="center">
+  <img style="max-width:100%; object-fit: contain;"  src="/img/installation/npm2.png">
+</p>
+<ol start="3">
+<li>Click <code>Save</code>, and below host should be added into the host list</li>
+</ol>
+<p align="center">
+  <img style="max-width:100%; object-fit: contain;"  src="/img/installation/npm3.png">
+</p>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#1.-search-lomorage-from-app-store">1. Search lomorage from app store</a><a class="toc-level-2" href="#2.-click-install.-you-are-done">2. Click install. You are done!</a><a class="toc-level-2" href="#unraid-template-customization">Unraid template customization</a><a class="toc-level-2" href="#nginx-proxy-manager-integration">Nginx Proxy Manager integration</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

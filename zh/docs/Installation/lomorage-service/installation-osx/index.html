@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OSX · Lomorage</title><meta name="description" content="在MacOS上安装&quot;Lomorage照片助手&quot;程序
+
+ 1. 安装
+
+打开&quot;终端&quot;（不需要 sudo），执行：
+
+bash
+curl -fsSL https://lomorage.com/mac/install.sh | bash
+
+
+这会自动下载 lomod 以及它需要的所有组件（vips、exiftool、ffmpeg），安装到你自己的用户目录下并启动—"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="OSX · Lomorage"><meta property="og:description" content="在MacOS上安装&quot;Lomorage照片助手&quot;程序
+
+ 1. 安装
+
+打开&quot;终端&quot;（不需要 sudo），执行：
+
+bash
+curl -fsSL https://lomorage.com/mac/install.sh | bash
+
+
+这会自动下载 lomod 以及它需要的所有组件（vips、exiftool、ffmpeg），安装到你自己的用户目录下并启动—"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-osx/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-osx/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-osx/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-osx/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap"><a class="brand" href="/zh/" aria-label="Lomorage 首页"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="主导航"><a href="/zh/#why">为什么选 Lomorage</a><a href="/zh/#how">如何使用</a><a href="/zh/docs/">使用指南</a><a href="/zh/#questions">常见问题</a></nav><div class="header-actions"><a class="language" href="/docs/Installation/lomorage-service/installation-osx/" lang="en">EN</a><a class="button button-small" href="/zh/#download">下载 <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="帮助与指南">
+    <a class="docs-home-link" href="/zh/docs/">帮助与指南</a>
+    <label class="docs-search"><span class="visually-hidden">筛选指南</span><input type="search" data-doc-filter placeholder="Windows、NAS、家庭共享……"></label>
+    <nav><section data-doc-group><h2>从这里开始</h2><a href="/zh/docs/">选择适合你的方案</a><a href="/zh/docs/Installation/">安装 Lomorage</a><a href="/zh/docs/Installation/lomorage-service/">电脑或家庭服务器</a></section><section data-doc-group><h2>电脑与服务器</h2><a href="/zh/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/zh/docs/Installation/lomorage-service/installation-osx/" aria-current="page">macOS</a><a href="/zh/docs/Installation/lomorage-service/installation-synology/">群晖 NAS</a><a href="/zh/docs/Installation/lomorage-service/installation-raspbian/">树莓派</a><a href="/zh/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/zh/docs/Installation/lomorage-service/">更多 Linux 系统</a></section><section data-doc-group><h2>应用与照片</h2><a href="/zh/docs/Installation/lomorage-client/">手机与网页应用</a><a href="/zh/docs/Installation/lomorage-client/installation-ios/">iPhone 与 iPad</a><a href="/zh/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/zh/docs/Installation/lomorage-client/installation-web/">网页浏览</a><a href="/zh/docs/Installation/lomorage-importer/">导入已有照片</a></section><section data-doc-group><h2>更多使用方式</h2><a href="/zh/docs/Usage/">家人、分享与日常使用</a><a href="/zh/docs/Usage/customized-view/">自定义视图</a><a href="/zh/docs/Usage/external-access/">在外访问</a><a href="/zh/docs/Usage/Update/">更新与维护</a><a href="/zh/docs/Installation/lomo-frame/">电子相框</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/zh/docs/">← 文档首页</a>
+    <h1>OSX</h1>
+    <div class="prose docs-prose"><h1 id="在macos上安装lomorage照片助手程序">在MacOS上安装&quot;Lomorage照片助手&quot;程序</h1>
+<h2 id="1.-安装">1. 安装</h2>
+<p>打开&quot;终端&quot;（不需要 <code>sudo</code>），执行：</p>
+<pre><code class="language-bash">curl -fsSL https://lomorage.com/mac/install.sh | bash
+</code></pre>
+<p>这会自动下载 <code>lomod</code> 以及它需要的所有组件（vips、exiftool、ffmpeg），安装到你自己的用户目录下并启动——没有 <code>.dmg</code> 安装包，不需要输入管理员密码，也不需要重启电脑。</p>
+<aside class="doc-note doc-warning"><p>如果你在国内，GitHub 下载比较慢或者失败，可以走加速代理：</p>
+<pre><code class="language-bash">curl -fsSL https://lomorage.com/mac/install.sh | LOMOD_CHINA=1 bash
+</code></pre>
+</aside>
+<p>如果第一次启动时 macOS 弹出防火墙或网络访问提示（这样你的手机才能在局域网内访问它），点击 <strong>允许</strong>。</p>
+<h2 id="2.-数据目录">2. 数据目录</h2>
+<p>默认情况下，你的照片和视频会存储在你自己主目录下的 <code>Pictures/Lomorage</code> 文件夹里——不需要额外配置就能直接使用。</p>
+<p>如果你想用别的磁盘或文件夹（比如外接硬盘），不要直接用管道方式运行脚本，而是先下载下来，再带上 <code>--data-dir</code> 参数运行：</p>
+<pre><code class="language-bash">curl -fsSL https://lomorage.com/mac/install.sh -o install.sh
+chmod +x install.sh
+./install.sh --data-dir &quot;/Volumes/MyDrive/Lomorage&quot;
+</code></pre>
+<p>以后想把已安装的实例改到新目录，也是用同样的方式重新运行安装脚本——可以随时安全地重复运行。</p>
+<h2 id="3.-打开-lomorage">3. 打开 Lomorage</h2>
+<p>安装完成后，菜单栏会出现一个 <strong>Lomorage</strong> 图标，<code>~/Applications</code> 里也会多出一个 <strong>Lomorage</strong> 应用——用 Spotlight（⌘空格，输入&quot;Lomorage&quot;）或 Launchpad 就能像打开其他 Mac 应用一样找到它，双击即可在浏览器里打开网页客户端。</p>
+<p>点击菜单栏图标，可以看到 <strong>Start / Stop / Restart</strong>（启动/停止/重启），或者选择 <strong>Quit</strong> 完全退出。如果不小心退出了，用同样的方式（Spotlight、Launchpad 或 <code>~/Applications</code>）重新打开就行，不需要重新安装。</p>
+<h2 id="4.-从手机或其他电脑访问">4. 从手机或其他电脑访问</h2>
+<p>找到这台 Mac 的 IP 地址，然后在同一网络下的手机或其他设备浏览器里打开 <code>http://这台Mac的IP:8000</code>。</p>
+<h2 id="5.-更新">5. 更新</h2>
+<p>macOS 版目前还没有接入自动后台更新。想更新的话，直接重新执行第 1 步的安装命令即可——可以安全地重复运行，不会影响你的照片。</p>
+<h2 id="6.-卸载">6. 卸载</h2>
+<p>目前还没有一键卸载工具，如果需要完全移除：</p>
+<ol>
+<li>点击菜单栏图标，选择 <strong>Quit</strong>。</li>
+<li>删除 <code>~/Applications/Lomorage.app</code>。</li>
+<li>执行 <code>launchctl bootout gui/$(id -u)/com.lomorage.lomod</code>，然后删除
+<code>~/Library/LaunchAgents/com.lomorage.lomod.plist</code>。</li>
+<li>删除安装目录 <code>~/Library/Application Support/Lomorage/lomod</code>。</li>
+</ol>
+<p>第 2 步里数据目录中的照片不会受以上任何步骤影响。</p>
+<p>Enjoy!</p>
+<p><strong>联系我们: <a href="mailto:support@lomorage.com">support@lomorage.com</a></strong></p>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>本页内容</strong><a class="toc-level-2" href="#1.-安装">1. 安装</a><a class="toc-level-2" href="#2.-数据目录">2. 数据目录</a><a class="toc-level-2" href="#3.-打开-lomorage">3. 打开 Lomorage</a><a class="toc-level-2" href="#4.-从手机或其他电脑访问">4. 从手机或其他电脑访问</a><a class="toc-level-2" href="#5.-更新">5. 更新</a><a class="toc-level-2" href="#6.-卸载">6. 卸载</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/zh/">lomorage</a><p>留住此刻，回味时光。</p></div><nav aria-label="更多链接"><a href="/zh/docs/">使用指南</a><a href="/zh/blog/">博客</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">隐私政策</a><a href="/zh/contact/">联系我们</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

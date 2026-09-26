@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Armbian · Lomorage</title><meta name="description" content="Armbian
+
+You have two options to install:
+
+  - Docker installation
+
+  - Build your own image
+
+ Docker installation
+
+Please refer to lomo-docker(https://github.com/lomorage/lomo-doc"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Armbian · Lomorage"><meta property="og:description" content="Armbian
+
+You have two options to install:
+
+  - Docker installation
+
+  - Build your own image
+
+ Docker installation
+
+Please refer to lomo-docker(https://github.com/lomorage/lomo-doc"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-armbian/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-service/installation-armbian/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-armbian/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-armbian/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomorage-service/installation-armbian/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Armbian</h1>
+    <div class="prose docs-prose"><h1 id="armbian">Armbian</h1>
+<p>You have two options to install:</p>
+<ul>
+<li>
+<p>Docker installation</p>
+</li>
+<li>
+<p>Build your own image</p>
+</li>
+</ul>
+<h2 id="docker-installation">Docker installation</h2>
+<p>Please refer to <a href="https://github.com/lomorage/lomo-docker">lomo-docker</a> for installation with docker image. You should use the arm image &quot;lomorage/raspberrypi-lomorage:latest&quot;.</p>
+<h2 id="build-your-own-image">Build your own image</h2>
+<p>It should support all the SBC supported by official Armbian, but if you find it doesn't work, feel free to reach us.</p>
+<p>There is a <a href="https://github.com/lomorage/build/releases/download/2022_06_06.16_09_16.0.c5da5e1d4/Armbian_22.08.0-trunk_Orangepizero_buster_current_5.15.43_minimal.img.xz">prebuild image</a> for <a href="http://www.orangepi.org/orangepizero/">Orange Pi Zero</a>.</p>
+<p>The default Armbian login username is &quot;lomoware&quot; and password is &quot;lomorage&quot;.</p>
+<h3 id="1.-prepare-build-env">1. Prepare build env</h3>
+<p>If you are using Ubuntu Focal 20.04.x amd64, you can skip this step.</p>
+<ul>
+<li>
+<p>Download and install <a href="https://www.vagrantup.com/downloads.html">Vagrant</a>.</p>
+</li>
+<li>
+<p>Install a plug-in that will enable us to resize the primary storage device:</p>
+</li>
+</ul>
+<pre><code class="language-bash">vagrant plugin install vagrant-disksize
+</code></pre>
+<ul>
+<li>Install git and clone the Armbian repo:</li>
+</ul>
+<pre><code class="language-bash"># Clone the project.
+git clone --depth 1 https://github.com/lomorage/build
+
+# Make the Vagrant box available. This might take a while but only needs to be done once.
+vagrant box add ubuntu/focal64
+
+# If the box gets updated by the folks at HashiCorp, we'll want to update our copy too.
+# This only needs done once and a while.
+vagrant box update
+</code></pre>
+<h3 id="2.-build-the-image">2. Build the image</h3>
+<ul>
+<li>First bring the box up:</li>
+</ul>
+<pre><code class="language-bash"># We have to be in the same directory as the Vagrant file, which is in the build/config/templates directory.
+
+cd build/config/templates
+
+#  Note that you can edit the Vagrant  file to specify the number of cpus and amount of memory you want Vagrant to use.
+
+# And now we simply let vagrant create our box and bring it up.
+
+vagrant up
+
+# When the box has been installed we can get access via ssh.
+# (No need for passwords, Vagrant installs the keys we'll need.)
+vagrant ssh
+</code></pre>
+<ul>
+<li>
+<p>Change to board parameter in &quot;userpatches/config-default.conf&quot;, the default is <code>BOARD=&quot;orangepizero&quot;</code>, if you don't know the board name, you can just use <code>BOARD=&quot;&quot;</code> and choose the board when compiling, or you can refer to the configuration <a href="https://github.com/armbian/build/tree/master/config/boards">here</a>.</p>
+</li>
+<li>
+<p>build image:</p>
+</li>
+</ul>
+<pre><code class="language-bash"># Let's get building!
+cd armbian
+sudo ./compile.sh
+</code></pre>
+<p>After build successfully, the image will be generated in <code>output/images</code>.</p>
+<h3 id="3.-configuration-parameter-customization">3. Configuration parameter customization</h3>
+<p>Refer the same section at raspberry installation</p>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#docker-installation">Docker installation</a><a class="toc-level-2" href="#build-your-own-image">Build your own image</a><a class="toc-level-3" href="#1.-prepare-build-env">1. Prepare build env</a><a class="toc-level-3" href="#2.-build-the-image">2. Build the image</a><a class="toc-level-3" href="#3.-configuration-parameter-customization">3. Configuration parameter customization</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

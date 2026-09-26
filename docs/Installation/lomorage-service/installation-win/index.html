@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows · Lomorage</title><meta name="description" content="Install &quot;Lomorage Photo Assistant&quot; on Windows
+
+ 1. Install
+
+Open PowerShell (no need to run as Administrator) and paste in:
+
+powershell
+irm https://lomorage.com/windows/install.ps1"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Windows · Lomorage"><meta property="og:description" content="Install &quot;Lomorage Photo Assistant&quot; on Windows
+
+ 1. Install
+
+Open PowerShell (no need to run as Administrator) and paste in:
+
+powershell
+irm https://lomorage.com/windows/install.ps1"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-win/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomorage-service/installation-win/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/" aria-current="page">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Windows</h1>
+    <div class="prose docs-prose"><h1 id="install-lomorage-photo-assistant-on-windows">Install &quot;Lomorage Photo Assistant&quot; on Windows</h1>
+<h2 id="1.-install">1. Install</h2>
+<p>Open <strong>PowerShell</strong> (no need to run as Administrator) and paste in:</p>
+<pre><code class="language-powershell">irm https://lomorage.com/windows/install.ps1 | iex
+</code></pre>
+<p>This downloads <code>lomod.exe</code> and everything it needs (vips, exiftool, ffmpeg), installs it to
+your user profile, and starts it — no installer window, no admin rights, no reboot.</p>
+<aside class="doc-note doc-warning"><p>If you're in mainland China and GitHub downloads are slow or fail, set this first so the
+download goes through an accelerator proxy instead:</p>
+<pre><code class="language-powershell">$env:LOMOD_CHINA=1; irm https://lomorage.com/windows/install.ps1 | iex
+</code></pre>
+</aside>
+<p>If Windows shows a firewall prompt the first time it starts (so your phone can reach it over
+your local network), choose <strong>Private networks</strong> and click <strong>Allow access</strong>.</p>
+<h2 id="2.-data-folder">2. Data folder</h2>
+<p>By default, your photos and videos are stored under <code>Pictures\Lomorage</code> in your own user
+folder — you don't need to configure anything before using it.</p>
+<p>If you'd rather use a different drive or folder (for example an external drive), download the
+script first instead of piping it straight into <code>iex</code>, then run it with <code>-DataDir</code>:</p>
+<pre><code class="language-powershell">irm https://lomorage.com/windows/install.ps1 -OutFile install.ps1
+./install.ps1 -DataDir &quot;D:\Lomorage&quot;
+</code></pre>
+<p>Running the installer again like this is also how you re-point an existing install at a new
+folder — it's safe to re-run any time.</p>
+<h2 id="3.-open-lomorage">3. Open Lomorage</h2>
+<p>A <strong>Lomorage</strong> icon appears in your Start menu and in the notification area (system tray, at
+the bottom right of your screen) — double-click either to open the web client in your browser.</p>
+<p>Right-click the tray icon for <strong>Start / Stop / Restart</strong>, or <strong>Quit</strong> to close it entirely. If
+you ever quit it, search for <strong>Lomorage</strong> in the Start menu to open it again — no need to
+reinstall.</p>
+<h2 id="4.-access-from-your-phone-or-another-computer">4. Access from your phone or another computer</h2>
+<p>Find the IP address shown for your PC, then from your phone or another device on the same
+network, open <code>http://&lt;that-ip&gt;:8000</code> in a browser.</p>
+<h2 id="5.-staying-up-to-date">5. Staying up to date</h2>
+<p>Lomorage checks for updates once a day in the background and installs them automatically — no
+action needed. If you'd rather update right away, just run the install command from step 1
+again; it's safe to re-run and won't touch your photos.</p>
+<h2 id="6.-uninstall">6. Uninstall</h2>
+<p>There isn't a one-click uninstaller yet. To remove it completely:</p>
+<ol>
+<li>Right-click the tray icon and choose <strong>Quit</strong>.</li>
+<li>Delete the <code>Lomorage.lnk</code> shortcuts from your Start menu and from
+<code>shell:startup</code> (paste that into the Windows Explorer address bar to jump there).</li>
+<li>Open Task Scheduler and delete the <strong>LomorageUpdate</strong> task, if present.</li>
+<li>Delete the install folder at <code>%LOCALAPPDATA%\Lomorage\lomod</code>.</li>
+</ol>
+<p>Your photos in the data folder from step 2 are not touched by any of this.</p>
+<p>Enjoy!</p>
+<p><strong>Need help? Email <a href="mailto:support@lomorage.com">support@lomorage.com</a>.</strong></p>
+<aside class="doc-note"><p><strong>HEIC/HEVC requires no extra Lomorage dependency.</strong> Lomorage includes the components it
+needs to process iPhone photos and videos, and you can view them in the web client.</p>
+<p>You may need Microsoft's <a href="https://apps.microsoft.com/detail/9pmmsr1cgpwg">HEIF Image Extensions</a>
+and <a href="https://apps.microsoft.com/detail/9nmzlz57r3t7">HEVC Video Extensions</a> only if you want
+Windows Explorer or the Photos app to open the original HEIC/HEVC files directly. These
+extensions are optional and do not affect backup or viewing through Lomorage.</p>
+</aside>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#1.-install">1. Install</a><a class="toc-level-2" href="#2.-data-folder">2. Data folder</a><a class="toc-level-2" href="#3.-open-lomorage">3. Open Lomorage</a><a class="toc-level-2" href="#4.-access-from-your-phone-or-another-computer">4. Access from your phone or another computer</a><a class="toc-level-2" href="#5.-staying-up-to-date">5. Staying up to date</a><a class="toc-level-2" href="#6.-uninstall">6. Uninstall</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

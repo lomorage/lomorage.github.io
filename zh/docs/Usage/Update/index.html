@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>手工升级Lomoarge后台系统 · Lomorage</title><meta name="description" content="手工升级Lomoarge后台系统
+
+如果您碰到您的Lomorage后台系统不能自动升级，请尝试下面手工升级的方法
+
+ 1. 确认您使用了正确的Lomoware源
+
+使用ssh 工具登录您的树莓派或者liux系统。
+您可以google或者百度 如何使用ssh
+
+比如：您的树莓派系统的IP地址是： 192.168.1.162，可以在Windows的终端输入：
+
+"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="手工升级Lomoarge后台系统 · Lomorage"><meta property="og:description" content="手工升级Lomoarge后台系统
+
+如果您碰到您的Lomorage后台系统不能自动升级，请尝试下面手工升级的方法
+
+ 1. 确认您使用了正确的Lomoware源
+
+使用ssh 工具登录您的树莓派或者liux系统。
+您可以google或者百度 如何使用ssh
+
+比如：您的树莓派系统的IP地址是： 192.168.1.162，可以在Windows的终端输入：
+
+"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Usage/Update/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/zh/docs/Usage/Update/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Usage/Update/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Usage/Update/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap"><a class="brand" href="/zh/" aria-label="Lomorage 首页"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="主导航"><a href="/zh/#why">为什么选 Lomorage</a><a href="/zh/#how">如何使用</a><a href="/zh/docs/">使用指南</a><a href="/zh/#questions">常见问题</a></nav><div class="header-actions"><a class="language" href="/docs/Usage/Update/" lang="en">EN</a><a class="button button-small" href="/zh/#download">下载 <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="帮助与指南">
+    <a class="docs-home-link" href="/zh/docs/">帮助与指南</a>
+    <label class="docs-search"><span class="visually-hidden">筛选指南</span><input type="search" data-doc-filter placeholder="Windows、NAS、家庭共享……"></label>
+    <nav><section data-doc-group><h2>从这里开始</h2><a href="/zh/docs/">选择适合你的方案</a><a href="/zh/docs/Installation/">安装 Lomorage</a><a href="/zh/docs/Installation/lomorage-service/">电脑或家庭服务器</a></section><section data-doc-group><h2>电脑与服务器</h2><a href="/zh/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/zh/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/zh/docs/Installation/lomorage-service/installation-synology/">群晖 NAS</a><a href="/zh/docs/Installation/lomorage-service/installation-raspbian/">树莓派</a><a href="/zh/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/zh/docs/Installation/lomorage-service/">更多 Linux 系统</a></section><section data-doc-group><h2>应用与照片</h2><a href="/zh/docs/Installation/lomorage-client/">手机与网页应用</a><a href="/zh/docs/Installation/lomorage-client/installation-ios/">iPhone 与 iPad</a><a href="/zh/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/zh/docs/Installation/lomorage-client/installation-web/">网页浏览</a><a href="/zh/docs/Installation/lomorage-importer/">导入已有照片</a></section><section data-doc-group><h2>更多使用方式</h2><a href="/zh/docs/Usage/">家人、分享与日常使用</a><a href="/zh/docs/Usage/customized-view/">自定义视图</a><a href="/zh/docs/Usage/external-access/">在外访问</a><a href="/zh/docs/Usage/Update/" aria-current="page">更新与维护</a><a href="/zh/docs/Installation/lomo-frame/">电子相框</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/zh/docs/">← 文档首页</a>
+    <h1>手工升级Lomoarge后台系统</h1>
+    <div class="prose docs-prose"><h1 id="手工升级lomoarge后台系统">手工升级Lomoarge后台系统</h1>
+<p>如果您碰到您的Lomorage后台系统不能自动升级，请尝试下面手工升级的方法</p>
+<h2 id="1.-确认您使用了正确的lomoware源">1. 确认您使用了正确的Lomoware源</h2>
+<p>使用ssh 工具登录您的树莓派或者liux系统。
+您可以google或者百度 <strong>如何使用ssh</strong></p>
+<p>比如：您的树莓派系统的IP地址是： 192.168.1.162，可以在Windows的终端输入：</p>
+<pre><code class="language-bash">ssh pi@192.168.1.162
+pi@192.168.1.162's password:
+</code></pre>
+<p><strong>默认密码是 raspberry</strong></p>
+<p>连接成功后，输入：</p>
+<pre><code class="language-bash">cat /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>显示结果如下：</p>
+<pre><code class="language-bash">deb [trusted=yes] https://lomoware.lomorage.com/debian/bookworm bookworm main
+</code></pre>
+<p><strong>如果中间的网址不是 <a href="http://lomoware.lomorage.com">lomoware.lomorage.com</a> 那请按如下方法更改</strong>, 否则跳到<strong>步骤2直接开始升级</strong></p>
+<p>在ssh 终端输入：</p>
+<pre><code class="language-bash">sudo nano  /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>按下面的图中更改，</p>
+<div align="center">
+<p class="screenshoot">
+  <img width="100%" src="/img/installation/update/change_source.png">
+</p>
+</div>
+<blockquote>
+<p>然后按 <strong>ctrl + X</strong></p>
+</blockquote>
+<blockquote>
+<p>接着按 <strong>Y</strong>  保存您的更改</p>
+</blockquote>
+<h2 id="2.-在-ssh-终端输入以下命令开始升级">2. 在 ssh 终端输入以下命令开始升级</h2>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install lomo-backend
+</code></pre>
+<h3 id="如果-apt-update-报签名错误-no_pubkey-gpg-error">如果 <code>apt update</code> 报签名错误 (NO_PUBKEY / GPG error)</h3>
+<p>如果您看到类似下面的错误：</p>
+<pre><code>W: GPG error: https://lomoware.lomorage.com/debian/bookworm bookworm InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY xxxxxxxxxxxxxxxx
+</code></pre>
+<p>这说明我们更新了源的签名密钥（比如旧密钥丢失需要更换），而您的系统里还是旧的密钥。重新执行一遍安装密钥的步骤即可：</p>
+<pre><code class="language-bash">sudo apt install -y ca-certificates
+sudo update-ca-certificates --fresh
+curl -fsSL https://lomoware.lomorage.com/debian/gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/lomorage-apt-key.gpg &gt; /dev/null
+</code></pre>
+<p>然后重新运行第2步的升级命令。</p>
+<p><strong>注意</strong>：如果您的 <code>/etc/apt/sources.list.d/lomoware.list</code> 里的内容是 <code>deb [trusted=yes] ...</code>（带 <code>[trusted=yes]</code>），说明这台设备本来就跳过了签名校验，不会碰到这个问题，也不需要执行上面的步骤。</p>
+<h2 id="3.-在手机端-设置-页面-查看您的服务器信息确保升级成功">3. 在手机端 设置 页面 查看您的服务器信息，确保升级成功</h2>
+<p>如果升级过程中遇到问题，请发邮件至 <a href="mailto:support@lomorage.com">support@lomorage.com</a>。</p>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>本页内容</strong><a class="toc-level-2" href="#1.-确认您使用了正确的lomoware源">1. 确认您使用了正确的Lomoware源</a><a class="toc-level-2" href="#2.-在-ssh-终端输入以下命令开始升级">2. 在 ssh 终端输入以下命令开始升级</a><a class="toc-level-3" href="#如果-apt-update-报签名错误-no_pubkey-gpg-error">如果 apt update 报签名错误 (NO_PUBKEY / GPG error)</a><a class="toc-level-2" href="#3.-在手机端-设置-页面-查看您的服务器信息确保升级成功">3. 在手机端 设置 页面 查看您的服务器信息，确保升级成功</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/zh/">lomorage</a><p>留住此刻，回味时光。</p></div><nav aria-label="更多链接"><a href="/zh/docs/">使用指南</a><a href="/zh/blog/">博客</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">隐私政策</a><a href="/zh/contact/">联系我们</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

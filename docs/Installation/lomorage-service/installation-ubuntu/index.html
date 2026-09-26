@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ubuntu · Lomorage</title><meta name="description" content="You can either use the docker installation, or install using APT
+
+ Docker installation
+
+Please refer to lomo-docker(https://github.com/lomorage/lomo-docker) for installation with d"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Ubuntu · Lomorage"><meta property="og:description" content="You can either use the docker installation, or install using APT
+
+ Docker installation
+
+Please refer to lomo-docker(https://github.com/lomorage/lomo-docker) for installation with d"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-ubuntu/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-service/installation-ubuntu/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-ubuntu/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-ubuntu/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomorage-service/installation-ubuntu/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Ubuntu</h1>
+    <div class="prose docs-prose"><p>You can either use the docker installation, or install using APT</p>
+<h1 id="docker-installation">Docker installation</h1>
+<p>Please refer to <a href="https://github.com/lomorage/lomo-docker">lomo-docker</a> for installation with docker image. You can either use the arm image &quot;lomorage/raspberrypi-lomorage:latest&quot; or amd64 image &quot;lomorage/amd64-lomorage:latest&quot; based on the host architecture.</p>
+<h1 id="apt-installation">APT installation</h1>
+<p><strong>Currently we only support x86/AMD64 Ubuntu 18.04.5 LTS (Bionic Beaver), Ubuntu 20.04.1 LTS (Focal Fossa), Ubuntu 22.04 LTS (Jammy Jellyfish), and Ubuntu 24.04 LTS (Noble Numbat).</strong></p>
+<h2 id="1.-add-lomoware-source">1. Add lomoware source</h2>
+<pre><code class="language-bash">sudo apt install -y ca-certificates python-certifi python3-certifi
+sudo update-ca-certificates --fresh
+curl -fsSL https://lomoware.lomorage.com/debian/gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/lomorage-apt-key.gpg &gt; /dev/null
+</code></pre>
+<p>If you are using Bionic:</p>
+<pre><code class="language-bash">echo &quot;deb [arch=amd64] https://lomoware.lomorage.com/debian/bionic bionic main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>If you are using Focal:</p>
+<pre><code class="language-bash">echo &quot;deb [arch=amd64] https://lomoware.lomorage.com/debian/focal focal main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>If you are using Jammy:</p>
+<pre><code class="language-bash">echo &quot;deb [arch=amd64] https://lomoware.lomorage.com/debian/jammy jammy main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>If you are using Noble:</p>
+<pre><code class="language-bash">echo &quot;deb [arch=amd64] https://lomoware.lomorage.com/debian/noble noble main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>then run:</p>
+<pre><code class="language-bash">sudo apt update
+</code></pre>
+<h2 id="2.-install-lomorage">2. Install Lomorage</h2>
+<p>You need at least lomo-vips, lomo-base-lite and lomo-backend installed.</p>
+<ul>
+<li>
+<p>lomo-backend: mandatory, &quot;Lomorage Photo Assistant&quot; backend</p>
+</li>
+<li>
+<p>lomo-base-lite: optional, hard drive mount tool, rsync, jq etc</p>
+</li>
+<li>
+<p>lomo-vips: mandatory, lomorage vips clone. (A fast image processing library with low memory needs), used by lomo-backend</p>
+</li>
+</ul>
+<pre><code class="language-bash">sudo apt install lomo-base-lite lomo-vips lomo-backend -y
+</code></pre>
+<p>Make sure the user can sudo without password, if not, execute the following command to add it:</p>
+<pre><code class="language-bash">echo &quot;$USER ALL=(ALL:ALL) NOPASSWD: ALL&quot; | sudo tee /etc/sudoers.d/$USER
+</code></pre>
+<h3 id="3.-configuration-parameter-customization">3. Configuration parameter customization</h3>
+<p>User can use environment variable to control configuration parameter as below. Above example is using <code>/etc/profile</code> file as default. You can change based on your own setup.</p>
+<p>Note after you set environment variable, please make sure it takes effect when you start or restart lomod</p>
+<h3 id="3.-configuration-parameter-customization-1">3. Configuration parameter customization</h3>
+<p>User can use environment variable in &quot;/opt/lomorage/etc/environment&quot; to control configuration parameter as below. You can change based on your own setup.</p>
+<h4 id="3.1-change-mount-directory">3.1 Change mount directory</h4>
+<p>You may need to specify the mount directory if the USB drive is not mounted in &quot;/media&quot; directory.</p>
+<p>For example if you are using PCManFM, then the mount directory will be &quot;/media/pi&quot;. To specify the mount directory to be &quot;/media/pi&quot;, add environment variable <code>LOMOD_MOUNT_DIR=/media/pi</code> in <code>/opt/lomorage/etc/environment</code>, such as</p>
+<pre><code>echo &quot;LOMOD_MOUNT_DIR=/media/pi&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<p><strong>this parameter should be the directory mount, not the sub-directory</strong></p>
+<p><strong>Make sure the user has the r/w permission for above mount directory, this parameter should be the parent directory mounted, for example if it's mounted as &quot;/media/pi/disk0&quot;, then you should use &quot;/media/pi/&quot;.</strong></p>
+<h4 id="3.2-http-listen-port">3.2 HTTP Listen Port</h4>
+<p>Lomod listens on port 8000 by default. If it is conflict and you want to specify own listen port, you can add environment variable <code>LOMOD_PORT_HTTP</code> in <code>/opt/lomorage/etc/environment</code>. For example,</p>
+<pre><code>echo &quot;LOMOD_PORT_HTTP=8888&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<p>Another option is <code>cp /lib/systemd/system/lomod.service /etc/systemd/system/lomod.service</code> and then edit &quot;/etc/systemd/system/lomod.service&quot; and change &quot;ExecStart&quot; directly to specify the parameters used(run <code>/opt/lomorage/bin/lomod -h</code> to check the parameters), and run <code>sudo systemctl daemon-reload</code>, then it will use &quot;/etc/systemd/system/lomod.service&quot; instead. &quot;/lib/systemd/system/lomod.service&quot; is expected to be overwritten when upgrade.</p>
+<h2 id="4.-run">4. Run</h2>
+<p>Restart &quot;Lomorage Photo Assistant&quot;:</p>
+<pre><code class="language-bash"># restart lomo-backend
+sudo systemctl restart lomod
+
+# restart lomo-frame
+sudo service supervisor restart
+</code></pre>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#1.-add-lomoware-source">1. Add lomoware source</a><a class="toc-level-2" href="#2.-install-lomorage">2. Install Lomorage</a><a class="toc-level-3" href="#3.-configuration-parameter-customization">3. Configuration parameter customization</a><a class="toc-level-3" href="#3.-configuration-parameter-customization-1">3. Configuration parameter customization</a><a class="toc-level-2" href="#4.-run">4. Run</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

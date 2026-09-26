@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Openwrt · Lomorage</title><meta name="description" content="Openwrt安装
+
+Lomorage的opkg包安装依赖Entware软件仓库中的其他包(比如ffmpeg exif-tools)。
+
+当前在Beta测试中，如果您碰到什么问题请联系我们。
+
+ 快速开始
+
+ 1. 安装Entware
+
+请参考这里(https://github.com/Entware/Entware/wiki/Alternative-ins"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Openwrt · Lomorage"><meta property="og:description" content="Openwrt安装
+
+Lomorage的opkg包安装依赖Entware软件仓库中的其他包(比如ffmpeg exif-tools)。
+
+当前在Beta测试中，如果您碰到什么问题请联系我们。
+
+ 快速开始
+
+ 1. 安装Entware
+
+请参考这里(https://github.com/Entware/Entware/wiki/Alternative-ins"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-openwrt/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-openwrt/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-openwrt/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-openwrt/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap"><a class="brand" href="/zh/" aria-label="Lomorage 首页"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="主导航"><a href="/zh/#why">为什么选 Lomorage</a><a href="/zh/#how">如何使用</a><a href="/zh/docs/">使用指南</a><a href="/zh/#questions">常见问题</a></nav><div class="header-actions"><a class="language" href="/docs/Installation/lomorage-service/installation-openwrt/" lang="en">EN</a><a class="button button-small" href="/zh/#download">下载 <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="帮助与指南">
+    <a class="docs-home-link" href="/zh/docs/">帮助与指南</a>
+    <label class="docs-search"><span class="visually-hidden">筛选指南</span><input type="search" data-doc-filter placeholder="Windows、NAS、家庭共享……"></label>
+    <nav><section data-doc-group><h2>从这里开始</h2><a href="/zh/docs/">选择适合你的方案</a><a href="/zh/docs/Installation/">安装 Lomorage</a><a href="/zh/docs/Installation/lomorage-service/">电脑或家庭服务器</a></section><section data-doc-group><h2>电脑与服务器</h2><a href="/zh/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/zh/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/zh/docs/Installation/lomorage-service/installation-synology/">群晖 NAS</a><a href="/zh/docs/Installation/lomorage-service/installation-raspbian/">树莓派</a><a href="/zh/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/zh/docs/Installation/lomorage-service/">更多 Linux 系统</a></section><section data-doc-group><h2>应用与照片</h2><a href="/zh/docs/Installation/lomorage-client/">手机与网页应用</a><a href="/zh/docs/Installation/lomorage-client/installation-ios/">iPhone 与 iPad</a><a href="/zh/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/zh/docs/Installation/lomorage-client/installation-web/">网页浏览</a><a href="/zh/docs/Installation/lomorage-importer/">导入已有照片</a></section><section data-doc-group><h2>更多使用方式</h2><a href="/zh/docs/Usage/">家人、分享与日常使用</a><a href="/zh/docs/Usage/customized-view/">自定义视图</a><a href="/zh/docs/Usage/external-access/">在外访问</a><a href="/zh/docs/Usage/Update/">更新与维护</a><a href="/zh/docs/Installation/lomo-frame/">电子相框</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/zh/docs/">← 文档首页</a>
+    <h1>Openwrt</h1>
+    <div class="prose docs-prose"><h1 id="openwrt安装">Openwrt安装</h1>
+<p>Lomorage的opkg包安装依赖Entware软件仓库中的其他包(比如ffmpeg exif-tools)。</p>
+<p>当前在Beta测试中，如果您碰到什么问题请联系我们。</p>
+<h2 id="快速开始">快速开始</h2>
+<h3 id="1.-安装entware">1. 安装Entware</h3>
+<p>请参考<a href="https://github.com/Entware/Entware/wiki/Alternative-install-vs-standard">这里</a>的步骤来安装Entware到目标机上。</p>
+<p>您可以使用<code>cat /proc/cpuinfo</code>命令来检查系统架构:</p>
+<pre><code>root@OpenWrt:/mnt/sda1# cat /proc/cpuinfo
+system type		: Atheros AR9344 rev 2
+machine			: Western Digital My Net N750
+processor		: 0
+cpu model		: MIPS 74Kc V4.12
+BogoMIPS		: 278.93
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 32
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 4, address/irw mask: [0x0ffc, 0x0ffc, 0x0ffb, 0x0ffb]
+isa			: mips1 mips2 mips32r1 mips32r2
+ASEs implemented	: mips16 dsp dsp2
+Options implemented	: tlb 4kex 4k_cache prefetch mcheck ejtag llsc dc_aliases perf_cntr_intr_bit nan_legacy nan_2008 perf
+shadow register sets	: 1
+kscratch registers	: 0
+package			: 0
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available
+</code></pre>
+<p>如果是MIPS，可以使用 <code>lscpu</code>来查看字节序，mips是big-endian架构,. mipsel是little-endian架构。</p>
+<pre><code>root@OpenWrt:/mnt/sda1# lscpu | grep &quot;Byte Order&quot;
+Byte Order:          Big Endian
+</code></pre>
+<p>然后您可以使用<code>uname -a </code>查看Linux版本号:</p>
+<pre><code>root@OpenWrt:/mnt/sda1# uname -a
+Linux OpenWrt 4.14.221 #0 Mon Feb 15 15:22:37 2021 mips GNU/Linux
+</code></pre>
+<p>通常您需要加载USB驱动器，并将包安装到上面，参考:</p>
+<ol>
+<li><a href="https://openwrt.org/docs/guide-user/storage/usb-drives-quickstart#procedure">https://openwrt.org/docs/guide-user/storage/usb-drives-quickstart#procedure</a></li>
+<li><a href="https://www.jianshu.com/p/4061eeaccd13">https://www.jianshu.com/p/4061eeaccd13</a></li>
+</ol>
+<p><strong>确保修改了&quot;/etc/profile&quot;，添加<code>/opt/bin/go/bin:/opt/bin</code>到<code>PATH</code>，添加<code>/opt/lib/</code>到<code>LD_LIBRARY_PATH</code></strong></p>
+<p>Entware安装好了后，可以从Entware安装下面的依赖和工具:</p>
+<pre><code>root@OpenWrt:~# opkg install coreutils-stat perl-image-exiftool ffmpeg ffprobe lsblk
+</code></pre>
+<h3 id="2.-安装lomorage">2. 安装Lomorage</h3>
+<p>现在支持的系统平台如下:</p>
+<pre><code>aarch64-3.10    # arm64, linux kernel ver &gt;= 3.10
+armv7-3.2       # armv7, linux kernel ver &gt;=3.2
+mips-3.4        # mips big-endian, linux kernel ver &gt;=3.2
+mipsel-3.4      # mips little-endian, linux kernel ver &gt;=3.2
+</code></pre>
+<p>添加<code>src/gz lomorage https://lomostaging.lomorage.com/opkg/[architecture]</code>到<code>/opt/etc/opkg.conf</code>，将<code>[architecture]</code>替换为你的系统架构，比如如果是mips big-endian, linux kernel ver &gt;=3.2, 使用<code>src/gz lomorage https://lomostaging.lomorage.com/opkg/mips-3.4</code>。必须将其放置到 <strong>&quot;entware&quot; 条目的下面</strong>，因为entware中有些需要的包没有打开需要的编译选项，需要使用Lomorage源中的包。</p>
+<pre><code>root@OpenWrt:~# cat /opt/etc/opkg.conf
+src/gz entware http://bin.entware.net/mipssf-k3.4
+src/gz lomorage https://lomostaging.lomorage.com/opkg/mips-3.4
+dest root /
+lists_dir ext /opt/var/opkg-lists
+arch all 100
+arch mips-3x 150
+arch mips-3.4 160
+</code></pre>
+<p>然后您可以安装&quot;lomo-backend&quot;，所有的依赖应该都能自动安装:</p>
+<pre><code>root@OpenWrt:/mnt/sda1/# opkg update --no-check-certificate
+root@OpenWrt:/mnt/sda1/# opkg install lomo-backend --no-check-certificate
+</code></pre>
+<p>&quot;lomod&quot;安装完成后会自动启动，默认的加载目录是&quot;/mnt&quot;，端口号&quot;8000&quot;，你也可以使用下面的命令控制:</p>
+<pre><code>root@OpenWrt:/mnt/sda1# /opt/etc/init.d/lomod
+Usage: /opt/etc/init.d/lomod {start|stop|restart}
+</code></pre>
+<p>需要注意的是对于&quot;arm&quot;架构，会有两个版本: &quot;hf&quot; and &quot;nohf&quot;, &quot;hf&quot;是hard float的缩写，可以通过<code>grep &quot;fpu&quot; /proc/cpuinfo</code>来查看CPU是否支持hard float，如果命令输出显示<code>fpu     : yes</code>那就是支持. <strong>如果不支持hard float，您需要安装nohf版本的包:</strong></p>
+<pre><code>root@OpenWrt:/mnt/sda1/# opkg install lomo-backend_nohf --no-check-certificate
+</code></pre>
+<p>接下来您可以使用cron job来每天4:00 am自动更新lomo-backend:</p>
+<pre><code>root@OpenWrt:~# crontab -e
+</code></pre>
+<p>添加下面的内容:</p>
+<pre><code>0 4 * * * opkg update --no-check-certificate &amp;&amp; opkg install lomo-backend --no-check-certificate
+</code></pre>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>本页内容</strong><a class="toc-level-2" href="#快速开始">快速开始</a><a class="toc-level-3" href="#1.-安装entware">1. 安装Entware</a><a class="toc-level-3" href="#2.-安装lomorage">2. 安装Lomorage</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/zh/">lomorage</a><p>留住此刻，回味时光。</p></div><nav aria-label="更多链接"><a href="/zh/docs/">使用指南</a><a href="/zh/blog/">博客</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">隐私政策</a><a href="/zh/contact/">联系我们</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

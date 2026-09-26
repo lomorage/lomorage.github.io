@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raspbian · Lomorage</title><meta name="description" content="Install &quot;Lomorage Photo Assistant&quot; on Raspberry Pi
+
+To run on Raspberry Pi, you need to order a Raspberry Pi(https://www.raspberrypi.org/), we have tested the image the following m"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Raspbian · Lomorage"><meta property="og:description" content="Install &quot;Lomorage Photo Assistant&quot; on Raspberry Pi
+
+To run on Raspberry Pi, you need to order a Raspberry Pi(https://www.raspberrypi.org/), we have tested the image the following m"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-raspbian/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-service/installation-raspbian/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-raspbian/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-raspbian/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomorage-service/installation-raspbian/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/" aria-current="page">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Raspbian</h1>
+    <div class="prose docs-prose"><h1 id="install-lomorage-photo-assistant-on-raspberry-pi">Install &quot;Lomorage Photo Assistant&quot; on Raspberry Pi</h1>
+<p>To run on Raspberry Pi, you need to order a <a href="https://www.raspberrypi.org/">Raspberry Pi</a>, we have tested the image the following models:</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
+</ul>
+<p>If you don't have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:</p>
+<ul>
+<li>Raspberry Pi board</li>
+<li>Power supply</li>
+<li>16GB MicroSD card</li>
+</ul>
+<p>A <a href="https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/">Raspberry Pi 3 B+ (PLUS) Starter Kit</a> is good enough for the setup.</p>
+<p><strong>There are 3 options to install &quot;Lomorage Photo Assistant&quot; on Raspberry Pi</strong>, one is using the prebuild OS image which has all the dependencies installed, or you can run docker image on your existing running Raspberry Pi, or if you can just use APT install.</p>
+<h2 id="install-with-prebuild-os-image">Install with prebuild OS image</h2>
+<p>The prebuild image includes all Lomorage packages, including:</p>
+<ul>
+<li>
+<p>lomo-backend: &quot;Lomorage Photo Assistant&quot; backend</p>
+</li>
+<li>
+<p>lomo-base: network configure tool, button control, hard drive mount tool (usbmount modification), bluetooth console</p>
+</li>
+<li>
+<p>lomo-frame: the digital frame application</p>
+</li>
+</ul>
+<p>Click the link below to download the prebuild OS image.</p>
+<p align="center">
+<a href="https://github.com/lomorage/pi-gen/releases/download/2021_11_05.23_32_53.0.4a997ab/image_2021-11-05-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+</p>
+<p>After you download the customized OS image, you can install the image to MicroSD card using <a href="https://www.balena.io/etcher/">balenaEtcher</a>, which is available on both Windows and macOS.</p>
+<p>After you insert the MicroSD to your desktop or laptop, just select the image you download, choose the MicroSD drive, and click &quot;Flash&quot;, it will be done in a few minutes.</p>
+<p align="center">
+  <img width="50%" src="/img/installation/balenaEtcher.png">
+</p>
+<p>After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.</p>
+<p>If you have HDMI connected, after system boot successfully, it will show up a screen that no able to find any assets, and will also show a QRCode for register the lomo frame, <strong>please create user on iOS/Android APP first before scanning the QRCode to bind the lomo frame</strong>. You can upload photos using Lomorage Phone app, and then press &quot;r&quot; to rescan. If you want to quit to terminal to do some configuration, just press &quot;ESC&quot; and then &quot;Ctrl+Alt+F2&quot;, after you made any changes and want to start lomo-frame, use command <code>sudo service supervisor restart</code>.</p>
+<p><em>The default login username is &quot;lomoware&quot; and password is &quot;lomorage&quot;</em></p>
+<p>We suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command <code>wifi_switch.sh client &quot;wifi-ssid&quot; wifi-password</code>, replace &quot;wifi-ssid&quot; and &quot;wifi-password&quot; with those of your wifi network. <em>Make sure you have quotation mark around &quot;wifi-ssid&quot; if you have space or unicode character in it, for example <code>wifi_switch.sh client &quot;Lomorage's 2.4G&quot; mypassword</code>.</em></p>
+<aside class="doc-note doc-warning"><p>You probably will have the problem that &quot;Wi-Fi is currently blocked by rfkill&quot;. You can confirm this by running:</p>
+<pre><code>pi@raspberrypi:~ $ sudo rfkill list all
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+1: hci0: Bluetooth
+	Soft blocked: yes
+	Hard blocked: no
+</code></pre>
+<p>And you can enable WiFi by running:</p>
+<pre><code>sudo rfkill unblock 0
+</code></pre>
+<p>assuming 0 is the index of Wireless LAN.</p>
+<p>After this, you can try <code>wifi_switch.sh</code> again.</p>
+</aside>
+<h2 id="docker-installation">Docker installation</h2>
+<p>Please refer to <a href="https://github.com/lomorage/lomo-docker">lomo-docker</a> for installation with docker image. You should use the arm image &quot;lomorage/raspberrypi-lomorage:latest&quot;.</p>
+<h2 id="apt-installation">Apt installation</h2>
+<p>If you have the official Raspbian image installed already, APT installation would be the quickest way to install.</p>
+<h3 id="1.-add-lomoware-source">1. Add lomoware source</h3>
+<pre><code class="language-bash">sudo apt install -y ca-certificates python3-certifi
+sudo update-ca-certificates --fresh
+curl -fsSL https://lomoware.lomorage.com/debian/gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/lomorage-apt-key.gpg &gt; /dev/null
+</code></pre>
+<p>If you are using trixie:</p>
+<pre><code class="language-bash">echo &quot;deb https://lomoware.lomorage.com/debian/trixie trixie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>If you are using bookworm:</p>
+<pre><code class="language-bash">echo &quot;deb https://lomoware.lomorage.com/debian/bookworm bookworm main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>If you are using bullseye:</p>
+<pre><code class="language-bash">echo &quot;deb https://lomoware.lomorage.com/debian/bullseye bullseye main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>then run:</p>
+<pre><code class="language-bash">sudo apt update
+</code></pre>
+<h3 id="2.-install-lomorage">2. Install Lomorage</h3>
+<p>You need at least lomo-vips and lomo-backend installed.</p>
+<ul>
+<li>
+<p>lomo-backend: mandatory, &quot;Lomorage Photo Assistant&quot; backend</p>
+</li>
+<li>
+<p>lomo-base: optional, network configure tool, button control, hard drive mount tool, bluetooth console</p>
+</li>
+<li>
+<p>lomo-vips: mandatory, lomorage vips clone. (A fast image processing library with low memory needs), used by lomo-backend</p>
+</li>
+<li>
+<p>lomo-frame: optional, the digital frame application</p>
+</li>
+</ul>
+<pre><code class="language-bash">sudo apt install lomo-base lomo-vips lomo-backend lomo-frame -y
+</code></pre>
+<p>Make sure the user can sudo without password, if not, execute the following command to add it:</p>
+<pre><code class="language-bash">echo &quot;$USER ALL=(ALL:ALL) NOPASSWD: ALL&quot; | sudo tee /etc/sudoers.d/$USER
+</code></pre>
+<h3 id="3.-configuration-parameter-customization">3. Configuration parameter customization</h3>
+<p>User can use environment variable in &quot;/opt/lomorage/etc/environment&quot; to control configuration parameter as below. You can change based on your own setup.</p>
+<h4 id="3.1-change-mount-directory">3.1 Change mount directory</h4>
+<p>You may need to specify the mount directory if the USB drive is not mounted in &quot;/media&quot; directory.</p>
+<p>For example if you are using PCManFM, then the mount directory will be &quot;/media/pi&quot;. To specify the mount directory to be &quot;/media/pi&quot;, add environment variable <code>LOMOD_MOUNT_DIR=/media/pi</code> in <code>/opt/lomorage/etc/environment</code>, such as</p>
+<pre><code>echo &quot;LOMOD_MOUNT_DIR=/media/pi&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<p><strong>this parameter should be the directory mount, not the sub-directory</strong></p>
+<p><strong>Make sure the user has the r/w permission for above mount directory, this parameter should be the parent directory mounted, for example if it's mounted as &quot;/media/pi/disk0&quot;, then you should use &quot;/media/pi/&quot;.</strong></p>
+<h4 id="3.2-http-listen-port">3.2 HTTP Listen Port</h4>
+<p>Lomod listens on port 8000 by default. If it is conflict and you want to specify own listen port, you can add environment variable <code>LOMOD_PORT_HTTP</code> in <code>/opt/lomorage/etc/environment</code>. For example,</p>
+<pre><code>echo &quot;LOMOD_PORT_HTTP=8888&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<p>Another option is <code>cp /lib/systemd/system/lomod.service /etc/systemd/system/lomod.service</code> and then edit &quot;/etc/systemd/system/lomod.service&quot; and change &quot;ExecStart&quot; directly to specify the parameters used(run <code>/opt/lomorage/bin/lomod -h</code> to check the parameters), and run <code>sudo systemctl daemon-reload</code>, then it will use &quot;/etc/systemd/system/lomod.service&quot; instead. &quot;/lib/systemd/system/lomod.service&quot; is expected to be overwritten when upgrade.</p>
+<h4 id="3.3-disable-mount-monitor">3.3 Disable Mount Monitor</h4>
+<p>Lomod listens USB disk mount status and prevents app from uploading if USB or UFS mount are lost by default at raspberry PI environment because it may use up OS SD card space very quickly. If you want to disable the monitor, you can add environment variable <code>LOMOD_DISABLE_MOUNT_MONITOR</code>. For example,</p>
+<pre><code>echo &quot;LOMOD_DISABLE_MOUNT_MONITOR=1&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<h3 id="4.-run">4. Run</h3>
+<p>Restart &quot;Lomorage Photo Assistant&quot;:</p>
+<pre><code class="language-bash"># restart lomo-backend
+sudo systemctl restart lomod
+
+# restart lomo-frame
+sudo service supervisor restart
+</code></pre>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#install-with-prebuild-os-image">Install with prebuild OS image</a><a class="toc-level-2" href="#docker-installation">Docker installation</a><a class="toc-level-2" href="#apt-installation">Apt installation</a><a class="toc-level-3" href="#1.-add-lomoware-source">1. Add lomoware source</a><a class="toc-level-3" href="#2.-install-lomorage">2. Install Lomorage</a><a class="toc-level-3" href="#3.-configuration-parameter-customization">3. Configuration parameter customization</a><a class="toc-level-3" href="#4.-run">4. Run</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

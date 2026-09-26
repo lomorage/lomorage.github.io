@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>External Access · Lomorage</title><meta name="description" content="External Access Configuration
+
+Currently, external access need some manual setup and some technical background, we will make the process more user-friendly later. There are mainly "><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="External Access · Lomorage"><meta property="og:description" content="External Access Configuration
+
+Currently, external access need some manual setup and some technical background, we will make the process more user-friendly later. There are mainly "><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Usage/external-access/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Usage/external-access/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Usage/external-access/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Usage/external-access/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Usage/external-access/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/" aria-current="page">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>External Access</h1>
+    <div class="prose docs-prose"><h1 id="external-access-configuration">External Access Configuration</h1>
+<p>Currently, external access need some manual setup and some technical background, we will make the process more user-friendly later. There are mainly 2 options:</p>
+<ol>
+<li>Use the 3rd party tunnel service</li>
+<li>Open port mapping on your router</li>
+</ol>
+<h2 id="use-the-3rd-party-tunnel-service-option-1">Use the 3rd party tunnel service (option 1)</h2>
+<p>There are a few tunnel services available for free use, most tunnel services require a client application running on your device, and set up a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the URL with that subdomain, the tunnel service will forward the traffic/request to the client application.</p>
+<p><a href="https://ngrok.com">ngrok</a> is a free and popular tunnel services, requires registration before use, and need pay for customize subdomain. You can also use other tunnel services as well.</p>
+<h3 id="1.-register">1. Register</h3>
+<p>Sign up a ngrok account <a href="https://dashboard.ngrok.com/signup">here</a>, after that, it will show up a &quot;Setup &amp; Installation&quot; page.</p>
+<h3 id="2.-download">2. Download</h3>
+<p>ngrok is just one binary, you can download the version on your platform.</p>
+<p>If you are on Raspberry Pi, you can copy the link of Linux(ARM) on the &quot;Setup &amp; Installation&quot; page, which is &quot;<a href="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip">https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip</a>&quot; for now, and download it via &quot;wget&quot;.</p>
+<pre><code class="language-bash">wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+</code></pre>
+<h3 id="3.-installation">3. Installation</h3>
+<p>unzip and get the binary. You can double click on Windows or macOS to unzip it.</p>
+<p>If you are using Raspberry Pi, use &quot;unzip&quot; command:</p>
+<pre><code class="language-bash">unzip ngrok-stable-linux-arm.zip
+</code></pre>
+<h3 id="4.-connect-your-account">4. Connect your account</h3>
+<p>On the &quot;Setup &amp; Installation&quot; page step 3, it shows the “authtoken”, you need open <strong>terminal</strong> to run ngrok to add the authtoken to the config file.</p>
+<pre><code class="language-bash">./ngrok authtoken [your-authtoken-show-in-step-3]
+</code></pre>
+<h3 id="5.-run-ngrok">5. Run ngrok</h3>
+<p>&quot;Lomorage Photo Assistant&quot; is using &quot;8000&quot; by default, and ngrok can't customize subdomain with free account. After runnig successfully, it will show the tunnel url, the subdomain is a random string which might change in next run.</p>
+<pre><code class="language-bash">./ngrok http 8000
+</code></pre>
+<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
+<h3 id="6.-config-tunnel-service-on-lomorage-app">6. Config tunnel service on Lomorage APP</h3>
+<p>Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host, the host is like &quot;<a href="http://2e30eea5.ngrok.io">2e30eea5.ngrok.io</a>&quot;, and port should be &quot;443&quot;.</p>
+<h2 id="nginx-https-proxy-option-2">Nginx https proxy (option 2)</h2>
+<p>Another option is to open port mapping on your home router and use nginx as reverse https proxy if you have your own domain name. Depends on your familiarity on Nginx, you can either use popular Nginx Proxy Manager tool, or customized nginx configuration by yourselves. Following sections presents both options for you to choose.</p>
+<aside class="doc-note"><p>If you are using Lomorage image, the login username is &quot;lomoware&quot; and password is &quot;lomorage&quot;;</p>
+</aside>
+<h3 id="nginx-proxy-manager">Nginx Proxy Manager</h3>
+<p>Nginx Proxy Manager is a populer self-host tool to easily forward your websites running at home to the public internet. Please refer <a href="https://nginxproxymanager.com">user guide</a> for installation.</p>
+<ol>
+<li>Click <code>Add Proxy Host</code>, then set your own domain name and forward ip as below screen. Schema is <code>http</code>, and forward port is the listen port configured for lomorage container, 8000 is default listen por
+t.</li>
+</ol>
+<p align="center">
+  <img width="50%" src="/img/installation/npm1.png">
+</p>
+<ol start="2">
+<li>Enable <code>SSL</code> configuration and set certificate domain name as your own domain name</li>
+</ol>
+<p align="center">
+  <img width="50%" src="/img/installation/npm2.png">
+</p>
+<ol start="3">
+<li>Click <code>Save</code>, and below host should be added into the host list</li>
+</ol>
+<p align="center">
+  <img width="50%" src="/img/installation/npm3.png">
+</p>
+<h3 id="customize-nginx-configuration">Customize Nginx Configuration</h3>
+<p>The following part will use setup in Linux as an example, other platforms are similar since all the software used below are cross platform.</p>
+<h4 id="1.-install-certbot-and-nginx">1. Install certbot and Nginx</h4>
+<pre><code>$ sudo apt-get install certbot python-certbot-nginx -y
+</code></pre>
+<h4 id="2.-generate-certificate">2. generate certificate</h4>
+<p><strong>First, make sure you have your domain name configured and opened TCP port mapping 80 and 443 on your home router, and forward those traffic to the device running Nginx on the same port.</strong></p>
+<p><strong>Following part will use &quot;<a href="http://bob.lomorage.com">bob.lomorage.com</a>&quot; as an example</strong></p>
+<pre><code>$ sudo certbot --nginx -d bob.lomorage.com
+</code></pre>
+<p>And this will generate certificate as below:</p>
+<pre><code>$ sudo certbot --nginx -d bob.lomorage.com
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for bob.lomorage.com
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/bob.lomorage.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/bob.lomorage.com/privkey.pem
+This certificate expires on 2021-11-14.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+</code></pre>
+<h4 id="3.-config-nginx">3. config Nginx</h4>
+<p>create “/etc/nginx/conf.d/lomorage.conf” (need sudo), and fill with content below (change &quot;<a href="http://bob.lomorage.com">bob.lomorage.com</a>&quot; with your own domain name):</p>
+<pre><code>server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name demo.lomorage.com;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/bob.lomorage.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/bob.lomorage.com/privkey.pem;
+
+    location / {
+        client_max_body_size 0;
+        proxy_pass http://localhost:8000;
+        proxy_set_header X-Forwarded-For $remote_addr;
+    }
+}
+</code></pre>
+<p>If your &quot;Lomorage Photo Assistant&quot; and nginx are running on different devices, change &quot;localhost&quot; to the IP address running Lomorage service.</p>
+<p>Now reload config, restart and enable Nginx service</p>
+<pre><code>sudo systemctl restart nginx
+sudo systemctl enable nginx
+</code></pre>
+<p>Now you can verify the settings using browser by accessing &quot;<a href="https://bob.lomorage.com/system">https://bob.lomorage.com/system</a>&quot; (change &quot;<a href="http://bob.lomorage.com">bob.lomorage.com</a>&quot; with your own domain name).</p>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#use-the-3rd-party-tunnel-service-option-1">Use the 3rd party tunnel service (option 1)</a><a class="toc-level-3" href="#1.-register">1. Register</a><a class="toc-level-3" href="#2.-download">2. Download</a><a class="toc-level-3" href="#3.-installation">3. Installation</a><a class="toc-level-3" href="#4.-connect-your-account">4. Connect your account</a><a class="toc-level-3" href="#5.-run-ngrok">5. Run ngrok</a><a class="toc-level-3" href="#6.-config-tunnel-service-on-lomorage-app">6. Config tunnel service on Lomorage APP</a><a class="toc-level-2" href="#nginx-https-proxy-option-2">Nginx https proxy (option 2)</a><a class="toc-level-3" href="#nginx-proxy-manager">Nginx Proxy Manager</a><a class="toc-level-3" href="#customize-nginx-configuration">Customize Nginx Configuration</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

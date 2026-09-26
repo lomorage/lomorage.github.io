@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raspbian · Lomorage</title><meta name="description" content="在树莓派上安装&quot;Lomorage照片助手&quot;程序
+
+要在树莓派上运行，您需要先购买一个树莓派(https://www.raspberrypi.org/)，Lomorage可以运行在以下型号的机器上:
+
+- Raspberry Pi 4 Model B(https://www.raspberrypi.org/products/raspberry-pi-4-mod"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Raspbian · Lomorage"><meta property="og:description" content="在树莓派上安装&quot;Lomorage照片助手&quot;程序
+
+要在树莓派上运行，您需要先购买一个树莓派(https://www.raspberrypi.org/)，Lomorage可以运行在以下型号的机器上:
+
+- Raspberry Pi 4 Model B(https://www.raspberrypi.org/products/raspberry-pi-4-mod"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-raspbian/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-raspbian/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-raspbian/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-raspbian/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap"><a class="brand" href="/zh/" aria-label="Lomorage 首页"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="主导航"><a href="/zh/#why">为什么选 Lomorage</a><a href="/zh/#how">如何使用</a><a href="/zh/docs/">使用指南</a><a href="/zh/#questions">常见问题</a></nav><div class="header-actions"><a class="language" href="/docs/Installation/lomorage-service/installation-raspbian/" lang="en">EN</a><a class="button button-small" href="/zh/#download">下载 <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="帮助与指南">
+    <a class="docs-home-link" href="/zh/docs/">帮助与指南</a>
+    <label class="docs-search"><span class="visually-hidden">筛选指南</span><input type="search" data-doc-filter placeholder="Windows、NAS、家庭共享……"></label>
+    <nav><section data-doc-group><h2>从这里开始</h2><a href="/zh/docs/">选择适合你的方案</a><a href="/zh/docs/Installation/">安装 Lomorage</a><a href="/zh/docs/Installation/lomorage-service/">电脑或家庭服务器</a></section><section data-doc-group><h2>电脑与服务器</h2><a href="/zh/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/zh/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/zh/docs/Installation/lomorage-service/installation-synology/">群晖 NAS</a><a href="/zh/docs/Installation/lomorage-service/installation-raspbian/" aria-current="page">树莓派</a><a href="/zh/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/zh/docs/Installation/lomorage-service/">更多 Linux 系统</a></section><section data-doc-group><h2>应用与照片</h2><a href="/zh/docs/Installation/lomorage-client/">手机与网页应用</a><a href="/zh/docs/Installation/lomorage-client/installation-ios/">iPhone 与 iPad</a><a href="/zh/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/zh/docs/Installation/lomorage-client/installation-web/">网页浏览</a><a href="/zh/docs/Installation/lomorage-importer/">导入已有照片</a></section><section data-doc-group><h2>更多使用方式</h2><a href="/zh/docs/Usage/">家人、分享与日常使用</a><a href="/zh/docs/Usage/customized-view/">自定义视图</a><a href="/zh/docs/Usage/external-access/">在外访问</a><a href="/zh/docs/Usage/Update/">更新与维护</a><a href="/zh/docs/Installation/lomo-frame/">电子相框</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/zh/docs/">← 文档首页</a>
+    <h1>Raspbian</h1>
+    <div class="prose docs-prose"><h1 id="在树莓派上安装lomorage照片助手程序">在树莓派上安装&quot;Lomorage照片助手&quot;程序</h1>
+<p>要在树莓派上运行，您需要先购买一个<a href="https://www.raspberrypi.org/">树莓派</a>，Lomorage可以运行在以下型号的机器上:</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pi 4 Model B</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/">Raspberry Pi 3 Model B+</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspberry Pi Zero W</a></li>
+<li><a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a></li>
+</ul>
+<p>如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能。下面是您需要的最小配置:</p>
+<ul>
+<li>树莓派主板</li>
+<li>配套电源</li>
+<li>16GB MicroSD卡</li>
+</ul>
+<p><strong>有3种方式来在Raspberry Pi上安装&quot;Lomorage照片助手&quot;程序</strong>, 一种是安装预编译好的系统镜像，该镜像已经安装了所有&quot;Lomorage照片助手&quot;程序依赖的库和第三方工具，简单快捷，推荐使用；如果您已经有树莓派在运行其他服务，您也可以使用Docker镜像来安装，或者使用从APT源安装。</p>
+<h2 id="安装系统镜像">安装系统镜像</h2>
+<p>预装的系统镜像包括所有的包:</p>
+<ul>
+<li>
+<p>lomo-backend: &quot;Lomorage照片助手&quot;程序</p>
+</li>
+<li>
+<p>lomo-base: 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</p>
+</li>
+<li>
+<p>lomo-frame: 数码相框程序</p>
+</li>
+</ul>
+<p>点击下面的链接下载系统镜像。</p>
+<p align="center">
+<a href="https://gfw.lomorage.com/https://github.com/lomorage/pi-gen/releases/download/2021_11_05.23_32_53.0.4a997ab/image_2021-11-05-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+</p>
+<p>下载了系统镜像后, 你可以使用<a href="https://www.balena.io/etcher/">balenaEtcher</a>将其安装到MicroSD卡, balenaEtcher提供Windows和macOS版本。</p>
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/balenaEtcher.png">
+</p>
+</div>
+<p>将MicroSD卡插入到台式电脑或笔记本的读卡器后，选择下载的系统镜像，选择MicroSD卡，点击“Flash“按钮，几分钟后工具就会提示您的MicroSD卡已经就绪, 之后将<strong>MicroSD卡插入到树莓派，接上USB移动硬盘，插入网线，接通电源，等待几分钟系统启动完毕，您就可以用Lomorage 手机App开始备份照片了</strong>。</p>
+<p>如果您连接了HDMI，系统启动完成后，会提示没有找到资源，也会显示一个二维码用来绑定Lomorage相框，<strong>请先在iOS/Android手机应用上创建用户，然后再扫码绑定Lomorage相框</strong>，您可以使用Lomorage手机应用程序上传照片，然后按&quot;r&quot;键重新扫描。如果您想退出到控制台做一些系统配置，可以按&quot;ESC&quot;退出，然后按&quot;Ctrl+Alt+F2&quot;切换到控制台，配置完成后，可以使用命令<code>sudo service supervisor restart</code>来启动Lomorage相框程序。</p>
+<p><em>默认的用户名是&quot;lomoware&quot;，密码是&quot;lomorage&quot;</em></p>
+<p>为了更好的性能，建议使用有线网络连接，但如果您想使用WiFi, 您可以登陆树莓派，并使用下面的命令来启用无线连接<code>wifi_switch.sh client wifi-ssid wifi-password</code>，将 &quot;wifi-ssid&quot;和&quot;wifi-password&quot;替换为您的无线网络名和密码。<em>如果您的无线网络名称中有中文字符或者空格，就需要用引号，比如<code>wifi_switch.sh client &quot;Lomorage的 无线&quot; mypassword</code></em></p>
+<aside class="doc-note doc-warning"><p>您有可能会碰到&quot;Wi-Fi is currently blocked by rfkill&quot;的问题，可以执行下面的命令检查一下WiFi是否被禁用:</p>
+<pre><code>pi@raspberrypi:~ $ sudo rfkill list all
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+1: hci0: Bluetooth
+	Soft blocked: yes
+	Hard blocked: no
+</code></pre>
+<p>您可以使用下面的命令来启用WiFi:</p>
+<pre><code>sudo rfkill unblock 0
+</code></pre>
+<p>这里“0”是上面Wireless LAN的序号。</p>
+<p>启用之后您可以再尝试<code>wifi_switch.sh</code>。</p>
+</aside>
+<h1 id="其他安装方法">其他安装方法</h1>
+<h2 id="选项一docker安装">选项一：Docker安装</h2>
+<p>请参考<a href="https://github.com/lomorage/lomo-docker">lomo-docker</a>安装Docker镜像。请使用arm的镜像&quot;lomorage/raspberrypi-lomorage:latest&quot;。</p>
+<h2 id="选项二apt安装">选项二：APT安装</h2>
+<p>如果您运行官方的系统，APT是最快捷的安装方式。</p>
+<h3 id="1.-添加lomoware源">1. 添加lomoware源</h3>
+<pre><code class="language-bash">sudo apt install -y ca-certificates python3-certifi
+sudo update-ca-certificates --fresh
+curl -fsSL https://lomoware.lomorage.com/debian/gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/lomorage-apt-key.gpg &gt; /dev/null
+
+</code></pre>
+<p>如果您使用trixie:</p>
+<pre><code class="language-bash">echo &quot;deb https://lomoware.lomorage.com/debian/trixie trixie main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>如果您使用bookworm:</p>
+<pre><code class="language-bash">echo &quot;deb https://lomoware.lomorage.com/debian/bookworm bookworm main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>如果您使用bullseye:</p>
+<pre><code class="language-bash">echo &quot;deb https://lomoware.lomorage.com/debian/bullseye bullseye main&quot; | sudo tee /etc/apt/sources.list.d/lomoware.list
+</code></pre>
+<p>然后运行:</p>
+<pre><code class="language-bash">sudo apt update
+</code></pre>
+<h3 id="2.-安装lomorage">2. 安装Lomorage</h3>
+<p>最小安装需要lomo-vips和lomo-backend，您可以根据自己需要进行选择。</p>
+<ul>
+<li>
+<p>lomo-backend: 必须, &quot;Lomorage照片助手&quot;程序</p>
+</li>
+<li>
+<p>lomo-base: 可选, 系统工具，包括网络配置，开关控制, 磁盘加载, 蓝牙控制台</p>
+</li>
+<li>
+<p>lomo-vips: 必须, lomo-backend使用的图像处理库</p>
+</li>
+<li>
+<p>lomo-frame: 可选, 数码相框程序</p>
+</li>
+</ul>
+<pre><code class="language-bash">sudo apt install lomo-base lomo-vips lomo-backend lomo-frame -y
+</code></pre>
+<p>确保当前用户sudo不用密码, 如果不行，可以通过下面的命令添加:</p>
+<pre><code class="language-bash">echo &quot;$USER ALL=(ALL:ALL) NOPASSWD: ALL&quot; | sudo tee /etc/sudoers.d/$USER
+</code></pre>
+<h3 id="3.-按需修改运行参数">3. 按需修改运行参数</h3>
+<p>用户可以在&quot;/opt/lomorage/etc/environment&quot;设置环境变量来修改某些运行参数。用户可以根据自己实际情况加以调整。</p>
+<h4 id="3.1-修改磁盘mount目录">3.1 修改磁盘mount目录</h4>
+<p>如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到&quot;/media&quot;路径下的子目录），您需要添加&quot;Lomorage照片助手&quot;程序运行参数来指定加载目录。</p>
+<p>比如如果您使用PCManFM，那么加载的路径会是&quot;/media/pi&quot;。 要指定加载目录&quot;/media/pi&quot;, 请添加环境变量<code>LOMOD_MOUNT_DIR=/media/pi</code>在<code>/opt/lomorage/etc/environment</code>，比如</p>
+<pre><code>echo &quot;LOMOD_MOUNT_DIR=/media/pi&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<p><strong>请确保您的用户有上面设置的&quot;mount-dir&quot;的读写权限, 另外改参数必须是mount的父目录，比如mount到&quot;/media/pi/disk0&quot;下面，就必须指定为&quot;/media/pi&quot;</strong></p>
+<p>另外的方案是<code>cp /lib/systemd/system/lomod.service /etc/systemd/system/lomod.service</code>，然后编辑&quot;/etc/systemd/system/lomod.service&quot;，修改&quot;ExecStart&quot;指定要用的参数(运行<code>/opt/lomorage/bin/lomod -h</code>查看可用的参数)，然后运行<code>sudo systemctl daemon-reload</code>之后，就会使用&quot;/etc/systemd/system/lomod.service&quot;的配置了。 &quot;/lib/systemd/system/lomod.service&quot;在升级时会被覆盖。</p>
+<h4 id="3.2-http-监听端口">3.2 HTTP 监听端口</h4>
+<p>Lomod缺省监听端口是8000，如果需要自定义，清使用环境变量<code>LOMOD_PORT_HTTP</code>，比如</p>
+<pre><code>echo &quot;LOMOD_PORT_HTTP=8888&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<h4 id="3.3-禁用磁盘监控">3.3 禁用磁盘监控</h4>
+<p>Lomod会监控USB磁盘的加载状态，防止掉盘。如果因为某些原因需要禁用，可以使用环境变量<code>LOMOD_DISABLE_MOUNT_MONITOR</code>控制，比如</p>
+<pre><code>echo &quot;LOMOD_DISABLE_MOUNT_MONITOR=1&quot; | tee -a /opt/lomorage/etc/environment
+</code></pre>
+<h3 id="4.-运行">4. 运行</h3>
+<p>重启&quot;Lomorage照片助手&quot;程序:</p>
+<pre><code class="language-bash"># 重启lomo-backend
+sudo systemctl restart lomod
+
+# 重启lomo-frame
+sudo service supervisor restart
+</code></pre>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>本页内容</strong><a class="toc-level-2" href="#安装系统镜像">安装系统镜像</a><a class="toc-level-2" href="#选项一docker安装">选项一：Docker安装</a><a class="toc-level-2" href="#选项二apt安装">选项二：APT安装</a><a class="toc-level-3" href="#1.-添加lomoware源">1. 添加lomoware源</a><a class="toc-level-3" href="#2.-安装lomorage">2. 安装Lomorage</a><a class="toc-level-3" href="#3.-按需修改运行参数">3. 按需修改运行参数</a><a class="toc-level-3" href="#4.-运行">4. 运行</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/zh/">lomorage</a><p>留住此刻，回味时光。</p></div><nav aria-label="更多链接"><a href="/zh/docs/">使用指南</a><a href="/zh/blog/">博客</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">隐私政策</a><a href="/zh/contact/">联系我们</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

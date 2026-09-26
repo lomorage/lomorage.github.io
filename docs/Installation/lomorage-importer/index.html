@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Import Tool · Lomorage</title><meta name="description" content="What is Lomorage Importer
+It is most likely user already stored historical photos / videos at multiple places, and hope to consolidate all at one place.
+
+Lomorage provides 3 ways t"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Import Tool · Lomorage"><meta property="og:description" content="What is Lomorage Importer
+It is most likely user already stored historical photos / videos at multiple places, and hope to consolidate all at one place.
+
+Lomorage provides 3 ways t"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-importer/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-importer/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-importer/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-importer/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/docs/Installation/lomorage-importer/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="Help &amp; guides">
+    <a class="docs-home-link" href="/docs/">Help &amp; guides</a>
+    <label class="docs-search"><span class="visually-hidden">Filter guides</span><input type="search" data-doc-filter placeholder="Windows, NAS, family sharing…"></label>
+    <nav><section data-doc-group><h2>Start here</h2><a href="/docs/">Choose your setup</a><a href="/docs/Installation/">Install Lomorage</a><a href="/docs/Installation/lomorage-service/">Computer or home server</a></section><section data-doc-group><h2>Computer &amp; server</h2><a href="/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/docs/Installation/lomorage-service/installation-synology/">Synology NAS</a><a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi</a><a href="/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/docs/Installation/lomorage-service/">More Linux systems</a></section><section data-doc-group><h2>Apps &amp; your photos</h2><a href="/docs/Installation/lomorage-client/">Phone and web apps</a><a href="/docs/Installation/lomorage-client/installation-ios/">iPhone &amp; iPad</a><a href="/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/docs/Installation/lomorage-client/installation-web/">Web browser</a><a href="/docs/Installation/lomorage-importer/" aria-current="page">Import an existing library</a></section><section data-doc-group><h2>More ways to use it</h2><a href="/docs/Usage/">Family, sharing &amp; everyday use</a><a href="/docs/Usage/customized-view/">Custom views</a><a href="/docs/Usage/external-access/">Access away from home</a><a href="/docs/Usage/Update/">Updates &amp; maintenance</a><a href="/docs/Installation/lomo-frame/">Photo frame</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/docs/">← Documentation home</a>
+    <h1>Import Tool</h1>
+    <div class="prose docs-prose"><h1 id="what-is-lomorage-importer">What is Lomorage Importer</h1>
+<p>It is most likely user already stored historical photos / videos at multiple places, and hope to consolidate all at one place.</p>
+<p>Lomorage provides 3 ways to batch import these existing assets into the system:</p>
+<ol>
+<li>Native tool - recommended option</li>
+<li>Web client</li>
+<li>Command line tool - advanced option</li>
+</ol>
+<h2 id="import-by-native-tool">Import by native tool</h2>
+<p>Import all assets under specified directory or single file. The tool will analysis asset create time by EXIF tool, and supply while import. It also support to import Google photo takeout ZIP file directly into Lomorage.</p>
+<p>Currently it support <strong>Windows and MacOS</strong>.</p>
+<h3 id="download">Download</h3>
+<p>Go to <a href="https://github.com/lomorage/lomo-importer-release">Lomo-importer@github</a> to download the latest binary.</p>
+<h4 id="latest-importer-for-windows">Latest importer for Windows</h4>
+<ul>
+<li><a href="https://lomorage.com/windows/LomoImporter.zip">Latest Windows Importer</a></li>
+</ul>
+<h4 id="or-directly-download-here">Or directly download here:</h4>
+<ul>
+<li>MacOS <a href="https://lomorage.com/mac/LomoImporter.zip">LomoImporter.app2021-08-31_14-13-34_mac.zip</a></li>
+</ul>
+<h3 id="quick-intro">Quick intro</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6dsxfmWZkoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h3 id="eg-how-to-import-one-folder">Eg: how to import one folder</h3>
+<ol>
+<li>Login to Lomorage</li>
+</ol>
+<div align="center">
+  <p class="screenshoot" />
+  <img width="80%" src="/img/installation/lomorage-importer/login.jpg">
+</div>
+<ol start="2">
+<li>Clieck the button <strong>“1.Select Folder...&quot;</strong>, to select the folder which you want to import.</li>
+<li>Then click the button <strong>“2.Start Import&quot;</strong>, before import, you can add more files and remove some files.</li>
+</ol>
+<div align="center">
+  <p class="screenshoot" />
+  <img width="80%" src="/img/installation/lomorage-importer/start.jpg">
+</div>
+<h3 id="eg-how-to-import-google-photo-takeout-zip-files-to-lomorage">Eg: How to import Google Photo Takeout ZIP files to lomorage</h3>
+<ol>
+<li>
+<p>Download your google photo from <a href="http://takeout.google.com">takeout.google.com</a></p>
+</li>
+<li>
+<p>Login to Lomorage</p>
+</li>
+</ol>
+<div align="center">
+  <p class="screenshoot" />
+  <img width="80%" src="/img/installation/lomorage-importer/login.jpg">
+</div>
+<ol start="3">
+<li>Click the button <strong>“1.Add Files...&quot;</strong>, select the ZIP files you want to add, then click the button <strong>“2.Start Import&quot;</strong>. Just follow below picture.</li>
+</ol>
+<div align="center">
+  <p class="screenshoot" />
+  <img width="80%" src="/img/installation/lomorage-importer/start_zip.jpg">
+</div>
+<h2 id="import-by-command-line">Import by command line</h2>
+<p>Command line tool is for advanced user when the existing assets are in attached USB or Local/NFS/CIFS mounted disks along with &quot;Lomorage Photo Assistant&quot;. It can avoid unnecessary back-and-forth network traffic as well as disk operation. During import, the tool will move existing assets to the directories created by lomorage for each user, or not move asset while inserting record only if supply <code>--no-move</code> option. All import logs are saved under /opt/lomorage/var/log/import_[import directory].log. Below is usage for the tool.</p>
+<pre><code>$ /opt/lomorage/bin/lomoc import -h
+NAME:
+   lomoc import - Import all photos from given directory into lomo backend with given username and password
+
+USAGE:
+   lomoc import [command options] [username] [password] [directory]
+
+OPTIONS:
+   --port value, -p value  (default: 8000)
+   --no-move, -n           not moving original photos/videos, and only insert record in db
+</code></pre>
+<p>Note:</p>
+<ul>
+<li><code>--port</code> is listen port of <code>lomod</code> backend service. It is 8000 by default.</li>
+<li><code>--no-move</code> is to hint backend service not moving assets, and only insert record in DB. By default it is false, and import will <strong>MOVE</strong> all assets and consolidate them into one location</li>
+</ul>
+<p>Example:</p>
+<pre><code>$ /opt/lomorage/bin/lomoc import alice password /media/STEC_838C-1111/test/video
+-m
+Login localhost successfully
+import photos/videos from /media/STEC_838C-1111/test
+please check import log /opt/lomorage/var/log/import_media_STEC_838C-1111_test.log
+
+$ cat /opt/lomorage/var/log/import_media_STEC_838C-1111_test.log
+start import /media/STEC_838C-1111/test/img/11_2014_01_21.webp
+finish import /media/STEC_838C-1111/test/img/11_2014_01_21.webp to /media/STEC_838C-1111/alice/Photos/master/2021/09/20/20210920_9391.webp
+start import /media/STEC_838C-1111/test/img/12_2014_01_21.heic
+finish import /media/STEC_838C-1111/test/img/12_2014_01_21.heic to /media/STEC_838C-1111/alice/Photos/master/2021/09/20/20210920_9392.heic
+start import /media/STEC_838C-1111/test/img/14_2017_09_13.heic
+finish import /media/STEC_838C-1111/test/img/14_2017_09_13.heic to /media/STEC_838C-1111/alice/Photos/master/2017/09/13/20170913_9393.heic
+start import /media/STEC_838C-1111/test/img/1_2003_01_17.jpg
+finish import /media/STEC_838C-1111/test/img/1_2003_01_17.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/01/17/20030117_9394.jpg
+start import /media/STEC_838C-1111/test/img/3_2003_11_01.jpg
+finish import /media/STEC_838C-1111/test/img/3_2003_11_01.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/01/20031101_9395.jpg
+start import /media/STEC_838C-1111/test/img/4_2003_11_01.jpg
+finish import /media/STEC_838C-1111/test/img/4_2003_11_01.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/01/20031101_9396.jpg
+start import /media/STEC_838C-1111/test/img/5_2003_11_23.jpg
+finish import /media/STEC_838C-1111/test/img/5_2003_11_23.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/23/20031123_9397.jpg
+start import /media/STEC_838C-1111/test/img/6_2004_01_21.jpg
+finish import /media/STEC_838C-1111/test/img/6_2004_01_21.jpg to /media/STEC_838C-1111/alice/Photos/master/2004/01/21/20040121_9398.jpg
+start import /media/STEC_838C-1111/test/img/7_2004_09_12.webp
+finish import /media/STEC_838C-1111/test/img/7_2004_09_12.webp to /media/STEC_838C-1111/alice/Photos/master/2004/09/12/20040912_9399.webp
+start import /media/STEC_838C-1111/test/img/8_2008_12_14.dng
+finish import /media/STEC_838C-1111/test/img/8_2008_12_14.dng to /media/STEC_838C-1111/alice/Photos/master/2008/12/14/20081214_9400.dng
+start import /media/STEC_838C-1111/test/img/9_2013_07_28.png
+finish import /media/STEC_838C-1111/test/img/9_2013_07_28.png to /media/STEC_838C-1111/alice/Photos/master/2021/09/20/20210920_9401.png
+start import /media/STEC_838C-1111/test/img/preview.jpg
+finish import /media/STEC_838C-1111/test/img/preview.jpg to /media/STEC_838C-1111/alice/Photos/master/2003/11/23/20031123_9402.jpg
+FINISH: totally scanned 1 directories, and imported 12 media files
+</code></pre>
+<h2 id="import-with-usb">Import with USB</h2>
+<p>You can access the photos on iPhone/Android directly via USB, and can import photo folder directly with wire instead of using wireless, this can make the import faster, especially when you have lots of photos to import in the beginning. Once mounted in the file system, you can use the above import tools.</p>
+<h3 id="ios">iOS</h3>
+<p>If you are using Windows 11, it will mount iOS photo folder automatically</p>
+<p>If you are using Linux, you can follow the link <a href="https://opensource.com/article/21/8/libimobiledevice-iphone-linux">here</a> to use libimobiledevice and ifuse to mount iPhone storage to the file system.</p>
+<p>If you are using macOS, you can still install libimobiledevice tool, but ifuse is not available for macOS, and you have to install <a href="https://github.com/osxfuse/osxfuse/releases">osxfuse</a> and <a href="https://github.com/gromgit/homebrew-fuse">ifuse-mac</a>, you can install ifuse-mac with brew: <code>brew install gromgit/fuse/ifuse-mac</code>.</p>
+<h3 id="android">Android</h3>
+<p>TODO</p>
+<h1 id="contact-us">Contact us</h1>
+<p>Any questions, please let us know!</p>
+<h1 id="update-history">Update history</h1>
+<h2 id="08312021">08/31/2021</h2>
+<ul>
+<li>Fix: read heic exif time crash issue</li>
+<li>Support large file direct importing.</li>
+</ul>
+<h2 id="08092021">08/09/2021</h2>
+<ul>
+<li>can config importing thread count</li>
+<li>Improve&amp;faster the importing speed</li>
+<li>support lomo live photo zip file</li>
+<li>fix memory leak</li>
+<li>fix error logs popup while exiting</li>
+</ul>
+<h2 id="07142021">07/14/2021</h2>
+<ul>
+<li>support add folder directly and the program will list all files under this folder.</li>
+</ul>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>On this page</strong><a class="toc-level-2" href="#import-by-native-tool">Import by native tool</a><a class="toc-level-3" href="#download">Download</a><a class="toc-level-3" href="#quick-intro">Quick intro</a><a class="toc-level-3" href="#eg-how-to-import-one-folder">Eg: how to import one folder</a><a class="toc-level-3" href="#eg-how-to-import-google-photo-takeout-zip-files-to-lomorage">Eg: How to import Google Photo Takeout ZIP files to lomorage</a><a class="toc-level-2" href="#import-by-command-line">Import by command line</a><a class="toc-level-2" href="#import-with-usb">Import with USB</a><a class="toc-level-3" href="#ios">iOS</a><a class="toc-level-3" href="#android">Android</a><a class="toc-level-2" href="#08312021">08/31/2021</a><a class="toc-level-2" href="#08092021">08/09/2021</a><a class="toc-level-2" href="#07142021">07/14/2021</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

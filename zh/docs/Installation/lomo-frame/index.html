@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lomorage相框 · Lomorage</title><meta name="description" content="安装
+
+LOMORAGE_DOC_NOTE_0
+
+如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装Lomo-frame应用，已经预装到系统中了。
+
+如果您没有使用Lomorage树莓派系统镜像，请参考这里(/zh/docs/Installation/lomorage-service/installation-raspbian/1-%e6%b7%"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="Lomorage相框 · Lomorage"><meta property="og:description" content="安装
+
+LOMORAGE_DOC_NOTE_0
+
+如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装Lomo-frame应用，已经预装到系统中了。
+
+如果您没有使用Lomorage树莓派系统镜像，请参考这里(/zh/docs/Installation/lomorage-service/installation-raspbian/1-%e6%b7%"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Installation/lomo-frame/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/zh/docs/Installation/lomo-frame/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomo-frame/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomo-frame/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap"><a class="brand" href="/zh/" aria-label="Lomorage 首页"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="主导航"><a href="/zh/#why">为什么选 Lomorage</a><a href="/zh/#how">如何使用</a><a href="/zh/docs/">使用指南</a><a href="/zh/#questions">常见问题</a></nav><div class="header-actions"><a class="language" href="/docs/Installation/lomo-frame/" lang="en">EN</a><a class="button button-small" href="/zh/#download">下载 <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="帮助与指南">
+    <a class="docs-home-link" href="/zh/docs/">帮助与指南</a>
+    <label class="docs-search"><span class="visually-hidden">筛选指南</span><input type="search" data-doc-filter placeholder="Windows、NAS、家庭共享……"></label>
+    <nav><section data-doc-group><h2>从这里开始</h2><a href="/zh/docs/">选择适合你的方案</a><a href="/zh/docs/Installation/">安装 Lomorage</a><a href="/zh/docs/Installation/lomorage-service/">电脑或家庭服务器</a></section><section data-doc-group><h2>电脑与服务器</h2><a href="/zh/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/zh/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/zh/docs/Installation/lomorage-service/installation-synology/">群晖 NAS</a><a href="/zh/docs/Installation/lomorage-service/installation-raspbian/">树莓派</a><a href="/zh/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/zh/docs/Installation/lomorage-service/">更多 Linux 系统</a></section><section data-doc-group><h2>应用与照片</h2><a href="/zh/docs/Installation/lomorage-client/">手机与网页应用</a><a href="/zh/docs/Installation/lomorage-client/installation-ios/">iPhone 与 iPad</a><a href="/zh/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/zh/docs/Installation/lomorage-client/installation-web/">网页浏览</a><a href="/zh/docs/Installation/lomorage-importer/">导入已有照片</a></section><section data-doc-group><h2>更多使用方式</h2><a href="/zh/docs/Usage/">家人、分享与日常使用</a><a href="/zh/docs/Usage/customized-view/">自定义视图</a><a href="/zh/docs/Usage/external-access/">在外访问</a><a href="/zh/docs/Usage/Update/">更新与维护</a><a href="/zh/docs/Installation/lomo-frame/" aria-current="page">电子相框</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/zh/docs/">← 文档首页</a>
+    <h1>Lomorage相框</h1>
+    <div class="prose docs-prose"><h1 id="安装">安装</h1>
+<aside class="doc-note doc-warning"><p>Lomo-frame应用只支持Raspberry Pi平台, Windows/Mac或docker版本不支持。</p>
+</aside>
+<p>如果您使用最新的Lomorage树莓派系统镜像, 就无需再安装Lomo-frame应用，已经预装到系统中了。</p>
+<p>如果您没有使用Lomorage树莓派系统镜像，请参考<a href="/zh/docs/Installation/lomorage-service/installation-raspbian/#1-%e6%b7%bb%e5%8a%a0lomoware%e6%ba%90">这里</a>添加lomoware的源，您可以使用下面的命令安装:</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install lomo-frame
+</code></pre>
+<h1 id="配置">配置</h1>
+<p>您有多个选择:</p>
+<ol>
+<li>
+<p>在同一个树莓派上运行&quot;Lomorage照片助手&quot;和相框程序。</p>
+</li>
+<li>
+<p>在不同的树莓派上运行&quot;Lomorage照片助手&quot;和相框程序，比如您可以用树莓派zero来运行相框程序，用性能更好的的树莓派4来运行树莓派4。</p>
+</li>
+</ol>
+<p>如果相框程序运行起来后，会在相框屏幕上显示一个二维码，您可以使用iOS 或者 安卓 Lomorage应用程序来注册相框，成功后，您就可以在Lomorage手机应用里给相框分享照片了，就像分享到其他联系人一样。</p>
+<h2 id="快速开始">快速开始</h2>
+<p>如果您已经安装了Lomo-frame程序，它会在开机后自动启动。</p>
+<p>如果树莓派没有连上网络，您需要先将其连上网络，如果您使用WiFi，先连上HDMI和键盘，然后重启设备，按照屏幕上的提示进入命令行并登陆，接下来可以使用命令<code>wifi_switch.sh client [wifi-ssid] [wifi-password]</code>, 用您自己的配置替换&quot;[wifi-ssid]&quot;和&quot;[wifi-password]&quot;。</p>
+<aside class="doc-note doc-warning"><p>您有可能会碰到&quot;Wi-Fi is currently blocked by rfkill&quot;的问题，可以执行下面的命令检查一下WiFi是否被禁用:</p>
+<pre><code>pi@raspberrypi:~ $ sudo rfkill list all
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+1: hci0: Bluetooth
+	Soft blocked: yes
+	Hard blocked: no
+</code></pre>
+<p>您可以使用下面的命令来启用WiFi:</p>
+<pre><code>sudo rfkill unblock 0
+</code></pre>
+<p>这里“0”是上面Wireless LAN的序号。</p>
+<p>启用之后您可以再尝试<code>wifi_switch.sh</code>。</p>
+</aside>
+<p>网络设置完成后，重启，会显示QRCode，您可以到Lomorage iOS APP的设置页面，注册相框，然后您就可以使用手机应用程序来分享照片给数码相框。</p>
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/frame-register-ios.png">
+  <img width="30%" src="/img/installation/frame-share-ios.png">
+</p>
+</div>
+<p>如果你无需更多的高级配置，则可以跳过下面的内容。</p>
+<h2 id="关闭开启相框">关闭开启相框</h2>
+<p>Lomo-frame应用程序会在系统启动的时候自动加载，但如果您需要手动控制，你可以使用<code>framectrl.sh on</code>命令打开, 或者使用<code>framectrl.sh off</code>命令关闭。<strong>这个命令打开或关闭Lomo-frame应用，并同时打开或者关闭显示器。</strong></p>
+<h2 id="关闭开启lomo-frame应用">关闭开启Lomo-frame应用</h2>
+<p>如果您只是想退出Lomo-frame应用，但是想让显示器L续开着，您可以使用下面的方法之一:</p>
+<ul>
+<li>
+<p>如果树莓派接了键盘，按&quot;esc&quot;键。</p>
+</li>
+<li>
+<p>如果您使用ssh访问，使用<code>sudo service supervisor stop</code>命令。</p>
+</li>
+</ul>
+<p>您可以用<code>sudo service supervisor start</code>命令打开Lomo-frame应用.</p>
+<h2 id="定时开关">定时开关</h2>
+<p><strong>默认打开时间是&quot;08:00 am&quot;, 关闭时间是&quot;21:00 pm&quot;.</strong></p>
+<p>您可以使用下面的命令来修改, 下面的命令修改打开时间为&quot;10:00 am&quot;，关闭时间为&quot;18:00&quot;:</p>
+<pre><code class="language-bash">framectr.sh add --on-hour 10 --off-hour 18
+</code></pre>
+<p>您也可以修改打开时间为&quot;10:30 am&quot;，关闭时间为&quot;18:30&quot;</p>
+<pre><code class="language-bash">framectr.sh add --on-hour 10 --on-min 30 --off-hour 18 --off-min 30
+</code></pre>
+<p>或者您想7x24小时开机, 删除定时开关机:</p>
+<pre><code class="language-bash">framectr.sh remove
+</code></pre>
+<h2 id="播放顺序">播放顺序</h2>
+<p><strong>默认是随机播放</strong>，但如果您希望顺序播放:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/is_random =.*/is_random = false/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<p>或者您想改为随机播放:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/is_random =.*/is_random = true/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<h2 id="自定义播放列表">自定义播放列表</h2>
+<p>您可以创建后修改播放列表文件&quot;/opt/lomorage/var/lomo-playlist.txt&quot;，格式是每个文件路径一行。</p>
+<h2 id="播放媒体类型">播放媒体类型</h2>
+<p><strong>默认会播放视频和照片</strong>，但如果您只想播放照片，您可以修改&quot;/opt/lomorage/var/video_looper.ini&quot;文件中的&quot;media_type&quot;:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/media_type =.*/media_type = image/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<p>或者您只想播放视频:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/media_type =.*/media_type = video/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<p>或者想重置为播放视频和照片:</p>
+<pre><code class="language-bash">sudo sed -i &quot;s/media_type =.*/media_type = all/&quot; /opt/lomorage/var/video_looper.ini
+</code></pre>
+<h2 id="快捷键">快捷键</h2>
+<p>您可以通过下面的快捷键来控制:</p>
+<ul>
+<li>
+<p>&quot;r&quot;: 重新扫描并生成播放列表。</p>
+</li>
+<li>
+<p>&quot;k&quot;: 跳到下一个视频或图片。</p>
+</li>
+<li>
+<p>&quot;s&quot;: 暂停播放/继续播放</p>
+</li>
+<li>
+<p>&quot;esc&quot;: 退出应用</p>
+</li>
+</ul>
+<h2 id="设置多个数码相框">设置多个数码相框</h2>
+<p>下面的设置需要比较多的专业知识，以后我们会在手机应用中添加相应的控制和配置功能。</p>
+<p>如果您已经有了树莓派在跑&quot;Lomorage照片助手&quot;程序（主树莓派），并在上面连接了移动硬盘，您很可能会把它放在储藏室并使用有线连接，而您可能是希望数码相框放在卧室或者客厅。</p>
+<p>您可以使用低成本的树莓派Zero w来安装数码相框程序，并通过WiFi远程访问您的照片和视频。树莓派Zero w跑数码相框应用甚至能流畅的播放视频。</p>
+<ul>
+<li>
+<ol>
+<li>安装Lomo-frame</li>
+</ol>
+</li>
+</ul>
+<p>您可以按照本页面最前面的方式来安装。</p>
+<ul>
+<li>
+<ol start="2">
+<li>设置WiFi连接</li>
+</ol>
+</li>
+</ul>
+<p>键盘连接到Raspberry Pi zero W并登陆, 如果您是Lomorage的树莓派镜像，可以使用命令<code>wifi_switch.sh client [wifi-ssid] [wifi-password]</code>, 用您自己的配置替换&quot;[wifi-ssid]&quot;和&quot;[wifi-password]&quot;。如果使用其他系统，您可以参考网上其他资料来设置WiFi连接。</p>
+<ul>
+<li>
+<ol start="3">
+<li>检查主树莓派的IP地址</li>
+</ol>
+</li>
+</ul>
+<p>您可以在手机APP里面查看，点击“设置”，找到“本地服务”，其中的&quot;服务器地址“字段里面的就是IP地址。</p>
+<ul>
+<li>
+<ol start="4">
+<li>找到主树莓派的加载目录</li>
+</ol>
+</li>
+</ul>
+<p>您可以把主树莓派的&quot;media&quot;目录通过SAMBA协议加载到电脑上，用户名是&quot;lomoware&quot;，密码是&quot;lomorage&quot;，你可以在&quot;media&quot;目录下找到加载的存储媒体文件的目录名。</p>
+<ul>
+<li>
+<ol start="5">
+<li>远程挂载媒体目录到树莓派zero w</li>
+</ol>
+</li>
+</ul>
+<p>比如加载到主树莓派的目录路径为&quot;/media/WD_90C27F73C27F5C82&quot;，主树莓派的IP地址为192.168.1.155, 您可以登陆树莓派zero w，并远程挂载那个目录到本地:</p>
+<pre><code class="language-bash">sudo mkdir /media/WD_90C27F73C27F5C82
+echo &quot;//192.168.1.124/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000&quot; | sudo tee -a /etc/fstab
+sudo mount -a
+</code></pre>
+<ul>
+<li>
+<ol start="6">
+<li>重启</li>
+</ol>
+</li>
+</ul>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+<p>重启之后，您应该可以看到开始扫描媒体文件，并生成播放列表了。</p>
+</div>
+  </article>
+  <aside class="docs-toc"><strong>本页内容</strong><a class="toc-level-2" href="#快速开始">快速开始</a><a class="toc-level-2" href="#关闭开启相框">关闭开启相框</a><a class="toc-level-2" href="#关闭开启lomo-frame应用">关闭开启Lomo-frame应用</a><a class="toc-level-2" href="#定时开关">定时开关</a><a class="toc-level-2" href="#播放顺序">播放顺序</a><a class="toc-level-2" href="#自定义播放列表">自定义播放列表</a><a class="toc-level-2" href="#播放媒体类型">播放媒体类型</a><a class="toc-level-2" href="#快捷键">快捷键</a><a class="toc-level-2" href="#设置多个数码相框">设置多个数码相框</a></aside>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/zh/">lomorage</a><p>留住此刻，回味时光。</p></div><nav aria-label="更多链接"><a href="/zh/docs/">使用指南</a><a href="/zh/blog/">博客</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">隐私政策</a><a href="/zh/contact/">联系我们</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

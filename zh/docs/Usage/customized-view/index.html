@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自定义视图 · Lomorage</title><meta name="description" content="自定义视图
+
+Lomorage按“年/月/日”的目录结构存储照片和视频，有些用户希望能按照“年/月”或者“年”的方式在电脑上浏览照片，有些用户希望能按更有意义的目录名来组织照片视频（自定义相册）。
+
+Lomorage通过提供虚拟的视图来解决这个问题，它可以提供多种不同的视图来方便用户浏览照片，而不影响到在硬盘上的照片物理存储目录结构。
+
+物理存储目录结构如下"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:title" content="自定义视图 · Lomorage"><meta property="og:description" content="自定义视图
+
+Lomorage按“年/月/日”的目录结构存储照片和视频，有些用户希望能按照“年/月”或者“年”的方式在电脑上浏览照片，有些用户希望能按更有意义的目录名来组织照片视频（自定义相册）。
+
+Lomorage通过提供虚拟的视图来解决这个问题，它可以提供多种不同的视图来方便用户浏览照片，而不影响到在硬盘上的照片物理存储目录结构。
+
+物理存储目录结构如下"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Usage/customized-view/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+<link rel="canonical" href="https://lomorage.com/zh/docs/Usage/customized-view/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Usage/customized-view/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Usage/customized-view/">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+<link rel="stylesheet" href="/css/docs.css">
+</head>
+
+<body class="docs-page">
+<a class="skip-link" href="#main">跳转到正文</a>
+<header class="site-header wrap"><a class="brand" href="/zh/" aria-label="Lomorage 首页"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="主导航"><a href="/zh/#why">为什么选 Lomorage</a><a href="/zh/#how">如何使用</a><a href="/zh/docs/">使用指南</a><a href="/zh/#questions">常见问题</a></nav><div class="header-actions"><a class="language" href="/docs/Usage/customized-view/" lang="en">EN</a><a class="button button-small" href="/zh/#download">下载 <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="帮助与指南">
+    <a class="docs-home-link" href="/zh/docs/">帮助与指南</a>
+    <label class="docs-search"><span class="visually-hidden">筛选指南</span><input type="search" data-doc-filter placeholder="Windows、NAS、家庭共享……"></label>
+    <nav><section data-doc-group><h2>从这里开始</h2><a href="/zh/docs/">选择适合你的方案</a><a href="/zh/docs/Installation/">安装 Lomorage</a><a href="/zh/docs/Installation/lomorage-service/">电脑或家庭服务器</a></section><section data-doc-group><h2>电脑与服务器</h2><a href="/zh/docs/Installation/lomorage-service/installation-win/">Windows</a><a href="/zh/docs/Installation/lomorage-service/installation-osx/">macOS</a><a href="/zh/docs/Installation/lomorage-service/installation-synology/">群晖 NAS</a><a href="/zh/docs/Installation/lomorage-service/installation-raspbian/">树莓派</a><a href="/zh/docs/Installation/lomorage-service/installation-docker/">Docker</a><a href="/zh/docs/Installation/lomorage-service/">更多 Linux 系统</a></section><section data-doc-group><h2>应用与照片</h2><a href="/zh/docs/Installation/lomorage-client/">手机与网页应用</a><a href="/zh/docs/Installation/lomorage-client/installation-ios/">iPhone 与 iPad</a><a href="/zh/docs/Installation/lomorage-client/installation-android/">Android</a><a href="/zh/docs/Installation/lomorage-client/installation-web/">网页浏览</a><a href="/zh/docs/Installation/lomorage-importer/">导入已有照片</a></section><section data-doc-group><h2>更多使用方式</h2><a href="/zh/docs/Usage/">家人、分享与日常使用</a><a href="/zh/docs/Usage/customized-view/" aria-current="page">自定义视图</a><a href="/zh/docs/Usage/external-access/">在外访问</a><a href="/zh/docs/Usage/Update/">更新与维护</a><a href="/zh/docs/Installation/lomo-frame/">电子相框</a></section></nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="/zh/docs/">← 文档首页</a>
+    <h1>自定义视图</h1>
+    <div class="prose docs-prose"><h1 id="自定义视图">自定义视图</h1>
+<p>Lomorage按“年/月/日”的目录结构存储照片和视频，有些用户希望能按照“年/月”或者“年”的方式在电脑上浏览照片，有些用户希望能按更有意义的目录名来组织照片视频（自定义相册）。</p>
+<p>Lomorage通过提供虚拟的视图来解决这个问题，它可以提供多种不同的视图来方便用户浏览照片，而不影响到在硬盘上的照片物理存储目录结构。</p>
+<p>物理存储目录结构如下:</p>
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/customized-view/lomorage-physical-folder-structure.png">
+</p>
+<p>修改自定义视图为&quot;年&quot;:</p>
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/customized-view/lomorage-virtual-folder-structure-year.png">
+</p>
+<p>修改自定义视图为&quot;年/月&quot;:</p>
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/customized-view/lomorage-virtual-folder-structure-year-month.png">
+</p>
+<p>您可能也注意到上面的截图中有“Albums”目录，这个目录存放的是您在手机APP上创建的相册:</p>
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/customized-view/lomorage-virtual-folder-structure-albums.png">
+</p>
+<p>您可以通过Mac/Windows下的“Lomorage照片助手”来修改“自定义视图”:</p>
+<p>Windows:</p>
+<p class="screenshoot">
+  <img width="100%" src="/img/installation/customized-view/win-customize-view-menu-zh.png">
+</p>
+<p>MacOS:</p>
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/customized-view/osx-customize-view-menu-zh.png">
+</p>
+<p>或者通过Lomorage手机APP来修改（如果您使用的是其他平台的“Lomorage照片助手”）:</p>
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/customized-view/ios-customize-view-menu-zh.png">
+</p>
+<p>安卓:</p>
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/customized-view/android-customize-view-menu-zh.png">
+</p>
+<p>再修改了“自定义视图”之后，您可以在Windows和Mac上加载“自定义视图”。如果您使用的是Mac/Windows下的“Lomorage照片助手”，会自动加载并弹出已经加载的目录。如果您使用其他平台的“Lomorage照片助手”，可以手动参考下面的链接来加载，Lomorage使用WebDAV协议，并通过&quot;http://[Lomorage照片助手ip地址]:8004&quot;访问，无需密码。</p>
+<ul>
+<li>MacOS: <a href="https://support.apple.com/zh-cn/guide/mac-help/mchlp1546/mac">https://support.apple.com/zh-cn/guide/mac-help/mchlp1546/mac</a></li>
+<li>Windows: <a href="https://bynss.com/windows/501651.html">https://bynss.com/windows/501651.html</a></li>
+</ul>
+</div>
+  </article>
+  
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/zh/">lomorage</a><p>留住此刻，回味时光。</p></div><nav aria-label="更多链接"><a href="/zh/docs/">使用指南</a><a href="/zh/blog/">博客</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">隐私政策</a><a href="/zh/contact/">联系我们</a></nav><small>© 2026 Lomorage</small></footer>
+
+<script src="/js/docs.js" defer></script>
+</body>
+</html>
