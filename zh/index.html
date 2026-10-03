@@ -49,7 +49,7 @@
           <ol class="install-instructions">
             <li><h4>打开安装用的命令窗口</h4><p>按 Win + R，输入 cmd，然后按回车。只需复制下一步的命令，无需输入管理员密码。</p></li>
             <li><h4>复制下面这条命令，粘贴后按回车</h4>
-              <div class="command-box"><pre><code id="command-windows" aria-label="Windows 安装命令" tabindex="0">powershell -NoProfile -ExecutionPolicy Bypass -c &quot;[Environment]::SetEnvironmentVariable(&#39;LOMOD_CHINA&#39;,&#39;1&#39;,&#39;Process&#39;); irm https://lomorage.com/windows/install.ps1 | iex&quot;</code></pre><button type="button" class="copy-command" data-copy="command-windows" data-success="已复制。回到刚才打开的窗口，粘贴并按回车。" data-failure="请选中上方完整命令，手动复制。" hidden>复制这条命令 <span aria-hidden="true">⧉</span></button></div>
+              <div class="command-box"><pre><code id="command-windows" aria-label="Windows 安装命令" tabindex="0">powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;[Environment]::SetEnvironmentVariable(&#39;LOMOD_CHINA&#39;,&#39;1&#39;,&#39;Process&#39;); irm &#39;https://lomorage.com/windows/install.ps1&#39; -OutFile &quot;$env:TEMP&#92;lomorage-install.ps1&quot;; &amp; &quot;$env:TEMP&#92;lomorage-install.ps1&quot;&quot;</code></pre><button type="button" class="copy-command" data-copy="command-windows" data-success="已复制。回到刚才打开的窗口，粘贴并按回车。" data-failure="请选中上方完整命令，手动复制。" hidden>复制这条命令 <span aria-hidden="true">⧉</span></button></div>
               <p class="copy-status" id="status-windows" role="status" aria-live="polite"></p>
             </li>
             <li><h4>等待电脑自动打开设置网页</h4><p>安装完成会启动 Lomorage，并打开设置网页。第一次使用时，保留网页上的设置二维码，下一步用手机应用扫描。以后可搜索 Lomorage 再次打开。</p></li>
