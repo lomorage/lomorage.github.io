@@ -9,7 +9,7 @@
 Open PowerShell (no need to run as Administrator) and paste in:
 
 powershell
-irm https://lomorage.com/windows/install.ps1"><meta name="theme-color" content="#fbf8f3">
+powershell -NoProfile -ExecutionPolicy Bypas"><meta name="theme-color" content="#fbf8f3">
 <meta property="og:title" content="Windows · Lomorage"><meta property="og:description" content="Install &quot;Lomorage Photo Assistant&quot; on Windows
 
  1. Install
@@ -17,7 +17,7 @@ irm https://lomorage.com/windows/install.ps1"><meta name="theme-color" content="
 Open PowerShell (no need to run as Administrator) and paste in:
 
 powershell
-irm https://lomorage.com/windows/install.ps1"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+powershell -NoProfile -ExecutionPolicy Bypas"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
 <link rel="canonical" href="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-win/">
 <link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
 <link rel="stylesheet" href="/css/downloads.css">
@@ -41,13 +41,13 @@ irm https://lomorage.com/windows/install.ps1"><meta property="og:type" content="
     <div class="prose docs-prose"><h1 id="install-lomorage-photo-assistant-on-windows">Install &quot;Lomorage Photo Assistant&quot; on Windows</h1>
 <h2 id="1.-install">1. Install</h2>
 <p>Open <strong>PowerShell</strong> (no need to run as Administrator) and paste in:</p>
-<pre><code class="language-powershell">irm https://lomorage.com/windows/install.ps1 | iex
+<pre><code class="language-powershell">powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;irm 'https://lomorage.com/windows/install.ps1' -OutFile &quot;$env:TEMP\lomorage-install.ps1&quot;; &amp; &quot;$env:TEMP\lomorage-install.ps1&quot;&quot;
 </code></pre>
 <p>This downloads <code>lomod.exe</code> and everything it needs (vips, exiftool, ffmpeg), installs it to
 your user profile, and starts it — no installer window, no admin rights, no reboot.</p>
 <aside class="doc-note doc-warning"><p>If you're in mainland China and GitHub downloads are slow or fail, set this first so the
 download goes through an accelerator proxy instead:</p>
-<pre><code class="language-powershell">$env:LOMOD_CHINA=1; irm https://lomorage.com/windows/install.ps1 | iex
+<pre><code class="language-powershell">powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;$env:LOMOD_CHINA=1; irm 'https://lomorage.com/windows/install.ps1' -OutFile &quot;$env:TEMP\lomorage-install.ps1&quot;; &amp; &quot;$env:TEMP\lomorage-install.ps1&quot;&quot;
 </code></pre>
 </aside>
 <p>If Windows shows a firewall prompt the first time it starts (so your phone can reach it over

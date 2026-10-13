@@ -9,10 +9,7 @@
 打开 PowerShell（不需要以管理员身份运行），粘贴执行：
 
 powershell
-irm https://lomorage.com/windows/install.ps1 | iex
-
-
-这会自动下载 lomod.exe 以及它需要的所有组件（vips、exiftool、ffmpe"><meta name="theme-color" content="#fbf8f3">
+powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;irm &#39;https://lomorage.com/windows/install.ps"><meta name="theme-color" content="#fbf8f3">
 <meta property="og:title" content="Windows · Lomorage"><meta property="og:description" content="在Windows上安装&quot;Lomorage照片助手&quot;
 
  1. 安装
@@ -20,10 +17,7 @@ irm https://lomorage.com/windows/install.ps1 | iex
 打开 PowerShell（不需要以管理员身份运行），粘贴执行：
 
 powershell
-irm https://lomorage.com/windows/install.ps1 | iex
-
-
-这会自动下载 lomod.exe 以及它需要的所有组件（vips、exiftool、ffmpe"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-win/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
+powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;irm &#39;https://lomorage.com/windows/install.ps"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-win/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
 <link rel="canonical" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-win/"><link rel="alternate" hreflang="en" href="https://lomorage.com/docs/Installation/lomorage-service/installation-win/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/docs/Installation/lomorage-service/installation-win/">
 <link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
 <link rel="stylesheet" href="/css/downloads.css">
@@ -47,11 +41,11 @@ irm https://lomorage.com/windows/install.ps1 | iex
     <div class="prose docs-prose"><h1 id="在windows上安装lomorage照片助手">在Windows上安装&quot;Lomorage照片助手&quot;</h1>
 <h2 id="1.-安装">1. 安装</h2>
 <p>打开 <strong>PowerShell</strong>（不需要以管理员身份运行），粘贴执行：</p>
-<pre><code class="language-powershell">irm https://lomorage.com/windows/install.ps1 | iex
+<pre><code class="language-powershell">powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;irm 'https://lomorage.com/windows/install.ps1' -OutFile &quot;$env:TEMP\lomorage-install.ps1&quot;; &amp; &quot;$env:TEMP\lomorage-install.ps1&quot;&quot;
 </code></pre>
 <p>这会自动下载 <code>lomod.exe</code> 以及它需要的所有组件（vips、exiftool、ffmpeg），安装到你自己的用户目录下并启动——没有安装向导窗口，不需要管理员权限，也不需要重启电脑。</p>
 <aside class="doc-note doc-warning"><p>如果你在国内，GitHub 下载比较慢或者失败，可以先设置这个环境变量，让下载走加速代理：</p>
-<pre><code class="language-powershell">$env:LOMOD_CHINA=1; irm https://lomorage.com/windows/install.ps1 | iex
+<pre><code class="language-powershell">powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;$env:LOMOD_CHINA=1; irm 'https://lomorage.com/windows/install.ps1' -OutFile &quot;$env:TEMP\lomorage-install.ps1&quot;; &amp; &quot;$env:TEMP\lomorage-install.ps1&quot;&quot;
 </code></pre>
 </aside>
 <p>如果第一次启动时 Windows 弹出防火墙提示（这样你的手机才能在局域网内访问它），请选择 <strong>专用网络（Private networks）</strong>，点击 <strong>允许访问</strong>。</p>
