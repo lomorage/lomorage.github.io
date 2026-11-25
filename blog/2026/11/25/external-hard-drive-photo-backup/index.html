@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backing Up Photos to an External Hard Drive: A Practical Guide · Lomorage</title><meta name="description" content="How to back up family photos to an external hard drive the right way: choosing a drive, file systems, folder organization, automating backups and avoiding data…"><meta name="theme-color" content="#fbf8f3">
+<meta property="og:site_name" content="Lomorage"><meta property="og:locale" content="en_US">
+<meta property="og:title" content="Backing Up Photos to an External Hard Drive: A Practical Guide · Lomorage"><meta property="og:description" content="How to back up family photos to an external hard drive the right way: choosing a drive, file systems, folder organization, automating backups and avoiding data…"><meta property="og:type" content="article"><meta property="og:url" content="https://lomorage.com/blog/2026/11/25/external-hard-drive-photo-backup/"><meta property="og:image" content="https://lomorage.com/img/blog/set_wd_as_backup/set_wd_as_backup.jpg">
+<meta property="article:published_time" content="2026-11-25"><meta property="article:modified_time" content="2026-11-25">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Backing Up Photos to an External Hard Drive: A Practical Guide · Lomorage"><meta name="twitter:description" content="How to back up family photos to an external hard drive the right way: choosing a drive, file systems, folder organization, automating backups and avoiding data…"><meta name="twitter:image" content="https://lomorage.com/img/blog/set_wd_as_backup/set_wd_as_backup.jpg">
+<link rel="canonical" href="https://lomorage.com/blog/2026/11/25/external-hard-drive-photo-backup/"><link rel="alternate" hreflang="en" href="https://lomorage.com/blog/2026/11/25/external-hard-drive-photo-backup/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/blog/2026/11/25/external-hard-drive-photo-backup/"><link rel="alternate" hreflang="x-default" href="https://lomorage.com/blog/2026/11/25/external-hard-drive-photo-backup/">
+<link rel="alternate" type="application/rss+xml" title="Lomorage" href="https://lomorage.com/blog/index.xml">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Backing Up Photos to an External Hard Drive: A Practical Guide","description":"How to back up family photos to an external hard drive the right way: choosing a drive, file systems, folder organization, automating backups and avoiding data…","image":"https://lomorage.com/img/blog/set_wd_as_backup/set_wd_as_backup.jpg","datePublished":"2026-11-25","dateModified":"2026-11-25","inLanguage":"en","mainEntityOfPage":"https://lomorage.com/blog/2026/11/25/external-hard-drive-photo-backup/","url":"https://lomorage.com/blog/2026/11/25/external-hard-drive-photo-backup/","keywords":"external hard drive, photo backup, redundancy, Hard Disk","author":{"@type":"Organization","name":"Lomorage Team","url":"https://lomorage.com/"},"publisher":{"@type":"Organization","@id":"https://lomorage.com/#organization","name":"Lomorage","url":"https://lomorage.com/","logo":"https://lomorage.com/img/brand/memory-embrace-256.png","sameAs":["https://github.com/lomorage"]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lomorage","item":"https://lomorage.com/"},{"@type":"ListItem","position":2,"name":"Journal","item":"https://lomorage.com/blog/"},{"@type":"ListItem","position":3,"name":"Backing Up Photos to an External Hard Drive: A Practical Guide","item":"https://lomorage.com/blog/2026/11/25/external-hard-drive-photo-backup/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is an external hard drive a good way to back up photos?","acceptedAnswer":{"@type":"Answer","text":"Yes, as one part of a plan. External drives are inexpensive and you control them, but any single drive can fail, so keep at least one more copy on a separate device."}},{"@type":"Question","name":"Which file system should I use for a photo backup drive?","acceptedAnswer":{"@type":"Answer","text":"Use what your computer supports best: NTFS for Windows, APFS for Mac, or exFAT if the drive moves between both. Lomorage on Raspberry Pi supports vfat, exfat, ext2/3/4, hfsplus and ntfs, so you don't need to reformat an existing drive."}},{"@type":"Question","name":"How long do external hard drives last?","acceptedAnswer":{"@type":"Answer","text":"Commonly several years, but it varies by model and use. Plan to replace drives before they get old, and check your backup regularly so you notice problems early."}}]}]}</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/blog/2026/11/25/external-hard-drive-photo-backup/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="wrap document-page">
+
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a class="text-link" href="/">home</a> / <a class="text-link" href="/blog/">Journal</a></nav>
+<article>
+<h1>Backing Up Photos to an External Hard Drive: A Practical Guide</h1>
+<p class="article-meta"><time datetime="2026-11-25">2026-11-25</time> <a class="article-tag" href="/tags/external-hard-drive/">#external hard drive</a> <a class="article-tag" href="/tags/photo-backup/">#photo backup</a> <a class="article-tag" href="/tags/redundancy/">#redundancy</a> <a class="article-tag" href="/tags/hard-disk/">#Hard Disk</a></p>
+<div class="prose"><p>An external hard drive is the most common photo &quot;backup&quot; — and the most commonly forgotten one. A drive copied once two years ago and left in a drawer isn't really a backup. Here's how to use external drives so they actually protect your family's photos.</p>
+<!--more-->
+<h2 id="choosing-a-drive">Choosing a drive</h2>
+<ul>
+<li><strong>Capacity:</strong> at least 2–3× the size of your current library, so you have room to grow for several years.</li>
+<li><strong>Desktop vs portable:</strong> desktop (3.5&quot;) drives have their own power and are good for an always-connected backup; portable (2.5&quot;) drives are good for rotating off-site.</li>
+<li><strong>SSD vs HDD:</strong> SSDs are faster and more shock-resistant; HDDs are cheaper per terabyte. Either works for photos.</li>
+<li><strong>Buy two.</strong> One drive is a single point of failure.</li>
+</ul>
+<h2 id="file-systems">File systems</h2>
+<table>
+<thead>
+<tr>
+<th>File system</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NTFS</td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>APFS</td>
+<td>Mac</td>
+</tr>
+<tr>
+<td>exFAT</td>
+<td>Moving between Windows and Mac</td>
+</tr>
+</tbody>
+</table>
+<p>You don't have to reformat a drive that already has files. Lomorage on Windows and Mac uses whatever the operating system supports, and on Raspberry Pi it supports vfat, exfat, ext2/3/4, hfsplus and ntfs (<a href="/faq/#what-file-systems-supported">FAQ</a>).</p>
+<h2 id="organize-by-date-not-by-memory">Organize by date, not by memory</h2>
+<p>Folders like &quot;Photos new&quot;, &quot;Phone backup 2&quot;, &quot;Final final&quot; quickly become impossible. Organize by <strong>year/month/day</strong>. Lomorage does this automatically — backed-up originals are stored as ordinary files in date-based folders, so the drive stays readable even without the app. (Dates are stored in UTC; see the <a href="/faq/#why-folders-named-with-date-time-seem-not-correct-on-hard-drive">FAQ</a>.)</p>
+<h2 id="stop-copying-by-hand">Stop copying by hand</h2>
+<p>Manual copying works only as long as you remember. Instead:</p>
+<ol>
+<li>Connect the drive to a computer, NAS or <a href="/blog/2026/11/25/raspberry-pi-photo-server/">Raspberry Pi</a> that's usually on.</li>
+<li>Install <a href="/">Lomorage</a> and choose that drive as storage — the app recommends the drive with the most free space.</li>
+<li>Phones back up automatically over Wi-Fi on the schedule you choose.</li>
+</ol>
+<h2 id="add-the-second-copy">Add the second copy</h2>
+<p>Attach another drive as a <strong>redundancy backup</strong>:</p>
+<ul>
+<li>On Raspberry Pi: <a href="/blog/2019/12/24/raspberrypi-hd/">secondary backup guide</a></li>
+<li>On Windows with a network drive: <a href="/blog/2023/02/22/set_wd_as_backup/">WD MyCloud as a backup disk</a></li>
+<li>On macOS: set redundancy backup in LomoAgent settings</li>
+</ul>
+<p>Then keep a third copy away from home — see <a href="/blog/2026/11/24/321-backup-family-photos/">the 3-2-1 rule</a>.</p>
+<h2 id="habits-that-prevent-loss">Habits that prevent loss</h2>
+<ul>
+<li><strong>Check every few months:</strong> open a few old and new photos and videos from each drive.</li>
+<li><strong>Eject safely</strong> before unplugging.</li>
+<li><strong>Let drives sleep.</strong> Lomorage supports hard drive sleep and wakes the drive when needed.</li>
+<li><strong>Replace aging drives</strong> before they fail. When it's time to upgrade, follow the <a href="/blog/2023/03/02/migrate_from_pi_win/">migration guide</a>.</li>
+<li><strong>Keep drives cool and still</strong> — heat and knocks shorten their life.</li>
+</ul>
+<p>Ready to turn a drawer drive into an automatic backup? <a href="/#download">Get Lomorage</a>.</p>
+</div>
+</article>
+<aside class="article-cta">
+<h2>Keep your family photos at home</h2>
+<p>Free desktop app · Phone app $1.99 once · No subscription, ever</p>
+<a class="button" href="/#download">Download <span aria-hidden="true">→</span></a>
+</aside>
+
+<section class="related-posts">
+<h2>Related reading</h2>
+<ul><li><a href="/blog/2026/11/25/raspberry-pi-photo-server/">Build a Low-Power Raspberry Pi Photo Backup Server for Your Family</a> <time datetime="2026-11-25">2026-11-25</time></li><li><a href="/blog/2026/11/24/321-backup-family-photos/">The 3-2-1 Backup Rule for Family Photos, Made Simple</a> <time datetime="2026-11-24">2026-11-24</time></li><li><a href="/blog/2023/02/22/set_wd_as_backup/">Set WD MyCloud as Lomorage redundancy backup disk on Windows</a> <time datetime="2023-02-22">2023-02-22</time></li></ul>
+</section>
+
+
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+</body>
+</html>

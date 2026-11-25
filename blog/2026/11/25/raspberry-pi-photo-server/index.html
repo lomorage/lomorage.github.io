@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build a Low-Power Raspberry Pi Photo Backup Server for Your Family · Lomorage</title><meta name="description" content="Turn a Raspberry Pi and a USB hard drive into an always-on family photo backup server with Lomorage: what to buy, how to install, and tips for reliability."><meta name="theme-color" content="#fbf8f3">
+<meta property="og:site_name" content="Lomorage"><meta property="og:locale" content="en_US">
+<meta property="og:title" content="Build a Low-Power Raspberry Pi Photo Backup Server for Your Family · Lomorage"><meta property="og:description" content="Turn a Raspberry Pi and a USB hard drive into an always-on family photo backup server with Lomorage: what to buy, how to install, and tips for reliability."><meta property="og:type" content="article"><meta property="og:url" content="https://lomorage.com/blog/2026/11/25/raspberry-pi-photo-server/"><meta property="og:image" content="https://lomorage.com/img/blog/raspberrypi-hd/power-hub-adafruit.jpg">
+<meta property="article:published_time" content="2026-11-25"><meta property="article:modified_time" content="2026-11-25">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Build a Low-Power Raspberry Pi Photo Backup Server for Your Family · Lomorage"><meta name="twitter:description" content="Turn a Raspberry Pi and a USB hard drive into an always-on family photo backup server with Lomorage: what to buy, how to install, and tips for reliability."><meta name="twitter:image" content="https://lomorage.com/img/blog/raspberrypi-hd/power-hub-adafruit.jpg">
+<link rel="canonical" href="https://lomorage.com/blog/2026/11/25/raspberry-pi-photo-server/"><link rel="alternate" hreflang="en" href="https://lomorage.com/blog/2026/11/25/raspberry-pi-photo-server/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/blog/2026/11/25/raspberry-pi-photo-server/"><link rel="alternate" hreflang="x-default" href="https://lomorage.com/blog/2026/11/25/raspberry-pi-photo-server/">
+<link rel="alternate" type="application/rss+xml" title="Lomorage" href="https://lomorage.com/blog/index.xml">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+<link rel="stylesheet" href="/css/brand.css">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Build a Low-Power Raspberry Pi Photo Backup Server for Your Family","description":"Turn a Raspberry Pi and a USB hard drive into an always-on family photo backup server with Lomorage: what to buy, how to install, and tips for reliability.","image":"https://lomorage.com/img/blog/raspberrypi-hd/power-hub-adafruit.jpg","datePublished":"2026-11-25","dateModified":"2026-11-25","inLanguage":"en","mainEntityOfPage":"https://lomorage.com/blog/2026/11/25/raspberry-pi-photo-server/","url":"https://lomorage.com/blog/2026/11/25/raspberry-pi-photo-server/","keywords":"Raspberry Pi, photo backup, self-hosted, Lomorage","author":{"@type":"Organization","name":"Lomorage Team","url":"https://lomorage.com/"},"publisher":{"@type":"Organization","@id":"https://lomorage.com/#organization","name":"Lomorage","url":"https://lomorage.com/","logo":"https://lomorage.com/img/brand/memory-embrace-256.png","sameAs":["https://github.com/lomorage"]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lomorage","item":"https://lomorage.com/"},{"@type":"ListItem","position":2,"name":"Journal","item":"https://lomorage.com/blog/"},{"@type":"ListItem","position":3,"name":"Build a Low-Power Raspberry Pi Photo Backup Server for Your Family","item":"https://lomorage.com/blog/2026/11/25/raspberry-pi-photo-server/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a Raspberry Pi powerful enough for photo backup?","acceptedAnswer":{"@type":"Answer","text":"Yes for backup and browsing. Lomorage has been tested on Raspberry Pi 4 Model B, 3 Model B+, Zero W and 2 Model B; newer models give better performance. AI search in LomoMobile can run on your phone, so the Pi doesn't need to do the heavy lifting."}},{"@type":"Question","name":"What do I need to build a Raspberry Pi photo server?","acceptedAnswer":{"@type":"Answer","text":"A Raspberry Pi board, a reliable power supply, a 16 GB or larger microSD card, a USB hard drive, and ideally a powered USB hub and an Ethernet cable."}},{"@type":"Question","name":"What happens to my photos if the microSD card fails?","acceptedAnswer":{"@type":"Answer","text":"Your photos are stored on the hard drive, and the database is backed up to the hard drive as well. You can reinstall the image and restore the database, as described in the Lomorage FAQ."}}]}]}</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/blog/2026/11/25/raspberry-pi-photo-server/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
+
+<main id="main" class="wrap document-page">
+
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a class="text-link" href="/">home</a> / <a class="text-link" href="/blog/">Journal</a></nav>
+<article>
+<h1>Build a Low-Power Raspberry Pi Photo Backup Server for Your Family</h1>
+<p class="article-meta"><time datetime="2026-11-25">2026-11-25</time> <a class="article-tag" href="/tags/raspberry-pi/">#Raspberry Pi</a> <a class="article-tag" href="/tags/photo-backup/">#photo backup</a> <a class="article-tag" href="/tags/self-hosted/">#self-hosted</a> <a class="article-tag" href="/tags/lomorage/">#Lomorage</a></p>
+<div class="prose"><p>A Raspberry Pi sips a few watts, stays on all year, and costs less than a year of many cloud photo plans. Add a USB hard drive and you have an <strong>always-on photo backup server</strong> that every phone in the house can use. Here's how to build one with Lomorage.</p>
+<!--more-->
+<h2 id="why-a-raspberry-pi">Why a Raspberry Pi</h2>
+<ul>
+<li><strong>Always on, low power.</strong> Phones can back up at night without a PC running.</li>
+<li><strong>Cheap.</strong> A board, power supply, microSD card and a hard drive you may already own.</li>
+<li><strong>Quiet and small.</strong> It can sit next to your router.</li>
+<li><strong>Your files, your drive.</strong> Photos are stored as ordinary files in folders by date.</li>
+</ul>
+<h2 id="shopping-list">Shopping list</h2>
+<ul>
+<li><strong>Raspberry Pi</strong> — tested models include Pi 4 Model B, 3 Model B+, Zero W and 2 Model B. Newer is faster.</li>
+<li><strong>Official or quality power supply.</strong> Under-powering causes strange problems.</li>
+<li><strong>16 GB+ microSD card.</strong></li>
+<li><strong>USB hard drive</strong> with room to grow.</li>
+<li><strong>Powered USB hub</strong> — strongly recommended for 2.5&quot; drives or more than one drive.</li>
+<li><strong>Ethernet cable</strong> — faster and more reliable than Wi-Fi.</li>
+</ul>
+<h2 id="install-in-four-steps">Install in four steps</h2>
+<ol>
+<li><strong>Download the prebuilt Lomorage image</strong> linked in the <a href="/docs/Installation/lomorage-service/installation-raspbian/">Raspberry Pi guide</a>.</li>
+<li><strong>Flash it</strong> to the microSD card with balenaEtcher.</li>
+<li><strong>Connect</strong> the hard drive, Ethernet and power, then wait a few minutes for the first boot.</li>
+<li><strong>Install LomoMobile</strong> on your phone, create your account and start backing up.</li>
+</ol>
+<p>Prefer to keep your existing Raspberry Pi OS? The guide also covers <strong>Docker</strong> and <strong>apt</strong> installation. Using a different board? See <a href="/docs/Installation/lomorage-service/installation-armbian/">Armbian</a>.</p>
+<h2 id="make-it-reliable">Make it reliable</h2>
+<ul>
+<li><strong>Use a powered hub</strong> for drives — power issues are the most common cause of disconnects.</li>
+<li><strong>Add a second drive</strong> as a redundancy backup. Step-by-step: <a href="/blog/2019/12/24/raspberrypi-hd/">Set up a secondary backup with Raspberry Pi</a>.</li>
+<li><strong>Know your recovery path.</strong> If the microSD card fails, your photos are still on the hard drive and the database is backed up there too — see <a href="/faq/#how-to-recover-from-raspbian-boot-failure">how to recover from a boot failure</a>.</li>
+<li><strong>Outgrowing the Pi?</strong> Move the library to a Windows server and a bigger drive with our <a href="/blog/2023/03/02/migrate_from_pi_win/">migration guide</a>.</li>
+</ul>
+<h2 id="bonus-a-photo-frame">Bonus: a photo frame</h2>
+<p>The prebuilt image includes the Lomorage digital frame application. Plug in an HDMI screen and the Pi can show your family photos — or use an <a href="/blog/2021/08/26/zero-cost-android-frame/">old Android tablet as a frame</a>.</p>
+<h2 id="remote-access">Remote access</h2>
+<p>To view originals away from home, set up a tunnel or router port mapping: <a href="/docs/Usage/external-access/">External access</a>.</p>
+<p>A Pi server is a great first copy. Keep a second and an off-site copy too — <a href="/blog/2026/11/24/321-backup-family-photos/">the 3-2-1 rule</a> explains why.</p>
+</div>
+</article>
+<aside class="article-cta">
+<h2>Keep your family photos at home</h2>
+<p>Free desktop app · Phone app $1.99 once · No subscription, ever</p>
+<a class="button" href="/#download">Download <span aria-hidden="true">→</span></a>
+</aside>
+
+<section class="related-posts">
+<h2>Related reading</h2>
+<ul><li><a href="/blog/2026/11/25/external-hard-drive-photo-backup/">Backing Up Photos to an External Hard Drive: A Practical Guide</a> <time datetime="2026-11-25">2026-11-25</time></li><li><a href="/blog/2026/11/24/321-backup-family-photos/">The 3-2-1 Backup Rule for Family Photos, Made Simple</a> <time datetime="2026-11-24">2026-11-24</time></li><li><a href="/blog/2019/12/24/raspberrypi-hd/">Setup Lomorage secondary backup with Raspberry Pi</a> <time datetime="2019-12-24">2019-12-24</time></li></ul>
+</section>
+
+
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
+
+</body>
+</html>

@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Simple and Fast Data Migration and Storage Expansion · Lomorage</title><meta name="description" content="Simple and Fast Data Migration and Storage Expansion
-
-Recently, a user encountered an issue where their original storage disk was full and wanted to directly migrate data from thei"><meta name="theme-color" content="#fbf8f3">
-<meta property="og:title" content="Simple and Fast Data Migration and Storage Expansion · Lomorage"><meta property="og:description" content="Simple and Fast Data Migration and Storage Expansion
-
-Recently, a user encountered an issue where their original storage disk was full and wanted to directly migrate data from thei"><meta property="og:type" content="website"><meta property="og:url" content="https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/"><meta property="og:image" content="https://lomorage.com/img/home/coast.jpg">
-<link rel="canonical" href="https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/"><link rel="alternate" hreflang="en" href="https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/">
+<title>Simple and Fast Data Migration and Storage Expansion · Lomorage</title><meta name="description" content="Migrate a Lomorage photo library from a Raspberry Pi to a Windows server and expand storage to a bigger drive. The same steps work for data recovery."><meta name="theme-color" content="#fbf8f3">
+<meta property="og:site_name" content="Lomorage"><meta property="og:locale" content="en_US">
+<meta property="og:title" content="Simple and Fast Data Migration and Storage Expansion · Lomorage"><meta property="og:description" content="Migrate a Lomorage photo library from a Raspberry Pi to a Windows server and expand storage to a bigger drive. The same steps work for data recovery."><meta property="og:type" content="article"><meta property="og:url" content="https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/"><meta property="og:image" content="https://lomorage.com/img/blog/migrate_from_pi_win/migrate_pi_win.jpg">
+<meta property="article:published_time" content="2023-03-02"><meta property="article:modified_time" content="2023-03-02">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Simple and Fast Data Migration and Storage Expansion · Lomorage"><meta name="twitter:description" content="Migrate a Lomorage photo library from a Raspberry Pi to a Windows server and expand storage to a bigger drive. The same steps work for data recovery."><meta name="twitter:image" content="https://lomorage.com/img/blog/migrate_from_pi_win/migrate_pi_win.jpg">
+<link rel="canonical" href="https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/"><link rel="alternate" hreflang="en" href="https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/"><link rel="alternate" hreflang="zh" href="https://lomorage.com/zh/blog/2023/03/02/migrate_from_pi_win/"><link rel="alternate" hreflang="x-default" href="https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/">
+<link rel="alternate" type="application/rss+xml" title="Lomorage" href="https://lomorage.com/blog/index.xml">
 <link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
 <link rel="stylesheet" href="/css/downloads.css">
 <link rel="stylesheet" href="/css/brand.css">
 
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"Simple and Fast Data Migration and Storage Expansion","description":"Migrate a Lomorage photo library from a Raspberry Pi to a Windows server and expand storage to a bigger drive. The same steps work for data recovery.","image":"https://lomorage.com/img/blog/migrate_from_pi_win/migrate_pi_win.jpg","datePublished":"2023-03-02","dateModified":"2023-03-02","inLanguage":"en","mainEntityOfPage":"https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/","url":"https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/","keywords":"WD, MyCloud, Redundancy","author":{"@type":"Organization","name":"Lomorage Team","url":"https://lomorage.com/"},"publisher":{"@type":"Organization","@id":"https://lomorage.com/#organization","name":"Lomorage","url":"https://lomorage.com/","logo":"https://lomorage.com/img/brand/memory-embrace-256.png","sameAs":["https://github.com/lomorage"]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Lomorage","item":"https://lomorage.com/"},{"@type":"ListItem","position":2,"name":"Journal","item":"https://lomorage.com/blog/"},{"@type":"ListItem","position":3,"name":"Simple and Fast Data Migration and Storage Expansion","item":"https://lomorage.com/blog/2023/03/02/migrate_from_pi_win/"}]}]}</script>
 </head>
 
 <body>
@@ -20,8 +21,11 @@ Recently, a user encountered an issue where their original storage disk was full
 <header class="site-header wrap"><a class="brand" href="/" aria-label="Lomorage home"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a><nav class="desktop-nav" aria-label="Main navigation"><a href="/#why">Why Lomorage</a><a href="/#how">How it works</a><a href="/docs/">Guides</a><a href="/#questions">FAQs</a></nav><div class="header-actions"><a class="language" href="/zh/blog/2023/03/02/migrate_from_pi_win/" lang="zh">中文</a><a class="button button-small" href="/#download">Download <span aria-hidden="true">→</span></a></div></header>
 
 <main id="main" class="wrap document-page">
-<a class="text-link" href="/">← home</a>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a class="text-link" href="/">home</a> / <a class="text-link" href="/blog/">Journal</a></nav>
+<article>
 <h1>Simple and Fast Data Migration and Storage Expansion</h1>
+<p class="article-meta"><time datetime="2023-03-02">2023-03-02</time> <a class="article-tag" href="/tags/wd/">#WD</a> <a class="article-tag" href="/tags/mycloud/">#MyCloud</a> <a class="article-tag" href="/tags/redundancy/">#Redundancy</a></p>
 <div class="prose"><p><strong>Simple and Fast Data Migration and Storage Expansion</strong></p>
 <p>Recently, a user encountered an issue where their original storage disk was full and wanted to directly migrate data from their existing PI server to a Windows server while expanding the storage disk. Let's explore the fastest way to migrate and expand data, and this guide can also be used for data recovery. This article uses Windows as an example, but the process is similar for other platforms.</p>
 <!--more-->
@@ -71,6 +75,19 @@ Recently, a user encountered an issue where their original storage disk was full
 <h2 id="3.3-restart-photo-assistant-to-complete-data-migration-no-more-worries-about-full-disks">3.3 Restart Photo Assistant to Complete Data Migration, No More Worries About Full Disks!</h2>
 <p>After copying the modified <code>assets.db</code>, restart the Lomorage Photo Assistant. At this point, your data migration is complete, and the storage limit issue has been resolved!</p>
 </div>
+</article>
+<aside class="article-cta">
+<h2>Keep your family photos at home</h2>
+<p>Free desktop app · Phone app $1.99 once · No subscription, ever</p>
+<a class="button" href="/#download">Download <span aria-hidden="true">→</span></a>
+</aside>
+
+<section class="related-posts">
+<h2>Related reading</h2>
+<ul><li><a href="/blog/2023/02/22/set_wd_as_backup/">Set WD MyCloud as Lomorage redundancy backup disk on Windows</a> <time datetime="2023-02-22">2023-02-22</time></li><li><a href="/blog/2020/05/17/import_my_cloud/">Move MyCloud to Lomorage</a> <time datetime="2020-05-17">2020-05-17</time></li><li><a href="/blog/2026/11/24/backup-iphone-photos-to-windows-pc/">How to Back Up iPhone Photos to a Windows PC Without iCloud</a> <time datetime="2026-11-24">2026-11-24</time></li></ul>
+</section>
+
+
 </main>
 <footer class="wrap footer"><div><a class="brand" href="/">lomorage</a><p>Save the moments. Enjoy the memories.</p></div><nav aria-label="More links"><a href="/docs/">Guides</a><a href="/blog/">Journal</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="/privacy.html">Privacy</a><a href="/contact/">Contact</a></nav><small>© 2026 Lomorage</small></footer>
 
